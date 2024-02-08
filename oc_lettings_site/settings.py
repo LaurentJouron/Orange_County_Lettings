@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import environ
+import sentry_sdk
 
 # Initialise environment variables
 env = environ.Env(
@@ -8,6 +9,17 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 load_dotenv()
+
+sentry_sdk.init(
+    dsn="https://5748bad655e9f1da78f2dc955c0fd451@o4506677079900160.ingest.sentry.io/4506710341844992",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
 
 
 IS_HEROKU = "DYNO" in os.environ
