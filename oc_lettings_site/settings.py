@@ -11,7 +11,7 @@ env = environ.Env(
 load_dotenv()
 
 sentry_sdk.init(
-    dsn="https://5748bad655e9f1da78f2dc955c0fd451@o4506677079900160.ingest.sentry.io/4506710341844992",
+    dsn=os.environ["DSN"],
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     traces_sample_rate=1.0,
