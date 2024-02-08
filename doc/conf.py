@@ -17,8 +17,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Orange County Lettings"
-copyright = "2023, Mathieu Cazenave - OC-Formation Python- Projet 13"
-author = "Mathieu Cazenave"
+copyright = "2023, Laurent Jouron - OC-Formation Python- Projet 13"
+author = "Laurent Jouron"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
