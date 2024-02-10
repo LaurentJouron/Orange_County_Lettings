@@ -19,9 +19,9 @@ La création d'un compte sur `docker hub <https://hub.docker.com/>`_ est nécess
 
 Docker Inc distribue 3 versions de Docker différentes :
 
-* Docker Community Edition (Linux seulement) ; GRATUIT
-* Docker Desktop (Mac ou Windows) ; GRATUIT
-* Docker Enterprise (Linux seulement). sous LICENCE 
+* Docker Community Edition (Linux seulement) - GRATUIT
+* Docker Desktop (Mac ou Windows) - GRATUIT
+* Docker Enterprise (Linux seulement) - LICENCE 
 
 
 Pour le déploiement sur Heroku

@@ -16,11 +16,11 @@ Les variables d'environnements du projet enregistrées dans *Project Settings* s
 
    "DOCKER_PASSWORD",	"mot_de_passe_dockerhub"
    "DOCKER_USERNAME",	"identifiant_dockerhub"
-   "DSN",	"cle_sentry-DSN"
+   "DSN",	"dsn_secret_key"
    "HEROKU_APP_NAME",	"lettings"
    "HEROKU_TOKEN",	"api_key_heroku*"
    "IMAGE_NAME",	"lettings_image"
-   "SECRET_KEY",	"secret_key_django"
+   "SECRET_KEY",	"SECRET_KEY"
 
 
 (*)L'API key est indiquée dans le `compte Heroku <https://dashboard.heroku.com/account>`_ dans *Account Settings*.
@@ -41,8 +41,7 @@ https://lettings-972532108750.herokuapp.com
 
 Le pipeline CI/CD et ses builds sont visibles sur cette page : 
 
-https://app.circleci.com/pipelines/github/Nunespace/Lettings 
-
+https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings
 
 Gestion de l'application
 -------------------------

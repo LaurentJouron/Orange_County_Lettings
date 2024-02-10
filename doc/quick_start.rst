@@ -20,7 +20,7 @@ Avec Docker
 
 1. Aller sur l'url de recherche de `Docker Hub <https://hub.docker.com/search/?type=image&image_filter=official>`_
 
-2. Dans la zone de recherche, taper *nunespace/lettings*
+2. Dans la zone de recherche, taper *ikigai/lettings*
 
 3. Cliquer sur l'image puis sur l'onglet *Tags*
 

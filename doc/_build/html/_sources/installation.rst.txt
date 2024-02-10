@@ -17,7 +17,7 @@ et mettre *pip install* à la place de *pipenv install*
 
 #. Ouvrez le **terminal** et tapez ::
 
-    git clone https://github.com/Nunespace/Lettings.git
+    git clone https://github.com/LaurentJouron/Orange_County_Lettings.git
 
 #. Placez-vous dans le répertoire Lettings ::
 
@@ -29,8 +29,8 @@ et mettre *pip install* à la place de *pipenv install*
 
 #. Créer un fichier .env à la racine du projet, y mettre les variables suivantes [#f1]_ ::
     
-    SECRET_KEY=cle_secrète_django 
-    DSN=cle_DSN_sentry
+    SECRET_KEY=SECRET_KEY 
+    DSN=dsn_key_sentry
 
     
 #. Démarrez le serveur avec ::

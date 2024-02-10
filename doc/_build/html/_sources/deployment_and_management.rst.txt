@@ -41,7 +41,7 @@ https://lettings-972532108750.herokuapp.com
 
 Le pipeline CI/CD et ses builds sont visibles sur cette page : 
 
-https://app.circleci.com/pipelines/github/Nunespace/Lettings 
+https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings
 
 
 Gestion de l'application

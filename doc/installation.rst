@@ -4,9 +4,10 @@ Installation du projet
 
 Prérequis
 ------------
-L'application aura besoin de **Python** (version 3.12), **Git** et **Pipenv** pour fonctionner. Si besoin, vous pouvez les installer en suivant les instructions sur `cette page`_.
+L'application aura besoin de **Python** (version 3.12), **Git** et **Pipenv** pour fonctionner. 
+Si besoin, vous pouvez les installer en suivant les instructions sur `cette page`_.
 
-.. _cette page: https://github.com/Nunespace/Lettings/blob/main/doc/installation_python-git-pipenv.md
+.. _cette page: https://github.com/LaurentJouron/Orange_County_Lettings/blob/master/doc/installation.rst
 
 
 
@@ -17,11 +18,11 @@ et mettre *pip install* à la place de *pipenv install*
 
 #. Ouvrez le **terminal** et tapez ::
 
-    git clone https://github.com/Nunespace/Lettings.git
+    git clone https://github.com/LaurentJouron/Orange_County_Lettings.git
 
-#. Placez-vous dans le répertoire Lettings ::
+#. Placez-vous dans le répertoire Orange_County_Lettings ::
 
-    cd Lettings
+    cd Orange_County_Lettings
 
 #. Installez les dépendances du projet ::
 
@@ -29,8 +30,8 @@ et mettre *pip install* à la place de *pipenv install*
 
 #. Créer un fichier .env à la racine du projet, y mettre les variables suivantes [#f1]_ ::
     
-    SECRET_KEY=cle_secrète_django 
-    DSN=cle_DSN_sentry
+    SECRET_KEY=secret_key
+    DSN=dsn_key_sentry
 
     
 #. Démarrez le serveur avec ::
@@ -50,5 +51,3 @@ Pour les lancements ultérieurs du serveur, il suffit d'exécuter les étape 5 e
 
 .. note:: Les clés secrètes Django et DSN de Sentry sont communiquées en dehors du dépôt Git hub
     Pour récupérer clé DSN de Sentry : aller sur le `compte Sentry <https://sentry.io>`_, puis dans le projet *lettings*, ouvrir *Project Settings*.
-    
-   
