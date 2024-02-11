@@ -7,7 +7,3 @@ Les modèles principaux de l'application sont:
 
 - et *profiles* lié à *user*
 
-
-
-.. image:: DBSQLiteLettings.png
-    :alt: Diagramme UML
