@@ -17,7 +17,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Orange County Lettings"
-copyright = "2023, Laurent Jouron - OC-Formation Python- Projet 13"
+copyright = (
+    "Laurent Jouron for Ikigai -  &copy; Copyright 2024 - All rights reserved"
+)
 author = "Laurent Jouron"
 
 # -- General configuration ---------------------------------------------------
