@@ -18,6 +18,7 @@ whitenoise = "*"
 python-dotenv = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+furo = "*"
 
 [dev-packages]
 
