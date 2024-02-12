@@ -1,0 +1,69 @@
+Quick start
+===========
+
+.. _start:
+
+Start
+-----
+
+There are several solutions to install the project. The easiest for quick use is as follows:
+
+Start by cloning the project with this command:
+
+
+.. code-block:: console
+
+   git clone https://github.com/LaurentJouron/Orange_County_Lettings.git
+
+
+Place yourself inside the project:
+
+.. code-block:: console
+
+   cd Orange_County_Lettings
+
+
+Create a . venv file to access the virtual environment
+
+.. code-block:: console
+
+   mkdir .venv
+
+
+Install the necessary environment
+
+.. code-block:: console
+
+   pipenv install ou pip install
+
+
+Activate the virtual environment
+
+.. code-block:: console
+
+   pipenv shell ou pip shell
+
+
+It remains only to launch the project to be able to browse it.
+
+.. code-block:: console
+   
+   python manage.py runserver
+
+
+`Open the website <http://localhost:8000>`_
+
+
+.. note::
+   This way of installing the project is the easiest way to use all its functions. 
+   On the other hand, this use is local, which means that nothing is found on the internet 
+   and is accessible only on the computer you use.
+
+
+.. toctree::
+	:maxdepth: 2
+
+ 	Description <index>
+   Quick start <quick_start>
+
+Refer to :doc:`index` for more information on quick :ref:`index <Description>` installation.
