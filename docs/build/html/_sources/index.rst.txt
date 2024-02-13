@@ -2,21 +2,18 @@
    sphinx-quickstart on Mon Feb 12 07:51:44 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+.. theorie:
 
-*******
-Details
-*******
-* **Authors** : Laurent Jouron
+**Reception**
+=============
+.. important::
 
-* **Creation date** : Feb 12, 2024
-
-* **modification date** : |today|
-
-* **Projet** : Orange County Lettings
+   This documentation was carried out as part of a training in computer development. It cannot be taken for official documentation.
 
 
-**Technology**
-==============
+**********
+Technology
+**********
 
 .. image:: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 .. image:: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
@@ -24,31 +21,81 @@ Details
 .. image:: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 .. image:: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 
-
 ***********
-Description
+Information
 ***********
+* **Authors** : Laurent Jouron
 
-**Orange County Lettings** is an innovative platform dedicated to the rental of real estate, booming in the *American market*.
+* **Etablissement**: Orange County Lettings
 
-Our app offers a smooth and intuitive user experience for landlords and tenants, making it easy to manage rentals and search for housing.
+* **Projet** : Site web de location de biens immobiliers en phase d’expansion aux États-Unis
 
-With a robust modular architecture and advanced features, Orange County Lettings is committed to providing high-quality 
-service while remaining at the forefront of technology.
+* **Creation date** : Feb 12, 2024
 
-`Open the GitHub repository <https://github.com/LaurentJouron/EpicEvents>`_
+* **modification date** : |today|
 
-Join us today and discover a new way to rent and manage real estate with ease and efficiency.
+* **Statut du document** : En travaux.
 
-.. note::
+****
+Logo
+****
 
-   This documentation was carried out as part of a training in computer development. It cannot be taken for official documentation.
+.. _ma_figure:
+
+.. figure:: _static/logo.png
+   :height: 450
+   :width: 600
+   :scale: 80
+   :align: center
+   :alt: Logo
+
+   :download:`Download <_static/logo.png>`
+
+***************
+Image with logo
+***************
+
+.. _ma_figure:
+
+.. figure:: _static/Orange_County_Lettings_logo.png
+   :height: 250
+   :width: 600
+   :scale: 100
+   :align: center
+   :alt: Image with logo
+
+   :download:`Download <_static/Orange_County_Lettings_logo.png>`
+
+*********
+Home page
+*********
+
+.. _ma_figure:
+
+.. figure:: _static/home_page.png
+   :height: 250
+   :width: 600
+   :scale: 100
+   :align: center
+   :alt: Home page
+
+   :download:`Download <_static/home_page.png>`
 
 
+*****
+Links
+*****
+
+* Refer to start for more information on quick :ref:`quick start <quick_start>` installation.
+* By going to description you get more details on the :ref:`description <description>` evolution of the project.
+* Come and see the structure of the :ref:`database <data_structure>`.
+
+
+Indices and tables
+==================
 .. toctree::
-	:maxdepth: 2
+         :maxdepth: 3
 
- 	Description <index>
-   Quick start <quick_start>
-
-Refer to :doc:`quick_start` for more information on quick :ref:`start <start>` installation.
+         description
+         quick_start
+         data_structure

@@ -1,7 +1,7 @@
-Quick start
-===========
+.. _quick_start:
 
-.. _start:
+**Quick start**
+===============
 
 Start
 -----
@@ -55,15 +55,5 @@ It remains only to launch the project to be able to browse it.
 
 
 .. note::
-   This way of installing the project is the easiest way to use all its functions. 
-   On the other hand, this use is local, which means that nothing is found on the internet 
-   and is accessible only on the computer you use.
-
-
-.. toctree::
-	:maxdepth: 2
-
- 	Description <index>
-   Quick start <quick_start>
-
-Refer to :doc:`index` for more information on quick :ref:`index <Description>` installation.
+   This way of installation is the simplest. On the other hand, this use is local, which means that nothing is found 
+   on the internet and is accessible only on the computer you are using.
