@@ -24,17 +24,17 @@ Technology
 ***********
 Information
 ***********
-* **Authors** : Laurent Jouron
+* **Authors** : `Laurent Jouron <https://laurentjouron.github.io/LaurentJouron.com/>`_
 
 * **Etablissement**: Orange County Lettings
 
-* **Projet** : Site web de location de biens immobiliers en phase d’expansion aux États-Unis
+* **Projet** : Website for rental properties in the expansion phase in the United States
 
 * **Creation date** : Feb 12, 2024
 
-* **modification date** : |today|
+* **Modification date** : |today|
 
-* **Statut du document** : En travaux.
+* **Document status** : In work
 
 ****
 Logo
@@ -43,9 +43,7 @@ Logo
 .. _ma_figure:
 
 .. figure:: _static/logo.png
-   :height: 450
-   :width: 600
-   :scale: 80
+   :scale: 75
    :align: center
    :alt: Logo
 
@@ -93,9 +91,9 @@ Links
 
 Indices and tables
 ==================
-.. toctree::
-         :maxdepth: 3
+   .. toctree::
+            :maxdepth: 3
 
-         description
-         quick_start
-         data_structure
+            description
+            quick_start
+            data_structure

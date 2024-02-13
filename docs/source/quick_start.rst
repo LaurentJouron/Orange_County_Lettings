@@ -3,12 +3,9 @@
 **Quick start**
 ===============
 
-Start
------
-
 There are several solutions to install the project. The easiest for quick use is as follows:
 
-Start by cloning the project with this command:
+Start by ``cloning the project`` with this command:
 
 
 .. code-block:: console
@@ -16,35 +13,35 @@ Start by cloning the project with this command:
    git clone https://github.com/LaurentJouron/Orange_County_Lettings.git
 
 
-Place yourself inside the project:
+Place yourself ``inside the project``:
 
 .. code-block:: console
 
    cd Orange_County_Lettings
 
 
-Create a . venv file to access the virtual environment
+Create a ``.venv`` file to access the ``virtual environment``
 
 .. code-block:: console
 
    mkdir .venv
 
 
-Install the necessary environment
+Install the ``necessary environment``
 
 .. code-block:: console
 
    pipenv install ou pip install
 
 
-Activate the virtual environment
+``Activate`` the virtual environment
 
 .. code-block:: console
 
    pipenv shell ou pip shell
 
 
-It remains only to launch the project to be able to browse it.
+It remains only to ``launch the project`` to be able to browse it.
 
 .. code-block:: console
    
