@@ -20,6 +20,7 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 furo = "*"
 pyflakes = "*"
+install = "*"
 
 [dev-packages]
 
