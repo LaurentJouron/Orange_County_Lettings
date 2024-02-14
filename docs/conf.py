@@ -20,6 +20,7 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
+    "sphinx_rtd_theme",
 ]
 
 # The suffix of source filenames.
@@ -32,7 +33,7 @@ source_suffix = {
 # The master toctree document.
 master_doc = "index"
 
-templates_path = ["source/_templates"]
+templates_path = ["_templates"]
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
