@@ -21,6 +21,7 @@ sphinx-rtd-theme = "*"
 furo = "*"
 pyflakes = "*"
 install = "*"
+sphinx-copybutton = "*"
 
 [dev-packages]
 
