@@ -49,4 +49,3 @@ html_theme_options = {
 }
 html_theme = "sphinx_rtd_theme"
 html_logo = "_static/logo.png"
-html_static_path = ["_static"]
