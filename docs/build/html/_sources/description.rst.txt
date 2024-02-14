@@ -21,10 +21,32 @@ My mission is to set up and operate the site locally on my computer. Following t
 * Run the linting locally.
 * Run the test suite locally.
 
+************
+Prerequisite
+************
+
+* GitHub account with read access to this repository
+* Git CLI
+* SQLite3 CLI or various graphics software
+* Python interpreter version 3.6 or higher
+* Flake8
+* Docker desktop
 
 *****
 To do
 *****
+
+* Modular development of a Django project
+* Unit tests
+* Test coverage greater than 80%
+* Make sure the test coverage is greater than 80% using a coverage check tool such as ``coverage`` or ``pytest-cov``
+* The correct pluralization of models in the admin page of the application
+* A docstring on each module, class and function
+* A personalized page in case of error 404 or 500
+* Flake8 that returns no errors
+* Sentry logging
+* Moving an image with Docker
+* Test automation and integration with CircleCi
 
 *****************
 Final description

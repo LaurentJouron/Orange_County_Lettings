@@ -35,3 +35,10 @@ def profile_fixture(monkeypatch, fake_profile_fixture):
         lambda: fake_profile_fixture,
     )
     return {"profile": fake_profile_fixture}
+
+
+@pytest.fixture
+def user_fixture(django_user_model):
+    return django_user_model.objects.create_user(
+        username="test", password="password"
+    )

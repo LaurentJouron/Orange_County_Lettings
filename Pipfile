@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
-flake8 = "==3.7.0"
-pytest-django = "==3.9.0"
+flake8 = "*"
+pytest-django = "*"
 six = "*"
 coverage = "*"
 pytest-cov = "*"
@@ -19,6 +19,7 @@ python-dotenv = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 furo = "*"
+pyflakes = "*"
 
 [dev-packages]
 

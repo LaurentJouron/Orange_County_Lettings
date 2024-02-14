@@ -6,10 +6,10 @@
 
 **Reception**
 =============
+
 .. important::
 
    This documentation was carried out as part of a training in computer development. It cannot be taken for official documentation.
-
 
 **********
 Technology
@@ -24,6 +24,7 @@ Technology
 ***********
 Information
 ***********
+
 * **Authors** : `Laurent Jouron <https://laurentjouron.github.io/LaurentJouron.com/>`_
 
 * **Etablissement**: Orange County Lettings
@@ -60,7 +61,7 @@ Image with logo
    :width: 600
    :scale: 100
    :align: center
-   :alt: Image with logo
+   :alt: Home work
 
    :download:`Download <_static/Orange_County_Lettings_logo.png>`
 
@@ -79,7 +80,6 @@ Home page
 
    :download:`Download <_static/home_page.png>`
 
-
 *****
 Links
 *****
@@ -88,9 +88,9 @@ Links
 * By going to description you get more details on the :ref:`description <description>` evolution of the project.
 * Come and see the structure of the :ref:`database <data_structure>`.
 
-
 Indices and tables
 ==================
+
    .. toctree::
             :maxdepth: 3
 

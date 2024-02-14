@@ -3,6 +3,21 @@
 **Data structure**
 ==================
 
+***************************
+Need for the specifications
+***************************
+
+* Position yourself in the root folder of the project ``cd oc_lettings_site``
+* Open a shell session ``sqlite3``
+* Connection to the database ``.open oc-lettings-site.sqlite3``
+* Displays the database tables ``.tables``
+* Displays the profiles, pragma ``table_info(oc_lettings_site_profile)``
+* Create a query on the profile table:
+* ``select user_id, favorite_city from oc_lettings_site_profile where favorite_city like 'B%';``
+* ``.quit`` to leave
+
+To have a graphical interface, it is better to use the free software `DB Browser for SQLite <https://sqlitebrowser.org/dl/>`_.
+
 *******
 Address
 *******
@@ -17,10 +32,10 @@ Address
    "validators=[MaxValueValidator(9999)]", "max_length=64", "max_length=64", "max_length=2", "validators=[MaxValueValidator(99999)]", "max_length=3"
    "", "", "", "validators=[MinLengthValidator(2)]", "", "validators=[MinLengthValidator(3)]"
 
-
 ********
 Lettings
 ********
+
 .. csv-table::
    :header: "title", "address"
 
@@ -31,13 +46,13 @@ Lettings
 ********
 Profile
 ********
+
 .. csv-table::
    :header: "user", "favorite_city"
 
    "User", "CharField"
    "on_delete=models.CASCADE", "max_length=64"
    "", "blank=True"
-
 
 ******
 Schema

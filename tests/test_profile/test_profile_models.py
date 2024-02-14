@@ -1,16 +1,13 @@
 import pytest
 
-from django.test import Client
 from profiles.models import Profile
-
-client = Client()
 
 
 @pytest.mark.django_db
-def test_profile_model(user1):
+def test_profile_model(user_fixture):
     profile = Profile.objects.create(
-        user=user1,
+        user=user_fixture,
         favorite_city="Very big city",
     )
-    expected_value = "test_user1"
+    expected_value = "test"
     assert str(profile) == expected_value
