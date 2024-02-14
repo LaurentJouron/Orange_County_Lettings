@@ -47,6 +47,6 @@ html_theme_options = {
     "display_version": False,
     "style_external_links": True,
 }
-html_theme = "sphinx_rtd_theme"
+html_theme = "source/sphinx_rtd_theme"
 html_logo = "source/_static/logo.png"
 html_static_path = ["source/_static"]
