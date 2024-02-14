@@ -31,14 +31,26 @@ Install the ``necessary environment``
 
 .. code-block:: console
 
-   pipenv install ou pip install
+   pipenv install
+
+or
+
+.. code-block:: console
+
+   pip install
 
 
 ``Activate`` the virtual environment
 
 .. code-block:: console
 
-   pipenv shell ou pip shell
+   pipenv shell
+
+or
+
+.. code-block:: console
+
+   pip shell
 
 
 It remains only to ``launch the project`` to be able to browse it.

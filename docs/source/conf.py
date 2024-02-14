@@ -15,13 +15,21 @@ release = "1.0.0"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    "sphinx_copybutton",
     "sphinx.ext.duration",
     "sphinx.ext.autodoc",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-    "sphinx_rtd_theme",
 ]
+
+autodoc_default_flags = []
+
+autodoc_modules = {
+    "lettings": "lettings",
+    "profiles": "profiles",
+    "oc_lettings_site": "oc_lettings_site",
+}
 
 # The suffix of source filenames.
 source_suffix = {
@@ -48,6 +56,7 @@ html_theme_options = {
     "display_version": False,
     "style_external_links": True,
 }
+
 html_theme = "sphinx_rtd_theme"
 html_logo = "_static/logo.png"
 html_static_path = ["_static"]
