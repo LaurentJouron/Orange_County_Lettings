@@ -32,7 +32,7 @@ source_suffix = {
 # The master toctree document.
 master_doc = "index"
 
-templates_path = ["_templates"]
+templates_path = ["source/_templates"]
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -48,4 +48,5 @@ html_theme_options = {
     "style_external_links": True,
 }
 html_theme = "sphinx_rtd_theme"
-html_logo = "_static/logo.png"
+html_logo = "source/_static/logo.png"
+html_static_path = ["source/_static"]
