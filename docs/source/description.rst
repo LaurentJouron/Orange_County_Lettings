@@ -7,13 +7,13 @@
 Start
 *****
 
-Orange County Lettings recruited me to play a key role in improving the website, code and deployment.
+Orange County Lettings is a start-up in the real estate rental sector. Being expanding in the 
+United States, the company decided to expand its team. As a developer, you need to play an 
+important role in improving the company’s site, both in terms of code and deployment.
+I had access to the site’s `GitHub repository <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_.
 
-After evaluating the technologies currently used in the application code, the technical director, identified various problems to solve. 
-During our first meeting with him, I had access 
-to the site’s `GitHub repository <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_.
-
-My mission is to set up and operate the site locally on my computer. Following the instructions of the README, it is possible to:
+My mission is to set up and operate the site locally on my computer. 
+Following the instructions of the README, it is possible to:
 
 * Run the site locally and browse it in a browser.
 * I can log in and use the Admin section of the site.

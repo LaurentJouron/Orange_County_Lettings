@@ -20,7 +20,7 @@ Place yourself ``inside the project``:
    cd Orange_County_Lettings
 
 
-Create a ``.venv`` file to access the ``virtual environment``
+Create a ``.venv`` folder to access the ``virtual environment``
 
 .. code-block:: console
 
