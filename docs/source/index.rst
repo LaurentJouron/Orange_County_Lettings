@@ -102,3 +102,4 @@ Indices and tables
             description
             quick_start
             data_structure
+            documentation
