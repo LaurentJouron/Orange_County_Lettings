@@ -26,11 +26,8 @@ Prerequisite
 ************
 
 * GitHub account with read access to this repository
-* Git CLI
 * SQLite3 CLI or various graphics software
 * Python interpreter version 3.6 or higher
-* Flake8
-* Docker desktop
 
 *****
 To do
