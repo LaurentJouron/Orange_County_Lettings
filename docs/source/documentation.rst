@@ -3,6 +3,8 @@
 **Documentation**
 =================
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ********
 Creation
 ********
@@ -32,6 +34,8 @@ project inside the docs folder. To proceed, answer each question as follows:
 * Project release []: Write “0.1” (without quotes) and press Enter.
 
 * Project language [en]: Leave it empty (the default, English) and press Enter.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *******
 Project
@@ -81,6 +85,8 @@ And finally, open docs/build/html/index.html in your browser. You should see som
 
    .\make html
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 *****************
 .readthedocs.yaml
 *****************
@@ -105,6 +111,8 @@ To realize this documentation I used this configuration for the file ``.readthed
     python:
     install:
         - requirements: docs/requirements.txt
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *******
 conf.py
@@ -177,6 +185,8 @@ To realize this documentation I used this configuration for the file ``conf.py``
     html_logo = "_static/logo.png"
     html_static_path = ["_static"]
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ****************
 requirements.txt
 ****************
@@ -189,3 +199,54 @@ To realize this documentation I used this configuration for the file ``requireme
     sphinx-rtd-theme==1.3.0
     sphinx-bootstrap-theme
     sphinx-copybutton
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*****************
+Schema of the doc
+*****************
+
+* `Description <http://127.0.0.1:5500/docs/build/html/description.html#>`_
+
+  - `Start <http://127.0.0.1:5500/docs/build/html/description.html#start>`_
+
+  - `Prerequiste <http://127.0.0.1:5500/docs/build/html/description.html#prerequisite>`_
+
+  - `To do <http://127.0.0.1:5500/docs/build/html/description.html#to-do>`_
+
+  - `Final description <http://127.0.0.1:5500/docs/build/html/description.html#final-description>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* `Quick start <http://127.0.0.1:5500/docs/build/html/quick_start.html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* `Data structure <http://127.0.0.1:5500/docs/build/html/data_structure.html>`_
+
+  - `Need for the specifications <http://127.0.0.1:5500/docs/build/html/data_structure.html#need-for-the-specifications>`_
+
+  - `Address <http://127.0.0.1:5500/docs/build/html/data_structure.html#address>`_
+
+  - `Lettings <http://127.0.0.1:5500/docs/build/html/data_structure.html#lettings>`_
+
+  - `Profile <http://127.0.0.1:5500/docs/build/html/data_structure.html#profile>`_
+
+  - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* `Documentation <http://127.0.0.1:5500/docs/build/html/documentation.html>`_
+
+  - `Creation <http://127.0.0.1:5500/docs/build/html/documentation.html#creation>`_
+
+  - `Project <http://127.0.0.1:5500/docs/build/html/documentation.html#project>`_
+
+  - `.readthedocs.yaml <http://127.0.0.1:5500/docs/build/html/documentation.html#readthedocs-yaml>`_
+
+  - `conf.py <http://127.0.0.1:5500/docs/build/html/documentation.html#conf-py>`_
+
+  - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
+
+  - `requirements.txt <http://127.0.0.1:5500/docs/build/html/documentation.html#requirements-txt>`_
+
+  - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
