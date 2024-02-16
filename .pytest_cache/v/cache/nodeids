@@ -1,1 +1,15 @@
-[]
+[
+  "tests/test_lettings/test_address_models.py::test_address_model",
+  "tests/test_lettings/test_index_urls.py::test_index_url",
+  "tests/test_lettings/test_index_views.py::test_index_view",
+  "tests/test_lettings/test_index_views.py::test_index_view_no_lettings",
+  "tests/test_lettings/test_letting_urls.py::test_letting_url",
+  "tests/test_lettings/test_letting_views.py::test_letting_view_not_found",
+  "tests/test_oc_lettings_site/test_urls.py::test_index_url",
+  "tests/test_oc_lettings_site/test_views.py::test_index_view",
+  "tests/test_profile/test_index_urls.py::test_index_url",
+  "tests/test_profile/test_index_views.py::test_index_view",
+  "tests/test_profile/test_profile_models.py::test_profile_model",
+  "tests/test_profile/test_profile_urls.py::test_profile_url",
+  "tests/test_profile/test_profile_views.py::test_profile_view"
+]

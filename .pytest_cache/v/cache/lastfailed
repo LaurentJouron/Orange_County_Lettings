@@ -1,0 +1,9 @@
+{
+  "tests/test_lettings/test_index_urls.py::test_index_url": true,
+  "tests/test_lettings/test_index_views.py::test_index_view": true,
+  "tests/test_lettings/test_index_views.py::test_index_view_no_lettings": true,
+  "tests/test_lettings/test_letting_urls.py::test_letting_url": true,
+  "tests/test_lettings/test_letting_views.py::test_letting_view_not_found": true,
+  "tests/test_profile/test_index_views.py::test_index_view": true,
+  "tests/test_profile/test_profile_views.py::test_profile_view": true
+}
