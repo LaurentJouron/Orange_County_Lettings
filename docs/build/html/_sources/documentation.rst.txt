@@ -223,7 +223,7 @@ Schema of the doc
 
 * `Data structure <http://127.0.0.1:5500/docs/build/html/data_structure.html>`_
 
-  - `Need for the specifications <http://127.0.0.1:5500/docs/build/html/data_structure.html#need-for-the-specifications>`_
+  - `Specifications <http://127.0.0.1:5500/docs/build/html/data_structure.html#need-for-the-specifications>`_
 
   - `Address <http://127.0.0.1:5500/docs/build/html/data_structure.html#address>`_
 

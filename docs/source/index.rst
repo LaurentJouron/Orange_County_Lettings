@@ -157,7 +157,12 @@ Indices and tables
    .. toctree::
             :maxdepth: 3
 
-            description
-            quick_start
+            circleci
+            coverage
             data_structure
+            description
+            docker
             documentation
+            quick_start
+            sentry
+            test
