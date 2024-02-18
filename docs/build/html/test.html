@@ -49,7 +49,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="coverage.html"><strong>Coverage</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
@@ -57,10 +56,9 @@
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Pytest-Django</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pytest-ini">pytest.ini</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#first-test">First test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#results">Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#report">Report</a></li>
 </ul>
 </li>
 </ul>
@@ -91,16 +89,16 @@
              
   <section id="pytest-django">
 <span id="test"></span><h1><strong>Pytest-Django</strong><a class="headerlink" href="#pytest-django" title="Link to this heading"></a></h1>
-<hr class="docutils" />
-<p>pytest-django is a plugin for <a class="reference external" href="https://docs.pytest.org/en/8.0.x/">pytest</a>  that provides a set of useful tools
-for testing <a class="reference external" href="https://www.djangoproject.com/">Django</a> applications and projects.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<a class="reference external image-reference" href="https://pytest-django.readthedocs.io/en/latest/"><img alt="Pytest-Django Badge" src="https://img.shields.io/badge/pytest--django-%232C8736.svg?style=for-the-badge&amp;logo=pytest&amp;logoColor=white" /></a>
 <p>The configuration below is very inspired by the official file <a class="reference external" href="https://pytest-django.readthedocs.io/en/latest/">pytest-django</a></p>
 </div>
+<p>pytest-django is a plugin for <a class="reference external" href="https://docs.pytest.org/en/8.0.x/">pytest</a>  that provides a set of useful tools
+for testing <a class="reference external" href="https://www.djangoproject.com/">Django</a> applications and projects.</p>
 <hr class="docutils" />
-<section id="quick-start">
-<h2>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install pytest-django</span>
 </pre></div>
 </div>
@@ -117,18 +115,38 @@ and make your tests discoverable (<a class="reference external" href="https://py
 <span class="n">python_files</span> <span class="o">=</span> <span class="n">tests</span><span class="o">.</span><span class="n">py</span> <span class="n">test_</span><span class="o">*.</span><span class="n">py</span> <span class="o">*</span><span class="n">_tests</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-</section>
 <hr class="docutils" />
-<section id="first-test">
-<h2>First test<a class="headerlink" href="#first-test" title="Link to this heading"></a></h2>
+<p class="rubric">Run test</p>
 <p>Run your tests with <code class="docutils literal notranslate"><span class="pre">pytest</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+<p class="rubric">pytest -vvv</p>
+<p>To view test details in the terminal, use the <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> option with pytest:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest -vvv</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">pytest –cov=. tests/</p>
+<p>To measure the test coverage of a project, run pytest with the <code class="docutils literal notranslate"><span class="pre">--cov</span></code>
+option to specify the folder to be analyzed:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest --cov=. tests/</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">pytest –cov=. –cov-report html</p>
+<p>To generate an HTML report automatically, use the <code class="docutils literal notranslate"><span class="pre">--cov-report</span> <span class="pre">html</span></code> option with pytest:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest --cov=. --cov-report html</span>
+</pre></div>
+</div>
+<p>Then, open the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> folder and launch <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in a browser to view the report.</p>
 </section>
 <hr class="docutils" />
-<section id="results">
-<h2>Results<a class="headerlink" href="#results" title="Link to this heading"></a></h2>
+<section id="report">
+<h2>Report<a class="headerlink" href="#report" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="http://127.0.0.1:5501/htmlcov/">Open the report</a></p>
+<hr class="docutils" />
 </section>
 </section>
 

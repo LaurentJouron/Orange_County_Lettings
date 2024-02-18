@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Description" href="description.html" />
-    <link rel="prev" title="Coverage" href="coverage.html" /> 
+    <link rel="prev" title="Circle CI" href="circleci.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,7 +50,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="coverage.html"><strong>Coverage</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Data structure</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#specifications">Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#address">Address</a></li>
@@ -93,19 +92,45 @@
              
   <section id="data-structure">
 <span id="id1"></span><h1><strong>Data structure</strong><a class="headerlink" href="#data-structure" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<a class="reference external image-reference" href="https://www.sqlite.org/index.html"><img alt="Sqlite Badge" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&amp;logo=sqlite&amp;logoColor=white" /></a>
+<p>Parameterizations are done to a specific project. To parameterize to the other project, go to the official
+documentation <a class="reference external" href="https://www.sqlite.org/index.html">SQLite</a>.</p>
+</div>
 <hr class="docutils" />
 <section id="specifications">
 <h2>Specifications<a class="headerlink" href="#specifications" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>Position yourself in the root folder of the project <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">oc_lettings_site</span></code></p></li>
-<li><p>Open a shell session <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code></p></li>
-<li><p>Connection to the database <code class="docutils literal notranslate"><span class="pre">.open</span> <span class="pre">oc-lettings-site.sqlite3</span></code></p></li>
-<li><p>Displays the database tables <code class="docutils literal notranslate"><span class="pre">.tables</span></code></p></li>
-<li><p>Displays the profiles, pragma <code class="docutils literal notranslate"><span class="pre">table_info(oc_lettings_site_profile)</span></code></p></li>
-<li><p>Create a query on the profile table:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">user_id,</span> <span class="pre">favorite_city</span> <span class="pre">from</span> <span class="pre">oc_lettings_site_profile</span> <span class="pre">where</span> <span class="pre">favorite_city</span> <span class="pre">like</span> <span class="pre">'B%';</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.quit</span></code> to leave</p></li>
-</ul>
+<p class="rubric">Change directory</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd oc_lettings_site</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Open a shell session</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.open oc-lettings-site.sqlite3</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Displays the database tables</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.tables</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Displays the profiles, pragma</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">table_info(oc_lettings_site_profile)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">Create a query on the profile table:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">favorite_city</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">oc_lettings_site_profile</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">favorite_city</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;B%&#39;</span><span class="p">;</span><span class="o">``</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric">to leave</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.quit</span>
+</pre></div>
+</div>
+<hr class="docutils" />
 <p>To have a graphical interface, it is better to use the free software <a class="reference external" href="https://sqlitebrowser.org/dl/">DB Browser for SQLite</a>.</p>
 </section>
 <hr class="docutils" />
@@ -210,7 +235,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="coverage.html" class="btn btn-neutral float-left" title="Coverage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="circleci.html" class="btn btn-neutral float-left" title="Circle CI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="description.html" class="btn btn-neutral float-right" title="Description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -71,6 +71,10 @@ Technology
    :alt: Sphinx Badge
    :target: https://www.sphinx-doc.org/
 
+.. image:: https://img.shields.io/badge/pytest--django-%232C8736.svg?style=for-the-badge&logo=pytest&logoColor=white
+   :alt: Pytest-Django Badge
+   :target: https://pytest-django.readthedocs.io/en/latest/
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***********
@@ -158,7 +162,6 @@ Indices and tables
             :maxdepth: 3
 
             circleci
-            coverage
             data_structure
             description
             docker

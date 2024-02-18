@@ -97,12 +97,17 @@
 <hr class="docutils" />
 <section id="creation">
 <h2>Creation<a class="headerlink" href="#creation" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<a class="reference external image-reference" href="https://www.sphinx-doc.org/en/master/index.html"><img alt="Sphinx Badge" src="https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&amp;logo=sphinx&amp;logoColor=white" /></a>
 <p><code class="docutils literal notranslate"><span class="pre">After</span> <span class="pre">creating</span> <span class="pre">the</span> <span class="pre">project</span></code> and activating the virtual environment, you can start.
-To start create documentation, you must <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">install Sphinx</a> it and create the package.</p>
+To start create documentation, you must install <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a></p>
+</div>
+<p class="rubric">Install Sphinx</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pipenv install sphinx</span>
 </pre></div>
 </div>
-<p>Creating the documentation layout</p>
+<p class="rubric">Creating the documentation layout</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-quickstart docs</span>
 </pre></div>
 </div>
@@ -124,37 +129,24 @@ project inside the docs folder. To proceed, answer each question as follows:</p>
 <a class="reference internal image-reference" href="_images/doc_project.png"><img alt="Logo" src="_images/doc_project.png" style="width: 200.25px; height: 135.75px;" /></a>
 </figure>
 <p>The purpose of each of these files is:</p>
-<ul>
-<li><dl class="simple">
-<dt>build/</dt><dd><ul class="simple">
+<p class="rubric">build/</p>
+<ul class="simple">
 <li><p>An empty directory (for now) that will hold the rendered documentation.</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>make.bat and Makefile</dt><dd><ul class="simple">
+<p class="rubric">make.bat and Makefile</p>
+<ul class="simple">
 <li><p>Convenience scripts to simplify some common Sphinx operations, such as rendering the content.</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>source/conf.py</dt><dd><ul class="simple">
+<p class="rubric">source/conf.py</p>
+<ul class="simple">
 <li><p>A Python script holding the configuration of the Sphinx project. It contains the project name and release</p></li>
 </ul>
 <p>you specified to sphinx-quickstart, as well as some extra configuration keys.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>source/index.rst</dt><dd><ul class="simple">
+<p class="rubric">source/index.rst</p>
+<ul class="simple">
 <li><p>The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-</ul>
+<p class="rubric">Build docs/build/</p>
 <p>Thanks to this bootstrapping step, you already have everything needed to render the documentation as HTML for the first time.
 To do that, run this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-build -M html docs/source/ docs/build/</span>
@@ -164,9 +156,12 @@ To do that, run this command:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/doc_view.png"><img alt="Logo" src="_images/doc_view.png" style="width: 437.25px; height: 141.0px;" /></a>
 </figure>
+<p class="rubric">Position yourself in the docs folder</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd docs</span>
 </pre></div>
 </div>
+<p class="rubric">make html</p>
+<p>This command must be retained because this command will be repeated with each modification.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\make html</span>
 </pre></div>
 </div>

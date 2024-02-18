@@ -9,14 +9,25 @@
 Creation
 ********
 
-``After creating the project`` and activating the virtual environment, you can start.
-To start create documentation, you must `install Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ it and create the package.
+.. important::
+
+    .. image:: https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&logo=sphinx&logoColor=white
+        :alt: Sphinx Badge
+        :target: https://www.sphinx-doc.org/en/master/index.html
+    
+    ``After creating the project`` and activating the virtual environment, you can start.
+    To start create documentation, you must install `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ 
+    
+
+
+.. rubric:: Install Sphinx
 
 .. code-block:: console
 
    pipenv install sphinx
 
-Creating the documentation layout
+
+.. rubric:: Creating the documentation layout
 
 .. code-block:: console
 
@@ -50,21 +61,33 @@ After the last question, you will see the new docs directory with the following 
 
 The purpose of each of these files is:
 
-* build/
-    * An empty directory (for now) that will hold the rendered documentation.
 
-* make.bat and Makefile
-    * Convenience scripts to simplify some common Sphinx operations, such as rendering the content.
+.. rubric:: build/
+    
+* An empty directory (for now) that will hold the rendered documentation.
 
-* source/conf.py
-    * A Python script holding the configuration of the Sphinx project. It contains the project name and release 
-    you specified to sphinx-quickstart, as well as some extra configuration keys.
 
-* source/index.rst
-    * The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
+.. rubric:: make.bat and Makefile
+
+* Convenience scripts to simplify some common Sphinx operations, such as rendering the content.
+
+
+.. rubric:: source/conf.py
+
+* A Python script holding the configuration of the Sphinx project. It contains the project name and release 
+you specified to sphinx-quickstart, as well as some extra configuration keys.
+
+
+.. rubric:: source/index.rst
+    
+* The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
+
+
+.. rubric:: Build docs/build/
 
 Thanks to this bootstrapping step, you already have everything needed to render the documentation as HTML for the first time. 
 To do that, run this command:
+
 
 .. code-block:: console
 
@@ -77,9 +100,17 @@ And finally, open docs/build/html/index.html in your browser. You should see som
    :align: center
    :alt: Logo
 
+
+.. rubric:: Position yourself in the docs folder
+
 .. code-block:: console
 
    cd docs
+
+
+.. rubric:: make html
+
+This command must be retained because this command will be repeated with each modification.
 
 .. code-block:: console
 

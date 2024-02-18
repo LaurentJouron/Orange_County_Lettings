@@ -1,6 +1,10 @@
 [
   "tests/test_lettings/test_address_models.py::test_address_model",
   "tests/test_lettings/test_index_urls.py::test_index_url",
+  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_index_view_with_lettings",
+  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_index_view_with_no_lettings",
+  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_letting_view_with_existing_letting",
+  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_letting_view_with_nonexistent_letting",
   "tests/test_lettings/test_index_views.py::test_index_view",
   "tests/test_lettings/test_index_views.py::test_index_view_no_lettings",
   "tests/test_lettings/test_letting_urls.py::test_letting_url",

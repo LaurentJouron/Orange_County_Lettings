@@ -3,12 +3,13 @@
 **Quick start**
 ===============
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 There are several solutions to install the project. The easiest for quick use is as follows:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start by ``cloning the project`` with this command:
+.. rubric:: Clone
 
 .. code-block:: console
 
@@ -17,7 +18,7 @@ Start by ``cloning the project`` with this command:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Place yourself ``inside the project``:
+.. rubric:: Change directory in the project:
 
 .. code-block:: console
 
@@ -26,15 +27,16 @@ Place yourself ``inside the project``:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Create a ``.venv`` folder to access the ``virtual environment``
+.. rubric:: Create virtual environment folder
 
 .. code-block:: console
 
    mkdir .venv
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Install the ``necessary environment``
+.. rubric:: Install virtual environment
 
 .. code-block:: console
 
@@ -49,7 +51,7 @@ or
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-``Activate`` the virtual environment
+.. rubric:: Activate environment
 
 .. code-block:: console
 
@@ -61,9 +63,10 @@ or
 
    pip shell
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-It remains only to ``launch the project`` to be able to browse it.
+.. rubric:: Launch local project.
 
 .. code-block:: console
    
@@ -75,5 +78,6 @@ It remains only to ``launch the project`` to be able to browse it.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. note::
+
    This way of installation is the simplest. On the other hand, this use is local, which means that nothing is found 
    on the internet and is accessible only on the computer you are using.

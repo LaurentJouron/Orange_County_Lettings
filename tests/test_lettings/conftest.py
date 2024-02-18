@@ -68,7 +68,7 @@ def address_fixture(monkeypatch, fake_address_fixture):
 @pytest.fixture
 def lettings_fixture(monkeypatch, fake_letting_fixture):
     monkeypatch.setattr(
-        "letting.models.Letting",
+        "lettings.models.Letting",
         lambda: fake_letting_fixture,
     )
     return {"lettings": fake_letting_fixture}

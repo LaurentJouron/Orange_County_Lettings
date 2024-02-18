@@ -3,20 +3,75 @@
 **Data structure**
 ==================
 
+.. important::
+
+    .. image:: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
+        :alt: Sqlite Badge
+        :target: https://www.sqlite.org/index.html
+
+    Parameterizations are done to a specific project. To parameterize to the other project, go to the official 
+    documentation `SQLite <https://www.sqlite.org/index.html>`_.
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***************************
 Specifications
 ***************************
 
-* Position yourself in the root folder of the project ``cd oc_lettings_site``
-* Open a shell session ``sqlite3``
-* Connection to the database ``.open oc-lettings-site.sqlite3``
-* Displays the database tables ``.tables``
-* Displays the profiles, pragma ``table_info(oc_lettings_site_profile)``
-* Create a query on the profile table:
-* ``select user_id, favorite_city from oc_lettings_site_profile where favorite_city like 'B%';``
-* ``.quit`` to leave
+.. rubric:: Change directory
+
+.. code-block:: console
+
+   cd oc_lettings_site
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Open a shell session
+
+.. code-block:: console
+
+   .open oc-lettings-site.sqlite3
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Displays the database tables
+
+.. code-block:: console
+
+   .tables
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Displays the profiles, pragma 
+   
+.. code-block:: console
+
+   table_info(oc_lettings_site_profile)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Create a query on the profile table:
+
+.. code-block:: sql
+   
+   select user_id, favorite_city from oc_lettings_site_profile where favorite_city like 'B%';``
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: to leave
+
+.. code-block:: console
+
+   .quit
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To have a graphical interface, it is better to use the free software `DB Browser for SQLite <https://sqlitebrowser.org/dl/>`_.
 

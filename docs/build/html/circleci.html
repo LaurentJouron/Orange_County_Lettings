@@ -24,7 +24,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Coverage" href="coverage.html" />
+    <link rel="next" title="Data structure" href="data_structure.html" />
     <link rel="prev" title="Reception" href="index.html" /> 
 </head>
 
@@ -50,18 +50,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Circle CI</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-circleci">What is CircleCi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pipline-ci-cd">Pipline CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#project">Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deployer-la-configuration-une-fois-que-vous-etes-satisfait-de-votre-configuration-deployez-la-sur-votre-compte-circleci-et-associez-la-a-votre-depot-git">Déployer la configuration : Une fois que vous êtes satisfait de votre configuration, déployez-la sur votre compte CircleCI et associez-la à votre dépôt Git.</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#readthedocs">readthedocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#conf-py">conf.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requirements-txt">requirements.txt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#schema-of-the-doc">Schema of the doc</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="coverage.html"><strong>Coverage</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
@@ -97,31 +90,121 @@
              
   <section id="circle-ci">
 <span id="circleci"></span><h1><strong>Circle CI</strong><a class="headerlink" href="#circle-ci" title="Link to this heading"></a></h1>
-<p>CircleCI is a continuous integration and continuous deployment (CI/CD) tool widely used in software development.
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<a class="reference external image-reference" href="https://circleci.com/docs/"><img alt="CircleCi Badge" src="https://img.shields.io/badge/circle%20ci-%23161616.svg?style=for-the-badge&amp;logo=circleci&amp;logoColor=white" /></a>
+<p>Parameterizations are done to a specific project. To parameterize to the other project, go to the official
+documentation.</p>
+</div>
+<hr class="docutils" />
+<section id="what-is-circleci">
+<h2>What is CircleCi<a class="headerlink" href="#what-is-circleci" title="Link to this heading"></a></h2>
+<p>CircleCI is a continuous integration and continuous deployment (CI/CD)
+tool widely used in software development.
 Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.</p>
+</section>
 <hr class="docutils" />
 <section id="pipline-ci-cd">
 <h2>Pipline CI/CD<a class="headerlink" href="#pipline-ci-cd" title="Link to this heading"></a></h2>
 <p>A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a
 series of automated steps that are executed in a specific order to test and deploy the code consistently
 and reliably.</p>
+</section>
+<hr class="docutils" />
+<section id="conf-py">
+<h2>conf.py<a class="headerlink" href="#conf-py" title="Link to this heading"></a></h2>
+<p class="rubric">Create a folder .circleci</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir .circleci</span>
+</pre></div>
+</div>
+<p class="rubric">Place in it</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd .circleci</span>
+</pre></div>
+</div>
+<p class="rubric">Create a file conf.py for Unix/Linux/macOS</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">touch conf.py</span>
+</pre></div>
+</div>
+<p class="rubric">Create a file conf.py for Windows</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;version: 2.1&quot; &gt; conf.py</span>
+</pre></div>
+</div>
+<p class="rubric">conf.py script</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
 
+<span class="n">orbs</span><span class="p">:</span>
+<span class="n">python</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">python</span><span class="o">@</span><span class="mf">2.1.1</span>
+
 <span class="n">jobs</span><span class="p">:</span>
-<span class="n">build</span><span class="p">:</span>
+<span class="n">build_and_test</span><span class="p">:</span> <span class="n">build</span> <span class="ow">and</span> <span class="n">test</span>
     <span class="n">docker</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">python</span><span class="p">:</span><span class="mf">3.12</span>
+    <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+
     <span class="n">steps</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">checkout</span>
-    <span class="o">-</span> <span class="n">run</span><span class="p">:</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-    <span class="o">-</span> <span class="n">run</span><span class="p">:</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
-    <span class="o">-</span> <span class="n">run</span><span class="p">:</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+    <span class="o">-</span> <span class="n">python</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">packages</span><span class="p">:</span>
+        <span class="n">pkg</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span> <span class="n">pipenv</span>
+        <span class="n">pip</span><span class="o">-</span><span class="n">dependency</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">check</span> <span class="n">test</span> <span class="k">with</span> <span class="n">Pytest</span>
+        <span class="n">command</span><span class="p">:</span> <span class="n">pytest</span> <span class="o">--</span><span class="n">nomigrations</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">warnings</span>
+
+<span class="n">flake8</span><span class="p">:</span>
+    <span class="n">docker</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+    <span class="n">steps</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">checkout</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Install</span> <span class="n">Flake8</span>
+        <span class="n">command</span><span class="p">:</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">flake8</span><span class="o">==</span><span class="mf">3.7.0</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">check</span> <span class="n">linting</span> <span class="k">with</span> <span class="n">Flake8</span>
+        <span class="n">command</span><span class="p">:</span> <span class="n">flake8</span>
+
+<span class="n">build</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="p">:</span>
+    <span class="n">docker</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+    <span class="n">steps</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">checkout</span>
+    <span class="o">-</span> <span class="n">setup_remote_docker</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="n">docker</span> <span class="n">image</span>
+        <span class="n">command</span><span class="p">:</span>
+            <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="err">$</span><span class="n">DOCKER_IMAGE</span><span class="p">:</span><span class="n">latest</span> <span class="o">.</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Connect</span> <span class="n">to</span> <span class="n">Docker</span> <span class="n">Hub</span>
+        <span class="n">command</span><span class="p">:</span>
+            <span class="n">echo</span> <span class="s2">&quot;$DOCKER_HUB_PASSWORD&quot;</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">login</span> <span class="o">-</span><span class="n">u</span> <span class="s2">&quot;$DOCKER_HUB_USER_ID&quot;</span> <span class="o">--</span><span class="n">password</span><span class="o">-</span><span class="n">stdin</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Push</span> <span class="n">docker</span> <span class="n">image</span>
+        <span class="n">command</span><span class="p">:</span>
+            <span class="n">docker</span> <span class="n">tag</span> <span class="err">$</span><span class="n">DOCKER_IMAGE</span> <span class="err">$</span><span class="n">DOCKER_IMAGE</span> <span class="o">|</span>
+            <span class="n">docker</span> <span class="n">push</span> <span class="err">$</span><span class="n">DOCKER_IMAGE</span>
+
+<span class="n">deploy</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dockerhub</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">render</span><span class="p">:</span>
+    <span class="n">docker</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">curlimages</span><span class="o">/</span><span class="n">curl</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">steps</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Deploy</span> <span class="n">docker</span> <span class="n">hub</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Render</span>
+        <span class="n">command</span><span class="p">:</span> <span class="n">curl</span> <span class="err">$</span><span class="n">DEPLOY_HOOK</span>
 
 <span class="n">workflows</span><span class="p">:</span>
-<span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
-<span class="n">build_and_deploy</span><span class="p">:</span>
+<span class="n">run_tests_and_build_docker</span><span class="p">:</span>
     <span class="n">jobs</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">build</span>
+    <span class="o">-</span> <span class="n">flake8</span>
+    <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="p">:</span>
+        <span class="n">filters</span><span class="p">:</span>
+            <span class="n">branches</span><span class="p">:</span>
+            <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
+        <span class="n">requires</span><span class="p">:</span>
+            <span class="o">-</span> <span class="n">flake8</span>
+    <span class="o">-</span> <span class="n">deploy</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dockerhub</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">render</span><span class="p">:</span>
+        <span class="n">filters</span><span class="p">:</span>
+            <span class="n">branches</span><span class="p">:</span>
+            <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
+        <span class="n">requires</span><span class="p">:</span>
+            <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -129,34 +212,16 @@ and reliably.</p>
 <li><p>Steps in this job include retrieving source code, installing dependencies, running database migrations, and running tests.</p></li>
 <li><p>Then we define a workflow named “build_and_deploy” which simply includes the “build” job.</p></li>
 </ul>
-</section>
 <hr class="docutils" />
-<section id="project">
-<h2>Project<a class="headerlink" href="#project" title="Link to this heading"></a></h2>
-<p>Définir les étapes de la pipeline : Identifiez les différentes étapes nécessaires pour tester et déployer votre application. Cela peut inclure des étapes telles que la compilation du code, l’exécution des tests, la construction d’images Docker, et le déploiement sur des serveurs ou des plateformes de cloud.</p>
-<p>Créer un fichier de configuration : CircleCI utilise un fichier de configuration YAML (généralement nommé .circleci/config.yml) pour définir votre pipeline. Ce fichier contient les étapes à exécuter, ainsi que les dépendances et les paramètres nécessaires.</p>
-<p>Configurer les déclencheurs : Déterminez les événements qui doivent déclencher l’exécution de votre pipeline. Cela peut inclure des commits sur certaines branches de votre dépôt Git, des demandes de fusion (pull requests), ou des déclencheurs planifiés.</p>
-<p>Configurer les jobs : Définissez les différentes tâches à exécuter dans votre pipeline en tant que jobs. Chaque job représente une étape de votre pipeline, comme la compilation, les tests unitaires, les tests d’intégration, etc.</p>
-<p>Configurer les workflows : Les workflows permettent de définir l’ordre dans lequel les jobs doivent être exécutés et les conditions sous lesquelles ils doivent l’être. Vous pouvez définir des workflows pour gérer différentes branches de votre dépôt, des événements spécifiques, ou des conditions personnalisées.</p>
-<p>Tester la configuration : Avant de déployer votre pipeline en production, assurez-vous de la tester localement ou sur des environnements de développement pour vous assurer qu’elle fonctionne comme prévu.</p>
-<section id="deployer-la-configuration-une-fois-que-vous-etes-satisfait-de-votre-configuration-deployez-la-sur-votre-compte-circleci-et-associez-la-a-votre-depot-git">
-<h3>Déployer la configuration : Une fois que vous êtes satisfait de votre configuration, déployez-la sur votre compte CircleCI et associez-la à votre dépôt Git.<a class="headerlink" href="#deployer-la-configuration-une-fois-que-vous-etes-satisfait-de-votre-configuration-deployez-la-sur-votre-compte-circleci-et-associez-la-a-votre-depot-git" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="readthedocs">
-<h2>readthedocs<a class="headerlink" href="#readthedocs" title="Link to this heading"></a></h2>
-</section>
 <hr class="docutils" />
-<section id="conf-py">
-<h2>conf.py<a class="headerlink" href="#conf-py" title="Link to this heading"></a></h2>
-</section>
 <hr class="docutils" />
-<section id="requirements-txt">
-<h2>requirements.txt<a class="headerlink" href="#requirements-txt" title="Link to this heading"></a></h2>
-</section>
 <hr class="docutils" />
-<section id="schema-of-the-doc">
-<h2>Schema of the doc<a class="headerlink" href="#schema-of-the-doc" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
 <hr class="docutils" />
 <hr class="docutils" />
 <hr class="docutils" />
@@ -168,7 +233,7 @@ and reliably.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Reception" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="coverage.html" class="btn btn-neutral float-right" title="Coverage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="data_structure.html" class="btn btn-neutral float-right" title="Data structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
