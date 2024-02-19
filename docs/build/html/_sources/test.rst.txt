@@ -8,6 +8,10 @@
     .. image:: https://img.shields.io/badge/pytest--django-%232C8736.svg?style=for-the-badge&logo=pytest&logoColor=white
         :alt: Pytest-Django Badge
         :target: https://pytest-django.readthedocs.io/en/latest/
+
+    .. image:: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
+        :alt: Django Badge
+        :target: https://www.djangoproject.com/
     
     The configuration below is very inspired by the official file `pytest-django <https://pytest-django.readthedocs.io/en/latest/>`_ 
 
@@ -52,6 +56,15 @@ Run your tests with ``pytest``:
 
     pytest
 
+.. _ma_figure:
+
+.. figure:: _static/pytest.png
+   :scale: 50
+   :align: center
+   :alt: test vvv
+
+   :download:`Download <_static/pytest.png>`
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: pytest -vvv
@@ -62,16 +75,33 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
     pytest -vvv
 
+.. _ma_figure:
+
+.. figure:: _static/test_vvv.png
+   :scale: 50
+   :align: center
+   :alt: test vvv
+
+   :download:`Download <_static/test_vvv.png>`
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: pytest --cov=. tests/
 
-To measure the test coverage of a project, run pytest with the ``--cov`` 
-option to specify the folder to be analyzed:
+To measure the test coverage of a project, run pytest with the ``--cov`` option to specify the folder to be analyzed:
 
 .. code-block:: console
 
     pytest --cov=. tests/
+
+.. _ma_figure:
+
+.. figure:: _static/cov_test.png
+   :scale: 50
+   :align: center
+   :alt: cov test
+
+   :download:`Download <_static/cov_test.png>`
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -84,6 +114,15 @@ To generate an HTML report automatically, use the ``--cov-report html`` option w
     pytest --cov=. --cov-report html
 
 Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view the report.
+
+.. _ma_figure:
+
+.. figure:: _static/cov_report.png
+   :scale: 50
+   :align: center
+   :alt: Resport test
+
+   :download:`Download <_static/cov_report.png>`
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -13,6 +13,7 @@
 
    This documentation was carried out as part of a training in computer development. It cannot be taken for official documentation.
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********
@@ -47,6 +48,10 @@ Technology
    :alt: HTML5 Badge
    :target: https://jaetheme.com/balises-html5/
 
+.. image:: https://img.shields.io/badge/css-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+   :alt: CSS Badge
+   :target: https://developer.mozilla.org/fr/docs/Web/CSS
+
 .. image:: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
    :alt: Docker Badge
    :target: https://docs.docker.com/
@@ -75,6 +80,7 @@ Technology
    :alt: Pytest-Django Badge
    :target: https://pytest-django.readthedocs.io/en/latest/
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***********
@@ -93,6 +99,7 @@ Information
 
 * **Document status** : In work
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ****
@@ -107,6 +114,7 @@ Logo
    :alt: Logo
 
    :download:`Download <_static/logo.png>`
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -125,6 +133,7 @@ Image with logo
 
    :download:`Download <_static/Orange_County_Lettings_logo.png>`
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *********
@@ -142,6 +151,7 @@ Home page
 
    :download:`Download <_static/home_page.png>`
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *****
@@ -152,6 +162,7 @@ Links
 * By going to description you get more details on the :ref:`description <description>` evolution of the project.
 * Come and see the structure of the :ref:`database <data_structure>`.
 * To see the configuration of the doc with `Sphinx <https://www.sphinx-doc.org/>`_ , I invite you to go to the :ref:`documentation <documentation>` tab.
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

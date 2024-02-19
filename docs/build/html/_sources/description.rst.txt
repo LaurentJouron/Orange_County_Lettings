@@ -23,15 +23,18 @@ Following the instructions of the README, it is possible to:
 * Run the linting locally.
 * Run the test suite locally.
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-************
-Prerequisite
-************
+*************
+Pre-requisite
+*************
 
 * GitHub account with read access to this repository
+* Git CLI
 * SQLite3 CLI or various graphics software
 * Python interpreter version 3.6 or higher
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -51,6 +54,7 @@ To do
 * Moving an image with Docker
 * Test automation and integration with CircleCi
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *****************
@@ -64,6 +68,8 @@ Our app offers a smooth and intuitive user experience for landlords and tenants,
 With a robust modular architecture and advanced features, Orange County Lettings is committed to providing high-quality 
 service while remaining at the forefront of technology.
 
-`Open the GitHub repository <https://github.com/LaurentJouron/EpicEvents>`_
+`Open the GitHub repository <https://github.com/LaurentJouron/Orange_County_Lettings>`_
 
 Join us today and discover a new way to rent and manage real estate with ease and efficiency.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

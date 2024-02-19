@@ -50,7 +50,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="coverage.html"><strong>Coverage</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
@@ -100,13 +99,15 @@
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <a class="reference external image-reference" href="https://www.sphinx-doc.org/en/master/index.html"><img alt="Sphinx Badge" src="https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&amp;logo=sphinx&amp;logoColor=white" /></a>
-<p><code class="docutils literal notranslate"><span class="pre">After</span> <span class="pre">creating</span> <span class="pre">the</span> <span class="pre">project</span></code> and activating the virtual environment, you can start.
+<p><strong>After creating the project</strong> and activating the virtual environment, you can start.
 To start create documentation, you must install <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a></p>
 </div>
+<hr class="docutils" />
 <p class="rubric">Install Sphinx</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pipenv install sphinx</span>
 </pre></div>
 </div>
+<hr class="docutils" />
 <p class="rubric">Creating the documentation layout</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-quickstart docs</span>
 </pre></div>
@@ -114,10 +115,10 @@ To start create documentation, you must install <a class="reference external" hr
 <p>This will present to you a series of questions required to create the basic directory and configuration layout for your
 project inside the docs folder. To proceed, answer each question as follows:</p>
 <ul class="simple">
-<li><p>Separate source and build directories (y/n) [n]: Write “y” (without quotes) and press Enter.</p></li>
-<li><p>Project name: Write “Lumache” (without quotes) and press Enter.</p></li>
-<li><p>Author name(s): Write “Graziella” (without quotes) and press Enter.</p></li>
-<li><p>Project release []: Write “0.1” (without quotes) and press Enter.</p></li>
+<li><p>Separate source and build directories (y/n) [n]: y</p></li>
+<li><p>Project name: Orange County Lettings</p></li>
+<li><p>Author name: Laurent Jouron</p></li>
+<li><p>Project release []: 0.1</p></li>
 <li><p>Project language [en]: Leave it empty (the default, English) and press Enter.</p></li>
 </ul>
 </section>
@@ -126,8 +127,9 @@ project inside the docs folder. To proceed, answer each question as follows:</p>
 <h2>Project<a class="headerlink" href="#project" title="Link to this heading"></a></h2>
 <p>After the last question, you will see the new docs directory with the following content.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/doc_project.png"><img alt="Logo" src="_images/doc_project.png" style="width: 200.25px; height: 135.75px;" /></a>
+<a class="reference internal image-reference" href="_images/doc_project.png"><img alt="doc project" src="_images/doc_project.png" style="width: 200.25px; height: 135.75px;" /></a>
 </figure>
+<hr class="docutils" />
 <p>The purpose of each of these files is:</p>
 <p class="rubric">build/</p>
 <ul class="simple">
@@ -146,6 +148,7 @@ project inside the docs folder. To proceed, answer each question as follows:</p>
 <ul class="simple">
 <li><p>The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).</p></li>
 </ul>
+<hr class="docutils" />
 <p class="rubric">Build docs/build/</p>
 <p>Thanks to this bootstrapping step, you already have everything needed to render the documentation as HTML for the first time.
 To do that, run this command:</p>
@@ -156,6 +159,7 @@ To do that, run this command:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/doc_view.png"><img alt="Logo" src="_images/doc_view.png" style="width: 437.25px; height: 141.0px;" /></a>
 </figure>
+<hr class="docutils" />
 <p class="rubric">Position yourself in the docs folder</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd docs</span>
 </pre></div>

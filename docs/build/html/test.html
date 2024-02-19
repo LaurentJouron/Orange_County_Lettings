@@ -92,6 +92,7 @@
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <a class="reference external image-reference" href="https://pytest-django.readthedocs.io/en/latest/"><img alt="Pytest-Django Badge" src="https://img.shields.io/badge/pytest--django-%232C8736.svg?style=for-the-badge&amp;logo=pytest&amp;logoColor=white" /></a>
+<a class="reference external image-reference" href="https://www.djangoproject.com/"><img alt="Django Badge" src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&amp;logo=django&amp;logoColor=white" /></a>
 <p>The configuration below is very inspired by the official file <a class="reference external" href="https://pytest-django.readthedocs.io/en/latest/">pytest-django</a></p>
 </div>
 <p>pytest-django is a plugin for <a class="reference external" href="https://docs.pytest.org/en/8.0.x/">pytest</a>  that provides a set of useful tools
@@ -121,19 +122,36 @@ and make your tests discoverable (<a class="reference external" href="https://py
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span>
 </pre></div>
 </div>
+<figure class="align-center" id="id5">
+<span id="ma-figure"></span><a class="reference internal image-reference" href="_images/pytest.png"><img alt="test vvv" src="_images/pytest.png" style="width: 652.0px; height: 72.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/a2e596beff18c2aa1687aef6952907ca/pytest.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 <hr class="docutils" />
 <p class="rubric">pytest -vvv</p>
 <p>To view test details in the terminal, use the <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> option with pytest:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest -vvv</span>
 </pre></div>
 </div>
+<figure class="align-center" id="id6">
+<span id="id2"></span><a class="reference internal image-reference" href="_images/test_vvv.png"><img alt="test vvv" src="_images/test_vvv.png" style="width: 647.5px; height: 71.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/473a2d15fbad80db683ee4396a4af6bb/test_vvv.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 <hr class="docutils" />
 <p class="rubric">pytest –cov=. tests/</p>
-<p>To measure the test coverage of a project, run pytest with the <code class="docutils literal notranslate"><span class="pre">--cov</span></code>
-option to specify the folder to be analyzed:</p>
+<p>To measure the test coverage of a project, run pytest with the <code class="docutils literal notranslate"><span class="pre">--cov</span></code> option to specify the folder to be analyzed:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest --cov=. tests/</span>
 </pre></div>
 </div>
+<figure class="align-center" id="id7">
+<span id="id3"></span><a class="reference internal image-reference" href="_images/cov_test.png"><img alt="cov test" src="_images/cov_test.png" style="width: 506.0px; height: 424.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/1c0be7607d8dc722107bf771d11052f8/cov_test.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 <hr class="docutils" />
 <p class="rubric">pytest –cov=. –cov-report html</p>
 <p>To generate an HTML report automatically, use the <code class="docutils literal notranslate"><span class="pre">--cov-report</span> <span class="pre">html</span></code> option with pytest:</p>
@@ -141,6 +159,12 @@ option to specify the folder to be analyzed:</p>
 </pre></div>
 </div>
 <p>Then, open the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> folder and launch <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in a browser to view the report.</p>
+<figure class="align-center" id="id8">
+<span id="id4"></span><a class="reference internal image-reference" href="_images/cov_report.png"><img alt="Resport test" src="_images/cov_report.png" style="width: 716.0px; height: 435.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/6d9e65e81c7dd213f28b199920f5f993/cov_report.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <hr class="docutils" />
 <section id="report">

@@ -3,6 +3,12 @@
 **Quick start**
 ===============
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. note::
+
+   This way of installation is the simplest. On the other hand, this use is local, which means that nothing is found 
+   on the internet and is accessible only on the computer you are using.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 There are several solutions to install the project. The easiest for quick use is as follows:
@@ -42,12 +48,6 @@ There are several solutions to install the project. The easiest for quick use is
 
    pipenv install
 
-or
-
-.. code-block:: console
-
-   pip install
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,27 +57,19 @@ or
 
    pipenv shell
 
-or
-
-.. code-block:: console
-
-   pip shell
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Launch local project.
+.. rubric:: Launch local project
 
 .. code-block:: console
    
    python manage.py runserver
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Go to the local website by clicking on the link
 
 `Open the website <http://localhost:8000>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.. note::
-
-   This way of installation is the simplest. On the other hand, this use is local, which means that nothing is found 
-   on the internet and is accessible only on the computer you are using.

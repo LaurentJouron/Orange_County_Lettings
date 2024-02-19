@@ -15,10 +15,11 @@ Creation
         :alt: Sphinx Badge
         :target: https://www.sphinx-doc.org/en/master/index.html
     
-    ``After creating the project`` and activating the virtual environment, you can start.
+    **After creating the project** and activating the virtual environment, you can start.
     To start create documentation, you must install `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ 
     
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: Install Sphinx
 
@@ -26,6 +27,7 @@ Creation
 
    pipenv install sphinx
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: Creating the documentation layout
 
@@ -36,13 +38,13 @@ Creation
 This will present to you a series of questions required to create the basic directory and configuration layout for your 
 project inside the docs folder. To proceed, answer each question as follows:
 
-* Separate source and build directories (y/n) [n]: Write “y” (without quotes) and press Enter.
+* Separate source and build directories (y/n) [n]: y
 
-* Project name: Write “Lumache” (without quotes) and press Enter.
+* Project name: Orange County Lettings
 
-* Author name(s): Write “Graziella” (without quotes) and press Enter.
+* Author name: Laurent Jouron
 
-* Project release []: Write “0.1” (without quotes) and press Enter.
+* Project release []: 0.1
 
 * Project language [en]: Leave it empty (the default, English) and press Enter.
 
@@ -57,10 +59,12 @@ After the last question, you will see the new docs directory with the following 
 .. figure:: _static/doc_project.png
    :scale: 75
    :align: center
-   :alt: Logo
+   :alt: doc project
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The purpose of each of these files is:
-
 
 .. rubric:: build/
     
@@ -82,6 +86,7 @@ you specified to sphinx-quickstart, as well as some extra configuration keys.
     
 * The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: Build docs/build/
 
@@ -100,6 +105,7 @@ And finally, open docs/build/html/index.html in your browser. You should see som
    :align: center
    :alt: Logo
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: Position yourself in the docs folder
 
