@@ -86,13 +86,13 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: pytest --cov=. tests/
+.. rubric:: pytest --cov=.
 
 To measure the test coverage of a project, run pytest with the ``--cov`` option to specify the folder to be analyzed:
 
 .. code-block:: console
 
-    pytest --cov=. tests/
+    pytest --cov=.
 
 .. _ma_figure:
 
@@ -117,12 +117,12 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
 
 .. _ma_figure:
 
-.. figure:: _static/cov_report.png
+.. figure:: _static/report_test.png
    :scale: 50
    :align: center
    :alt: Resport test
 
-   :download:`Download <_static/cov_report.png>`
+   :download:`Download <_static/report_test.png>`
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
