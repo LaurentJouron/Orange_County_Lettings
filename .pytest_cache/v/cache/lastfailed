@@ -9,5 +9,15 @@
   "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_index_view_with_lettings": true,
   "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_index_view_with_no_lettings": true,
   "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_letting_view_with_existing_letting": true,
-  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_letting_view_with_nonexistent_letting": true
+  "tests/test_lettings/test_index_views.py::LettingViewsTestCase::test_letting_view_with_nonexistent_letting": true,
+  "lettings/test_lettings/test_lettings.py::TestLettings::test_access_existing_letting": true,
+  "lettings/test_lettings/test_lettings.py::TestLettings::test_access_unavailable_letting_page": true,
+  "lettings/test_lettings/test_lettings.py::TestLettings::test_access_unexisting_letting": true,
+  "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::TestOcLettingsSite::test_access_unavailable_page": true,
+  "profiles/test_profiles/test_profiles.py::TestProfiles::test_access_existing_profile": true,
+  "profiles/test_profiles/test_profiles.py::TestProfiles::test_access_unexisting_profile": true,
+  "profiles/test_profiles/test_profiles.py::TestProfiles::test_access_unexisting_profile_page": true,
+  "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::test_letting_url": true,
+  "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::test_letting_view": true,
+  "lettings/test_lettings/test_lettings.py::test_address_model": true
 }

@@ -1,74 +1,26 @@
 import pytest
-from lettings.models import Address, Letting
+from lettings.models import Address
 
 
 @pytest.fixture
-def fake_address_fixture():
-    return [
-        Address(
-            id="1",
-            number="7217",
-            street="Bedford Street",
-            city="Brunswick",
-            state="GA",
-            zip_code="31525",
-            country_iso_code="USA",
-        ),
-        Address(
-            id="2",
-            number="4",
-            street="Military Street",
-            city="Willoughby",
-            state="OH",
-            zip_code="44094",
-            country_iso_code="USA",
-        ),
-        Address(
-            id="3",
-            number="340",
-            street="Wintergreen Avenue",
-            city="Newport News",
-            state="VA",
-            zip_code="23601",
-            country_iso_code="USA",
-        ),
-    ]
-
-
-@pytest.fixture
-def fake_letting_fixture():
-    return [
-        Letting(
-            id="1",
-            title="Joshua Tree Green Haus /w Hot Tub",
-            address_id="1",
-        ),
-        Letting(
-            id="2",
-            title="Oceanview Retreat",
-            address_id="2",
-        ),
-        Letting(
-            id="3",
-            title="'Silo Studio' Cottage",
-            address_id="3",
-        ),
-    ]
-
-
-@pytest.fixture
-def address_fixture(monkeypatch, fake_address_fixture):
-    monkeypatch.setattr(
-        "lettings.models.Address",
-        lambda: fake_address_fixture,
+def address1_fixture():
+    return Address.objects.create(
+        number=500,
+        street="Dream Avenue",
+        city="Dream city",
+        state="LA",
+        zip_code=10000,
+        country_iso_code="USA",
     )
-    return {"address": fake_address_fixture}
 
 
 @pytest.fixture
-def lettings_fixture(monkeypatch, fake_letting_fixture):
-    monkeypatch.setattr(
-        "lettings.models.Letting",
-        lambda: fake_letting_fixture,
+def address2_fixture():
+    return Address.objects.create(
+        number=300,
+        street="Dark Avenue",
+        city="Dark city",
+        state="SF",
+        zip_code=13000,
+        country_iso_code="USA",
     )
-    return {"lettings": fake_letting_fixture}
