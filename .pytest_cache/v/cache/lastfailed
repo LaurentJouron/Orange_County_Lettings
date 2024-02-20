@@ -18,6 +18,5 @@
   "profiles/test_profiles/test_profiles.py::TestProfiles::test_access_unexisting_profile": true,
   "profiles/test_profiles/test_profiles.py::TestProfiles::test_access_unexisting_profile_page": true,
   "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::test_letting_url": true,
-  "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::test_letting_view": true,
-  "lettings/test_lettings/test_lettings.py::test_address_model": true
+  "oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py::test_letting_view": true
 }

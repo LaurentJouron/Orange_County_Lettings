@@ -43,7 +43,6 @@ def profile(request, username):
     Examples:
         >>> response = profile(request, "john_doe")
     """
-
     try:
         profile = Profile.objects.get(user__username=username)
     except Profile.DoesNotExist as e:
