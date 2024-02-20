@@ -46,7 +46,6 @@ def test_index_view(profile1_fixture, profile2_fixture):
 
 @pytest.mark.django_db
 def test_profile_view(profile1_fixture):
-    profile1_fixture
     path = reverse("profiles:profile", kwargs={"username": "test_user1"})
     response = client.get(path)
     content = response.content.decode()
