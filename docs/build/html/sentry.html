@@ -57,7 +57,6 @@
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Sentry</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pipline-ci-cd">Pipline CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#project">Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#env">.env</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#settings-py">settings.py</a></li>
 </ul>
@@ -100,10 +99,9 @@ documentation.</p>
 <hr class="docutils" />
 <section id="pipline-ci-cd">
 <h2>Pipline CI/CD<a class="headerlink" href="#pipline-ci-cd" title="Link to this heading"></a></h2>
-</section>
 <hr class="docutils" />
-<section id="project">
-<h2>Project<a class="headerlink" href="#project" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<hr class="docutils" />
 </section>
 <hr class="docutils" />
 <section id="env">
@@ -117,16 +115,21 @@ documentation.</p>
 <h2>settings.py<a class="headerlink" href="#settings-py" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentry_sdk</span><span class="o">.</span><span class="n">init</span><span class="p">(</span>
     <span class="n">dsn</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DSN&quot;</span><span class="p">],</span>
-    <span class="c1"># Set traces_sample_rate to 1.0 to capture 100%</span>
-    <span class="c1"># of transactions for performance monitoring.</span>
     <span class="n">traces_sample_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-    <span class="c1"># Set profiles_sample_rate to 1.0 to profile 100%</span>
-    <span class="c1"># of sampled transactions.</span>
-    <span class="c1"># We recommend adjusting this value in production.</span>
     <span class="n">profiles_sample_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
 <hr class="docutils" />
 <hr class="docutils" />
 <hr class="docutils" />

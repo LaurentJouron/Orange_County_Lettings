@@ -14,10 +14,10 @@ urlpatterns = [
 ]
 
 # 404 erreur: page not found
-handler404 = "views.handler404"
+handler404 = "oc_lettings_site.views.handler404"
 
 # 500 erreur: Server error
-handler500 = "views.handler500"
+handler500 = "oc_lettings_site.views.handler500"
 
 if settings.DEBUG:
     urlpatterns += static(

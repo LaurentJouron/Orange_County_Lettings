@@ -52,6 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
@@ -107,6 +108,8 @@
 <a class="reference external image-reference" href="https://flake8.pycqa.org/"><img alt="Flake8 Badge" src="https://img.shields.io/badge/flake8-%234B8BBE.svg?style=for-the-badge&amp;logo=flake8&amp;logoColor=white" /></a>
 <a class="reference external image-reference" href="https://www.sphinx-doc.org/"><img alt="Sphinx Badge" src="https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&amp;logo=sphinx&amp;logoColor=white" /></a>
 <a class="reference external image-reference" href="https://pytest-django.readthedocs.io/en/latest/"><img alt="Pytest-Django Badge" src="https://img.shields.io/badge/pytest--django-%232C8736.svg?style=for-the-badge&amp;logo=pytest&amp;logoColor=white" /></a>
+<a class="reference external image-reference" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html"><img alt="Google Docstrings Badge" src="https://img.shields.io/badge/docstrings-google-blue.svg?style=for-the-badge&amp;logo=google&amp;logoColor=white" /></a>
+<a class="reference external image-reference" href="https://numpydoc.readthedocs.io/en/latest/format.html"><img alt="NumPy/SciPy Docstrings Badge" src="https://img.shields.io/badge/docstrings-numpy/scipy-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white" /></a>
 </section>
 <hr class="docutils" />
 <section id="information">
@@ -116,7 +119,7 @@
 <li><p><strong>Etablissement</strong>: Orange County Lettings</p></li>
 <li><p><strong>Projet</strong> : Website for rental properties in the expansion phase in the United States</p></li>
 <li><p><strong>Creation date</strong> : Feb 12, 2024</p></li>
-<li><p><strong>Modification date</strong> : Feb 19, 2024</p></li>
+<li><p><strong>Modification date</strong> : Feb 22, 2024</p></li>
 <li><p><strong>Document status</strong> : In work</p></li>
 </ul>
 </section>
@@ -150,16 +153,6 @@
 </figcaption>
 </figure>
 </section>
-<hr class="docutils" />
-<section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>Refer to start for more information on quick <a class="reference internal" href="quick_start.html#quick-start"><span class="std std-ref">quick start</span></a> installation.</p></li>
-<li><p>By going to description you get more details on the <a class="reference internal" href="description.html#description"><span class="std std-ref">description</span></a> evolution of the project.</p></li>
-<li><p>Come and see the structure of the <a class="reference internal" href="data_structure.html#data-structure"><span class="std std-ref">database</span></a>.</p></li>
-<li><p>To see the configuration of the doc with <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> , I invite you to go to the <span class="xref std std-ref">documentation</span> tab.</p></li>
-</ul>
-</section>
 </section>
 <hr class="docutils" />
 <section id="indices-and-tables">
@@ -170,7 +163,8 @@
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="circleci.html#what-is-circleci">What is CircleCi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="circleci.html#pipline-ci-cd">Pipline CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="circleci.html#conf-py">conf.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circleci.html#id1">.circleci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circleci.html#config-py">config.py</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a><ul>
@@ -189,6 +183,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docstring.html#what-the-docstrings">What the docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstring.html#google-style">Google style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstring.html#numpy-scipy-style">NumPy/Scipy style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstring.html#display-docstrings">Display docstrings</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html#creation">Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html#project">Project</a></li>
@@ -201,7 +202,6 @@
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sentry.html#pipline-ci-cd">Pipline CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sentry.html#project">Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sentry.html#env">.env</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sentry.html#settings-py">settings.py</a></li>
 </ul>

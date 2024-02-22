@@ -3,21 +3,13 @@ import os
 import environ
 import sentry_sdk
 
-# Initialise environment variables
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
+# Initializes the environment variables
+env = environ.Env(DEBUG=(bool, False))
 load_dotenv()
 
 sentry_sdk.init(
     dsn=os.environ["DSN"],
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
     traces_sample_rate=1.0,
-    # Set profiles_sample_rate to 1.0 to profile 100%
-    # of sampled transactions.
-    # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
 )
 
@@ -36,8 +28,8 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 if not IS_HEROKU:
     DEBUG = True
 
-# Generally avoid wildcards(*). However since Heroku router provides
-# hostname validation it is ok
+# # Generally avoid wildcards(*). However since Heroku router provides
+# # hostname validation it is ok
 ALLOWED_HOSTS = ["*"] if IS_HEROKU else []
 
 # Application definition
@@ -140,5 +132,26 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console"],
+            "level": os.getenv("DJANGO_LOG_LEVEL", "INFO"),
+            "propagate": False,
+        },
     },
 }

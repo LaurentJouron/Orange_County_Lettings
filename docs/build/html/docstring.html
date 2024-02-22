@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docstring &mdash; Orange County Lettings 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation" href="documentation.html" />
+    <link rel="prev" title="Docker" href="docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Orange County Lettings
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Docstring</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-the-docstrings">What the docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#google-style">Google style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numpy-scipy-style">NumPy/Scipy style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#display-docstrings">Display docstrings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orange County Lettings</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Docstring</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/docstring.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="docstring">
+<span id="id1"></span><h1><strong>Docstring</strong><a class="headerlink" href="#docstring" title="Link to this heading"></a></h1>
+<hr class="docutils" />
+<section id="what-the-docstrings">
+<h2>What the docstrings<a class="headerlink" href="#what-the-docstrings" title="Link to this heading"></a></h2>
+<p>Python docstrings are documentation strings that are embedded directly into the source code of a function,
+class, or module. They are used to provide clear and concise information about the
+purpose with which they are associated. Docstrings can be accessed via the <code class="docutils literal notranslate"><span class="pre">_doc_</span></code> attribute of the relevant object and
+are used to automatically generate more detailed documentation using tools like Sphinx.</p>
+<p>These docstring styles allow developers to quickly understand how to use a function or class without having to examine
+the source code, making it easier to collaborate and maintain the code.</p>
+<p><em>There are several styles of docstrings in Python, but two of the most common are:</em></p>
+</section>
+<hr class="docutils" />
+<section id="google-style">
+<h2>Google style<a class="headerlink" href="#google-style" title="Link to this heading"></a></h2>
+<a class="reference external image-reference" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html"><img alt="Google Docstrings Badge" src="https://img.shields.io/badge/docstrings-google-blue.svg?style=for-the-badge&amp;logo=google&amp;logoColor=white" /></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function takes two numbers as input and returns their sum.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (int): The first number.</span>
+<span class="sd">        b (int): The second number.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The sum of the two numbers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="numpy-scipy-style">
+<h2>NumPy/Scipy style<a class="headerlink" href="#numpy-scipy-style" title="Link to this heading"></a></h2>
+<a class="reference external image-reference" href="https://numpydoc.readthedocs.io/en/latest/format.html"><img alt="NumPy/SciPy Docstrings Badge" src="https://img.shields.io/badge/docstrings-numpy/scipy-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white" /></a>
+<p>This style is similar to the Google style but uses specific sections to describe parameters, return values, etc. Here’s an example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiply_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">scalar</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Multiply a matrix by a scalar.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    matrix : numpy.ndarray</span>
+<span class="sd">        The input matrix to be multiplied.</span>
+<span class="sd">    scalar : int or float</span>
+<span class="sd">        The scalar value to multiply the matrix by.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    numpy.ndarray</span>
+<span class="sd">        The resulting matrix after multiplication.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">matrix</span> <span class="o">*</span> <span class="n">scalar</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="display-docstrings">
+<h2>Display docstrings<a class="headerlink" href="#display-docstrings" title="Link to this heading"></a></h2>
+<p>To affcicher the documentation of a function, class or method, it is necessary to write the name of it, followed by <code class="docutils literal notranslate"><span class="pre">.__doc__</span></code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">addition</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">function</span> <span class="n">takes</span> <span class="n">two</span> <span class="n">numbers</span> <span class="k">as</span> <span class="nb">input</span> <span class="ow">and</span> <span class="n">returns</span> <span class="n">their</span> <span class="nb">sum</span><span class="o">.</span>
+
+<span class="n">Args</span><span class="p">:</span>
+    <span class="n">a</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">The</span> <span class="n">first</span> <span class="n">number</span><span class="o">.</span>
+    <span class="n">b</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">The</span> <span class="n">second</span> <span class="n">number</span><span class="o">.</span>
+
+<span class="n">Returns</span><span class="p">:</span>
+    <span class="nb">int</span><span class="p">:</span> <span class="n">The</span> <span class="nb">sum</span> <span class="n">of</span> <span class="n">the</span> <span class="n">two</span> <span class="n">numbers</span><span class="o">.</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">multiply_matrix</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Multiply</span> <span class="n">a</span> <span class="n">matrix</span> <span class="n">by</span> <span class="n">a</span> <span class="n">scalar</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">matrix</span> <span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="n">The</span> <span class="nb">input</span> <span class="n">matrix</span> <span class="n">to</span> <span class="n">be</span> <span class="n">multiplied</span><span class="o">.</span>
+<span class="n">scalar</span> <span class="p">:</span> <span class="nb">int</span> <span class="ow">or</span> <span class="nb">float</span>
+    <span class="n">The</span> <span class="n">scalar</span> <span class="n">value</span> <span class="n">to</span> <span class="n">multiply</span> <span class="n">the</span> <span class="n">matrix</span> <span class="n">by</span><span class="o">.</span>
+
+<span class="n">Returns</span>
+<span class="o">-------</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="n">The</span> <span class="n">resulting</span> <span class="n">matrix</span> <span class="n">after</span> <span class="n">multiplication</span><span class="o">.</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="docker.html" class="btn btn-neutral float-left" title="Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="documentation.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Laurent Jouron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

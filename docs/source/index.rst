@@ -80,6 +80,14 @@ Technology
    :alt: Pytest-Django Badge
    :target: https://pytest-django.readthedocs.io/en/latest/
 
+.. image:: https://img.shields.io/badge/docstrings-google-blue.svg?style=for-the-badge&logo=google&logoColor=white
+   :alt: Google Docstrings Badge
+   :target: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
+.. image:: https://img.shields.io/badge/docstrings-numpy/scipy-blue.svg?style=for-the-badge&logo=python&logoColor=white
+   :alt: NumPy/SciPy Docstrings Badge
+   :target: https://numpydoc.readthedocs.io/en/latest/format.html
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -154,18 +162,6 @@ Home page
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*****
-Links
-*****
-
-* Refer to start for more information on quick :ref:`quick start <quick_start>` installation.
-* By going to description you get more details on the :ref:`description <description>` evolution of the project.
-* Come and see the structure of the :ref:`database <data_structure>`.
-* To see the configuration of the doc with `Sphinx <https://www.sphinx-doc.org/>`_ , I invite you to go to the :ref:`documentation <documentation>` tab.
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Indices and tables
 ==================
 
@@ -176,6 +172,7 @@ Indices and tables
             data_structure
             description
             docker
+            docstring
             documentation
             quick_start
             sentry

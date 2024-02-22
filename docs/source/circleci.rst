@@ -21,6 +21,7 @@ CircleCI is a continuous integration and continuous deployment (CI/CD)
 tool widely used in software development.
 Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *************
@@ -31,122 +32,117 @@ A pipeline in the context of continuous integration (CI) and continuous deployme
 series of automated steps that are executed in a specific order to test and deploy the code consistently 
 and reliably.
 
+.. _ma_figure:
+
+.. figure:: _static/pepline_problem.png
+   :scale: 40
+   :align: center
+   :alt: pepline_problem
+
+   :download:`Download <_static/pepline_problem.png>`
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*******
-conf.py
-*******
+*********
+.circleci
+*********
 
 .. rubric:: Create a folder .circleci
 
+We need to create a folder ``.circleci`` at the project level so that when the project is created, the ``config.py`` 
+file is automatically placed inside it.
+
 .. code-block:: console
-    
+
         mkdir .circleci
 
-.. rubric:: Place in it
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. code-block:: console
-    
-        cd .circleci
+*********
+config.py
+*********
 
+This file can be created and automatically positioned in the ``.cirlceci``. folder. 
+A ``circleci-project-setup`` branch is created. Either you have to configure on this branch, 
+or you have to gather it on the Master branch.
 
-.. rubric:: Create a file conf.py for Unix/Linux/macOS 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. code-block:: console
+.. _ma_figure:
 
-        touch conf.py
+.. figure:: _static/create_circle_ci.png
+   :scale: 70
+   :align: center
+   :alt: create_circle_ci
 
+   :download:`Download <_static/create_circle_ci.png>`
 
-.. rubric:: Create a file conf.py for Windows
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. code-block:: console
+.. _ma_figure:
 
-        echo "version: 2.1" > conf.py
+.. figure:: _static/config_circle_file.png
+   :scale: 80
+   :align: center
+   :alt: config_circle_file
 
+   :download:`Download <_static/config_circle_file.png>`
 
-.. rubric:: conf.py script
- 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: config.py script
+
 .. code-block:: python
 
+        # Use the latest 2.1 version of CircleCI pipeline process engine.
+        # See: https://circleci.com/docs/configuration-reference
         version: 2.1
 
-        orbs:
-        python: circleci/python@2.1.1
-
+        # Define a job to be invoked later in a workflow.
+        # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
         jobs:
-        build_and_test: build and test
+        say-hello:
+            # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+            # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
             docker:
-            - image: cimg/python:3.12.0
+            # Specify the version you desire here
+            # See: https://circleci.com/developer/images/image/cimg/base
+            - image: cimg/base:current
 
+            # Add steps to the job
+            # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
             steps:
-            - checkout
-            - python/install-packages:
-                pkg-manager: pipenv
-                pip-dependency-file: requirements.txt
-            - run:
-                name: check test with Pytest
-                command: pytest --nomigrations --disable-warnings
-
-        flake8:
-            docker:
-            - image: cimg/python:3.12.0
-            steps:
+            # Checkout the code as the first step.
             - checkout
             - run:
-                name: Install Flake8
-                command: pip install flake8==3.7.0
-            - run:
-                name: check linting with Flake8
-                command: flake8
+                name: "Say hello"
+                command: "echo Hello, World!"
 
-        build-push-docker:
-            docker:
-            - image: cimg/python:3.12.0
-            steps:
-            - checkout
-            - setup_remote_docker
-            - run:
-                name: Build docker image
-                command:
-                    docker build -t $DOCKER_IMAGE:latest .
-            - run:
-                name: Connect to Docker Hub
-                command:
-                    echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
-            - run:
-                name: Push docker image
-                command:
-                    docker tag $DOCKER_IMAGE $DOCKER_IMAGE |
-                    docker push $DOCKER_IMAGE
-
-        deploy-from-dockerhub-to-render:
-            docker:
-            - image: curlimages/curl:latest
-            steps:
-            - run:
-                name: Deploy docker hub image to Render
-                command: curl $DEPLOY_HOOK
-
+        # Orchestrate jobs using workflows
+        # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
         workflows:
-        run_tests_and_build_docker:
+        say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
+            # Inside the workflow, you define the jobs you want to run.
             jobs:
-            - flake8
-            - build-push-docker:
-                filters:
-                    branches:
-                    only: master
-                requires:
-                    - flake8
-            - deploy-from-dockerhub-to-render:
-                filters:
-                    branches:
-                    only: master
-                requires:
-                    - build-push-docker
+            - say-hello
 
-* We define a job named "build" that uses a Docker Python 3.12 image.
-* Steps in this job include retrieving source code, installing dependencies, running database migrations, and running tests.
-* Then we define a workflow named "build_and_deploy" which simply includes the "build" job.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: Merge branches
+
+We must position ourselves on the marster branch.
+
+.. code-block:: python
+
+        git checkout master
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Then we can gather the branches, if necessary.
+
+.. code-block:: python
+
+        git merge circleci-project-setup
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
