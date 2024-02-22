@@ -21,12 +21,30 @@ CircleCI is a continuous integration and continuous deployment (CI/CD)
 tool widely used in software development.
 Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *************
 Pipline CI/CD
 *************
+
+.. rubric:: CI (continuous integration) & CD (continuous deployment)
+
+* Planning
+* Compilation
+* Integration
+* Testing
+* Measuring the quality
+* Packaging / Management of application deliverables
+
+.. _ma_figure:
+
+.. figure:: _static/cicd.png
+   :scale: 80
+   :align: center
+   :alt: CI/CD
+
+   :download:`Download <_static/cicd.png>`
+
 
 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a 
 series of automated steps that are executed in a specific order to test and deploy the code consistently 
@@ -146,29 +164,89 @@ Then we can gather the branches, if necessary.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*******
+.. rubric:: config.py after configuration
 
-*******
+.. code-block:: python
 
+       # Use the latest 2.1 version of CircleCI pipeline process engine.
+        # See: https://circleci.com/docs/configuration-reference
+        version: 2.1
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        orbs:
 
-*****************
+        python: circleci/python@2.1.1
 
-*****************
+        jobs:
+        build_and_test:
+        docker:
+        - image: cimg/python:3.12.0
 
+        steps:
+        - checkout
+        - python/install-packages:
+                pkg-manager: pipenv
+        - run:
+                name: Run tests
+                command:
+                mkdir test-results && pipenv run pytest
+        - store_test_results:
+                path: test-results
+        - store_artifacts:
+                path: test-results
+                destination: tr1
+        - persist_to_workspace:
+                root: ~/project
+                paths:
+                - .
+        build-and-push-docker-image:
+        docker:
+        - image: cimg/python:3.9.6
+        steps:
+        - checkout
+        - setup_remote_docker:
+                docker_layer_caching: true
+        - run:
+                name: build and push docker image
+                command: |
+                TAG=0.1.$CIRCLE_BUILD_NUM
+                docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
+                #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
+                echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+                docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        deploy_on_heroku:
+        docker:
+        - image: cimg/python:3.12.0
 
-****************
+        steps:
+        - checkout
+        - setup_remote_docker:
+                docker_layer_caching: true
+        - run:
+                name: Build and push Docker image to Heroku
+                command: |
+                sudo curl https://cli-assets.heroku.com/install.sh | sh
+                HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set SECRET_KEY=$SECRET_KEY -a $HEROKU_APP_NAME
+                HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DSN=$DSN -a $HEROKU_APP_NAME
+                HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
+                HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
+                HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
 
-****************
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*****************
-
-*****************
+        workflows:
+        main:
+        jobs:
+        - build_and_test
+        - build-and-push-docker-image:
+                requires:
+                - build_and_test
+                filters:
+                branches:
+                only: main
+        - deploy_on_heroku:
+                requires:
+                - build-and-push-docker-image
+                filters:
+                branches:
+                only: main
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
