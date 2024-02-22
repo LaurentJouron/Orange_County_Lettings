@@ -68,8 +68,9 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Go to the local website by clicking on the link
+.. raw:: html
 
-`Open the website <http://localhost:8000>`_
-
+   <a href="http://localhost:8000" class="button">
+       <img src="_static/button-open-website.png" alt="Bouton" width="200" height="100" />
+   </a>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

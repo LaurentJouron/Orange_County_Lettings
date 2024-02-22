@@ -52,13 +52,13 @@
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Pytest-Django</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pytest-ini">pytest.ini</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#report">Report</a></li>
 </ul>
 </li>
 </ul>
@@ -122,55 +122,57 @@ and make your tests discoverable (<a class="reference external" href="https://py
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span>
 </pre></div>
 </div>
-<figure class="align-center" id="id5">
-<span id="ma-figure"></span><a class="reference internal image-reference" href="_images/pytest.png"><img alt="test vvv" src="_images/pytest.png" style="width: 694.5px; height: 42.0px;" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/a2e596beff18c2aa1687aef6952907ca/pytest.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
-</figcaption>
+<figure class="align-center" id="ma-figure">
+<a class="reference internal image-reference" href="_images/pytest.png"><img alt="test vvv" src="_images/pytest.png" style="width: 694.5px; height: 42.0px;" /></a>
 </figure>
-<hr class="docutils" />
+<div style="text-align: center;">
+    <a href="_static/pytest.png" download class="button">
+       <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p class="rubric">pytest -vvv</p>
 <p>To view test details in the terminal, use the <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> option with pytest:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest -vvv</span>
 </pre></div>
 </div>
-<figure class="align-center" id="id6">
-<span id="id2"></span><a class="reference internal image-reference" href="_images/test_vvv.png"><img alt="test vvv" src="_images/test_vvv.png" style="width: 692.5px; height: 149.0px;" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/473a2d15fbad80db683ee4396a4af6bb/test_vvv.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
-</figcaption>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/test_vvv.png"><img alt="test vvv" src="_images/test_vvv.png" style="width: 692.5px; height: 149.0px;" /></a>
 </figure>
-<hr class="docutils" />
+<div style="text-align: center;">
+    <a href="_static/test_vvv.png" download class="button">
+       <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p class="rubric">pytest –cov=.</p>
 <p>To measure the test coverage of a project, run pytest with the <code class="docutils literal notranslate"><span class="pre">--cov</span></code> option to specify the folder to be analyzed:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest --cov=.</span>
 </pre></div>
 </div>
-<figure class="align-center" id="id7">
-<span id="id3"></span><a class="reference internal image-reference" href="_images/cov_test.png"><img alt="cov test" src="_images/cov_test.png" style="width: 502.5px; height: 436.5px;" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/1c0be7607d8dc722107bf771d11052f8/cov_test.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
-</figcaption>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/cov_test.png"><img alt="cov test" src="_images/cov_test.png" style="width: 502.5px; height: 436.5px;" /></a>
 </figure>
-<hr class="docutils" />
+<div style="text-align: center;">
+    <a href="_static/cov_test.png" download class="button">
+       <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p class="rubric">pytest –cov=. –cov-report html</p>
 <p>To generate an HTML report automatically, use the <code class="docutils literal notranslate"><span class="pre">--cov-report</span> <span class="pre">html</span></code> option with pytest:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest --cov=. --cov-report html</span>
 </pre></div>
 </div>
 <p>Then, open the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> folder and launch <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in a browser to view the report.</p>
-<figure class="align-center" id="id8">
-<span id="id4"></span><a class="reference internal image-reference" href="_images/report_test.png"><img alt="Resport test" src="_images/report_test.png" style="width: 661.5px; height: 435.5px;" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference download internal" download="" href="_downloads/69d8fcf32751b93cd4d985b8ee9a518d/report_test.png"><code class="xref download docutils literal notranslate"><span class="pre">Download</span></code></a></span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
-</figcaption>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/report_test.png"><img alt="Resport test" src="_images/report_test.png" style="width: 661.5px; height: 435.5px;" /></a>
 </figure>
-</section>
-<hr class="docutils" />
-<section id="report">
-<h2>Report<a class="headerlink" href="#report" title="Link to this heading"></a></h2>
-<p><a class="reference external" href="http://127.0.0.1:5501/htmlcov/">Open the report</a></p>
-<hr class="docutils" />
+<div style="text-align: center;">
+    <a href="_static/report_test.png" download class="button">
+       <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<a href="http://127.0.0.1:5501/htmlcov/" class="button">
+    <img src="_static/button-open-report.png" alt="Bouton" width="200" height="100" />
+</a><hr class="docutils" />
 </section>
 </section>
 

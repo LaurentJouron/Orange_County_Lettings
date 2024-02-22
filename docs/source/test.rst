@@ -63,7 +63,13 @@ Run your tests with ``pytest``:
    :align: center
    :alt: test vvv
 
-   :download:`Download <_static/pytest.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/pytest.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -82,7 +88,13 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
    :align: center
    :alt: test vvv
 
-   :download:`Download <_static/test_vvv.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/test_vvv.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -101,7 +113,13 @@ To measure the test coverage of a project, run pytest with the ``--cov`` option 
    :align: center
    :alt: cov test
 
-   :download:`Download <_static/cov_test.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/cov_test.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -122,15 +140,19 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
    :align: center
    :alt: Resport test
 
-   :download:`Download <_static/report_test.png>`
+.. raw:: html
 
-
+   <div style="text-align: center;">
+       <a href="_static/report_test.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-******
-Report
-******
+.. raw:: html
 
-`Open the report <http://127.0.0.1:5501/htmlcov/>`_
+   <a href="http://127.0.0.1:5501/htmlcov/" class="button">
+       <img src="_static/button-open-report.png" alt="Bouton" width="200" height="100" />
+   </a>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

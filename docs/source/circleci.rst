@@ -43,7 +43,13 @@ Pipline CI/CD
    :align: center
    :alt: CI/CD
 
-   :download:`Download <_static/cicd.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/cicd.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 
 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a 
@@ -57,7 +63,13 @@ and reliably.
    :align: center
    :alt: pepline_problem
 
-   :download:`Download <_static/pepline_problem.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/pepline_problem.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -93,7 +105,13 @@ or you have to gather it on the Master branch.
    :align: center
    :alt: create_circle_ci
 
-   :download:`Download <_static/create_circle_ci.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/create_circle_ci.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,7 +122,14 @@ or you have to gather it on the Master branch.
    :align: center
    :alt: config_circle_file
 
-   :download:`Download <_static/config_circle_file.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/config_circle_file.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

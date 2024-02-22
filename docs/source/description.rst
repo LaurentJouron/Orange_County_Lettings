@@ -68,7 +68,12 @@ Our app offers a smooth and intuitive user experience for landlords and tenants,
 With a robust modular architecture and advanced features, Orange County Lettings is committed to providing high-quality 
 service while remaining at the forefront of technology.
 
-`Open the GitHub repository <https://github.com/LaurentJouron/Orange_County_Lettings>`_
+.. raw:: html
+
+   <a href="https://github.com/LaurentJouron/Orange_County_Lettings" class="button">
+       <img src="_static/button-github-repository.png" alt="Bouton" width="200" height="100" />
+   </a>
+
 
 Join us today and discover a new way to rent and manage real estate with ease and efficiency.
 

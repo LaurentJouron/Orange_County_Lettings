@@ -91,6 +91,7 @@ Technology
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 ***********
 Information
 ***********
@@ -121,7 +122,13 @@ Logo
    :align: center
    :alt: Logo
 
-   :download:`Download <_static/logo.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/logo.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -139,8 +146,13 @@ Image with logo
    :align: center
    :alt: Home work
 
-   :download:`Download <_static/Orange_County_Lettings_logo.png>`
+.. raw:: html
 
+   <div style="text-align: center;">
+       <a href="_static/Orange_County_Lettings_logo.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -157,8 +169,13 @@ Home page
    :align: center
    :alt: Home page
 
-   :download:`Download <_static/home_page.png>`
+.. raw:: html
 
+   <div style="text-align: center;">
+       <a href="_static/home_page.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

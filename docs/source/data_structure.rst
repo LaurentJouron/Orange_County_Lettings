@@ -15,9 +15,9 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-***************************
+**************
 Specifications
-***************************
+**************
 
 .. rubric:: Change directory
 
@@ -139,6 +139,14 @@ Schema
    :width: 700
    :scale: 80
    :align: center
-   :alt: Database structure
+   :alt: Database structure`
 
-   :download:`Download <_static/database_structure.png>`
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/database_structure.png" download class="button">
+          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
