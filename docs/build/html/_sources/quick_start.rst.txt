@@ -68,9 +68,12 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+.. warning:: This button is only functional if the project is activated according to the above process. If this is the case ``click`` on it, otherwise it leads to an **error page**.
+
+
 .. raw:: html
 
    <a href="http://localhost:8000" class="button">
-       <img src="_static/button-open-website.png" alt="Bouton" width="200" height="100" />
+       <img src="_static/button_open_website.png" alt="Bouton" width="200" height="100" />
    </a>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

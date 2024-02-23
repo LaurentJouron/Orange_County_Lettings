@@ -242,21 +242,24 @@ To realize this documentation I used this configuration for the file ``requireme
 Schema of the doc
 *****************
 
-* `Description <http://127.0.0.1:5500/docs/build/html/description.html#>`_
-
-  - `Start <http://127.0.0.1:5500/docs/build/html/description.html#start>`_
-
-  - `Prerequiste <http://127.0.0.1:5500/docs/build/html/description.html#prerequisite>`_
-
-  - `To do <http://127.0.0.1:5500/docs/build/html/description.html#to-do>`_
-
-  - `Final description <http://127.0.0.1:5500/docs/build/html/description.html#final-description>`_
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* `Quick start <http://127.0.0.1:5500/docs/build/html/quick_start.html>`_
+Circle CI
+~~~~~~~~~
 
+* `Circle CI <http://127.0.0.1:5501/docs/build/html/circleci.html>`_
+
+  - `What is Circle CI <http://127.0.0.1:5501/docs/build/html/circleci.html#what-is-circleci>`_
+
+  - `Pipeline CI/CD <http://127.0.0.1:5501/docs/build/html/circleci.html#pipline-ci-cd>`_
+
+  - `.circleci <http://127.0.0.1:5501/docs/build/html/circleci.html#id2>`_
+
+  - `config.py <http://127.0.0.1:5501/docs/build/html/circleci.html#config-py>`_
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data structure
+~~~~~~~~~~~~~~
 
 * `Data structure <http://127.0.0.1:5500/docs/build/html/data_structure.html>`_
 
@@ -271,6 +274,46 @@ Schema of the doc
   - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+* `Description <http://127.0.0.1:5500/docs/build/html/description.html#>`_
+
+  - `Start <http://127.0.0.1:5500/docs/build/html/description.html#start>`_
+
+  - `Prerequiste <http://127.0.0.1:5500/docs/build/html/description.html#prerequisite>`_
+
+  - `To do <http://127.0.0.1:5500/docs/build/html/description.html#to-do>`_
+
+  - `Final description <http://127.0.0.1:5500/docs/build/html/description.html#final-description>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Docker
+~~~~~~
+
+* `Docker <http://127.0.0.1:5501/docs/build/html/docker.html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Docstring
+~~~~~~~~~
+
+* `Docstring <http://127.0.0.1:5501/docs/build/html/docker.html>`_
+
+  - `What the docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#what-the-docstrings>`_
+
+  - `Google style <http://127.0.0.1:5501/docs/build/html/docstring.html#google-style>`_
+
+  - `NumPy/Scipy style <http://127.0.0.1:5501/docs/build/html/docstring.html#numpy-scipy-style>`_
+
+  - `Display docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#display-docstrings>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Documentation
+~~~~~~~~~~~~~
 
 * `Documentation <http://127.0.0.1:5500/docs/build/html/documentation.html>`_
 
@@ -287,3 +330,31 @@ Schema of the doc
   - `requirements.txt <http://127.0.0.1:5500/docs/build/html/documentation.html#requirements-txt>`_
 
   - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Quick start
+~~~~~~~~~~~
+
+* `Quick start <http://127.0.0.1:5500/docs/build/html/quick_start.html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sentry
+~~~~~~
+
+* `Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pytest-Django
+~~~~~~~~~~~~~
+
+* `Pytest-Django <http://127.0.0.1:5501/docs/build/html/test.html>`_
+
+  - `Configuration <http://127.0.0.1:5501/docs/build/html/test.html#configuration>`_
+
+  - `pytest.ini <http://127.0.0.1:5501/docs/build/html/test.html#pytest-ini>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

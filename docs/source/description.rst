@@ -9,11 +9,6 @@
 Start
 *****
 
-Orange County Lettings is a start-up in the real estate rental sector. Being expanding in the 
-United States, the company decided to expand its team. As a developer, you need to play an 
-important role in improving the company’s site, both in terms of code and deployment.
-I had access to the site’s `GitHub repository <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_.
-
 My mission is to set up and operate the site locally on my computer. 
 Following the instructions of the README, it is possible to:
 
@@ -71,7 +66,7 @@ service while remaining at the forefront of technology.
 .. raw:: html
 
    <a href="https://github.com/LaurentJouron/Orange_County_Lettings" class="button">
-       <img src="_static/button-github-repository.png" alt="Bouton" width="200" height="100" />
+       <img src="_static/button_github_repository.png" alt="Repository GitHub button" width="200" height="100" />
    </a>
 
 

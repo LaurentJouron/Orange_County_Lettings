@@ -145,7 +145,7 @@ Schema
 
    <div style="text-align: center;">
        <a href="_static/database_structure.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 

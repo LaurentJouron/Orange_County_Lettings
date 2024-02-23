@@ -67,7 +67,7 @@ Run your tests with ``pytest``:
 
    <div style="text-align: center;">
        <a href="_static/pytest.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -92,7 +92,7 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
    <div style="text-align: center;">
        <a href="_static/test_vvv.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -117,7 +117,7 @@ To measure the test coverage of a project, run pytest with the ``--cov`` option 
 
    <div style="text-align: center;">
        <a href="_static/cov_test.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -144,15 +144,18 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
 
    <div style="text-align: center;">
        <a href="_static/report_test.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+.. warning:: Before activating the button below, you must install and activate the virtual environment.
+
+
 .. raw:: html
 
    <a href="http://127.0.0.1:5501/htmlcov/" class="button">
-       <img src="_static/button-open-report.png" alt="Bouton" width="200" height="100" />
+       <img src="_static/button_open_report.png" alt="Report button" width="200" height="100" />
    </a>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

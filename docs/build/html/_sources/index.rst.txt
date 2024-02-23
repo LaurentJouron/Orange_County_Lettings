@@ -13,6 +13,16 @@
 
    This documentation was carried out as part of a training in computer development. It cannot be taken for official documentation.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***********
+Description
+***********
+
+Orange County Lettings is a start-up in the real estate rental sector. Being expanding in the 
+United States, the company decided to expand its team. As a developer, you need to play an 
+important role in improving the company’s site, both in terms of code and deployment.
+I had access to the site’s `GitHub repository <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -88,9 +98,7 @@ Technology
    :alt: NumPy/SciPy Docstrings Badge
    :target: https://numpydoc.readthedocs.io/en/latest/format.html
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 ***********
 Information
@@ -126,7 +134,7 @@ Logo
 
    <div style="text-align: center;">
        <a href="_static/logo.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -150,7 +158,7 @@ Image with logo
 
    <div style="text-align: center;">
        <a href="_static/Orange_County_Lettings_logo.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -173,7 +181,7 @@ Home page
 
    <div style="text-align: center;">
        <a href="_static/home_page.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 

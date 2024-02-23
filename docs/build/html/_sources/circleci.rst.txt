@@ -47,7 +47,7 @@ Pipline CI/CD
 
    <div style="text-align: center;">
        <a href="_static/cicd.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -67,7 +67,7 @@ and reliably.
 
    <div style="text-align: center;">
        <a href="_static/pepline_problem.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -109,7 +109,7 @@ or you have to gather it on the Master branch.
 
    <div style="text-align: center;">
        <a href="_static/create_circle_ci.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
@@ -126,7 +126,7 @@ or you have to gather it on the Master branch.
 
    <div style="text-align: center;">
        <a href="_static/config_circle_file.png" download class="button">
-          <img src="_static/button-download.png" alt="Bouton Télécharger" width="100" height="50" />
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
