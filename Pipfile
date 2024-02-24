@@ -22,6 +22,7 @@ furo = "*"
 pyflakes = "*"
 install = "*"
 sphinx-copybutton = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

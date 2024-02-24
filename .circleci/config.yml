@@ -1,23 +1,21 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
 orbs:
-
   python: circleci/python@2.1.1
+  heroku: circleci/heroku@2.0.0
 
 jobs:
   build_and_test:
     docker:
       - image: cimg/python:3.12.0
-
+    
     steps:
       - checkout
       - python/install-packages:
           pkg-manager: pipenv
       - run:
           name: Run tests
-          command:
+          command: 
             mkdir test-results && pipenv run pytest
       - store_test_results:
           path: test-results
@@ -43,11 +41,11 @@ jobs:
             #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
-
+  
   deploy_on_heroku:
     docker:
       - image: cimg/python:3.12.0
-
+    
     steps:
       - checkout
       - setup_remote_docker:
@@ -61,6 +59,7 @@ jobs:
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
+ 
 
 workflows:
   main:

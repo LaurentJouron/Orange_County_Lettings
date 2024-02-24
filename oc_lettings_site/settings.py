@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 import environ
 import sentry_sdk
+import dj_database_url
 
 # Initializes the environment variables
 env = environ.Env(DEBUG=(bool, False))
@@ -81,12 +82,19 @@ WSGI_APPLICATION = "oc_lettings_site.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "oc-lettings-site.sqlite3"),
+if IS_HEROKU:
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=os.environ["DATABASE_URL"], conn_max_age=500
+        )
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "oc-lettings-site.sqlite3"),
+        }
+    }
 
 
 # Password validation
