@@ -199,6 +199,7 @@ Indices and tables
             docker
             docstring
             documentation
+            heroku
             quick_start
             sentry
             test

@@ -53,11 +53,19 @@
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Docker</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#terminal">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dockerfile-for-python">Dockerfile for Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dockerfile">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-compose-yml">docker-compose.yml</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-image">Build image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-image">Docker image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-image-details">Docker image details</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
@@ -96,26 +104,176 @@
 documentation <a class="reference external" href="https://docs.docker.com/">Docker</a>.</p>
 </div>
 <hr class="docutils" />
-<section id="terminal">
-<h2>Terminal<a class="headerlink" href="#terminal" title="Link to this heading"></a></h2>
+<section id="dockerfile-for-python">
+<h2>Dockerfile for Python<a class="headerlink" href="#dockerfile-for-python" title="Link to this heading"></a></h2>
+<p>This Docker file is used to build a Python application container.</p>
+<p>⏩️ Pull the official base image</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">FROM python:3.12.0</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Set the working directory inside the container</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">WORKDIR /usr/src/app</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Set environment variables to prevent Python from writing bytecode and buffering stdout and stderr</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ENV PYTHONDONTWRITEBYTECODE 1</span>
+<span class="go">ENV PYTHONUNBUFFERED 1</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Define arguments for setting secret key and DSN (Data Source Name)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ARG SECRET_KEY</span>
+<span class="go">ARG DSN</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Set environment variables using the provided arguments</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ENV SECRET_KEY=${SECRET_KEY}</span>
+<span class="go">ENV DSN=${DSN}</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Expose port 8000 to the outside world</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ENV PORT 8000</span>
+<span class="go">EXPOSE 8000</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Upgrade pip and copy requirements file to the working directory</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">RUN pip install --upgrade pip</span>
+<span class="go">COPY ./requirements.txt /usr/src/app</span>
+<span class="go">RUN pip install -r requirements.txt</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Copy the current directory contents into the container at /usr/src/app</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">COPY . /usr/src/app</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Collect static files</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">RUN python manage.py collectstatic --noinput</span>
+</pre></div>
+</div>
 <hr class="docutils" />
+<p>⏩️ Command to run the application using Gunicorn</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CMD gunicorn --bind 0.0.0.0:$PORT oc_lettings_site.wsgi</span>
+</pre></div>
+</div>
+</section>
 <hr class="docutils" />
+<section id="dockerfile">
+<h2>Dockerfile<a class="headerlink" href="#dockerfile" title="Link to this heading"></a></h2>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># Pull the official base image</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12.0</span>
+
+<span class="c"># Set the working directory inside the container</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/usr/src/app</span>
+
+<span class="c"># Set environment variables to prevent Python from writing bytecode and buffering stdout and stderr</span>
+<span class="k">ENV</span><span class="w"> </span>PYTHONDONTWRITEBYTECODE<span class="w"> </span><span class="m">1</span>
+<span class="k">ENV</span><span class="w"> </span>PYTHONUNBUFFERED<span class="w"> </span><span class="m">1</span>
+
+<span class="c"># Define arguments for setting secret key and DSN (Data Source Name)</span>
+<span class="k">ARG</span><span class="w"> </span>SECRET_KEY
+<span class="k">ARG</span><span class="w"> </span>DSN
+
+<span class="c"># Set environment variables using the provided arguments</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">SECRET_KEY</span><span class="o">=</span><span class="si">${</span><span class="nv">SECRET_KEY</span><span class="si">}</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">DSN</span><span class="o">=</span><span class="si">${</span><span class="nv">DSN</span><span class="si">}</span>
+
+<span class="c"># Expose port 8000 to the outside world</span>
+<span class="k">ENV</span><span class="w"> </span>PORT<span class="w"> </span><span class="m">8000</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+
+<span class="c"># Upgrade pip and copy requirements file to the working directory</span>
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+<span class="k">COPY</span><span class="w"> </span>./requirements.txt<span class="w"> </span>/usr/src/app
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Copy the current directory contents into the container at /usr/src/app</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/usr/src/app
+
+<span class="c"># Collect static files</span>
+<span class="k">RUN</span><span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>collectstatic<span class="w"> </span>--noinput
+
+<span class="c"># Command to run the application using Gunicorn</span>
+<span class="k">CMD</span><span class="w"> </span>gunicorn<span class="w"> </span>--bind<span class="w"> </span><span class="m">0</span>.0.0.0:<span class="nv">$PORT</span><span class="w"> </span>oc_lettings_site.wsgi
+</pre></div>
+</div>
+</section>
 <hr class="docutils" />
+<section id="docker-compose-yml">
+<h2>docker-compose.yml<a class="headerlink" href="#docker-compose-yml" title="Link to this heading"></a></h2>
+<p>This docker-compose.yml file defines the services needed to run the application.
+It uses Docker Compose to manage Docker containers.</p>
+<p>⏩️ Services</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>web: The “web” service is responsible for running the main application.</p></li>
+</ul>
+</div></blockquote>
+<p>⏩️ Configuration</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>build: This option specifies that the Docker image for this service must be built using the Dockerfile located in the current directory.</p></li>
+<li><p>volumes: This service mounts the current directory to the <code class="docutils literal notranslate"><span class="pre">/code</span></code> directory inside the container, thus allowing to synchronize the code between the host and the container.</p></li>
+<li><p>ports: It maps port 8000 of the Docker container to port 8000 of the host, allowing access to the application via port 8000 of the host.</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># This docker-compose.yml file defines the necessary services to run the application.</span>
+<span class="c"># It uses Docker Compose to manage Docker containers.</span>
+version:<span class="w"> </span><span class="s1">&#39;3.9&#39;</span>
+
+services:
+web:
+<span class="w">    </span>#<span class="w"> </span>Main<span class="w"> </span>service<span class="w"> </span>responsible<span class="w"> </span><span class="k">for</span><span class="w"> </span>running<span class="w"> </span>the<span class="w"> </span>application.
+<span class="w">    </span>build:<span class="w"> </span>.
+<span class="w">    </span>#<span class="w"> </span>This<span class="w"> </span>option<span class="w"> </span>specifies<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>service<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>built<span class="w"> </span>using<span class="w"> </span>the
+<span class="w">    </span>#<span class="w"> </span>Dockerfile<span class="w"> </span>located<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory.
+<span class="w">    </span>volumes:
+<span class="w">    </span>-<span class="w"> </span>.:/code
+<span class="w">    </span>#<span class="w"> </span>This<span class="w"> </span>service<span class="w"> </span>mounts<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span><span class="s2">&quot;/code&quot;</span><span class="w"> </span>directory<span class="w"> </span>inside<span class="w"> </span>the<span class="w"> </span>container,
+<span class="w">    </span>#<span class="w"> </span>allowing<span class="w"> </span>code<span class="w"> </span>synchronization<span class="w"> </span>between<span class="w"> </span>the<span class="w"> </span>host<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>container.
+<span class="w">    </span>ports:
+<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;8000:8000&quot;</span>
+<span class="w">    </span>#<span class="w"> </span>It<span class="w"> </span>maps<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>container<span class="w"> </span>to<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>host,<span class="w"> </span>enabling<span class="w"> </span>access<span class="w"> </span>to
+<span class="w">    </span>#<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>via<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>host.
+</pre></div>
+</div>
 <hr class="docutils" />
+<section id="build-image">
+<h3>Build image<a class="headerlink" href="#build-image" title="Link to this heading"></a></h3>
+<p>⏩️ Perform this command to control the image</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Docker build -t orange_county_lettings .</span>
+</pre></div>
+</div>
+</section>
 <hr class="docutils" />
+<section id="docker-image">
+<h3>Docker image<a class="headerlink" href="#docker-image" title="Link to this heading"></a></h3>
+<figure class="align-center" id="ma-figure">
+<a class="reference internal image-reference" href="_images/docker_image.png"><img alt="docker image" src="_images/docker_image.png" style="width: 785.5px; height: 72.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_image.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div></section>
 <hr class="docutils" />
-<hr class="docutils" />
-<hr class="docutils" />
-<hr class="docutils" />
-<hr class="docutils" />
+<section id="docker-image-details">
+<h3>Docker image details<a class="headerlink" href="#docker-image-details" title="Link to this heading"></a></h3>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/docker_image_details.png"><img alt="docker image" src="_images/docker_image_details.png" style="width: 809.0px; height: 485.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_image_details.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+</section>
 </section>
 </section>
 

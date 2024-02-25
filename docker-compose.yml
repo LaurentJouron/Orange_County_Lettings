@@ -1,9 +1,18 @@
+# This docker-compose.yml file defines the necessary services to run the application. 
+# It uses Docker Compose to manage Docker containers.
 version: '3.9'
 
 services:
   web:
+    # Main service responsible for running the application.
     build: .
+    # This option specifies that the Docker image for this service should be built using the
+    # Dockerfile located in the current directory.
     volumes:
       - .:/code
+      # This service mounts the current directory to the "/code" directory inside the container, 
+      # allowing code synchronization between the host and the container.
     ports:
       - "8000:8000"
+      # It maps port 8000 of the Docker container to port 8000 of the host, enabling access to 
+      # the application via port 8000 of the host.
