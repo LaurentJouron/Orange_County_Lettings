@@ -14,7 +14,6 @@ sentry_sdk.init(
     profiles_sample_rate=1.0,
 )
 
-
 IS_HEROKU = "DYNO" in os.environ
 
 # Set the project base directory
