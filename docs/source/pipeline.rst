@@ -147,7 +147,275 @@ These steps ensure that CircleCI can access the Git repository using SSH keys an
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+📜 Link lockfile
 
+Cette partie de la sortie indique qu'un fichier Pipfile.lock est copié du répertoire /home/circleci/project/ vers un répertoire temporaire /tmp/cci_pycache/lockfile.
+
+Le fichier Pipfile.lock est généré par Pipenv et contient des informations sur les dépendances Python spécifiques avec leurs versions exactes. Il est utilisé pour garantir que les mêmes versions de dépendances sont installées sur différents environnements.
+
+La copie de ce fichier vers un répertoire temporaire peut être une étape préparatoire pour l'installation des dépendances ou pour d'autres opérations nécessitant ce fichier.
+
+.. figure:: _static/circleci_link_lockfile.png
+   :scale: 50
+   :align: center
+   :alt: circleci link lockfile
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_link_lockfile.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Save Python version
+
+Ce script Bash extrait la version de Python installée sur l'environnement d'exécution de la construction et la stocke dans un fichier nommé python-version dans le répertoire temporaire /tmp/.
+
+Voici ce que chaque partie du script fait :
+
+#!/bin/bash -eo pipefail : Cette ligne indique que le script doit être interprété par Bash (#!/bin/bash) avec les options -eo pipefail. -e signifie "exit on error" (sortir en cas d'erreur), et -o pipefail signifie que le script échouera si l'une des commandes dans une chaîne de commandes (pipeline) échoue.
+
+python --version : Cette commande exécute python --version pour obtenir la version de Python installée. L'option --version demande à Python d'afficher sa version, et la sortie est dirigée vers la sortie standard.
+
+cut -d ' ' -f2 : Cette commande utilise cut pour extraire la deuxième colonne (délimitée par un espace) de la sortie de python --version, ce qui correspond à la version de Python.
+
+> /tmp/python-version : Cette partie redirige la sortie de la commande précédente vers le fichier /tmp/python-version, où la version de Python est stockée.
+
+En résumé, ce script Bash récupère la version de Python et la stocke dans un fichier pour référence ultérieure ou pour une utilisation dans d'autres étapes de la construction.
+
+.. figure:: _static/circleci_save_python_version.png
+   :scale: 50
+   :align: center
+   :alt: circleci save python version
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_save_python_version.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Restoring cache
+
+Cette partie de la sortie indique que CircleCI a trouvé un cache de la construction précédente (build 75) pour les chemins spécifiés, et il essaie de le télécharger pour l'utiliser dans cette construction actuelle.
+
+Voici ce que chaque partie signifie :
+
+Found a cache from build 75 : Indique que CircleCI a trouvé un cache à partir de la construction précédente avec le numéro de build 75.
+
+Size: 94 MiB : Indique la taille du cache trouvé.
+
+Cached paths : Liste les chemins des fichiers ou répertoires qui sont inclus dans le cache. Dans ce cas, seul /tmp/cci_pycache est inclus.
+
+Downloading cache archive : Indique que CircleCI télécharge l'archive du cache.
+
+Validating cache : Valide l'archive du cache après son téléchargement.
+
+Download duration for cache file : Indique la durée nécessaire pour télécharger l'archive du cache.
+
+Unarchiving cache : Décompresse l'archive du cache.
+
+Extraction duration : Indique la durée nécessaire pour extraire l'archive du cache.
+
+L'utilisation de cache dans CircleCI permet de stocker des artefacts ou des fichiers temporaires entre les builds afin d'accélérer les builds suivantes en évitant de refaire certaines étapes. Dans ce cas, le cache semble contenir des fichiers temporaires ou des artefacts liés à l'installation des dépendances Python.
+
+.. figure:: _static/circleci_restoring_cache.png
+   :scale: 50
+   :align: center
+   :alt: circleci restoring cache
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_restoring_cache.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Move restored cache
+
+Ces lignes de la sortie indiquent que CircleCI restaure des éléments du cache précédent vers leurs emplacements d'origine dans l'environnement de construction actuel. Voici ce que chaque ligne signifie :
+
+Restoring /tmp/cci_pycache/venv/L2hvbWUvY2lyY2xlY2kvLmxvY2FsL3NoYXJlL3ZpcnR1YWxlbnZz to /home/circleci/.local/share/virtualenvs : Cela signifie que CircleCI restaure un environnement virtuel précédemment sauvegardé (probablement créé avec Virtualenv) depuis le cache vers le répertoire /home/circleci/.local/share/virtualenvs.
+
+Restoring /tmp/cci_pycache/pypi/L2hvbWUvY2lyY2xlY2kvLmNhY2hlL3BpcA== to /home/circleci/.cache/pip : Cette ligne indique que CircleCI restaure des packages Python précédemment téléchargés depuis le cache vers le répertoire de cache Pip (/home/circleci/.cache/pip). L'identifiant crypté (comme L2hvbWUvY2lyY2xlY2kvLmNhY2hlL3BpcA==) fait référence à un chemin spécifique dans le cache.
+
+Restoring /tmp/cci_pycache/pypi/L2hvbWUvY2lyY2xlY2kvLmNhY2hlL3BpcGVudg== to /home/circleci/.cache/pipenv : Cela indique que des packages Python précédemment téléchargés spécifiquement pour Pipenv sont restaurés depuis le cache vers le répertoire de cache Pipenv (/home/circleci/.cache/pipenv).
+
+Ces étapes de restauration du cache contribuent à accélérer le processus de construction en évitant de télécharger à nouveau des dépendances déjà présentes dans le cache. Cela est particulièrement utile dans les constructions suivantes où les mêmes dépendances sont utilisées.
+
+.. figure:: _static/circleci_move_restored_cache.png
+   :scale: 50
+   :align: center
+   :alt: circleci move restored cache
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_move_restored_cache.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Install dependencies with pipenv using project Pipfile or inline packages
+
+Ces lignes de sortie indiquent différentes étapes dans le processus de construction de votre projet. Voici ce que chacune d'entre elles signifie :
+
+Loading .env environment variables... : Cette étape charge les variables d'environnement à partir du fichier .env. Ce fichier est souvent utilisé pour stocker des variables sensibles ou spécifiques à l'environnement, telles que les clés d'API ou les informations de configuration.
+
+Installing dependencies from Pipfile.lock (bbdd7e)... : Cette étape installe les dépendances Python spécifiées dans le fichier Pipfile.lock. Le contenu entre parenthèses, dans ce cas (bbdd7e), fait référence à la version spécifique du fichier Pipfile.lock utilisée pour installer les dépendances. Cela garantit que les mêmes versions exactes des dépendances sont installées à chaque fois.
+
+To activate this project's virtualenv, run pipenv shell. Alternatively, run a command inside the virtualenv with pipenv run. : Ces instructions indiquent comment activer l'environnement virtuel du projet créé par Pipenv. L'utilisation d'un environnement virtuel permet d'isoler les dépendances du projet des autres projets et du système hôte. Vous pouvez activer l'environnement virtuel en exécutant pipenv shell ou exécuter des commandes à l'intérieur de l'environnement virtuel avec pipenv run.
+
+Après ces étapes, votre projet est prêt à être exécuté ou à être soumis à d'autres processus de construction ou de déploiement.
+
+.. figure:: _static/circleci_install_dependencies_with_pipenv.png
+   :scale: 50
+   :align: center
+   :alt: circleci install dependencies with pipenv using project Pipfile or inline packages
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_install_dependencies_with_pipenv.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Copy to cache directory
+
+Ces lignes de sortie indiquent que CircleCI a détecté que le répertoire de cache existe déjà et qu'il a donc été sauté. Ensuite, il copie le fichier Pipfile.lock de votre projet vers le répertoire de cache.
+
+Voici ce que chaque ligne signifie :
+
+Cache directory already exists. Skipping... : Cela signifie que le répertoire de cache a déjà été créé lors d'une construction précédente et qu'il n'est donc pas nécessaire de le créer à nouveau. Le processus de construction passe à l'étape suivante.
+
+Copying /home/circleci/project/Pipfile.lock to /tmp/cci_pycache/lockfile : Cette ligne indique que le fichier Pipfile.lock de votre projet est copié vers le répertoire de cache (/tmp/cci_pycache/lockfile). Le fichier Pipfile.lock contient des informations sur les dépendances Python spécifiques avec leurs versions exactes et est utilisé pour garantir la reproductibilité de l'environnement d'exécution.
+
+Ces étapes contribuent à optimiser le processus de construction en évitant de recréer des éléments déjà présents dans le cache lorsque cela est possible.
+
+.. figure:: _static/circleci_copy_to_cache_directory.png
+   :scale: 50
+   :align: center
+   :alt: circleci copy to cache directory
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_copy_to_cache_directory.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Saving cache
+
+Ces lignes de sortie indiquent que la génération du cache a été ignorée car un cache existe déjà pour la clé spécifiée. La clé du cache est un identifiant unique qui dépend généralement des fichiers ou des répertoires inclus dans le cache, ainsi que de leurs états respectifs.
+
+Voici ce que chaque ligne signifie :
+
+Skipping cache generation, cache already exists for key: ... : Cela signifie que CircleCI a vérifié l'existence d'un cache pour la clé spécifiée, et a constaté qu'un cache existe déjà. Par conséquent, la génération du cache est ignorée car elle n'est pas nécessaire.
+
+Found one created at ... : Cette ligne indique que CircleCI a trouvé un cache qui a été créé à une certaine date et heure précises. Cela permet à l'utilisateur de connaître l'âge du cache actuellement utilisé.
+
+La présence de caches peut accélérer le processus de construction en évitant de refaire certaines étapes qui ont déjà été exécutées et en réutilisant les résultats des constructions précédentes. 
+
+.. figure:: _static/circleci_saving_cache.png
+   :scale: 50
+   :align: center
+   :alt: circleci saving cache
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_saving_cache.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Run test
+
+Ces lignes de sortie représentent le rapport de test généré par Pytest pour votre projet. Voici ce que chaque partie signifie :
+
+Loading .env environment variables... : Cette étape charge les variables d'environnement à partir du fichier .env, qui est souvent utilisé pour stocker des variables sensibles ou spécifiques à l'environnement, telles que les clés d'API ou les informations de configuration.
+
+============================= test session starts ============================== : Cela indique le début de la session de test.
+
+platform linux -- Python 3.12.0, pytest-8.0.2, pluggy-1.4.0 : Cette ligne fournit des informations sur la plateforme (Linux), la version de Python (3.12.0), la version de Pytest (8.0.2) et la version de Pluggy (1.4.0).
+
+django: version: 5.0.2, settings: oc_lettings_site.settings (from ini) : Cette ligne indique la version de Django utilisée (5.0.2) et les paramètres de configuration spécifiés dans le fichier pytest.ini.
+
+rootdir: /home/circleci/project : Cela indique le répertoire racine du projet où les tests ont été exécutés.
+
+configfile: pytest.ini : Cela indique le fichier de configuration utilisé pour les tests (dans ce cas, pytest.ini).
+
+plugins: cov-4.1.0, django-4.8.0 : Cette ligne indique les plugins Pytest utilisés, tels que le plugin de couverture (cov) et le plugin Django (django).
+
+collected 13 items : Cela indique le nombre total de tests collectés (13 dans ce cas).
+
+lettings/test_lettings/test_lettings.py ...... [ 46%] : Cela montre les résultats des tests pour les fichiers de test situés dans le répertoire lettings/test_lettings. Dans cet exemple, 46% des tests dans ce répertoire ont réussi.
+
+oc_lettings_site/test_oc_lettings_site/test_oc_lettings_site.py .. [ 61%] : Cela montre les résultats des tests pour les fichiers de test situés dans le répertoire oc_lettings_site/test_oc_lettings_site. Dans cet exemple, 61% des tests dans ce répertoire ont réussi.
+
+profiles/test_profiles/test_profiles.py ..... [100%] : Cela montre les résultats des tests pour les fichiers de test situés dans le répertoire profiles/test_profiles. Dans cet exemple, 100% des tests dans ce répertoire ont réussi.
+
+Coverage HTML written to dir htmlcov : Cela indique que le rapport de couverture a été généré au format HTML et enregistré dans le répertoire htmlcov.
+
+============================== 13 passed in 5.13s ============================== : Cela indique que tous les tests ont réussi (13 au total) et qu'ils ont été exécutés en 5.13 secondes.
+
+En résumé, ces lignes fournissent un aperçu des tests exécutés, de leur succès ou de leur échec, ainsi que des statistiques sur la session de test dans son ensemble
+
+.. figure:: _static/circleci_run_tests.png
+   :scale: 50
+   :align: center
+   :alt: circleci run tests
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_run_tests.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 Persisting to workspace
+
+La sortie indique que CircleCI est en train de créer une archive de l'espace de travail, qui comprend généralement les fichiers et répertoires nécessaires à l'exécution du pipeline. Une fois l'archive créée, elle est téléchargée vers l'emplacement spécifié.
+
+Dans votre cas, l'archive de l'espace de travail a été téléchargée avec succès après avoir été créée. La taille totale téléchargée est de 36 MiB, ce qui signifie que l'ensemble des fichiers de l'espace de travail à télécharger est de cette taille.
+
+Cette étape est généralement effectuée pour sauvegarder l'état de l'espace de travail à un certain point du pipeline, ce qui peut être utile pour le débogage ou pour analyser l'état du projet à ce moment précis.
+
+.. figure:: _static/circleci_persisting_to_workspace.png
+   :scale: 50
+   :align: center
+   :alt: circleci persisting to workspace
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_persisting_to_workspace.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
