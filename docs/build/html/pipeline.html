@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipelines &mdash; Orange County Lettings 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quick start" href="quick_start.html" />
+    <link rel="prev" title="Heroku" href="heroku.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Orange County Lettings
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Pipelines</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#spin-up-environment">Spin up environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-environment-variables">Preparing environment variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orange County Lettings</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Pipelines</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pipeline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pipelines">
+<span id="pipeline"></span><h1><strong>Pipelines</strong><a class="headerlink" href="#pipelines" title="Link to this heading"></a></h1>
+<hr class="docutils" />
+<section id="spin-up-environment">
+<h2>Spin up environment<a class="headerlink" href="#spin-up-environment" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>📜 Build-agent:</dt><dd><ul class="simple">
+<li><p>Specifies the version of the CircleCI build agent used to run the build.</p></li>
+</ul>
+</dd>
+<dt>📜 System information:</dt><dd><ul class="simple">
+<li><p>Provides information about the operating system and construction environment. In our case, the operating system is Ubuntu 20.04.6 LTS, with a Linux kernel 5.15.0-1053-aws.</p></li>
+</ul>
+</dd>
+<dt>📜 Starting container:</dt><dd><ul class="simple">
+<li><p>Indicates the start of a Docker container based on the cimg/python:3.12.0 image, necessary to execute the construction steps.</p></li>
+</ul>
+</dd>
+<dt>📜 Warning: No authentication provided:</dt><dd><ul class="simple">
+<li><p>This warning indicates that no authentication has been provided to pull the image from Docker Hub. CircleCI uses its own credentials for this.</p></li>
+</ul>
+</dd>
+<dt>📜 Image cache not found on this host, downloading cimg/python:3.12.0:</dt><dd><ul class="simple">
+<li><p>Indicates that the Docker cimg/python:3.12.0 image is not present in the local cache of the build host and must therefore be downloaded from the Docker Hub.</p></li>
+</ul>
+</dd>
+<dt>📜 cimg/python:3.12.0:</dt><dd><ul class="simple">
+<li><p>Detailed information about the downloaded Docker image, including its SHA256 hash.</p></li>
+</ul>
+</dd>
+<dt>📜 Pull stats:</dt><dd><ul class="simple">
+<li><p>Statistics on downloading and extracting the Docker image, indicating the time required and the download speed.</p></li>
+</ul>
+</dd>
+<dt>📜 Time to create container:</dt><dd><ul class="simple">
+<li><p>Time required to create the Docker container from the uploaded image.</p></li>
+</ul>
+</dd>
+<dt>📜 Time to upload agent and config:</dt><dd><ul class="simple">
+<li><p>Time required to download the build agent and configuration file.</p></li>
+</ul>
+</dd>
+<dt>📜 Time to start containers:</dt><dd><ul class="simple">
+<li><p>The time it takes to start Docker containers to complete the construction steps.</p></li>
+</ul>
+</dd>
+</dl>
+<p>This release provides an overview of the CircleCI build environment startup process and the download of dependencies needed to run the build steps.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_spin_up_environnement.png"><img alt="circleci spin up environnement" src="_images/circleci_spin_up_environnement.png" style="width: 773.0px; height: 416.5px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_spin_up_environnement.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div></section>
+<hr class="docutils" />
+<section id="preparing-environment-variables">
+<h2>Preparing environment variables<a class="headerlink" href="#preparing-environment-variables" title="Link to this heading"></a></h2>
+<p>📜 Construction environment variables: BASH_ENV, CIRCLECI, CI, etc…:</p>
+<blockquote>
+<div><ul>
+<li><p>These variables are defined by the CircleCI build environment to provide information about the current process.</p></li>
+<li><p>Example</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>CIRCLE_BRANCH contains the name of the current branch (master in this case),</p></li>
+<li><p>CIRCLE_BUILD_NUM contains the build number</p></li>
+<li><p>CIRCLE_BUILD_URL provides the URL of the build details page on the CircleCI dashboard.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>📜 Project environment variables: CIRCLE_USERNAME, CIRCLE_PROJECT_REPONAME, CIRCLE_REPOSITORY_URL, etc…:</p>
+<blockquote>
+<div><ul>
+<li><p>These variables are derived from the CircleCI project parameters and provide specific information about the project under construction.</p></li>
+<li><p>Example</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>CIRCLE_USERNAME contains the project owner username,</p></li>
+<li><p>CIRCLE_PROJECT_REPONAME contains the repository name</p></li>
+<li><p>CIRCLE_REPOSITORY_URL contains the Git repository URL.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>📜 Workflow environment variables: CIRCLE_WORKFLOW_ID, CIRCLE_WORKFLOW_JOB_ID, etc…:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>These variables are associated with the running workflow. They provide information about the workflow ID, the job ID in the workflow, and the workflow workspace ID.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Other variables: CIRCLE_OIDC_TOKEN, CIRCLE_OIDC_TOKEN_V2, CIRCLE_PLUGIN_TEST:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>These variables are project-specific and can be used to store sensitive information or API keys. In this case, they are redacted (<strong>REDACTED</strong>) for security reasons. This pipeline appears to be a build and test (build_and_test) phase of your Orange County Lettings project. It is triggered on the master branch and uses various environment variables to retrieve information about the context of the build.</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_preparing_enrironnment_variables.png"><img alt="circleci preparing enrironnment variables" src="_images/circleci_preparing_enrironnment_variables.png" style="width: 781.5px; height: 327.5px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_preparing_enrironnment_variables.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>📜 Checkout code</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This part of the build output is related to the configuration and use of SSH keys to access Git repositories.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Creating .ssh directory:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Creates the . ssh directory in the user directory to store the SSH keys.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Adding the following entries to known_hosts:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Added Git host public key (GitHub, Bitbucket, GitLab) to known_hosts file. This allows the trusted host (CircleCI) to identify the Git host and ensure that it connects to the correct server.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Writing SSH key for checkout:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Generates a private SSH key (id_rsa) and a public key (id_rsa.pub) for authentication when retrieving source code from the Git repository.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Cloning git repository :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Clone the Git repository to the current working directory.</p></li>
+</ul>
+</div></blockquote>
+<p>📜 Checking out branch :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Checks the specified branch. In this case, it is mentioned that the branch is up to date with origin/master and that the HEAD is now on the latest revision of this branch.</p></li>
+</ul>
+</div></blockquote>
+<p>These steps ensure that CircleCI can access the Git repository using SSH keys and retrieve the source code for construction.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_checkout_code.png"><img alt="circleci checkout code" src="_images/circleci_checkout_code.png" style="width: 782.0px; height: 346.5px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_checkout_code.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<hr class="docutils" />
+<a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings" class="button">
+    <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
+</a><hr class="docutils" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="heroku.html" class="btn btn-neutral float-left" title="Heroku" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="Quick start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Laurent Jouron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

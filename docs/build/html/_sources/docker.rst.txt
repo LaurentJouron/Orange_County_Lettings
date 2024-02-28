@@ -21,7 +21,7 @@ Dockerfile for Python
 
 This Docker file is used to build a Python application container.
 
-⏩️ Pull the official base image
+📜 Pull the official base image
 
 .. code-block:: console
 
@@ -29,7 +29,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Set the working directory inside the container
+📜 Set the working directory inside the container
 
 .. code-block:: console
 
@@ -37,7 +37,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Set environment variables to prevent Python from writing bytecode and buffering stdout and stderr
+📜 Set environment variables to prevent Python from writing bytecode and buffering stdout and stderr
 
 .. code-block:: console
 
@@ -46,7 +46,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Define arguments for setting secret key and DSN (Data Source Name)
+📜 Define arguments for setting secret key and DSN (Data Source Name)
 
 .. code-block:: console
 
@@ -55,7 +55,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Set environment variables using the provided arguments
+📜 Set environment variables using the provided arguments
 
 .. code-block:: console
 
@@ -64,7 +64,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Expose port 8000 to the outside world
+📜 Expose port 8000 to the outside world
 
 .. code-block:: console
 
@@ -73,7 +73,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Upgrade pip and copy requirements file to the working directory
+📜 Upgrade pip and copy requirements file to the working directory
 
 .. code-block:: console
 
@@ -83,7 +83,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Copy the current directory contents into the container at /usr/src/app
+📜 Copy the current directory contents into the container at /usr/src/app
 
 .. code-block:: console
 
@@ -91,7 +91,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Collect static files
+📜 Collect static files
 
 .. code-block:: console
 
@@ -99,7 +99,7 @@ This Docker file is used to build a Python application container.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Command to run the application using Gunicorn
+📜 Command to run the application using Gunicorn
 
 .. code-block:: console
 
@@ -110,6 +110,8 @@ This Docker file is used to build a Python application container.
 ==========
 Dockerfile
 ==========
+
+⚙️ Dockerfile
 
 .. code-block:: Dockerfile
 
@@ -155,18 +157,22 @@ Dockerfile
 docker-compose.yml
 ==================
 
+
 This docker-compose.yml file defines the services needed to run the application. 
 It uses Docker Compose to manage Docker containers.
 
-⏩️ Services
+*   Services
 
-    * web: The "web" service is responsible for running the main application.
+    *   web: The "web" service is responsible for running the main application.
 
-⏩️ Configuration
+*   Configuration
 
-    * build: This option specifies that the Docker image for this service must be built using the Dockerfile located in the current directory.
-    * volumes: This service mounts the current directory to the ``/code`` directory inside the container, thus allowing to synchronize the code between the host and the container.
-    * ports: It maps port 8000 of the Docker container to port 8000 of the host, allowing access to the application via port 8000 of the host.
+    *   build: This option specifies that the Docker image for this service must be built using the Dockerfile located in the current directory.
+    *   volumes: This service mounts the current directory to the ``/code`` directory inside the container, thus allowing to synchronize the code between the host and the container.
+    *   ports: It maps port 8000 of the Docker container to port 8000 of the host, allowing access to the application via port 8000 of the host.
+
+
+⚙️ docker-composer.yml
 
 .. code-block:: Dockerfile
 
@@ -189,14 +195,13 @@ It uses Docker Compose to manage Docker containers.
         # It maps port 8000 of the Docker container to port 8000 of the host, enabling access to 
         # the application via port 8000 of the host.
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***********
 Build image
 ***********
 
-⏩️ Perform this command to control the image
+⚙️ Perform this command to control the image
 
 .. code-block:: console
 

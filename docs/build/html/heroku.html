@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quick start" href="quick_start.html" />
-    <link rel="prev" title="Documentation" href="documentation.html" /> 
+    <link rel="prev" title="Error" href="error.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,7 +55,12 @@
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Heroku</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Heroku</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#heroku-and-cli">Heroku and CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signup">Signup</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
@@ -87,38 +92,45 @@
              
   <section id="heroku">
 <span id="id1"></span><h1><strong>Heroku</strong><a class="headerlink" href="#heroku" title="Link to this heading"></a></h1>
-<hr class="docutils" />
-<hr class="docutils" />
-<p>Connectez-vous à votre compte Heroku en utilisant la commande suivante dans votre terminal :</p>
-<p>heroku login</p>
-<p>Une fois connecté, créez une nouvelle application Heroku en exécutant la commande suivante :
-heroku create orange_county_lettings</p>
-<p>Ensuite, vous devez pousser votre image Docker vers le registre d’images de conteneurs Heroku en utilisant la commande suivante :
-heroku container:push web –app orange_county_lettings</p>
-<p>Après avoir poussé votre image Docker vers Heroku, vous devez libérer cette image en exécutant la commande suivante :
-heroku container:release web –app orange_county_lettings</p>
-<p>Enfin, pour vous assurer que votre application est en cours d’exécution, vous pouvez utiliser la commande suivante pour afficher les journaux en temps réel :
-heroku logs –tail –app nom_de_votre_application</p>
-<p><a class="reference external" href="https://county-lettings-dce9820cf239.herokuapp.com/">https://county-lettings-dce9820cf239.herokuapp.com/</a></p>
-<hr class="docutils" />
-<hr class="docutils" />
-<hr class="docutils" />
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Before activating the button below, you must install and activate the virtual environment.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<blockquote>
+<div><a class="reference external image-reference" href="https://devcenter.heroku.com/categories/reference"><img alt="Heroku Badge" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&amp;logo=heroku&amp;logoColor=white" /></a>
+</div></blockquote>
+<p>Parameterizations are done to a specific project. To parameterize to the other project, go to the official
+documentation.</p>
 </div>
-<p>⏩️
-⏩️</p>
+<hr class="docutils" />
+<section id="heroku-and-cli">
+<h2>Heroku and CLI<a class="headerlink" href="#heroku-and-cli" title="Link to this heading"></a></h2>
+<p>Make sure you have a <a class="reference external" href="https://signup.heroku.com/">Heroku</a> account and the <a class="reference external" href="https://devcenter.heroku.com/articles/heroku-cli">Heroku command line interface (CLI)</a> installed on your local machine.</p>
+</section>
+<hr class="docutils" />
+<section id="signup">
+<h2>Signup<a class="headerlink" href="#signup" title="Link to this heading"></a></h2>
+<p>Connectez-vous à votre compte Heroku en utilisant la commande suivante dans votre terminal :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">heroku login</span>
+</pre></div>
+</div>
+<figure class="align-center" id="ma-figure">
+<a class="reference internal image-reference" href="_images/heroku_login.png"><img alt="heroku login" src="_images/heroku_login.png" style="width: 715.5px; height: 87.5px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/heroku_login.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">
     <img src="_static/button_open_website.png" alt="Report button" width="200" height="100" />
 </a><hr class="docutils" />
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="documentation.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="error.html" class="btn btn-neutral float-left" title="Error" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="quick_start.html" class="btn btn-neutral float-right" title="Quick start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

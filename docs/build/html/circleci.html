@@ -52,7 +52,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Circle CI</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-circleci">What is CircleCi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pipline-ci-cd">Pipline CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">.circleci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">.circleci</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-py">config.py</a></li>
 </ul>
 </li>
@@ -61,7 +61,9 @@
 <li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
@@ -102,7 +104,7 @@ documentation.</p>
 <hr class="docutils" />
 <section id="what-is-circleci">
 <h2>What is CircleCi<a class="headerlink" href="#what-is-circleci" title="Link to this heading"></a></h2>
-<p>CircleCI is a continuous integration and continuous deployment (CI/CD)
+<p>📜 CircleCI is a continuous integration and continuous deployment (CI/CD)
 tool widely used in software development.
 Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.</p>
 </section>
@@ -118,17 +120,18 @@ Pipelines in CircleCI are automated workflows that describe how code is compiled
 <li><p>Measuring the quality</p></li>
 <li><p>Packaging / Management of application deliverables</p></li>
 </ul>
-<figure class="align-center" id="ma-figure">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/cicd.png"><img alt="CI/CD" src="_images/cicd.png" style="width: 254.4px; height: 127.2px;" /></a>
 </figure>
 <div style="text-align: center;">
     <a href="_static/cicd.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
-</div><p>A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a
+</div><hr class="docutils" />
+<p>📜 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a
 series of automated steps that are executed in a specific order to test and deploy the code consistently
 and reliably.</p>
-<figure class="align-center" id="id1">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/pepline_problem.png"><img alt="pepline_problem" src="_images/pepline_problem.png" style="width: 658.8000000000001px; height: 241.20000000000002px;" /></a>
 </figure>
 <div style="text-align: center;">
@@ -137,9 +140,9 @@ and reliably.</p>
     </a>
 </div></section>
 <hr class="docutils" />
-<section id="id2">
-<h2>.circleci<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<p class="rubric">Create a folder .circleci</p>
+<section id="id1">
+<h2>.circleci<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>⚙️ Create a folder <code class="docutils literal notranslate"><span class="pre">.circleci</span></code></p>
 <p>We need to create a folder <code class="docutils literal notranslate"><span class="pre">.circleci</span></code> at the project level so that when the project is created, the <code class="docutils literal notranslate"><span class="pre">config.py</span></code>
 file is automatically placed inside it.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir .circleci</span>
@@ -149,27 +152,27 @@ file is automatically placed inside it.</p>
 <hr class="docutils" />
 <section id="config-py">
 <h2>config.py<a class="headerlink" href="#config-py" title="Link to this heading"></a></h2>
-<p>This file can be created and automatically positioned in the <code class="docutils literal notranslate"><span class="pre">.cirlceci</span></code>. folder.
+<p>💡 This file can be created and automatically positioned in the <code class="docutils literal notranslate"><span class="pre">.cirlceci</span></code>. folder.
 A <code class="docutils literal notranslate"><span class="pre">circleci-project-setup</span></code> branch is created. Either you have to configure on this branch,
 or you have to gather it on the Master branch.</p>
 <hr class="docutils" />
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="_images/create_circle_ci.png"><img alt="create_circle_ci" src="_images/create_circle_ci.png" style="width: 905.0999999999999px; height: 96.6px;" /></a>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_create.png"><img alt="circle ci create" src="_images/circleci_create.png" style="width: 905.0999999999999px; height: 96.6px;" /></a>
 </figure>
 <div style="text-align: center;">
-    <a href="_static/create_circle_ci.png" download class="button">
+    <a href="_static/circleci_create.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />
-<figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="_images/config_circle_file.png"><img alt="config_circle_file" src="_images/config_circle_file.png" style="width: 374.40000000000003px; height: 231.20000000000002px;" /></a>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_config_file.png"><img alt="circleci config file" src="_images/circleci_config_file.png" style="width: 374.40000000000003px; height: 231.20000000000002px;" /></a>
 </figure>
 <div style="text-align: center;">
-    <a href="_static/config_circle_file.png" download class="button">
+    <a href="_static/circleci_config_file.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />
-<p class="rubric">config.py script</p>
+<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.py</span></code> initialization</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the latest 2.1 version of CircleCI pipeline process engine.</span>
 <span class="c1"># See: https://circleci.com/docs/configuration-reference</span>
 <span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
@@ -204,7 +207,7 @@ or you have to gather it on the Master branch.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric">Merge branches</p>
+<p>🔄 Merge branches</p>
 <p>We must position ourselves on the marster branch.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
 </pre></div>
@@ -215,93 +218,97 @@ or you have to gather it on the Master branch.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric">config.py after configuration</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the latest 2.1 version of CircleCI pipeline process engine.</span>
- <span class="c1"># See: https://circleci.com/docs/configuration-reference</span>
- <span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
+<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.py</span></code> after configuration</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This YAML file defines the configuration of the deployment pipeline with CircleCI.</span>
+<span class="c1"># It contains steps for building, testing, creating a Docker image, and deploying to Heroku.</span>
 
- <span class="n">orbs</span><span class="p">:</span>
+<span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
 
- <span class="n">python</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">python</span><span class="o">@</span><span class="mf">2.1.1</span>
+<span class="n">orbs</span><span class="p">:</span>
+<span class="n">python</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">python</span><span class="o">@</span><span class="mf">2.1.1</span>
+<span class="n">heroku</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">heroku</span><span class="o">@</span><span class="mf">2.0.0</span>
 
- <span class="n">jobs</span><span class="p">:</span>
- <span class="n">build_and_test</span><span class="p">:</span>
- <span class="n">docker</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+<span class="n">jobs</span><span class="p">:</span>
+<span class="n">build_and_test</span><span class="p">:</span>
+<span class="c1"># Job for building and testing the application.</span>
+<span class="c1"># Uses a Docker image with Python 3.12.0.</span>
+<span class="n">docker</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+<span class="n">steps</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">checkout</span>
+<span class="o">-</span> <span class="n">python</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">packages</span><span class="p">:</span>
+        <span class="n">pkg</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span> <span class="n">pipenv</span>
+<span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Run</span> <span class="n">tests</span>
+        <span class="n">command</span><span class="p">:</span>
+        <span class="n">mkdir</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span> <span class="o">&amp;&amp;</span> <span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span>
+<span class="o">-</span> <span class="n">store_test_results</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span>
+<span class="o">-</span> <span class="n">store_artifacts</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span>
+        <span class="n">destination</span><span class="p">:</span> <span class="n">tr1</span>
+<span class="o">-</span> <span class="n">persist_to_workspace</span><span class="p">:</span>
+        <span class="n">root</span><span class="p">:</span> <span class="o">~/</span><span class="n">project</span>
+        <span class="n">paths</span><span class="p">:</span>
+        <span class="o">-</span> <span class="o">.</span>
 
- <span class="n">steps</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">checkout</span>
- <span class="o">-</span> <span class="n">python</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">packages</span><span class="p">:</span>
-         <span class="n">pkg</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span> <span class="n">pipenv</span>
- <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
-         <span class="n">name</span><span class="p">:</span> <span class="n">Run</span> <span class="n">tests</span>
-         <span class="n">command</span><span class="p">:</span>
-         <span class="n">mkdir</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span> <span class="o">&amp;&amp;</span> <span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span>
- <span class="o">-</span> <span class="n">store_test_results</span><span class="p">:</span>
-         <span class="n">path</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span>
- <span class="o">-</span> <span class="n">store_artifacts</span><span class="p">:</span>
-         <span class="n">path</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span>
-         <span class="n">destination</span><span class="p">:</span> <span class="n">tr1</span>
- <span class="o">-</span> <span class="n">persist_to_workspace</span><span class="p">:</span>
-         <span class="n">root</span><span class="p">:</span> <span class="o">~/</span><span class="n">project</span>
-         <span class="n">paths</span><span class="p">:</span>
-         <span class="o">-</span> <span class="o">.</span>
- <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
- <span class="n">docker</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.9.6</span>
- <span class="n">steps</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">checkout</span>
- <span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
-         <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
- <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
-         <span class="n">name</span><span class="p">:</span> <span class="n">build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">docker</span> <span class="n">image</span>
-         <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
-         <span class="n">TAG</span><span class="o">=</span><span class="mf">0.1</span><span class="o">.</span><span class="err">$</span><span class="n">CIRCLE_BUILD_NUM</span>
-         <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="err">$</span><span class="n">IMAGE_NAME</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">SECRET_KEY</span><span class="p">}</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">DSN</span><span class="p">}</span> <span class="o">.</span>
-         <span class="c1">#docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .</span>
-         <span class="n">echo</span> <span class="err">$</span><span class="n">DOCKER_PASSWORD</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">login</span> <span class="o">-</span><span class="n">u</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span> <span class="o">--</span><span class="n">password</span><span class="o">-</span><span class="n">stdin</span>
-         <span class="n">docker</span> <span class="n">push</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="err">$</span><span class="n">IMAGE_NAME</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span>
+<span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
+<span class="c1"># Job for building and pushing a Docker image.</span>
+<span class="c1"># Uses a Docker image with Python 3.9.6.</span>
+<span class="n">docker</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.9.6</span>
+<span class="n">steps</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">checkout</span>
+<span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
+        <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
+<span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">docker</span> <span class="n">image</span>
+        <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
+        <span class="n">TAG</span><span class="o">=</span><span class="mf">0.1</span><span class="o">.</span><span class="err">$</span><span class="n">CIRCLE_BUILD_NUM</span>
+        <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="n">orange_county_lettings</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">SECRET_KEY</span><span class="p">}</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">DSN</span><span class="p">}</span> <span class="o">.</span>
+        <span class="c1">#docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .</span>
+        <span class="n">echo</span> <span class="err">$</span><span class="n">DOCKER_PASSWORD</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">login</span> <span class="o">-</span><span class="n">u</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span> <span class="o">--</span><span class="n">password</span><span class="o">-</span><span class="n">stdin</span>
+        <span class="n">docker</span> <span class="n">push</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="err">$</span><span class="n">IMAGE_NAME</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span>
 
- <span class="n">deploy_on_heroku</span><span class="p">:</span>
- <span class="n">docker</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+<span class="n">deploy_on_heroku</span><span class="p">:</span>
+<span class="c1"># Job for deploying the application to Heroku.</span>
+<span class="c1"># Uses a Docker image with Python 3.12.0.</span>
+<span class="n">docker</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+<span class="n">steps</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">checkout</span>
+<span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
+        <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
+<span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
+        <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
+        <span class="n">sudo</span> <span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cli</span><span class="o">-</span><span class="n">assets</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+        <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="n">SECRET_KEY</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
+        <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="n">DSN</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
+        <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
+        <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
+        <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
 
- <span class="n">steps</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">checkout</span>
- <span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
-         <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
- <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
-         <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
-         <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
-         <span class="n">sudo</span> <span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cli</span><span class="o">-</span><span class="n">assets</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="n">SECRET_KEY</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="n">DSN</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
-
- <span class="n">workflows</span><span class="p">:</span>
- <span class="n">main</span><span class="p">:</span>
- <span class="n">jobs</span><span class="p">:</span>
- <span class="o">-</span> <span class="n">build_and_test</span>
- <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
-         <span class="n">requires</span><span class="p">:</span>
-         <span class="o">-</span> <span class="n">build_and_test</span>
-         <span class="n">filters</span><span class="p">:</span>
-         <span class="n">branches</span><span class="p">:</span>
-         <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
- <span class="o">-</span> <span class="n">deploy_on_heroku</span><span class="p">:</span>
-         <span class="n">requires</span><span class="p">:</span>
-         <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span>
-         <span class="n">filters</span><span class="p">:</span>
-         <span class="n">branches</span><span class="p">:</span>
-         <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
+<span class="n">workflows</span><span class="p">:</span>
+<span class="n">main</span><span class="p">:</span>
+<span class="c1"># Main workflow for running the jobs in the specified order.</span>
+<span class="n">jobs</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">build_and_test</span>
+<span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
+        <span class="n">requires</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">build_and_test</span>
+        <span class="n">filters</span><span class="p">:</span>
+        <span class="n">branches</span><span class="p">:</span>
+        <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
+<span class="o">-</span> <span class="n">deploy_on_heroku</span><span class="p">:</span>
+        <span class="n">requires</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span>
+        <span class="n">filters</span><span class="p">:</span>
+        <span class="n">branches</span><span class="p">:</span>
+        <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
 </pre></div>
 </div>
 <hr class="docutils" />
-<a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings" class="button">
-    <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
-</a><hr class="docutils" />
 </section>
 </section>
 

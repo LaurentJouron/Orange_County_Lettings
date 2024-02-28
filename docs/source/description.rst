@@ -18,6 +18,7 @@ Following the instructions of the README, it is possible to:
 * Run the linting locally.
 * Run the test suite locally.
 
+📜 **Start** : `README <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_ on OC GitHub.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -49,6 +50,7 @@ To do
 * Moving an image with Docker
 * Test automation and integration with CircleCi
 
+📜 **End** `README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

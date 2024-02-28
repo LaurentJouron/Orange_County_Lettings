@@ -15,7 +15,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Clone
+.. rubric:: ⚙️ Clone
 
 .. code-block:: console
 
@@ -24,7 +24,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Change directory in the project:
+.. rubric:: ⏩️ Change directory in the project:
 
 .. code-block:: console
 
@@ -33,7 +33,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Create virtual environment folder
+.. rubric:: ⚙️ Create virtual environment folder
 
 .. code-block:: console
 
@@ -42,7 +42,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Install virtual environment
+.. rubric:: ⚙️ Install virtual environment
 
 .. code-block:: console
 
@@ -51,7 +51,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Activate environment
+.. rubric:: ⏩️ Activate environment
 
 .. code-block:: console
 
@@ -60,7 +60,7 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Launch local project
+.. rubric:: ⏩️ Launch local project
 
 .. code-block:: console
    

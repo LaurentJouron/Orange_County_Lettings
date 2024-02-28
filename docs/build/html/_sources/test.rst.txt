@@ -39,6 +39,8 @@ and make your tests discoverable (`see My tests are not being found. Why? <https
 pytest.ini
 **********
 
+⚙️ pytest.ini
+
 .. code-block:: python
 
     [pytest]
@@ -48,7 +50,7 @@ pytest.ini
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Run test
+⏩️ Run test
 
 Run your tests with ``pytest``:
 
@@ -73,7 +75,7 @@ Run your tests with ``pytest``:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: pytest -vvv
+⏩️ pytest -vvv
 
 To view test details in the terminal, use the ``-vvv`` option with pytest:
 
@@ -98,7 +100,7 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: pytest --cov=.
+⏩️ pytest --cov=.
 
 To measure the test coverage of a project, run pytest with the ``--cov`` option to specify the folder to be analyzed:
 
@@ -123,7 +125,7 @@ To measure the test coverage of a project, run pytest with the ``--cov`` option 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: pytest --cov=. --cov-report html
+⚙️ pytest --cov=. --cov-report html
 
 To generate an HTML report automatically, use the ``--cov-report html`` option with pytest:
 

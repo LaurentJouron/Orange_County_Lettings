@@ -19,7 +19,7 @@
 Specifications
 **************
 
-.. rubric:: Change directory
+⏩️ Change directory
 
 .. code-block:: console
 
@@ -28,7 +28,7 @@ Specifications
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Open a shell session
+🔧 Open a shell session
 
 .. code-block:: console
 
@@ -37,7 +37,7 @@ Specifications
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Displays the database tables
+🔍 Displays the database tables
 
 .. code-block:: console
 
@@ -46,8 +46,8 @@ Specifications
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Displays the profiles, pragma 
-   
+🔍 Displays the profiles, pragma 
+
 .. code-block:: console
 
    table_info(oc_lettings_site_profile)
@@ -55,16 +55,16 @@ Specifications
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Create a query on the profile table:
+🔍 Create a query on the profile table:
 
 .. code-block:: sql
-   
+
    select user_id, favorite_city from oc_lettings_site_profile where favorite_city like 'B%';``
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: to leave
+🔚 To leave
 
 .. code-block:: console
 

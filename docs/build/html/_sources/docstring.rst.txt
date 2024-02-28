@@ -29,6 +29,9 @@ Google style
    :alt: Google Docstrings Badge
    :target: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 
+
+⚙️ Google
+
 .. code-block:: Python
 
         def addition(a, b):
@@ -55,6 +58,8 @@ NumPy/Scipy style
    :target: https://numpydoc.readthedocs.io/en/latest/format.html
 
 This style is similar to the Google style but uses specific sections to describe parameters, return values, etc. Here’s an example:
+
+⚙️ NumPy/SciPy
 
 .. code-block:: Python
 
@@ -90,6 +95,8 @@ To affcicher the documentation of a function, class or method, it is necessary t
         print(addition.__doc__)
 
 
+💡Results for google style
+
 .. code-block:: Python
 
         This function takes two numbers as input and returns their sum.
@@ -107,6 +114,7 @@ To affcicher the documentation of a function, class or method, it is necessary t
 
         print(multiply_matrix.__doc__)
 
+💡Results for NumPy/Scipy style
 
 .. code-block:: Python
 

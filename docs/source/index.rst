@@ -22,7 +22,11 @@ Description
 Orange County Lettings is a start-up in the real estate rental sector. Being expanding in the 
 United States, the company decided to expand its team. As a developer, you need to play an 
 important role in improving the company’s site, both in terms of code and deployment.
-I had access to the site’s `GitHub repository <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_.
+I had access to the site’s 
+
+.. image:: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+   :alt: Gihub Badge
+   :target: https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,14 +120,11 @@ Information
 
 * **Document status** : In work
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ****
 Logo
 ****
-
-.. _ma_figure:
 
 .. figure:: _static/logo.png
    :scale: 75
@@ -138,14 +139,11 @@ Logo
        </a>
    </div>
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***************
 Image with logo
 ***************
-
-.. _ma_figure:
 
 .. figure:: _static/Orange_County_Lettings_logo.png
    :height: 250
@@ -167,8 +165,6 @@ Image with logo
 *********
 Home page
 *********
-
-.. _ma_figure:
 
 .. figure:: _static/home_page.png
    :height: 250
@@ -199,7 +195,9 @@ Indices and tables
             docker
             docstring
             documentation
+            error
             heroku
+            pipeline
             quick_start
             sentry
             test

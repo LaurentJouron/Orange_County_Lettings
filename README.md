@@ -87,15 +87,15 @@ Activer l'environnement de travail (environnement virtuel) avec
 Lancez l'application avec cette commande
   * ``python manage.py runserver``
 
-<a href="http://localhost:8000" title="Orange County Lettings" ></a>
+<a href="https://county-lettings-dce9820cf239.herokuapp.com/" title="Orange County Lettings" ></a>
 <table>
   <tr>
     <td align="center">
-      <a href="http://localhost:8000">
+      <a href="https://county-lettings-dce9820cf239.herokuapp.com/">
         <img width="200px"
           src="https://laurent-lettings.readthedocs.io/en/latest/_static/logo.png" /><br />
         <sub><b>Ouvrir le site</b></sub></a><br />
-      <a href="http://localhost:8000" title="Ouvrir le site" ></a> 
+      <a href="https://county-lettings-dce9820cf239.herokuapp.com/" title="Ouvrir le site" ></a> 
     </td>
 </table>
 
@@ -167,43 +167,6 @@ _______________________
 
 _______________________
 
-<h1 align="center">Docker</h1>
-
-<a href="https://docs.docker.com/" title="Ouvrir la documentation" ></a>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://docs.docker.com/">
-        <img width="200px"
-          src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" /><br />
-        <sub><b>Ouvrir la documentation</b></sub></a><br />
-      <a href="https://docs.docker.com/" title="Ouvrir la documentation" ></a> 
-    </td>
-</table>
-
-_______________________
-
-<h1 align="center">Sentry</h1>
-
-<a href="https://docs.sentry.io/" title="Ouvrir la documentation" ></a>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://docs.sentry.io/">
-        <img width="200px"
-          src="https://img.shields.io/badge/sentry-%2319CAAD.svg?style=for-the-badge&logo=sentry&logoColor=white" /><br />
-        <sub><b>Ouvrir la documentation</b></sub></a><br />
-      <a href="https://docs.sentry.io/" title="Ouvrir la documentation" ></a> 
-    </td>
-</table>
-
-
-<p>
-  Sentry est une plateforme de gestion des erreurs qui permet de capturer, suivre et résoudre les erreurs et les exceptions dans Orange County Lettings . Elle fournit des informations détaillées sur les erreurs, les variables locales et les informations sur l'environnement d'exécution. Cela permet aux développeurs de diagnostiquer et de résoudre rapidement les problèmes du site web.
-</p>
-
-_______________________
-
 <h1 align="center">Sphinx</h1>
 
 <a href="https://www.sphinx-doc.org/" title="Ouvrir la documentation" ></a>
@@ -219,11 +182,11 @@ _______________________
 </table>
 
 Pour se rendre sur la documentation du site:  <a href="https://laurent-lettings.readthedocs.io/en/latest/" target="_blank">Orange County Lettings</a> 
+
 _______________________
 
 
 <h1 align="center">Auteur et collaborateurs</h1>
-
 
 <table>
   <tr>

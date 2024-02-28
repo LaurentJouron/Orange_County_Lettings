@@ -21,7 +21,7 @@ Creation
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Install Sphinx
+⏩️ Install Sphinx
 
 .. code-block:: console
 
@@ -29,7 +29,7 @@ Creation
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Creating the documentation layout
+⚙️ Creating the documentation layout (``docs``)
 
 .. code-block:: console
 
@@ -66,33 +66,29 @@ After the last question, you will see the new docs directory with the following 
 
 The purpose of each of these files is:
 
-.. rubric:: build/
-    
+⏩️ build/
+
 * An empty directory (for now) that will hold the rendered documentation.
 
-
-.. rubric:: make.bat and Makefile
+⏩️ make.bat and Makefile
 
 * Convenience scripts to simplify some common Sphinx operations, such as rendering the content.
 
-
-.. rubric:: source/conf.py
+⏩️ source/conf.py
 
 * A Python script holding the configuration of the Sphinx project. It contains the project name and release 
 you specified to sphinx-quickstart, as well as some extra configuration keys.
 
+⏩️ source/index.rst
 
-.. rubric:: source/index.rst
-    
 * The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Build docs/build/
+⚙️ Build docs/build/
 
 Thanks to this bootstrapping step, you already have everything needed to render the documentation as HTML for the first time. 
 To do that, run this command:
-
 
 .. code-block:: console
 
@@ -107,14 +103,15 @@ And finally, open docs/build/html/index.html in your browser. You should see som
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Position yourself in the docs folder
+⏩️ Position yourself in the docs folder
 
 .. code-block:: console
 
    cd docs
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: make html
+⚙️ make html
 
 This command must be retained because this command will be repeated with each modification.
 
@@ -129,6 +126,8 @@ This command must be retained because this command will be repeated with each mo
 *****************
 
 To realize this documentation I used this configuration for the file ``.readthedocs.yaml``
+
+⚙️ .readthedocs.yaml
 
 .. code-block:: python
 
@@ -156,6 +155,8 @@ conf.py
 *******
 
 To realize this documentation I used this configuration for the file ``conf.py``
+
+⚙️ ``conf.py``
 
 .. code-block:: python
 
@@ -230,6 +231,8 @@ requirements.txt
 
 To realize this documentation I used this configuration for the file ``requirements.txt``
 
+⚙️ requirements.txt
+
 .. code-block:: txt
 
     Sphinx==7.2.6
@@ -295,6 +298,18 @@ Docker
 
 * `Docker <http://127.0.0.1:5501/docs/build/html/docker.html>`_
 
+  - `Dockerfile for Python <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile-for-python>`_
+
+  - `Dockerfile <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile>`_
+
+  - `docker-compose.yml <http://127.0.0.1:5501/docs/build/html/docker.html#docker-compose-yml>`_
+
+      - `Build image <http://127.0.0.1:5501/docs/build/html/docker.html#build-image>`_
+
+      - `Docker image <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image>`_
+
+      - `Docker image details <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image-details>`_
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Docstring
@@ -331,6 +346,18 @@ Documentation
 
   - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Heroku
+~~~~~~
+
+* `Heroku <http://127.0.0.1:5501/docs/build/html/heroku.html>`_
+
+  - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
+
+  - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Quick start
@@ -344,6 +371,12 @@ Sentry
 ~~~~~~
 
 * `Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html>`_
+
+  - `What is Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#what-is-sentry>`_
+
+  - `.env <http://127.0.0.1:5501/docs/build/html/sentry.html#env>`_
+
+  - `settings.py <http://127.0.0.1:5501/docs/build/html/sentry.html#settings-py>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

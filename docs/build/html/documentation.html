@@ -24,7 +24,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Heroku" href="heroku.html" />
+    <link rel="next" title="Error" href="error.html" />
     <link rel="prev" title="Docstring" href="docstring.html" /> 
 </head>
 
@@ -67,6 +67,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#docstring">Docstring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id7">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heroku">Heroku</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#quick-start">Quick start</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sentry">Sentry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pytest-django">Pytest-Django</a></li>
@@ -74,7 +75,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
@@ -116,12 +119,12 @@
 To start create documentation, you must install <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a></p>
 </div>
 <hr class="docutils" />
-<p class="rubric">Install Sphinx</p>
+<p>⏩️ Install Sphinx</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pipenv install sphinx</span>
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric">Creating the documentation layout</p>
+<p>⚙️ Creating the documentation layout (<code class="docutils literal notranslate"><span class="pre">docs</span></code>)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-quickstart docs</span>
 </pre></div>
 </div>
@@ -144,25 +147,25 @@ project inside the docs folder. To proceed, answer each question as follows:</p>
 </figure>
 <hr class="docutils" />
 <p>The purpose of each of these files is:</p>
-<p class="rubric">build/</p>
+<p>⏩️ build/</p>
 <ul class="simple">
 <li><p>An empty directory (for now) that will hold the rendered documentation.</p></li>
 </ul>
-<p class="rubric">make.bat and Makefile</p>
+<p>⏩️ make.bat and Makefile</p>
 <ul class="simple">
 <li><p>Convenience scripts to simplify some common Sphinx operations, such as rendering the content.</p></li>
 </ul>
-<p class="rubric">source/conf.py</p>
+<p>⏩️ source/conf.py</p>
 <ul class="simple">
 <li><p>A Python script holding the configuration of the Sphinx project. It contains the project name and release</p></li>
 </ul>
 <p>you specified to sphinx-quickstart, as well as some extra configuration keys.</p>
-<p class="rubric">source/index.rst</p>
+<p>⏩️ source/index.rst</p>
 <ul class="simple">
 <li><p>The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric">Build docs/build/</p>
+<p>⚙️ Build docs/build/</p>
 <p>Thanks to this bootstrapping step, you already have everything needed to render the documentation as HTML for the first time.
 To do that, run this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-build -M html docs/source/ docs/build/</span>
@@ -173,11 +176,12 @@ To do that, run this command:</p>
 <a class="reference internal image-reference" href="_images/doc_view.png"><img alt="Logo" src="_images/doc_view.png" style="width: 437.25px; height: 141.0px;" /></a>
 </figure>
 <hr class="docutils" />
-<p class="rubric">Position yourself in the docs folder</p>
+<p>⏩️ Position yourself in the docs folder</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd docs</span>
 </pre></div>
 </div>
-<p class="rubric">make html</p>
+<hr class="docutils" />
+<p>⚙️ make html</p>
 <p>This command must be retained because this command will be repeated with each modification.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\make html</span>
 </pre></div>
@@ -187,6 +191,7 @@ To do that, run this command:</p>
 <section id="readthedocs-yaml">
 <h2>.readthedocs.yaml<a class="headerlink" href="#readthedocs-yaml" title="Link to this heading"></a></h2>
 <p>To realize this documentation I used this configuration for the file <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code></p>
+<p>⚙️ .readthedocs.yaml</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Required</span>
 <span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
 
@@ -210,6 +215,7 @@ To do that, run this command:</p>
 <section id="conf-py">
 <h2>conf.py<a class="headerlink" href="#conf-py" title="Link to this heading"></a></h2>
 <p>To realize this documentation I used this configuration for the file <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<p>⚙️ <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
 <span class="c1">#</span>
 <span class="c1"># For the full list of built-in configuration values, see the documentation:</span>
@@ -279,6 +285,7 @@ To do that, run this command:</p>
 <section id="requirements-txt">
 <h2>requirements.txt<a class="headerlink" href="#requirements-txt" title="Link to this heading"></a></h2>
 <p>To realize this documentation I used this configuration for the file <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p>
+<p>⚙️ requirements.txt</p>
 <div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Sphinx==7.2.6
 sphinx-rtd-theme==1.3.0
 sphinx-bootstrap-theme
@@ -335,8 +342,22 @@ sphinx-copybutton
 <hr class="docutils" />
 <section id="docker">
 <h3>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html">Docker</a></p></li>
+<ul>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html">Docker</a></p>
+<ul>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile-for-python">Dockerfile for Python</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile">Dockerfile</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#docker-compose-yml">docker-compose.yml</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#build-image">Build image</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#docker-image">Docker image</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/docker.html#docker-image-details">Docker image details</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -371,6 +392,18 @@ sphinx-copybutton
 </ul>
 </section>
 <hr class="docutils" />
+<section id="heroku">
+<h3>Heroku<a class="headerlink" href="#heroku" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/heroku.html">Heroku</a></p>
+<ul>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli">Heroku and CLI</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/heroku.html#signup">Signup</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
 <section id="quick-start">
 <h3>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -381,7 +414,13 @@ sphinx-copybutton
 <section id="sentry">
 <h3>Sentry<a class="headerlink" href="#sentry" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/sentry.html">Sentry</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/sentry.html">Sentry</a></p>
+<ul>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/sentry.html#what-is-sentry">What is Sentry</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/sentry.html#env">.env</a></p></li>
+<li><p><a class="reference external" href="http://127.0.0.1:5501/docs/build/html/sentry.html#settings-py">settings.py</a></p></li>
+</ul>
+</li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -405,7 +444,7 @@ sphinx-copybutton
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="docstring.html" class="btn btn-neutral float-left" title="Docstring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="heroku.html" class="btn btn-neutral float-right" title="Heroku" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="error.html" class="btn btn-neutral float-right" title="Error" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

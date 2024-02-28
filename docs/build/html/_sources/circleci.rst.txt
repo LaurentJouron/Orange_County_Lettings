@@ -11,13 +11,14 @@
 
     Parameterizations are done to a specific project. To parameterize to the other project, go to the official 
     documentation.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ****************
 What is CircleCi
 ****************
 
-CircleCI is a continuous integration and continuous deployment (CI/CD) 
+📜 CircleCI is a continuous integration and continuous deployment (CI/CD) 
 tool widely used in software development.
 Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.
 
@@ -36,8 +37,6 @@ Pipline CI/CD
 * Measuring the quality
 * Packaging / Management of application deliverables
 
-.. _ma_figure:
-
 .. figure:: _static/cicd.png
    :scale: 80
    :align: center
@@ -51,12 +50,11 @@ Pipline CI/CD
        </a>
    </div>
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a 
+📜 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a 
 series of automated steps that are executed in a specific order to test and deploy the code consistently 
 and reliably.
-
-.. _ma_figure:
 
 .. figure:: _static/pepline_problem.png
    :scale: 40
@@ -77,7 +75,7 @@ and reliably.
 .circleci
 *********
 
-.. rubric:: Create a folder .circleci
+⚙️ Create a folder ``.circleci``
 
 We need to create a folder ``.circleci`` at the project level so that when the project is created, the ``config.py`` 
 file is automatically placed inside it.
@@ -92,48 +90,43 @@ file is automatically placed inside it.
 config.py
 *********
 
-This file can be created and automatically positioned in the ``.cirlceci``. folder. 
+💡 This file can be created and automatically positioned in the ``.cirlceci``. folder. 
 A ``circleci-project-setup`` branch is created. Either you have to configure on this branch, 
 or you have to gather it on the Master branch.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. _ma_figure:
-
-.. figure:: _static/create_circle_ci.png
+.. figure:: _static/circleci_create.png
    :scale: 70
    :align: center
-   :alt: create_circle_ci
+   :alt: circle ci create
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/create_circle_ci.png" download class="button">
+       <a href="_static/circleci_create.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. _ma_figure:
-
-.. figure:: _static/config_circle_file.png
+.. figure:: _static/circleci_config_file.png
    :scale: 80
    :align: center
-   :alt: config_circle_file
+   :alt: circleci config file
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/config_circle_file.png" download class="button">
+       <a href="_static/circleci_config_file.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: config.py script
+⚙️ ``config.py`` initialization
 
 .. code-block:: python
 
@@ -171,7 +164,8 @@ or you have to gather it on the Master branch.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: Merge branches
+🔄 Merge branches
+
 
 We must position ourselves on the marster branch.
 
@@ -189,30 +183,32 @@ Then we can gather the branches, if necessary.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. rubric:: config.py after configuration
+⚙️ ``config.py`` after configuration
 
 .. code-block:: python
 
-       # Use the latest 2.1 version of CircleCI pipeline process engine.
-        # See: https://circleci.com/docs/configuration-reference
+        # This YAML file defines the configuration of the deployment pipeline with CircleCI.
+        # It contains steps for building, testing, creating a Docker image, and deploying to Heroku.
+
         version: 2.1
 
         orbs:
-
         python: circleci/python@2.1.1
+        heroku: circleci/heroku@2.0.0
 
         jobs:
         build_and_test:
+        # Job for building and testing the application.
+        # Uses a Docker image with Python 3.12.0.
         docker:
         - image: cimg/python:3.12.0
-
         steps:
         - checkout
         - python/install-packages:
                 pkg-manager: pipenv
         - run:
                 name: Run tests
-                command:
+                command: 
                 mkdir test-results && pipenv run pytest
         - store_test_results:
                 path: test-results
@@ -223,7 +219,10 @@ Then we can gather the branches, if necessary.
                 root: ~/project
                 paths:
                 - .
+
         build-and-push-docker-image:
+        # Job for building and pushing a Docker image.
+        # Uses a Docker image with Python 3.9.6.
         docker:
         - image: cimg/python:3.9.6
         steps:
@@ -231,18 +230,19 @@ Then we can gather the branches, if necessary.
         - setup_remote_docker:
                 docker_layer_caching: true
         - run:
-                name: build and push docker image
+                name: Build and push docker image
                 command: |
                 TAG=0.1.$CIRCLE_BUILD_NUM
-                docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
+                docker build -t $DOCKER_USERNAME/orange_county_lettings:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
                 #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
                 echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
                 docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
 
         deploy_on_heroku:
+        # Job for deploying the application to Heroku.
+        # Uses a Docker image with Python 3.12.0.
         docker:
         - image: cimg/python:3.12.0
-
         steps:
         - checkout
         - setup_remote_docker:
@@ -259,6 +259,7 @@ Then we can gather the branches, if necessary.
 
         workflows:
         main:
+        # Main workflow for running the jobs in the specified order.
         jobs:
         - build_and_test
         - build-and-push-docker-image:
@@ -274,12 +275,4 @@ Then we can gather the branches, if necessary.
                 branches:
                 only: main
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.. raw:: html
-
-   <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings" class="button">
-       <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
-   </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
