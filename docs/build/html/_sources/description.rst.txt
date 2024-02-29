@@ -18,7 +18,6 @@ Following the instructions of the `start README <https://github.com/OpenClassroo
 * Run the linting locally.
 * Run the test suite locally.
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *************
@@ -30,24 +29,23 @@ Pre-requisite
 * SQLite3 CLI or various graphics software
 * Python interpreter version 3.6 or higher
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *****
 To do
 *****
 
-* Modular development of a Django project
-* Unit tests
-* Test coverage greater than 80%
-* Make sure the test coverage is greater than 80% using a coverage check tool such as ``coverage`` or ``pytest-cov``
-* The correct pluralization of models in the admin page of the application
-* A docstring on each module, class and function
-* A personalized page in case of error 404 or 500
+* :doc:`Modular <data_structure>` development of a Django project
+* :doc:`Unit tests <test>`
+* :doc:`Test coverage <test>` greater than 80%
+* Make sure :doc:`the test coverage <test>` is greater than 80% using a coverage check tool such as ``coverage`` or ``pytest-cov``
+* The `correct pluralization <https://github.com/LaurentJouron/Orange_County_Lettings/blob/master/lettings/models.py>`_ of models in the admin page of the application
+* :doc:`the test coverage <test>` on each module, class and function
+* A personalized page in case of :doc:`error 404 or 500 <error>`
 * Flake8 that returns no errors
-* Sentry logging
-* Moving an image with Docker
-* Test automation and integration with CircleCi
+* :doc:`Sentry <sentry>` logging
+* Moving an image with :doc:`Docker <docker>`
+* Test automation and integration with :doc:`CircleCi <circleci>`
 
 💡 **End** `README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ on my GitHub.
 
@@ -69,7 +67,6 @@ service while remaining at the forefront of technology.
    <a href="https://github.com/LaurentJouron/Orange_County_Lettings" class="button">
        <img src="_static/button_github_repository.png" alt="Repository GitHub button" width="200" height="100" />
    </a>
-
 
 Join us today and discover a new way to rent and manage real estate with ease and efficiency.
 

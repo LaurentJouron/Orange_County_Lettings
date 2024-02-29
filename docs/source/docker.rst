@@ -12,7 +12,6 @@
     Parameterizations are done to a specific project. To parameterize to the other project, go to the official 
     documentation `Docker <https://docs.docker.com/>`_.
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 =====================

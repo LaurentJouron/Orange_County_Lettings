@@ -50,9 +50,11 @@ pytest.ini
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ Run test
+********
+Run test
+********
 
-Run your tests with ``pytest``:
+⏩️ Run your tests with ``pytest``:
 
 .. code-block:: python
 
@@ -75,9 +77,11 @@ Run your tests with ``pytest``:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ pytest -vvv
+***********
+pytest -vvv
+***********
 
-To view test details in the terminal, use the ``-vvv`` option with pytest:
+⏩️ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
 .. code-block:: console
 
@@ -100,7 +104,9 @@ To view test details in the terminal, use the ``-vvv`` option with pytest:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⏩️ pytest --cov=.
+**************
+pytest --cov=.
+**************
 
 To measure the test coverage of a project, run pytest with the ``--cov`` option to specify the folder to be analyzed:
 
@@ -124,6 +130,10 @@ To measure the test coverage of a project, run pytest with the ``--cov`` option 
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***********
+Report HTML
+***********
 
 ⚙️ pytest --cov=. --cov-report html
 
@@ -149,10 +159,10 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. warning:: Before activating the button below, you must install and activate the virtual environment.
-
 
 .. raw:: html
 

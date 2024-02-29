@@ -51,7 +51,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Circle CI</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-circleci">What is CircleCi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pipline-ci-cd">Pipline CI/CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipelines-ci-cd">Pipelines CI/CD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">.circleci</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-py">config.py</a></li>
 </ul>
@@ -106,11 +106,11 @@ documentation.</p>
 <h2>What is CircleCi<a class="headerlink" href="#what-is-circleci" title="Link to this heading"></a></h2>
 <p>💡 CircleCI is a continuous integration and continuous deployment (CI/CD)
 tool widely used in software development.
-Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.</p>
+<a class="reference internal" href="pipeline.html"><span class="doc">Pipelines</span></a> in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.</p>
 </section>
 <hr class="docutils" />
-<section id="pipline-ci-cd">
-<h2>Pipline CI/CD<a class="headerlink" href="#pipline-ci-cd" title="Link to this heading"></a></h2>
+<section id="pipelines-ci-cd">
+<h2>Pipelines CI/CD<a class="headerlink" href="#pipelines-ci-cd" title="Link to this heading"></a></h2>
 <p class="rubric">CI (continuous integration) &amp; CD (continuous deployment)</p>
 <ul class="simple">
 <li><p>Planning</p></li>
@@ -128,7 +128,7 @@ Pipelines in CircleCI are automated workflows that describe how code is compiled
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />
-<p>💡 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a
+<p>💡 A <a class="reference internal" href="pipeline.html"><span class="doc">pipeline</span></a> in the context of continuous integration (CI) and continuous deployment (CD) is a
 series of automated steps that are executed in a specific order to test and deploy the code consistently
 and reliably.</p>
 <figure class="align-center">
@@ -218,6 +218,15 @@ or you have to gather it on the Master branch.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
+<p>⚙️ Build <code class="docutils literal notranslate"><span class="pre">config.py</span></code></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_build_config_file.png"><img alt="circleci build config file" src="_images/circleci_build_config_file.png" style="width: 788.5px; height: 511.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_build_config_file.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.py</span></code> after configuration</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This YAML file defines the configuration of the deployment pipeline with CircleCI.</span>
 <span class="c1"># It contains steps for building, testing, creating a Docker image, and deploying to Heroku.</span>

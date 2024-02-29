@@ -20,13 +20,13 @@ What is CircleCi
 
 💡 CircleCI is a continuous integration and continuous deployment (CI/CD) 
 tool widely used in software development.
-Pipelines in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.
+:doc:`Pipelines <pipeline>` in CircleCI are automated workflows that describe how code is compiled, tested, and deployed.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*************
-Pipline CI/CD
-*************
+***************
+Pipelines CI/CD
+***************
 
 .. rubric:: CI (continuous integration) & CD (continuous deployment)
 
@@ -52,7 +52,7 @@ Pipline CI/CD
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-💡 A pipeline in the context of continuous integration (CI) and continuous deployment (CD) is a 
+💡 A :doc:`pipeline <pipeline>` in the context of continuous integration (CI) and continuous deployment (CD) is a 
 series of automated steps that are executed in a specific order to test and deploy the code consistently 
 and reliably.
 
@@ -180,6 +180,23 @@ Then we can gather the branches, if necessary.
 .. code-block:: python
 
         git merge circleci-project-setup
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚙️ Build ``config.py``
+
+.. figure:: _static/circleci_build_config_file.png
+   :scale: 50
+   :align: center
+   :alt: circleci build config file
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_build_config_file.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

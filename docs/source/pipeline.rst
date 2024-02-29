@@ -1,7 +1,7 @@
 .. _pipeline:
 
 **Pipelines**
-============
+=============
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,34 +9,44 @@
 Spin up environment
 *******************
 
-📜 Build-agent:
+**Build-agent**
+
    * Specifies the version of the CircleCI build agent used to run the build.
 
-📜 System information: 
+**System information**
+
    * Provides information about the operating system and construction environment. In our case, the operating system is Ubuntu 20.04.6 LTS, with a Linux kernel 5.15.0-1053-aws.
 
-📜 Starting container: 
+**Starting container**
+
    * Indicates the start of a Docker container based on the cimg/python:3.12.0 image, necessary to execute the construction steps.
 
-📜 Warning: No authentication provided: 
+**Warning: No authentication provided**
+
    * This warning indicates that no authentication has been provided to pull the image from Docker Hub. CircleCI uses its own credentials for this.
 
-📜 Image cache not found on this host, downloading cimg/python:3.12.0:
+**Image cache not found on this host, downloading cimg/python:3.12.0**
+
    * Indicates that the Docker cimg/python:3.12.0 image is not present in the local cache of the build host and must therefore be downloaded from the Docker Hub.
 
-📜 cimg/python:3.12.0: 
+**cimg/python:3.12.0**
+
    * Detailed information about the downloaded Docker image, including its SHA256 hash.
 
-📜 Pull stats: 
+**Pull stats**
+
    * Statistics on downloading and extracting the Docker image, indicating the time required and the download speed.
 
-📜 Time to create container: 
+**Time to create container**
+
    * Time required to create the Docker container from the uploaded image.
 
-📜 Time to upload agent and config: 
+**Time to upload agent and config**
+
    * Time required to download the build agent and configuration file.
 
-📜 Time to start containers: 
+**Time to start containers**
+
    * The time it takes to start Docker containers to complete the construction steps.
 
 This release provides an overview of the CircleCI build environment startup process and the download of dependencies needed to run the build steps.
@@ -60,34 +70,34 @@ This release provides an overview of the CircleCI build environment startup proc
 Preparing environment variables
 *******************************
 
-📜 Construction environment variables: BASH_ENV, CIRCLECI, CI, etc...:
+💡 Construction environment variables: BASH_ENV, CIRCLECI, CI, etc...:
 
    * These variables are defined by the CircleCI build environment to provide information about the current process. 
 
    * Example
 
-      * CIRCLE_BRANCH contains the name of the current branch (master in this case), 
-      * CIRCLE_BUILD_NUM contains the build number
-      * CIRCLE_BUILD_URL provides the URL of the build details page on the CircleCI dashboard.
+      * **CIRCLE_BRANCH** contains the name of the current branch (master in this case), 
+      * **CIRCLE_BUILD_NUM** contains the build number
+      * **CIRCLE_BUILD_URL** provides the URL of the build details page on the CircleCI dashboard.
 
-📜 Project environment variables: CIRCLE_USERNAME, CIRCLE_PROJECT_REPONAME, CIRCLE_REPOSITORY_URL, etc...:
+💡 Project environment variables: CIRCLE_USERNAME, CIRCLE_PROJECT_REPONAME, CIRCLE_REPOSITORY_URL, etc...:
 
    * These variables are derived from the CircleCI project parameters and provide specific information about the project under construction.
 
    * Example
 
-      * CIRCLE_USERNAME contains the project owner username, 
-      * CIRCLE_PROJECT_REPONAME contains the repository name
-      * CIRCLE_REPOSITORY_URL contains the Git repository URL.
+      * **CIRCLE_USERNAME** contains the project owner username, 
+      * **CIRCLE_PROJECT_REPONAME** contains the repository name
+      * **CIRCLE_REPOSITORY_URL** contains the Git repository URL.
 
-📜 Workflow environment variables: CIRCLE_WORKFLOW_ID, CIRCLE_WORKFLOW_JOB_ID, etc...:
+💡 Workflow environment variables: CIRCLE_WORKFLOW_ID, CIRCLE_WORKFLOW_JOB_ID, etc...:
 
    * These variables are associated with the running workflow. They provide information about the workflow ID, the job ID in the workflow, and the workflow workspace ID.
 
 
-📜 Other variables: CIRCLE_OIDC_TOKEN, CIRCLE_OIDC_TOKEN_V2, CIRCLE_PLUGIN_TEST:
+💡 Other variables: CIRCLE_OIDC_TOKEN, CIRCLE_OIDC_TOKEN_V2, CIRCLE_PLUGIN_TEST:
 
-   * These variables are project-specific and can be used to store sensitive information or API keys. In this case, they are redacted (**REDACTED**) for security reasons. This pipeline appears to be a build and test (build_and_test) phase of your Orange County Lettings project. It is triggered on the master branch and uses various environment variables to retrieve information about the context of the build.
+   * These variables are project-specific and can be used to store sensitive information or API keys. In this case, they are redacted (**REDACTED**) for security reasons. This pipeline appears to be a build and test (**build_and_test**) phase of your Orange County Lettings project. It is triggered on the master branch and uses various environment variables to retrieve information about the context of the build.
 
 .. figure:: _static/circleci_preparing_enrironnment_variables.png
    :scale: 50
@@ -104,31 +114,29 @@ Preparing environment variables
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📜 Checkout code
+**Checkout code**
 
    * This part of the build output is related to the configuration and use of SSH keys to access Git repositories.
 
-
-📜 Creating .ssh directory: 
+**Creating .ssh directory**
 
    * Creates the . ssh directory in the user directory to store the SSH keys.
 
-📜 Adding the following entries to known_hosts:
+**Adding the following entries to known_hosts**
 
-   * Added Git host public key (GitHub, Bitbucket, GitLab) to known_hosts file. This allows the trusted host (CircleCI) to identify the Git host and ensure that it connects to the correct server.
+   * Added Git host public key (**GitHub, Bitbucket, GitLab**) to known_hosts file. This allows the trusted host (CircleCI) to identify the Git host and ensure that it connects to the correct server.
 
-📜 Writing SSH key for checkout:
+**Writing SSH key for checkout**
 
-   * Generates a private SSH key (id_rsa) and a public key (id_rsa.pub) for authentication when retrieving source code from the Git repository.
+   * Generates a private SSH key (``id_rsa``) and a public key (``id_rsa.pub``) for authentication when retrieving source code from the Git repository.
 
-📜 Cloning git repository : 
+**Cloning git repository**
 
    * Clone the Git repository to the current working directory.
 
-📜 Checking out branch : 
+**Checking out branch** 
 
    * Checks the specified branch. In this case, it is mentioned that the branch is up to date with origin/master and that the HEAD is now on the latest revision of this branch.
-
 
 These steps ensure that CircleCI can access the Git repository using SSH keys and retrieve the source code for construction.
 
@@ -147,13 +155,13 @@ These steps ensure that CircleCI can access the Git repository using SSH keys an
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📜 Link lockfile
+💡 Link lockfile
 
-Cette partie de la sortie indique qu'un fichier Pipfile.lock est copié du répertoire /home/circleci/project/ vers un répertoire temporaire /tmp/cci_pycache/lockfile.
+This part indicates that a Pipfile.lock file is copied from the ``/home/circleci/project/`` directory to a temporary /tmp/cci_pycache/lockfile directory.
 
-Le fichier Pipfile.lock est généré par Pipenv et contient des informations sur les dépendances Python spécifiques avec leurs versions exactes. Il est utilisé pour garantir que les mêmes versions de dépendances sont installées sur différents environnements.
+The ``Pipfile.lock`` file is generated by **Pipenv** and contains information about specific Python dependencies with their exact versions. It is used to ensure that the same versions of dependencies in different environments.
 
-La copie de ce fichier vers un répertoire temporaire peut être une étape préparatoire pour l'installation des dépendances ou pour d'autres opérations nécessitant ce fichier.
+Copying this file to a temporary directory is a preparatory step for installing dependencies or other operations that require this file.
 
 .. figure:: _static/circleci_link_lockfile.png
    :scale: 50
@@ -170,21 +178,29 @@ La copie de ce fichier vers un répertoire temporaire peut être une étape pré
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📜 Save Python version
+💡 Save Python version
 
-Ce script Bash extrait la version de Python installée sur l'environnement d'exécution de la construction et la stocke dans un fichier nommé python-version dans le répertoire temporaire /tmp/.
+This script extracts the version of Python installed on the runtime and stores it in a file named **python-version** in the temporary directory ``/tmp/``.
 
-Voici ce que chaque partie du script fait :
+Here is what each part of the script does:
 
-#!/bin/bash -eo pipefail : Cette ligne indique que le script doit être interprété par Bash (#!/bin/bash) avec les options -eo pipefail. -e signifie "exit on error" (sortir en cas d'erreur), et -o pipefail signifie que le script échouera si l'une des commandes dans une chaîne de commandes (pipeline) échoue.
+**#!/bin/bash -eo pipefail**
 
-python --version : Cette commande exécute python --version pour obtenir la version de Python installée. L'option --version demande à Python d'afficher sa version, et la sortie est dirigée vers la sortie standard.
+   * This line indicates that the script should be interpreted by **Bash** (``#!/bin/bash``) with the **-eo pipefail. -e** means "exit on error", and **-o pipefail** means that the script will fail if one of the commands in a command chain (``pipeline``) fails.
 
-cut -d ' ' -f2 : Cette commande utilise cut pour extraire la deuxième colonne (délimitée par un espace) de la sortie de python --version, ce qui correspond à la version de Python.
+**python --version**
 
-> /tmp/python-version : Cette partie redirige la sortie de la commande précédente vers le fichier /tmp/python-version, où la version de Python est stockée.
+   * This command runs python --version to get the version of **Python** installed. The ``--version`` option asks Python to display its **version**, and the output is directed to the standard output.
 
-En résumé, ce script Bash récupère la version de Python et la stocke dans un fichier pour référence ultérieure ou pour une utilisation dans d'autres étapes de la construction.
+**cut -d ' ' -f2**
+
+   * This command uses cut to extract the second column (bounded by a space) from the python ``--version`` output, which corresponds to the **Python version**.
+
+**/tmp/python-version**
+
+   * This part redirects the output of the previous command to the ``/tmp/python-version`` file, where the Python version is stored.
+
+In summary, this Bash script retrieves the version of Python and stores it in a file for later reference or for use in other construction steps.
 
 .. figure:: _static/circleci_save_python_version.png
    :scale: 50
@@ -201,7 +217,7 @@ En résumé, ce script Bash récupère la version de Python et la stocke dans un
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📜 Restoring cache
+💡 Restoring cache
 
 Cette partie de la sortie indique que CircleCI a trouvé un cache de la construction précédente (build 75) pour les chemins spécifiés, et il essaie de le télécharger pour l'utiliser dans cette construction actuelle.
 
