@@ -66,20 +66,20 @@ After the last question, you will see the new docs directory with the following 
 
 The purpose of each of these files is:
 
-⏩️ build/
+💡 build/
 
 * An empty directory (for now) that will hold the rendered documentation.
 
-⏩️ make.bat and Makefile
+💡 make.bat and Makefile
 
 * Convenience scripts to simplify some common Sphinx operations, such as rendering the content.
 
-⏩️ source/conf.py
+💡 source/conf.py
 
 * A Python script holding the configuration of the Sphinx project. It contains the project name and release 
 you specified to sphinx-quickstart, as well as some extra configuration keys.
 
-⏩️ source/index.rst
+💡 source/index.rst
 
 * The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
 

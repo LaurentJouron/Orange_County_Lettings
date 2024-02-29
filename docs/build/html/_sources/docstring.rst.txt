@@ -9,7 +9,7 @@
 What the docstrings
 *******************
 
-Python docstrings are documentation strings that are embedded directly into the source code of a function, 
+💡Python docstrings are documentation strings that are embedded directly into the source code of a function, 
 class, or module. They are used to provide clear and concise information about the 
 purpose with which they are associated. Docstrings can be accessed via the ``_doc_`` attribute of the relevant object and 
 are used to automatically generate more detailed documentation using tools like Sphinx.

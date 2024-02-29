@@ -1,5 +1,5 @@
 import logging
-import sentry_sdk
+from sentry_sdk import capture_message
 from django.http import Http404
 from django.shortcuts import render
 from .models import Profile
@@ -46,7 +46,7 @@ def profile(request, username):
     try:
         profile = Profile.objects.get(user__username=username)
     except Profile.DoesNotExist as e:
-        sentry_sdk.capture_message("This page does not exist!", level="error")
+        capture_message("This page does not exist!", level="error")
         logger.error("This page does not exist")
         raise Http404("This profile does not exist") from e
     context = {"profile": profile}

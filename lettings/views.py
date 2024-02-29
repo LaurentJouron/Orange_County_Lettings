@@ -1,5 +1,5 @@
 import logging
-import sentry_sdk
+from sentry_sdk import capture_message
 from lettings.models import Letting
 
 from django.http import Http404
@@ -67,7 +67,7 @@ def letting(request, letting_id):
     try:
         letting = Letting.objects.get(id=letting_id)
     except Letting.DoesNotExist as e:
-        sentry_sdk.capture_message("This page does not exist!", level="error")
+        capture_message("This page does not exist!", level="error")
         logger.error("This page does not exist")
         raise Http404("This letting does not exist") from e
     context = {

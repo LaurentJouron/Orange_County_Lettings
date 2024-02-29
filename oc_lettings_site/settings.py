@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 import environ
 import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # Initializes the environment variables
 env = environ.Env(DEBUG=(bool, False))
@@ -11,6 +12,15 @@ sentry_sdk.init(
     dsn=os.environ["DSN"],
     traces_sample_rate=1.0,
     profiles_sample_rate=1.0,
+    enable_tracing=True,
+    integrations=[
+        DjangoIntegration(
+            transaction_style="url",
+            middleware_spans=True,
+            signals_spans=False,
+            cache_spans=False,
+        ),
+    ],
 )
 
 IS_HEROKU = "DYNO" in os.environ

@@ -23,7 +23,7 @@ The 404 error is often called **Page not found** because it indicates that the r
 In a Django application, a custom 404 error page can be displayed to guide users when they encounter this error.
 
 
-📜 handler404
+💡 handler404
 
 In Django, handler404 is a variable that specifies the function or view that will be called when Django 
 encounters a 404 error, that is, a page that is not found.
@@ -35,13 +35,13 @@ Here’s how to describe it and how it is used in urls.py:
     # 404 erreur: page not found
     handler404 = views.handler404
 
-📜 Description:
+💡 Description:
 
 handler404 is a variable used in the urls.py file to specify the function or view that will be 
 executed when Django encounters a 404 error. This error occurs when a user tries to access a URL 
 that does not exist in your Django application.
 
-📜 Usage:
+💡 Usage:
 
 To use handler404, you must assign to a view or function that handles the display of the 404 error 
 custom page. This view or function must be defined in a views.py file.
@@ -64,7 +64,7 @@ A custom 500 error page can be used to inform users that the server is experienc
 and to provide instructions on what they can do, such as trying again later or contacting the site 
 administrator.
 
-📜 handler500 - Description:
+💡 handler500 - Description:
 
 handler500 is a variable used in Django’s urls.py file to specify the function or view that will be 
 executed when Django encounters a 500 error, also known as the "Server Error" error. This error occurs 
@@ -76,7 +76,7 @@ when Django encounters an internal server error.
     handler500 = views.handler500
 
 
-📜 Usage:
+💡 Usage:
 
 To use handler500, it must be assigned to a view or function that handles the display of the 500 error 
 custom page. This view or function must be defined in your views.py file.
@@ -87,7 +87,7 @@ custom page. This view or function must be defined in your views.py file.
 Summary
 *******
 
-📜 In summary, the 404 error indicates that the requested resource does not exist, while the 500 error 
+💡 In summary, the 404 error indicates that the requested resource does not exist, while the 500 error 
 indicates an internal server error. In both cases, it is important to provide custom error pages to 
 guide users and improve their website experience.
 

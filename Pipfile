@@ -10,7 +10,6 @@ pytest-django = "*"
 six = "*"
 coverage = "*"
 pytest-cov = "*"
-sentry-sdk = {extras = ["django"], version = "*"}
 django-environ = "*"
 gunicorn = "*"
 django-heroku = "*"
@@ -24,6 +23,7 @@ install = "*"
 sphinx-copybutton = "*"
 psycopg2 = "*"
 dj-database-url = "*"
+sentry-sdk = {extras = ["django"], version = "*"}
 
 [dev-packages]
 

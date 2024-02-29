@@ -10,7 +10,7 @@ Start
 *****
 
 My mission is to set up and operate the site locally on my computer. 
-Following the instructions of the README, it is possible to:
+Following the instructions of the `start README <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_ .
 
 * Run the site locally and browse it in a browser.
 * I can log in and use the Admin section of the site.
@@ -18,7 +18,6 @@ Following the instructions of the README, it is possible to:
 * Run the linting locally.
 * Run the test suite locally.
 
-📜 **Start** : `README <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_ on OC GitHub.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,7 +49,7 @@ To do
 * Moving an image with Docker
 * Test automation and integration with CircleCi
 
-📜 **End** `README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ 
+💡 **End** `README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ on my GitHub.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
