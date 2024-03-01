@@ -24,6 +24,11 @@ _______________________
 
 <h1 align="center">But de l'application</h1>
 
+* Refonte de l'architecture modulaire dans le repository GitHub
+* Réduction de diverses dettes techniques sur le projet
+* Ajout d'un pipeline CI/CD ainsi que son déploiement
+* Surveillance de l’application et suivi des erreurs via Sentry
+* Création de la documentation technique de l’application avec Read The Docs et Sphinx.
 
 _______________________
 
@@ -42,7 +47,6 @@ _______________________
       <a href="https://www.python.org/" title="Téléchargez Python" ></a> 
     </td>
 </table>
-
 
 _______________________
 
@@ -63,6 +67,11 @@ _______________________
   </tr>
 </table>
 
+_______________________
+
+<h1 align="center">Documentation </h1>
+
+Pour vous rendre sur la documentation et voir toutes les fonctionnalités, [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/)
 _______________________
 
 <h1 align="center">Installation du site en local </h1>
@@ -103,7 +112,11 @@ _______________________
 
 <h1 align="center">Admin</h1>
 
-Pour se rendre sur l' <a href="http://localhost:8000/admin" target="_blank">administration du site</a> 
+* Pour se rendre sur l'administration du site en local [cliquer ici (uniquement après installation)](http://localhost:8000/admin)
+
+* Pour se rendre sur l'administration du site déployé [cliquer ici](https://county-lettings-dce9820cf239.herokuapp.com/admin/login/?next=/admin/)
+
+<h3>Compte et mot de passe</h3>
 
 * Compte utilisateur `admin`
 * Mot de passe `Abc1234!`
@@ -147,7 +160,7 @@ _______________________
     </td>
 </table>
 
-
+Pour vous rendre sur la documentation orange county lettings et voir tous les tests, [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/test.html)
 
 _______________________
 
@@ -165,6 +178,25 @@ _______________________
     </td>
 </table>
 
+Pour vous rendre sur la documentation orange county lettings et voir tous les pipelines, [cliquer ici](https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings)
+
+_______________________
+
+<h1 align="center">Sentry</h1>
+
+<a href="https://docs.sentry.io/" title="Ouvrir la documentation" ></a>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://docs.sentry.io/">
+        <img width="200px"
+          src="https://img.shields.io/badge/sentry-%2319CAAD.svg?style=for-the-badge&logo=sentry&logoColor=white" /><br />
+        <sub><b>Ouvrir la documentation</b></sub></a><br />
+      <a href="https://docs.sentry.io/" title="Ouvrir la documentation" ></a> 
+    </td>
+</table>
+
+Pour vous rendre sur la documentation orange county lettings et voir tous les rapports de gestion des erreurs, [cliquer ici](https://ace-xk.sentry.io/performance/?project=4506710341844992)
 _______________________
 
 <h1 align="center">Sphinx</h1>
@@ -181,7 +213,7 @@ _______________________
     </td>
 </table>
 
-Pour se rendre sur la documentation du site:  <a href="https://laurent-lettings.readthedocs.io/en/latest/" target="_blank">Orange County Lettings</a> 
+Pour se rendre sur la documentation du site Orange County Lettings [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/)
 
 _______________________
 
@@ -208,83 +240,3 @@ _______________________
     </td>
   </tr>
 </table>
-
-
-
-## Résumé
-
-Site web d'Orange County Lettings
-
-## Développement local
-
-### Prérequis
-
-- Compte GitHub avec accès en lecture à ce repository
-- Git CLI
-- SQLite3 CLI
-- Interpréteur Python, version 3.6 ou supérieure
-
-Dans le reste de la documentation sur le développement local, il est supposé que la commande `python` de votre OS shell exécute l'interpréteur Python ci-dessus (à moins qu'un environnement virtuel ne soit activé).
-
-### macOS / Linux
-
-#### Cloner le repository
-
-- `cd /path/to/put/project/in`
-- `git clone https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR.git`
-
-#### Créer l'environnement virtuel
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `python -m venv venv`
-- `apt-get install python3-venv` (Si l'étape précédente comporte des erreurs avec un paquet non trouvé sur Ubuntu)
-- Activer l'environnement `source venv/bin/activate`
-- Confirmer que la commande `python` exécute l'interpréteur Python dans l'environnement virtuel
-`which python`
-- Confirmer que la version de l'interpréteur Python est la version 3.6 ou supérieure `python --version`
-- Confirmer que la commande `pip` exécute l'exécutable pip dans l'environnement virtuel, `which pip`
-- Pour désactiver l'environnement, `deactivate`
-
-#### Exécuter le site
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `pip install --requirement requirements.txt`
-- `python manage.py runserver`
-- Aller sur `http://localhost:8000` dans un navigateur.
-- Confirmer que le site fonctionne et qu'il est possible de naviguer (vous devriez voir plusieurs profils et locations).
-
-#### Linting
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `flake8`
-
-#### Tests unitaires
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `pytest`
-
-#### Base de données
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- Ouvrir une session shell `sqlite3`
-- Se connecter à la base de données `.open oc-lettings-site.sqlite3`
-- Afficher les tables dans la base de données `.tables`
-- Afficher les colonnes dans le tableau des profils, `pragma table_info(Python-OC-Lettings-FR_profile);`
-- Lancer une requête sur la table des profils, `select user_id, favorite_city from
-  Python-OC-Lettings-FR_profile where favorite_city like 'B%';`
-- `.quit` pour quitter
-
-#### Panel d'administration
-
-- Aller sur `http://localhost:8000/admin`
-- Connectez-vous avec l'utilisateur `admin`, mot de passe `Abc1234!`
-
-### Windows
-
-Utilisation de PowerShell, comme ci-dessus sauf :
-
-- Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
-- Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
