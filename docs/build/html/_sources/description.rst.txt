@@ -38,11 +38,11 @@ To do
 * :doc:`Modular <data_structure>` development of a Django project
 * :doc:`Unit tests <test>`
 * :doc:`Test coverage <test>` greater than 80%
-* Make sure :doc:`the test coverage <test>` is greater than 80% using a coverage check tool such as ``coverage`` or ``pytest-cov``
+* Ensure :doc:`test coverage <test>` is greater than 80% using a verification tool such as ``coverage`` or ``pytest-cov``
 * The `correct pluralization <https://github.com/LaurentJouron/Orange_County_Lettings/blob/master/lettings/models.py>`_ of models in the admin page of the application
 * :doc:`the test coverage <test>` on each module, class and function
 * A personalized page in case of :doc:`error 404 or 500 <error>`
-* Flake8 that returns no errors
+* :doc:`Flake8 <flake8>` that returns no errors
 * :doc:`Sentry <sentry>` logging
 * Moving an image with :doc:`Docker <docker>`
 * Test automation and integration with :doc:`CircleCi <circleci>`

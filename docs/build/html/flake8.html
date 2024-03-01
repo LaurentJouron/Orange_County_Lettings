@@ -59,6 +59,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Flake8</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-flake8">What is Flake8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-flake8">Install Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">.flake8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-flake8">Using Flake8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-flake8-html">What is Flake8-html</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-flake8-html">Install Flake8-html</a></li>
@@ -108,33 +109,43 @@ documentation.</p>
 <section id="what-is-flake8">
 <h2>What is Flake8<a class="headerlink" href="#what-is-flake8" title="Link to this heading"></a></h2>
 <p>Flake8 is a static source code analysis tool in Python.</p>
-<dl class="simple">
-<dt><strong>Static Analysis</strong></dt><dd><ul class="simple">
+<p><strong>Static Analysis</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8 performs a static analysis of Python code without executing it. This means that it scans the code for errors, not recommended practices, etc., without the need to run it.</p></li>
 </ul>
-</dd>
-<dt><strong>Style validation</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Style validation</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8 checks whether Python code complies with style conventions defined in PEP 8 standards. It reports style violations such as incorrect indentation, lines that are too long, unnecessary spaces, etc.</p></li>
 </ul>
-</dd>
-<dt><strong>Error detection</strong></dt><dd><p><a href="#id2"><span class="problematic" id="id3">**</span></a>In addition to checking the style of the code, Flake8 also detects potential errors in the code, such as references to undefined variables, unused imports, endless loops, etc.</p>
-</dd>
-<dt><strong>Customizable</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Error detection</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In addition to checking the style of the code, Flake8 also detects potential errors in the code, such as references to undefined variables, unused imports, endless loops, etc.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Customizable</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8 is customizable. You can configure the style rules you want to apply, disable certain checks or add new ones according to your specific needs.</p></li>
 </ul>
-</dd>
-<dt><strong>Integration into the Python ecosystem</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Integration into the Python ecosystem</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8 is widely used in the Python ecosystem and is supported by many code editors, IDE and version control systems. It can be easily integrated into a Python development workflow to improve the quality and consistency of your code.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p>In summary, Flake8 is a powerful tool to ensure the quality and consistency of Python code by detecting errors, verifying compliance with style conventions, and providing static analysis of source code. Using Flake8 can help maintain clean, readable, and easily maintainable code in Python projects.</p>
 </section>
 <hr class="docutils" />
 <section id="install-flake8">
 <h2>Install Flake8<a class="headerlink" href="#install-flake8" title="Link to this heading"></a></h2>
 <p>To install Flake8, open an interactive shell and run:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">flake8</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">install</span> <span class="n">flake8</span>
 </pre></div>
 </div>
 <p>If you want Flake8 to be installed for your default Python installation, you can instead use:</p>
@@ -147,14 +158,61 @@ documentation.</p>
 </div>
 </section>
 <hr class="docutils" />
+<section id="id2">
+<h2>.flake8<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>⚙️ Configuration <code class="docutils literal notranslate"><span class="pre">.flake8</span></code> file</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">flake8</span><span class="p">]</span>
+<span class="c1"># it&#39;s not a bug that we aren&#39;t using all of hacking</span>
+<span class="n">extend</span><span class="o">-</span><span class="n">ignore</span> <span class="o">=</span>
+<span class="c1"># H101: Use TODO(NAME)</span>
+<span class="n">H101</span><span class="p">,</span>
+<span class="c1"># H202: assertRaises Exception too broad</span>
+<span class="n">H202</span><span class="p">,</span>
+<span class="c1"># H233: Python 3.x incompatible use of print operator</span>
+<span class="n">H233</span><span class="p">,</span>
+<span class="c1"># H301: one import per line</span>
+<span class="n">H301</span><span class="p">,</span>
+<span class="c1"># H306: imports not in alphabetical order (time, os)</span>
+<span class="n">H306</span><span class="p">,</span>
+<span class="c1"># H401: docstring should not start with a space</span>
+<span class="n">H401</span><span class="p">,</span>
+<span class="c1"># H403: multi line docstrings should end on a new line</span>
+<span class="n">H403</span><span class="p">,</span>
+<span class="c1"># H404: multi line docstring should start without a leading new line</span>
+<span class="n">H404</span><span class="p">,</span>
+<span class="c1"># H405: multi line docstring summary not separated with an empty line</span>
+<span class="n">H405</span><span class="p">,</span>
+<span class="c1"># H501: Do not use self.__dict__ for string formatting</span>
+<span class="n">H501</span>
+
+<span class="nb">max</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">length</span> <span class="o">=</span> <span class="mi">99</span>
+
+<span class="c1"># In .flake8 or setup.cfg, use the exclude option to specify which directories</span>
+<span class="c1"># or files you want to exclude from the scan.</span>
+<span class="n">exclude</span> <span class="o">=</span>
+<span class="n">venv</span><span class="p">,</span>
+<span class="o">.</span><span class="n">venv</span><span class="p">,</span>
+<span class="o">.</span><span class="n">git</span><span class="p">,</span>
+<span class="o">.</span><span class="n">gitignore</span><span class="p">,</span>
+<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="o">**/</span><span class="n">migrations</span><span class="o">/*</span><span class="p">,</span>
+<span class="n">__pycache__</span><span class="p">,</span>
+
+<span class="c1"># filename option to exclude specific files rather than entire directories.</span>
+<span class="n">filename</span> <span class="o">=</span>
+<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">urllib3</span>\<span class="n">util</span>\<span class="n">timeout</span><span class="o">.</span><span class="n">py</span><span class="p">,</span>
+<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">urllib3</span>\<span class="n">util</span>\<span class="n">url</span><span class="o">.</span><span class="n">py</span><span class="p">,</span>
+<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">whitenoise</span>\<span class="n">base</span><span class="o">.</span><span class="n">py</span><span class="p">,</span>
+<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">whitenoise</span>\<span class="n">middleware</span><span class="o">.</span><span class="n">py</span><span class="p">,</span>
+<span class="n">Scripts</span>\<span class="n">activate_this</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
 <section id="using-flake8">
 <h2>Using Flake8<a class="headerlink" href="#using-flake8" title="Link to this heading"></a></h2>
 <p>To start using Flake8, open an interactive shell and run:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">check</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">code</span><span class="o">/</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span>
 </pre></div>
 </div>
 </section>
@@ -162,28 +220,36 @@ documentation.</p>
 <section id="what-is-flake8-html">
 <h2>What is Flake8-html<a class="headerlink" href="#what-is-flake8-html" title="Link to this heading"></a></h2>
 <p>Flake8-HTML is an extension of Flake8 that generates detailed HTML reports based on the results of code analysis performed by Flake8.</p>
-<dl class="simple">
-<dt><strong>Flake8 Extension</strong></dt><dd><ul class="simple">
+<p><strong>Flake8 Extension</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8-HTML extends the functionality of Flake8 by adding the ability to generate reports in HTML format from the results of code analysis.</p></li>
 </ul>
-</dd>
-<dt><strong>Detailed Reports</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Detailed Reports</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>With Flake8-HTML, you can generate detailed HTML reports that present the results of the code analysis clearly and visually. These reports provide detailed information about style violations, errors detected and other issues identified by Flake8.</p></li>
 </ul>
-</dd>
-<dt><strong>User-friendly visualization</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>User-friendly visualization</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>HTML reports generated by Flake8-HTML are designed to be easy to interpret. They use a structured layout and visual elements to present the information in an understandable way.</p></li>
 </ul>
-</dd>
-<dt><strong>Customizable</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Customizable</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8-HTML also offers some customization in reporting. You can configure the generation options to include or exclude certain information, choose the visual style of the reports, etc.</p></li>
 </ul>
-</dd>
-<dt><strong>Integration into workflows</strong></dt><dd><ul class="simple">
+</div></blockquote>
+<p><strong>Integration into workflows</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Flake8-HTML can be integrated into your Python workflow to provide quality reports on code quality. These reports can be used to identify and resolve problems, improving maintainability and readability of the code.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p>In summary, Flake8-HTML is a handy extension of Flake8 that adds the ability to generate detailed HTML reports from code analysis results, providing a clear and concise visualization of detected code quality issues. Using Flake8-HTML can help maintain clean, consistent, high-quality code in your Python projects.</p>
 </section>
 <hr class="docutils" />
