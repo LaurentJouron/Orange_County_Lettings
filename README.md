@@ -74,27 +74,12 @@ _______________________
 Pour vous rendre sur la documentation et voir toutes les fonctionnalités, [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/)
 _______________________
 
-<h1 align="center">Installation du site en local </h1>
+<h1 align="center">Accédez au site </h1>
 
-Pour commencer il faut cloner le projet grâce à l'url suivante :
-  * ``git clone https://github.com/LaurentJouron/Orange_County_Lettings.git``
+* Pour une rapide installation local [cliquer ici](http://127.0.0.1:5501/docs/build/html/quick_start.html)
 
-Il faut se déplacer dans le dossier:
-  * ``cd Orange_County_Lettings``
 
-Voici la procédure pour afficher la page d'accueil du site:
-
-Créer un répertoire avec le nom .venv
-  * ``mkdir .venv``
-
-Installer les bibliothèques nécessaires avec
-  * ``pipenv install`` ou ``pip install``
-
-Activer l'environnement de travail (environnement virtuel) avec
-  * ``pipenv shell`` ou ``pip shell``
-
-Lancez l'application avec cette commande
-  * ``python manage.py runserver``
+* Pour acceder au site public [cliquer ici](https://county-lettings-dce9820cf239.herokuapp.com/) ou sur le logo.
 
 <a href="https://county-lettings-dce9820cf239.herokuapp.com/" title="Orange County Lettings" ></a>
 <table>
@@ -110,7 +95,7 @@ Lancez l'application avec cette commande
 
 _______________________
 
-<h1 align="center">Admin</h1>
+<h1 align="center">Accédez à l'Admin</h1>
 
 * Pour se rendre sur l'administration du site en local [cliquer ici (uniquement après installation)](http://localhost:8000/admin)
 
@@ -130,7 +115,7 @@ _______________________
   <tr>
     <td align="center">
       <a href="https://flake8.pycqa.org/">
-        <img width="200px"
+        <img width="160px"
           src="https://img.shields.io/badge/flake8-%234B8BBE.svg?style=for-the-badge&logo=flake8&logoColor=white" /><br />
         <sub><b>Ouvrir la documentation</b></sub></a><br />
       <a href="https://flake8.pycqa.org/" title="Ouvrir la documentation" ></a> 
@@ -197,6 +182,24 @@ _______________________
 </table>
 
 Pour vous rendre sur la documentation orange county lettings et voir tous les rapports de gestion des erreurs, [cliquer ici](https://ace-xk.sentry.io/performance/?project=4506710341844992)
+
+_______________________
+
+<h1 align="center">Docker</h1>
+
+<a href="https://docs.docker.com/" title="Ouvrir la documentation" ></a>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://docs.docker.com/">
+        <img width="200px"
+          src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" /><br />
+        <sub><b>Ouvrir la documentation</b></sub></a><br />
+      <a href="https://docs.docker.com/" title="Ouvrir la documentation" ></a> 
+    </td>
+</table>
+
+Pour vous rendre sur la documentation orange county lettings et voir comment contruire une image avec Docker, [cliquer ici](http://127.0.0.1:5501/docs/build/html/docker.html)
 _______________________
 
 <h1 align="center">Sphinx</h1>
@@ -218,7 +221,7 @@ Pour se rendre sur la documentation du site Orange County Lettings [cliquer ici]
 _______________________
 
 
-<h1 align="center">Auteur et collaborateurs</h1>
+<h1 align="center">Auteur</h1>
 
 <table>
   <tr>
@@ -227,16 +230,9 @@ _______________________
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlW-w7O7g3hQTw8qcIAy3LCRhiHg5tUPfvVg&usqp=CAU"
           width="100px;"/><br />
         <sub><b>Laurent Jouron</b></sub></a><br />
-      <a href="https://openclassrooms.com/fr/" title="Étudiant">🈸</a>
-      <a href="https://github.com/LaurentJouron/Books-online" title="Codeur de l'application">💻</a>
+      <a href="https://laurentjouron.github.io/LaurentJouron.com/" title="Développeur">🈸</a>
+      <a href="https://github.com/LaurentJouron/Orange_County_Lettings" title="Codeur de l'application">💻</a>
     </td>
     <td align="center">
-      <a href="https://github.com/thierhost">
-        <img src="https://avatars.githubusercontent.com/u/7854284?s=100&v=4"
-          width="100px;"/><br />
-        <sub><b>Thierno Thiam</b></sub></a><br />
-      <a href="https://github.com/thierhost" title="Mentor de Laurent">👨‍🏫</a> 
-      <a href="https://www.python.org/dev/peps/pep-0008/" title="Doc PEP 8">📄</a>
-    </td>
   </tr>
 </table>

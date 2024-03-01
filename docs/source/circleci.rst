@@ -56,18 +56,34 @@ Pipelines CI/CD
 series of automated steps that are executed in a specific order to test and deploy the code consistently 
 and reliably.
 
-.. figure:: _static/pepline_problem.png
+.. figure:: _static/circleci_pipeline_problem.png
    :scale: 40
    :align: center
-   :alt: pepline_problem
+   :alt: pipeline problem
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/pepline_problem.png" download class="button">
+       <a href="_static/circleci_pipeline_problem.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. figure:: _static/circleci_pipeline_without_problem.png
+   :scale: 40
+   :align: center
+   :alt: circleci pipeline without problem
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_pipeline_without_problem.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

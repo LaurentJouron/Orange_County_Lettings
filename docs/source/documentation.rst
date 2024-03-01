@@ -61,25 +61,23 @@ After the last question, you will see the new docs directory with the following 
    :align: center
    :alt: doc project
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The purpose of each of these files is:
 
-💡 build/
+💡build/
 
 * An empty directory (for now) that will hold the rendered documentation.
 
-💡 make.bat and Makefile
+💡make.bat and Makefile
 
 * Convenience scripts to simplify some common Sphinx operations, such as rendering the content.
 
-💡 source/conf.py
+💡source/conf.py
 
-* A Python script holding the configuration of the Sphinx project. It contains the project name and release 
-you specified to sphinx-quickstart, as well as some extra configuration keys.
+* A Python script holding the configuration of the Sphinx project. It contains the project name and release you specified to sphinx-quickstart, as well as some extra configuration keys.
 
-💡 source/index.rst
+💡source/index.rst
 
 * The root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).
 
@@ -233,12 +231,13 @@ To realize this documentation I used this configuration for the file ``requireme
 
 ⚙️ requirements.txt
 
-.. code-block:: txt
+.. code-block:: Python
 
     Sphinx==7.2.6
     sphinx-rtd-theme==1.3.0
     sphinx-bootstrap-theme
     sphinx-copybutton
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *****************
@@ -259,6 +258,7 @@ Circle CI
   - `.circleci <http://127.0.0.1:5501/docs/build/html/circleci.html#id2>`_
 
   - `config.py <http://127.0.0.1:5501/docs/build/html/circleci.html#config-py>`_
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Data structure
@@ -340,12 +340,9 @@ Documentation
 
   - `conf.py <http://127.0.0.1:5500/docs/build/html/documentation.html#conf-py>`_
 
-  - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
-
   - `requirements.txt <http://127.0.0.1:5500/docs/build/html/documentation.html#requirements-txt>`_
 
   - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -357,6 +354,26 @@ Heroku
   - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
 
   - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Error
+~~~~~
+
+* `Error <http://127.0.0.1:5501/docs/build/html/error.html>`_
+
+  - `404 Error <http://127.0.0.1:5501/docs/build/html/error.html#id2>`_
+
+  - `500 Error <http://127.0.0.1:5501/docs/build/html/error.html#id3>`_
+
+  - `Summary <http://127.0.0.1:5501/docs/build/html/error.html#summary>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Heroku
+~~~~~~
+
+* `Heroku <http://127.0.0.1:5501/docs/build/html/heroku.html>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -389,5 +406,12 @@ Pytest-Django
 
   - `pytest.ini <http://127.0.0.1:5501/docs/build/html/test.html#pytest-ini>`_
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  - `Run test <http://127.0.0.1:5501/docs/build/html/test.html#run-test>`_
 
+  - `pytest -vvv <http://127.0.0.1:5501/docs/build/html/test.html#pytest-vvv>`_
+
+  - `pytest -cov=. <http://127.0.0.1:5501/docs/build/html/test.html#pytest-cov>`_
+
+  - `Report HTML <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

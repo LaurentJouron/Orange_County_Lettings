@@ -19,13 +19,15 @@ What is Sentry
 **************
 
 Sentry is an error management platform that captures, tracks and resolves errors and exceptions. It provides detailed information about errors, local variables, and runtime information. 
-This allows developers to diagnose and resolve issues quickly.
+This allows developers to diagnose and resolve issues quickly. `Sentry's Django integration <https://docs.sentry.io/platforms/python/integrations/django/>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ****
 .env
 ****
+
+To configure the Sentry SDK, initialize it in your settings.py file:
 
 .. code-block:: python
 
@@ -37,37 +39,24 @@ This allows developers to diagnose and resolve issues quickly.
 settings.py
 ***********
 
+By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can set options for DjangoIntegration to change its behavior:
+
 .. code-block:: python
 
     sentry_sdk.init(
         dsn=os.environ["DSN"],
         traces_sample_rate=1.0,
         profiles_sample_rate=1.0,
+        enable_tracing=True,
+        integrations=[
+            DjangoIntegration(
+                transaction_style="url",
+                middleware_spans=True,
+                signals_spans=False,
+                cache_spans=False,
+            ),
+        ],
     )
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*******
-
-*******
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*******
-
-*******
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*******
-
-*******
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*******
-
-*******
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -77,7 +66,4 @@ settings.py
        <img src="_static/button_sentry.png" alt="Report button" width="200" height="100" />
    </a>
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-

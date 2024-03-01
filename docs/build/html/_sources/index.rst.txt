@@ -22,7 +22,7 @@ Description
 Orange County Lettings is a start-up in the real estate rental sector. Being expanding in the 
 United States, the company decided to expand its team. As a developer, you need to play an 
 important role in improving the company’s site, both in terms of code and deployment.
-I had access to the site’s 
+I had access to the GitHub repository: 
 
 .. image:: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
    :alt: Gihub Badge

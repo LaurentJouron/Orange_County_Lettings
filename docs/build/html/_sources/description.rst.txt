@@ -10,7 +10,7 @@ Start
 *****
 
 My mission is to set up and operate the site locally on my computer. 
-Following the instructions of the `start README <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_ .
+Following the instructions of the `START README <https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR>`_ .
 
 * Run the site locally and browse it in a browser.
 * I can log in and use the Admin section of the site.
@@ -47,7 +47,7 @@ To do
 * Moving an image with :doc:`Docker <docker>`
 * Test automation and integration with :doc:`CircleCi <circleci>`
 
-💡 **End** `README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ on my GitHub.
+💡 `END README <https://github.com/LaurentJouron/Orange_County_Lettings>`_ on my GitHub.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
