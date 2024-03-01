@@ -1,4 +1,4 @@
-.. _circleci:
+flake8 --format=html --htmldir=flake-report
 
 **Circle CI**
 ============

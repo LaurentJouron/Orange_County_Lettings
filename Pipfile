@@ -24,6 +24,7 @@ sphinx-copybutton = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 sentry-sdk = {extras = ["django"], version = "*"}
+flake8-html = "*"
 
 [dev-packages]
 

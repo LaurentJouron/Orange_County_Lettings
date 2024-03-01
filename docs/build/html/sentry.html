@@ -56,11 +56,13 @@
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="flake8.html"><strong>Flake8</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Sentry</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-sentry">What is Sentry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-sentry">Install Sentry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#env">.env</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#settings-py">settings.py</a></li>
 </ul>
@@ -107,6 +109,14 @@ documentation.</p>
 This allows developers to diagnose and resolve issues quickly. <a class="reference external" href="https://docs.sentry.io/platforms/python/integrations/django/">Sentry’s Django integration</a></p>
 </section>
 <hr class="docutils" />
+<section id="install-sentry">
+<h2>Install Sentry<a class="headerlink" href="#install-sentry" title="Link to this heading"></a></h2>
+<p>Install sentry-sdk from PyPI with the django extra:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="s1">&#39;sentry-sdk[django]&#39;</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
 <section id="env">
 <h2>.env<a class="headerlink" href="#env" title="Link to this heading"></a></h2>
 <p>To configure the Sentry SDK, initialize it in your settings.py file:</p>
@@ -118,7 +128,12 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
 <section id="settings-py">
 <h2>settings.py<a class="headerlink" href="#settings-py" title="Link to this heading"></a></h2>
 <p>By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can set options for DjangoIntegration to change its behavior:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentry_sdk</span><span class="o">.</span><span class="n">init</span><span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">environ</span>
+<span class="kn">import</span> <span class="nn">sentry_sdk</span>
+<span class="kn">from</span> <span class="nn">sentry_sdk.integrations.django</span> <span class="kn">import</span> <span class="n">DjangoIntegration</span>
+
+<span class="n">sentry_sdk</span><span class="o">.</span><span class="n">init</span><span class="p">(</span>
     <span class="n">dsn</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DSN&quot;</span><span class="p">],</span>
     <span class="n">traces_sample_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
     <span class="n">profiles_sample_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>

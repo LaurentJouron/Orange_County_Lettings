@@ -21,3 +21,8 @@ extend-ignore =
     H405,
     # H501: Do not use self.__dict__ for string formatting
     H501
+
+max-line-length = 99
+exclude = **/migrations/*,venv,.git,__pycache__,venv,.venv,.gitignore,setup.py
+
+filename = Lib\site-packages\urllib3\util\timeout.py, Lib\site-packages\urllib3\util\url.py, Lib\site-packages\whitenoise\base.py, Lib\site-packages\whitenoise\middleware.py, Scripts\activate_this.py

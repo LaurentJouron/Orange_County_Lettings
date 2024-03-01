@@ -86,6 +86,10 @@ Technology
    :alt: Flake8 Badge
    :target: https://flake8.pycqa.org/
 
+.. image:: https://img.shields.io/badge/Flake8--HTML-%234B8BBE.svg?style=for-the-badge&logo=flake8&logoColor=white
+    :alt: Flake8-HTML Badge
+    :target: https://pypi.org/project/flake8-html/
+
 .. image:: https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&logo=sphinx&logoColor=white
    :alt: Sphinx Badge
    :target: https://www.sphinx-doc.org/
@@ -196,6 +200,7 @@ Indices and tables
             docstring
             documentation
             error
+            flake8
             heroku
             pipeline
             quick_start

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flake8 &mdash; Orange County Lettings 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Heroku" href="heroku.html" />
+    <link rel="prev" title="Error" href="error.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Orange County Lettings
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Flake8</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-flake8">What is Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-flake8">Install Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-flake8">Using Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-flake8-html">What is Flake8-html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-flake8-html">Install Flake8-html</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orange County Lettings</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Flake8</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/flake8.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flake8">
+<span id="id1"></span><h1><strong>Flake8</strong><a class="headerlink" href="#flake8" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<a class="reference external image-reference" href="https://flake8.pycqa.org/"><img alt="Flake8 Badge" src="https://img.shields.io/badge/flake8-%234B8BBE.svg?style=for-the-badge&amp;logo=flake8&amp;logoColor=white" /></a>
+<a class="reference external image-reference" href="https://pypi.org/project/flake8-html/"><img alt="Flake8-HTML Badge" src="https://img.shields.io/badge/Flake8--HTML-%234B8BBE.svg?style=for-the-badge&amp;logo=flake8&amp;logoColor=white" /></a>
+<p>Parameterizations are done to a specific project. To parameterize to the other project, go to the official
+documentation.</p>
+</div>
+<hr class="docutils" />
+<section id="what-is-flake8">
+<h2>What is Flake8<a class="headerlink" href="#what-is-flake8" title="Link to this heading"></a></h2>
+<p>Flake8 is a static source code analysis tool in Python.</p>
+<dl class="simple">
+<dt><strong>Static Analysis</strong></dt><dd><ul class="simple">
+<li><p>Flake8 performs a static analysis of Python code without executing it. This means that it scans the code for errors, not recommended practices, etc., without the need to run it.</p></li>
+</ul>
+</dd>
+<dt><strong>Style validation</strong></dt><dd><ul class="simple">
+<li><p>Flake8 checks whether Python code complies with style conventions defined in PEP 8 standards. It reports style violations such as incorrect indentation, lines that are too long, unnecessary spaces, etc.</p></li>
+</ul>
+</dd>
+<dt><strong>Error detection</strong></dt><dd><p><a href="#id2"><span class="problematic" id="id3">**</span></a>In addition to checking the style of the code, Flake8 also detects potential errors in the code, such as references to undefined variables, unused imports, endless loops, etc.</p>
+</dd>
+<dt><strong>Customizable</strong></dt><dd><ul class="simple">
+<li><p>Flake8 is customizable. You can configure the style rules you want to apply, disable certain checks or add new ones according to your specific needs.</p></li>
+</ul>
+</dd>
+<dt><strong>Integration into the Python ecosystem</strong></dt><dd><ul class="simple">
+<li><p>Flake8 is widely used in the Python ecosystem and is supported by many code editors, IDE and version control systems. It can be easily integrated into a Python development workflow to improve the quality and consistency of your code.</p></li>
+</ul>
+</dd>
+</dl>
+<p>In summary, Flake8 is a powerful tool to ensure the quality and consistency of Python code by detecting errors, verifying compliance with style conventions, and providing static analysis of source code. Using Flake8 can help maintain clean, readable, and easily maintainable code in Python projects.</p>
+</section>
+<hr class="docutils" />
+<section id="install-flake8">
+<h2>Install Flake8<a class="headerlink" href="#install-flake8" title="Link to this heading"></a></h2>
+<p>To install Flake8, open an interactive shell and run:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">flake8</span>
+</pre></div>
+</div>
+<p>If you want Flake8 to be installed for your default Python installation, you can instead use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">flake8</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is very important to install Flake8 on the correct version of Python for your needs. If you want Flake8 to properly parse new language features in Python 3.5 (for example), you need it to be installed on 3.5 for Flake8 to understand those features. In many ways, Flake8 is tied to the version of Python on which it runs.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="using-flake8">
+<h2>Using Flake8<a class="headerlink" href="#using-flake8" title="Link to this heading"></a></h2>
+<p>To start using Flake8, open an interactive shell and run:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">check</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">code</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="what-is-flake8-html">
+<h2>What is Flake8-html<a class="headerlink" href="#what-is-flake8-html" title="Link to this heading"></a></h2>
+<p>Flake8-HTML is an extension of Flake8 that generates detailed HTML reports based on the results of code analysis performed by Flake8.</p>
+<dl class="simple">
+<dt><strong>Flake8 Extension</strong></dt><dd><ul class="simple">
+<li><p>Flake8-HTML extends the functionality of Flake8 by adding the ability to generate reports in HTML format from the results of code analysis.</p></li>
+</ul>
+</dd>
+<dt><strong>Detailed Reports</strong></dt><dd><ul class="simple">
+<li><p>With Flake8-HTML, you can generate detailed HTML reports that present the results of the code analysis clearly and visually. These reports provide detailed information about style violations, errors detected and other issues identified by Flake8.</p></li>
+</ul>
+</dd>
+<dt><strong>User-friendly visualization</strong></dt><dd><ul class="simple">
+<li><p>HTML reports generated by Flake8-HTML are designed to be easy to interpret. They use a structured layout and visual elements to present the information in an understandable way.</p></li>
+</ul>
+</dd>
+<dt><strong>Customizable</strong></dt><dd><ul class="simple">
+<li><p>Flake8-HTML also offers some customization in reporting. You can configure the generation options to include or exclude certain information, choose the visual style of the reports, etc.</p></li>
+</ul>
+</dd>
+<dt><strong>Integration into workflows</strong></dt><dd><ul class="simple">
+<li><p>Flake8-HTML can be integrated into your Python workflow to provide quality reports on code quality. These reports can be used to identify and resolve problems, improving maintainability and readability of the code.</p></li>
+</ul>
+</dd>
+</dl>
+<p>In summary, Flake8-HTML is a handy extension of Flake8 that adds the ability to generate detailed HTML reports from code analysis results, providing a clear and concise visualization of detected code quality issues. Using Flake8-HTML can help maintain clean, consistent, high-quality code in your Python projects.</p>
+</section>
+<hr class="docutils" />
+<section id="install-flake8-html">
+<h2>Install Flake8-html<a class="headerlink" href="#install-flake8-html" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">install</span> <span class="n">flake8</span><span class="o">-</span><span class="n">html</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Then run flake8 passing the –format=html option and a –htmldir:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flake8</span> <span class="o">--</span><span class="nb">format</span><span class="o">=</span><span class="n">html</span> <span class="o">--</span><span class="n">htmldir</span><span class="o">=</span><span class="n">flake</span><span class="o">-</span><span class="n">report</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/flake8_report.png"><img alt="flake8 report" src="_images/flake8_report.png" style="width: 758.45px; height: 190.85000000000002px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/flake8_report.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before activating the button below, you must <a class="reference internal" href="quick_start.html"><span class="doc">install and activate</span></a> the virtual environment.</p>
+</div>
+<a href="http://127.0.0.1:5501/flake-report/" class="button">
+    <img src="_static/report_flake8.png" alt="Report button" width="200" height="100" />
+</a><hr class="docutils" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="error.html" class="btn btn-neutral float-left" title="Error" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="heroku.html" class="btn btn-neutral float-right" title="Heroku" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Laurent Jouron.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

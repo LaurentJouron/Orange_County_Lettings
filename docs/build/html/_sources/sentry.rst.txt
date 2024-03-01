@@ -23,6 +23,18 @@ This allows developers to diagnose and resolve issues quickly. `Sentry's Django 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+**************
+Install Sentry
+**************
+
+Install sentry-sdk from PyPI with the django extra:
+
+.. code-block:: python
+
+    pip install --upgrade 'sentry-sdk[django]'
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ****
 .env
 ****
@@ -42,6 +54,11 @@ settings.py
 By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can set options for DjangoIntegration to change its behavior:
 
 .. code-block:: python
+    
+    import os
+    import environ
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
 
     sentry_sdk.init(
         dsn=os.environ["DSN"],

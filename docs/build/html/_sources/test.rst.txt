@@ -162,7 +162,7 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. warning:: Before activating the button below, you must install and activate the virtual environment.
+.. warning:: Before activating the button below, you must :doc:`install and activate <quick_start>` the virtual environment.
 
 .. raw:: html
 
