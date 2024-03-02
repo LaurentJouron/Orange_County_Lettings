@@ -74,7 +74,12 @@ If you want Flake8 to be installed for your default Python installation, you can
 .flake8
 *******
 
-⚙️ Configuration ``.flake8`` file
+⚙️ Creation and Configuration ``.flake8`` file
+
+.. code-block:: python
+
+    mkdir .flake8
+
 
 .. code-block:: python
 

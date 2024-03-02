@@ -9,6 +9,11 @@ client = Client()
 
 @pytest.mark.django_db
 def test_index_url():
+    """
+    Test the URL mapping for the index view.
+
+    Checks if the URL mapping for the index view ('index') is correct.
+    """
     path = reverse("index")
     assert path == "/"
     assert resolve(path).view_name == "index"
@@ -16,6 +21,11 @@ def test_index_url():
 
 @pytest.mark.django_db
 def test_index_view():
+    """
+    Test the index view.
+
+    Checks if the index view ('index') renders correctly and contains expected content.
+    """
     path = reverse("index")
     response = client.get(path)
     content = response.content.decode()

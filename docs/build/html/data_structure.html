@@ -51,7 +51,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Data structure</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#specifications">Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-table">Project table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#address">Address</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lettings">Lettings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#profile">Profile</a></li>
@@ -63,6 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="flake8.html"><strong>Flake8</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
@@ -103,37 +104,21 @@
 documentation <a class="reference external" href="https://www.sqlite.org/index.html">SQLite</a>.</p>
 </div>
 <hr class="docutils" />
-<section id="specifications">
-<h2>Specifications<a class="headerlink" href="#specifications" title="Link to this heading"></a></h2>
-<p>⏩️ Change directory</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd oc_lettings_site</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>🔧 Open a shell session</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.open oc-lettings-site.sqlite3</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>🔍 Displays the database tables</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.tables</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>🔍 Displays the profiles, pragma</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">table_info(oc_lettings_site_profile)</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>🔍 Create a query on the profile table:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">favorite_city</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">oc_lettings_site_profile</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">favorite_city</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;B%&#39;</span><span class="p">;</span><span class="o">``</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>🔚 To leave</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.quit</span>
-</pre></div>
-</div>
+<section id="project-table">
+<h2>Project table<a class="headerlink" href="#project-table" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>letting</strong></p></td>
+<td><p>Name of the properties</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>address</strong></p></td>
+<td><p>Contains postal addresses of the properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>profile</strong></p></td>
+<td><p>Contains the country preference of the user</p></td>
+</tr>
+</tbody>
+</table>
 <hr class="docutils" />
 <p>To have a graphical interface, it is better to use the free software <a class="reference external" href="https://sqlitebrowser.org/dl/">DB Browser for SQLite</a>.</p>
 </section>
@@ -145,35 +130,35 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <li><p>verbose_name_plural = “Addresses”</p></li>
 </ul>
 <table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>number</p></th>
-<th class="head"><p>street</p></th>
-<th class="head"><p>city</p></th>
-<th class="head"><p>state</p></th>
-<th class="head"><p>zip_code</p></th>
-<th class="head"><p>country_iso_code</p></th>
-</tr>
-</thead>
 <tbody>
-<tr class="row-even"><td><p>PositiveIntegerField</p></td>
-<td><p>CharField</p></td>
-<td><p>CharField</p></td>
-<td><p>CharField</p></td>
+<tr class="row-odd"><td><p><strong>number</strong></p></td>
 <td><p>PositiveIntegerField</p></td>
+<td><p>validators=[MaxValueValidator(9999)]</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>street</strong></p></td>
 <td><p>CharField</p></td>
+<td><p>max_length=64</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>validators=[MaxValueValidator(9999)]</p></td>
+<tr class="row-odd"><td><p><strong>city</strong></p></td>
+<td><p>CharField</p></td>
 <td><p>max_length=64</p></td>
-<td><p>max_length=64</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>state</strong></p></td>
+<td><p>CharField</p></td>
 <td><p>max_length=2</p></td>
-<td><p>validators=[MaxValueValidator(99999)]</p></td>
-<td><p>max_length=3</p></td>
-</tr>
-<tr class="row-even"><td></td>
-<td></td>
-<td></td>
 <td><p>validators=[MinLengthValidator(2)]</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>zip_code</strong></p></td>
+<td><p>PositiveIntegerField</p></td>
+<td><p>validators=[MaxValueValidator(99999)]</p></td>
 <td></td>
+</tr>
+<tr class="row-even"><td><p><strong>country_iso_code</strong></p></td>
+<td><p>CharField</p></td>
+<td><p>max_length=3</p></td>
 <td><p>validators=[MinLengthValidator(3)]</p></td>
 </tr>
 </tbody>
@@ -183,19 +168,15 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <section id="lettings">
 <h2>Lettings<a class="headerlink" href="#lettings" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>title</p></th>
-<th class="head"><p>address</p></th>
-</tr>
-</thead>
 <tbody>
-<tr class="row-even"><td><p>CharField</p></td>
+<tr class="row-odd"><td><p><strong>title</strong></p></td>
+<td><p>CharField</p></td>
+<td><p>max_length=256</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>address</strong></p></td>
 <td><p>OneToOneField</p></td>
-</tr>
-<tr class="row-odd"><td><p>max_length=256</p></td>
 <td><p>Address</p></td>
-</tr>
-<tr class="row-even"><td></td>
 <td><p>on_delete=models.CASCADE</p></td>
 </tr>
 </tbody>
@@ -205,19 +186,15 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <section id="profile">
 <h2>Profile<a class="headerlink" href="#profile" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>user</p></th>
-<th class="head"><p>favorite_city</p></th>
-</tr>
-</thead>
 <tbody>
-<tr class="row-even"><td><p>User</p></td>
+<tr class="row-odd"><td><p><strong>user</strong></p></td>
+<td><p>User</p></td>
+<td><p>on_delete=models.CASCADE</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>favorite_city</strong></p></td>
 <td><p>CharField</p></td>
-</tr>
-<tr class="row-odd"><td><p>on_delete=models.CASCADE</p></td>
 <td><p>max_length=64</p></td>
-</tr>
-<tr class="row-even"><td></td>
 <td><p>blank=True</p></td>
 </tr>
 </tbody>

@@ -4,6 +4,12 @@ from lettings.models import Address
 
 @pytest.fixture
 def address1_fixture():
+    """
+    Fixture for creating an Address instance.
+
+    Returns:
+        Address: An Address instance with sample data.
+    """
     return Address.objects.create(
         number=500,
         street="Dream Avenue",
@@ -16,6 +22,12 @@ def address1_fixture():
 
 @pytest.fixture
 def address2_fixture():
+    """
+    Fixture for creating another Address instance.
+
+    Returns:
+        Address: Another Address instance with sample data.
+    """
     return Address.objects.create(
         number=300,
         street="Dark Avenue",

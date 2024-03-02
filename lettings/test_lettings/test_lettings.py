@@ -11,6 +11,11 @@ client = Client()
 
 @pytest.mark.django_db
 def test_address_model():
+    """
+    Test the __str__() method of the Address model.
+
+    Checks if the textual representation of an Address instance is correct.
+    """
     address = Address.objects.create(
         number=500,
         street="Dream Avenue",
@@ -25,6 +30,11 @@ def test_address_model():
 
 @pytest.mark.django_db
 def test_letting_model():
+    """
+    Test the __str__() method of the Letting model.
+
+    Checks if the textual representation of a Letting instance is correct.
+    """
     address = Address.objects.create(
         number=500,
         street="Dream Avenue",
@@ -41,6 +51,11 @@ def test_letting_model():
 
 @pytest.mark.django_db
 def test_index_url(address1_fixture, address2_fixture):
+    """
+    Test the URL mapping for the index view.
+
+    Checks if the URL mapping for the index view ('lettings:index') is correct.
+    """
     Letting.objects.create(title="The dream place", address=address1_fixture)
     Letting.objects.create(title="The dark place", address=address2_fixture)
     path = reverse("lettings:index")
@@ -50,6 +65,11 @@ def test_index_url(address1_fixture, address2_fixture):
 
 @pytest.mark.django_db
 def test_letting_url(address1_fixture):
+    """
+    Test the URL mapping for the letting view.
+
+    Checks if the URL mapping for the letting view ('lettings:letting') is correct.
+    """
     Letting.objects.create(title="The dream place", address=address1_fixture)
     path = reverse("lettings:letting", kwargs={"letting_id": 1})
 
@@ -59,6 +79,11 @@ def test_letting_url(address1_fixture):
 
 @pytest.mark.django_db
 def test_index_view(address1_fixture, address2_fixture):
+    """
+    Test the index view.
+
+    Checks if the index view ('lettings:index') renders correctly and contains expected content.
+    """
     Letting.objects.create(title="The dream place", address=address1_fixture)
     Letting.objects.create(title="The dark place", address=address2_fixture)
     path = reverse("lettings:index")
@@ -71,6 +96,11 @@ def test_index_view(address1_fixture, address2_fixture):
 
 @pytest.mark.django_db
 def test_letting_view(address1_fixture):
+    """
+    Test the letting view.
+
+    Checks if the letting view ('lettings:letting') renders correctly and contains expected content.
+    """
     Letting.objects.create(title="The dream place", address=address1_fixture)
     path = reverse("lettings:letting", kwargs={"letting_id": 1})
     response = client.get(path)

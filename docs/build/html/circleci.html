@@ -166,7 +166,7 @@ A <code class="docutils literal notranslate"><span class="pre">circleci-project-
 or you have to gather it on the Master branch.</p>
 <hr class="docutils" />
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/circleci_create.png"><img alt="circle ci create" src="_images/circleci_create.png" style="width: 905.0999999999999px; height: 96.6px;" /></a>
+<a class="reference internal image-reference" href="_images/circleci_create.png"><img alt="circle ci create" src="_images/circleci_create.png" style="width: 840.45px; height: 89.7px;" /></a>
 </figure>
 <div style="text-align: center;">
     <a href="_static/circleci_create.png" download class="button">
@@ -181,7 +181,8 @@ or you have to gather it on the Master branch.</p>
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />
-<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.py</span></code> initialization</p>
+<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> initialization</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> file is used by <strong>CircleCI</strong> to define the steps to follow when running a build pipeline. It starts by defining the version of the pipeline engine used, then defines a job (<strong>say-hello</strong>) that uses a Docker image (<code class="docutils literal notranslate"><span class="pre">cimg/base:current</span></code>) and executes a step that prints <strong>Hello, World!</strong>. Finally, it defines a workflow (<strong>say-hello-workflow</strong>) that orchestrates the execution of the previous work.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the latest 2.1 version of CircleCI pipeline process engine.</span>
 <span class="c1"># See: https://circleci.com/docs/configuration-reference</span>
 <span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
@@ -227,7 +228,7 @@ or you have to gather it on the Master branch.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-<p>⚙️ Build <code class="docutils literal notranslate"><span class="pre">config.py</span></code></p>
+<p>⚙️ Build <code class="docutils literal notranslate"><span class="pre">config.yml</span></code></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_build_config_file.png"><img alt="circleci build config file" src="_images/circleci_build_config_file.png" style="width: 788.5px; height: 511.0px;" /></a>
 </figure>
@@ -236,7 +237,8 @@ or you have to gather it on the Master branch.</p>
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />
-<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.py</span></code> after configuration</p>
+<p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> after configuration</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">YML</span> <span class="pre">file</span></code> defines the configuration of a deployment pipeline with <strong>CircleCI</strong>. It includes steps for <strong>building, testing, creating a Docker image, and deploying to Heroku</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This YAML file defines the configuration of the deployment pipeline with CircleCI.</span>
 <span class="c1"># It contains steps for building, testing, creating a Docker image, and deploying to Heroku.</span>
 

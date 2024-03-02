@@ -113,7 +113,7 @@ or you have to gather it on the Master branch.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: _static/circleci_create.png
-   :scale: 70
+   :scale: 65
    :align: center
    :alt: circle ci create
 
@@ -142,7 +142,9 @@ or you have to gather it on the Master branch.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚙️ ``config.py`` initialization
+⚙️ ``config.yml`` initialization
+
+This ``config.yml`` file is used by **CircleCI** to define the steps to follow when running a build pipeline. It starts by defining the version of the pipeline engine used, then defines a job (**say-hello**) that uses a Docker image (``cimg/base:current``) and executes a step that prints **Hello, World!**. Finally, it defines a workflow (**say-hello-workflow**) that orchestrates the execution of the previous work.
 
 .. code-block:: python
 
@@ -199,7 +201,7 @@ Then we can gather the branches, if necessary.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚙️ Build ``config.py``
+⚙️ Build ``config.yml``
 
 .. figure:: _static/circleci_build_config_file.png
    :scale: 50
@@ -216,7 +218,9 @@ Then we can gather the branches, if necessary.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚙️ ``config.py`` after configuration
+⚙️ ``config.yml`` after configuration
+
+This ``YML file`` defines the configuration of a deployment pipeline with **CircleCI**. It includes steps for **building, testing, creating a Docker image, and deploying to Heroku**.
 
 .. code-block:: python
 

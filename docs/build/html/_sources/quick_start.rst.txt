@@ -42,6 +42,8 @@ There are several solutions to install the project. The easiest for quick use is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+.. caution:: I use pipenv but all commands are functional with pip
+
 .. rubric:: ⚙️ Install virtual environment
 
 .. code-block:: console
@@ -65,6 +67,14 @@ There are several solutions to install the project. The easiest for quick use is
 .. code-block:: console
    
    python manage.py runserver
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: 🔚 Quit
+
+.. code-block:: console
+
+   ctrl + c
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
