@@ -21,6 +21,20 @@ jobs:
           name: Run tests
           command: 
             mkdir test-results && pipenv run pytest
+
+  flake8:
+    docker:
+      - image: cimg/python:3.12.0
+    steps:
+      - checkout
+      - run:
+          name: Install Flake8
+          command: pip install flake8==3.7.0
+      - run:
+          name: check linting with Flake8
+          command: flake8
+
+
       - store_test_results:
           path: test-results
       - store_artifacts:
@@ -73,6 +87,7 @@ workflows:
     # Main workflow for running the jobs in the specified order.
     jobs:
       - build_and_test
+      - flake8
       - build-and-push-docker-image:
           requires:
               - build_and_test
@@ -82,6 +97,7 @@ workflows:
       - deploy_on_heroku:
           requires:
             - build-and-push-docker-image
+            - flake8
           filters:
             branches:
               only: main
