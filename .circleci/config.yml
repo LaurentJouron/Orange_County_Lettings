@@ -9,8 +9,7 @@ orbs:
 
 jobs:
   build_and_test:
-    # Job for building and testing the application.
-    # Uses a Docker image with Python 3.12.0.
+    # Job for building and testing the application. Uses a Docker image with Python 3.12.0.
     docker:
       - image: cimg/python:3.12.0
     steps:
@@ -33,8 +32,6 @@ jobs:
       - run:
           name: check linting with Flake8
           command: flake8
-
-
       - store_test_results:
           path: test-results
       - store_artifacts:
@@ -46,8 +43,7 @@ jobs:
             - .
 
   build-and-push-docker-image:
-    # Job for building and pushing a Docker image.
-    # Uses a Docker image with Python 3.9.6.
+    # Job for building and pushing a Docker image. Uses a Docker image with Python 3.9.6.
     docker:
       - image: cimg/python:3.9.6
     steps:
@@ -64,8 +60,7 @@ jobs:
             docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
 
   deploy_on_heroku:
-    # Job for deploying the application to Heroku.
-    # Uses a Docker image with Python 3.12.0.
+    # Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.
     docker:
       - image: cimg/python:3.12.0
     steps:

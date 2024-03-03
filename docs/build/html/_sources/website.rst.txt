@@ -1,0 +1,17 @@
+.. _website:
+
+**Web Site**
+============
+
+.. important::
+
+    This documentation was carried out as part of a training in computer development. It cannot be used as official documentation. However, you can visit the `Site web <https://county-lettings-dce9820cf239.herokuapp.com/>`_.
+
+    .. raw:: html
+
+        <div style="text-align: center;">
+            <a href="https://county-lettings-dce9820cf239.herokuapp.com/" download class="button">
+                <img src="_static/logo.png" alt="Donwload button" width="100" height="50" />
+            </a>
+        </div>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

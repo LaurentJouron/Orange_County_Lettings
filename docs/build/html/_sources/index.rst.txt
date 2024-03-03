@@ -206,3 +206,4 @@ Indices and tables
             quick_start
             sentry
             test
+            website
