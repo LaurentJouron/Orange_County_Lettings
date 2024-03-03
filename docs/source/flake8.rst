@@ -214,3 +214,32 @@ Then run flake8 passing the --format=html option and a --htmldir:
    </a>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+****************
+Flake8 pipelines
+****************
+
+**Flake8** tests were also incorporated into **circleci pipelines**.
+
+.. figure:: _static/circleci_flake8.png
+   :scale: 50
+   :align: center
+   :alt: flake8 report
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_flake8.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. raw:: html
+
+   <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings/65/workflows/b035e665-45b6-438e-b442-5e32ef0a7b53/jobs/89" class="button">
+       <img src="_static/circleci_pipelines_flake8.png" alt="Report button" width="200" height="100" />
+   </a>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
