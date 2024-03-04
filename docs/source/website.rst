@@ -36,28 +36,11 @@ Reception
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*********
-Up button
-*********
-
-.. figure:: _static/site_up_buttons.png
-   :scale: 75
-   :align: center
-   :alt: site upbuttons
-
-.. raw:: html
-
-   <div style="text-align: center;">
-       <a href="_static/site_up_buttons.png" download class="button">
-          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
-       </a>
-   </div>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 *************
 Middle button
 *************
+
+The main page of the web site contain 2 buttons : Profiles and Lettings.
 
 .. figure:: _static/site_middle_buttons.png
    :scale: 60
@@ -78,6 +61,8 @@ Middle button
 Down button
 ***********
 
+From lettings and profiles, there is 2 buttons to go back to homepage or previous page.
+
 .. figure:: _static/site_down_buttons.png
    :scale: 75
    :align: center
@@ -93,9 +78,11 @@ Down button
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-******************
-Lettings reception
-******************
+********
+Lettings
+********
+
+Lettings contains a list of rentals. When you click on it, you can see details.
 
 .. figure:: _static/site_lettings_reception.png
    :height: 250
@@ -114,10 +101,6 @@ Lettings reception
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-***************
-Detail lettings
-***************
-
 .. figure:: _static/site_lettings_details.png
    :height: 250
    :width: 600
@@ -135,9 +118,11 @@ Detail lettings
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-******************
-Profiles reception
-******************
+********
+Profiles
+********
+
+Profiles contains a list of profiles wich you can click to access to their details. For example, you can see the profile's preferred location.
 
 .. figure:: _static/site_profiles_reception.png
    :height: 250
@@ -154,10 +139,6 @@ Profiles reception
        </a>
    </div>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-****************
-Profiles details
-****************
 
 .. figure:: _static/site_profile_details.png
    :height: 250

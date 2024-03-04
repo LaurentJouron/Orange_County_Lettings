@@ -266,13 +266,13 @@ Data structure
 
 * `Data structure <http://127.0.0.1:5500/docs/build/html/data_structure.html>`_
 
-  - `Specifications <http://127.0.0.1:5500/docs/build/html/data_structure.html#need-for-the-specifications>`_
+  - `Project table <http://127.0.0.1:5501/docs/build/html/data_structure.html#project-table>`_
 
   - `Address <http://127.0.0.1:5500/docs/build/html/data_structure.html#address>`_
 
   - `Lettings <http://127.0.0.1:5500/docs/build/html/data_structure.html#lettings>`_
 
-  - `Profile <http://127.0.0.1:5500/docs/build/html/data_structure.html#profile>`_
+  - `Profiles <http://127.0.0.1:5500/docs/build/html/data_structure.html#profile>`_
 
   - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
 
@@ -346,17 +346,6 @@ Documentation
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Heroku
-~~~~~~
-
-* `Heroku <http://127.0.0.1:5501/docs/build/html/heroku.html>`_
-
-  - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
-
-  - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Error
 ~~~~~
 
@@ -370,10 +359,64 @@ Error
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Flake8
+~~~~~~
+
+* `Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html>`_
+
+  - `What is Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8>`_
+
+  - `Install Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8>`_
+
+  - `.flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#id2>`_
+
+  - `Using Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#using-flake8>`_
+
+  - `What is Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8-html>`_
+
+  - `Install Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8-html>`_
+
+  - `Flake8 pipelines <http://127.0.0.1:5501/docs/build/html/flake8.html#flake8-pipelines>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Heroku
 ~~~~~~
 
 * `Heroku <http://127.0.0.1:5501/docs/build/html/heroku.html>`_
+
+  - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
+
+  - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pipelines
+~~~~~~~~~
+
+* `Pipelines <http://127.0.0.1:5501/docs/build/html/pipeline.html#>`_
+
+  - `Spin up environment <http://127.0.0.1:5501/docs/build/html/pipeline.html#spin-up-environment>`_
+
+  - `Preparing environment variables <http://127.0.0.1:5501/docs/build/html/pipeline.html#preparing-environment-variables>`_
+
+  - `Checkout code <http://127.0.0.1:5501/docs/build/html/pipeline.html#checkout-code>`_
+
+  - `Link lockfile <http://127.0.0.1:5501/docs/build/html/pipeline.html#link-lockfile>`_
+
+  - `Save Python version <http://127.0.0.1:5501/docs/build/html/pipeline.html#save-python-version>`_
+
+  - `Restoring cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#restoring-cache>`_
+
+  - `Move restored cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#move-restored-cache>`_
+
+  - `Install dependencies with pipenv <http://127.0.0.1:5501/docs/build/html/pipeline.html#install-dependencies-with-pipenv-using-project-pipfile-or-inline-packages>`_
+
+  - `Saving cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#saving-cache>`_
+
+  - `Run test <http://127.0.0.1:5501/docs/build/html/pipeline.html#run-test>`_
+
+  - `Persisting to workspace <http://127.0.0.1:5501/docs/build/html/pipeline.html#persisting-to-workspace>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -390,6 +433,8 @@ Sentry
 * `Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html>`_
 
   - `What is Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#what-is-sentry>`_
+
+  - `Install Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#install-sentry>`_
 
   - `.env <http://127.0.0.1:5501/docs/build/html/sentry.html#env>`_
 
@@ -413,5 +458,22 @@ Pytest-Django
   - `pytest -cov=. <http://127.0.0.1:5501/docs/build/html/test.html#pytest-cov>`_
 
   - `Report HTML <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Web site
+~~~~~~~~
+
+* `Web site <http://127.0.0.1:5501/docs/build/html/website.html>`_
+
+  - `Reception <http://127.0.0.1:5501/docs/build/html/website.html>`_
+
+  - `Middle button <http://127.0.0.1:5501/docs/build/html/website.html#middle-button>`_
+
+  - `Down button <http://127.0.0.1:5501/docs/build/html/website.html#down-button>`_
+
+  - `Lettings <http://127.0.0.1:5501/docs/build/html/website.html#lettings>`_
+
+  - `profiles <http://127.0.0.1:5501/docs/build/html/website.html#profiles>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
