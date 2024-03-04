@@ -54,5 +54,3 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
    <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">
        <img src="_static/button_open_website.png" alt="Report button" width="200" height="100" />
    </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

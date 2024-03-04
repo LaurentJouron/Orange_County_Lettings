@@ -86,4 +86,3 @@ There are several solutions to install the project. The easiest for quick use is
    <a href="http://localhost:8000" class="button">
        <img src="_static/button_open_website.png" alt="Bouton" width="200" height="100" />
    </a>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

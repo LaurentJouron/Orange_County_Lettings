@@ -314,3 +314,9 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. raw:: html
+
+   <a href="https://app.circleci.com/pipelines/github/LaurentJouron" class="button">
+       <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
+   </a>

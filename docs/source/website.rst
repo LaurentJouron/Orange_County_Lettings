@@ -61,7 +61,7 @@ The main page of the web site contain 2 buttons : Profiles and Lettings.
 Down button
 ***********
 
-From lettings and profiles, there is 2 buttons to go back to homepage or previous page.
+From lettings and profiles, there is 3 buttons to go back to homepage or previous page.
 
 .. figure:: _static/site_down_buttons.png
    :scale: 75
@@ -156,3 +156,9 @@ Profiles contains a list of profiles wich you can click to access to their detai
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. raw:: html
+
+   <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">
+       <img src="_static/button_open_website.png" alt="Bouton" width="200" height="100" />
+   </a>

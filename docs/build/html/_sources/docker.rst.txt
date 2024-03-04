@@ -247,7 +247,3 @@ Docker image details
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-docker run --rm --name orange_county_lettings -p orange_county_lettings

@@ -131,5 +131,3 @@ To affcicher the documentation of a function, class or method, it is necessary t
         -------
         numpy.ndarray
             The resulting matrix after multiplication. 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

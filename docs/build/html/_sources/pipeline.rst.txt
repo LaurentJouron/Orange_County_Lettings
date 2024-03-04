@@ -312,5 +312,3 @@ This step is usually done to save the workspace state at a certain point in the 
    <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings" class="button">
        <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
    </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

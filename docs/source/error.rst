@@ -88,5 +88,3 @@ Summary
 💡 In summary, the **404 error** indicates that the requested resource does not exist, while the **500 error** 
 indicates an internal server error. In both cases, it is important to provide custom error pages to 
 guide users and improve their website experience.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -39,8 +39,8 @@ To do
 * :doc:`Unit tests <test>`
 * :doc:`Test coverage <test>` greater than 80%
 * Ensure :doc:`test coverage <test>` is greater than 80% using a verification tool such as ``coverage`` or ``pytest-cov``
-* The `correct pluralization <https://github.com/LaurentJouron/Orange_County_Lettings/blob/master/lettings/models.py>`_ of models in the admin page of the application
-* :doc:`the test coverage <test>` on each module, class and function
+* The :doc:`correct pluralization <data_structure>` of models in the admin page of the application
+* The :doc:`test coverage <test>` on each module, class and function
 * A personalized page in case of :doc:`error 404 or 500 <error>`
 * :doc:`Flake8 <flake8>` that returns no errors
 * :doc:`Sentry <sentry>` logging
@@ -69,11 +69,3 @@ service while remaining at the forefront of technology.
    </a>
 
 Join us today and discover a new way to rent and manage real estate with ease and efficiency.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

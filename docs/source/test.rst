@@ -162,12 +162,12 @@ Then, open the ``htmlcov`` folder and launch ``index.html`` in a browser to view
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. warning:: Before activating the button below, you must :doc:`install and activate <quick_start>` the virtual environment.
+*********************
+Report pipelines test
+*********************
 
 .. raw:: html
 
-   <a href="http://127.0.0.1:5501/htmlcov/" class="button">
-       <img src="_static/button_open_report.png" alt="Report button" width="200" height="100" />
+   <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings/70/workflows/75a82eaa-0f22-4454-a4ad-d1eec874d81c/jobs/101" class="button">
+       <img src="_static/button_pipelines_test.png" alt="Report button" width="200" height="100" />
    </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

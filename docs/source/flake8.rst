@@ -241,5 +241,3 @@ Flake8 pipelines
    <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings/65/workflows/b035e665-45b6-438e-b442-5e32ef0a7b53/jobs/89" class="button">
        <img src="_static/circleci_pipelines_flake8.png" alt="Report button" width="200" height="100" />
    </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

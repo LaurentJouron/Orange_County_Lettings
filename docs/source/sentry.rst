@@ -82,5 +82,3 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
    <a href="https://ace-xk.sentry.io/performance/?project=4506710341844992" class="button">
        <img src="_static/button_sentry.png" alt="Report button" width="200" height="100" />
    </a>
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
