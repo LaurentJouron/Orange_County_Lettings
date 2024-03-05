@@ -83,7 +83,6 @@ workflows:
     jobs:
       - build_and_test
       - flake8
-      - heroku/push-docker-image
       - build-and-push-docker-image:
           requires:
               - build_and_test
