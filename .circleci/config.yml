@@ -43,9 +43,9 @@ jobs:
             - .
 
   build-and-push-docker-image:
-    # Job for building and pushing a Docker image. Uses a Docker image with Python 3.9.6.
+    # Job for building and pushing a Docker image. Uses a Docker image with Python 3.12.0
     docker:
-      - image: cimg/python:3.9.6
+      - image: cimg/python:3.12.0
     steps:
       - checkout
       - setup_remote_docker:
@@ -63,10 +63,12 @@ jobs:
     # Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.
     docker:
       - image: cimg/python:3.12.0
+
     steps:
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
+
       - run:
           name: Build and push Docker image to Heroku
           command: |

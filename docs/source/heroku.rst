@@ -50,23 +50,20 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. figure:: _static/heroku_login.png
+.. figure:: _static/heroku_deployement.png
    :scale: 50
    :align: center
-   :alt: heroku login
+   :alt: heroku deployement
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/heroku_login.png" download class="button">
+       <a href="_static/heroku_deployement.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 .. raw:: html
 
