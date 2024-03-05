@@ -51,11 +51,13 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="circleci.html"><strong>Circle CI</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Data structure</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#admin-start-structure">Admin start structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#project-table">Project table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#address">Address</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lettings">Lettings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#profiles">Profiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#schema">Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admin-end-structure">Admin end structure</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
@@ -105,6 +107,17 @@
 documentation <a class="reference external" href="https://www.sqlite.org/index.html">SQLite</a>.</p>
 </div>
 <hr class="docutils" />
+<section id="admin-start-structure">
+<h2>Admin start structure<a class="headerlink" href="#admin-start-structure" title="Link to this heading"></a></h2>
+<figure class="align-center" id="ma-figure">
+<a class="reference internal image-reference" href="_images/data_structure_admin_start.png"><img alt="data structure admin start" src="_images/data_structure_admin_start.png" style="width: 560.0px; height: 320.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/data_structure_admin_start.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div></section>
+<hr class="docutils" />
 <section id="project-table">
 <h2>Project table<a class="headerlink" href="#project-table" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -126,10 +139,38 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <hr class="docutils" />
 <section id="address">
 <h2>Address<a class="headerlink" href="#address" title="Link to this heading"></a></h2>
+<p><strong>Singular</strong> and <strong>plural</strong></p>
 <ul class="simple">
 <li><p>verbose_name = “Address”</p></li>
 <li><p>verbose_name_plural = “Addresses”</p></li>
 </ul>
+<p><strong>Address information</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>id</strong></p></td>
+<td><p>Automated incremental number, primary key</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>number</strong></p></td>
+<td><p>Street number, max value 9999</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>street</strong></p></td>
+<td><p>Name of the street, 64 characters max</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>city</strong></p></td>
+<td><p>City’s name, 64 characters max</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>state</strong></p></td>
+<td><p>State’s code, 2 characters max</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>zip_code</strong></p></td>
+<td><p>Max value 99999</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>country_iso_code</strong></p></td>
+<td><p>Country’s ISO code, 3 characters max</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Models structure</strong></p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><strong>number</strong></p></td>
@@ -168,6 +209,21 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <hr class="docutils" />
 <section id="lettings">
 <h2>Lettings<a class="headerlink" href="#lettings" title="Link to this heading"></a></h2>
+<p><strong>Lettings information</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>id</strong></p></td>
+<td><p>Automated incremental number, primary key</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>title</strong></p></td>
+<td><p>The name of the property to rent, max characters 255</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>address</strong></p></td>
+<td><p>Foreignkey to addresses</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Models structure</strong></p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><strong>title</strong></p></td>
@@ -186,6 +242,21 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <hr class="docutils" />
 <section id="profiles">
 <h2>Profiles<a class="headerlink" href="#profiles" title="Link to this heading"></a></h2>
+<p><strong>User information</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>id</strong></p></td>
+<td><p>automated incremental number, primary key</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>user</strong></p></td>
+<td><p>foreignkey to user’s table</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>favorite_city</strong></p></td>
+<td><p>the favorite city of the user, 64 characters max</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Models structure</strong></p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><strong>user</strong></p></td>
@@ -204,11 +275,22 @@ documentation <a class="reference external" href="https://www.sqlite.org/index.h
 <hr class="docutils" />
 <section id="schema">
 <h2>Schema<a class="headerlink" href="#schema" title="Link to this heading"></a></h2>
-<figure class="align-center" id="ma-figure">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="_images/database_structure.png"><img alt="Database structure`" src="_images/database_structure.png" style="width: 560.0px; height: 320.0px;" /></a>
 </figure>
 <div style="text-align: center;">
     <a href="_static/database_structure.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div></section>
+<hr class="docutils" />
+<section id="admin-end-structure">
+<h2>Admin end structure<a class="headerlink" href="#admin-end-structure" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/data_structure_admin.png"><img alt="data structure admin" src="_images/data_structure_admin.png" style="width: 560.0px; height: 320.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/data_structure_admin.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div></section>

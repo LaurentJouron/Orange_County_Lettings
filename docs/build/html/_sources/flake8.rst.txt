@@ -222,7 +222,7 @@ Flake8 pipelines
 **Flake8** tests were also incorporated into **circleci pipelines**.
 
 .. figure:: _static/circleci_flake8.png
-   :scale: 50
+   :scale: 45
    :align: center
    :alt: flake8 report
 

@@ -26,13 +26,14 @@ Make sure you have a `Heroku <https://signup.heroku.com/>`_ account and the `Her
 Signup
 ******
 
-Connectez-vous à votre compte Heroku en utilisant la commande suivante dans votre terminal :
+Connectez-vous à votre compte Heroku en utilisant la commande suivante dans votre terminal:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 .. code-block:: console 
 
    heroku login
-
-.. _ma_figure:
 
 .. figure:: _static/heroku_login.png
    :scale: 50
@@ -48,6 +49,24 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. figure:: _static/heroku_login.png
+   :scale: 50
+   :align: center
+   :alt: heroku login
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_login.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 .. raw:: html
 

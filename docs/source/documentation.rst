@@ -244,19 +244,14 @@ To realize this documentation I used this configuration for the file ``requireme
 Schema of the doc
 *****************
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Circle CI
 ~~~~~~~~~
 
-* `Circle CI <http://127.0.0.1:5501/docs/build/html/circleci.html>`_
+* :doc:`Circle CI <circleci>`
 
   - `What is Circle CI <http://127.0.0.1:5501/docs/build/html/circleci.html#what-is-circleci>`_
-
   - `Pipeline CI/CD <http://127.0.0.1:5501/docs/build/html/circleci.html#pipline-ci-cd>`_
-
   - `.circleci <http://127.0.0.1:5501/docs/build/html/circleci.html#id2>`_
-
   - `config.py <http://127.0.0.1:5501/docs/build/html/circleci.html#config-py>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -264,31 +259,26 @@ Circle CI
 Data structure
 ~~~~~~~~~~~~~~
 
-* `Data structure <http://127.0.0.1:5500/docs/build/html/data_structure.html>`_
+* :doc:`Data structure <data_structure>`
 
+  - `Admin start structure <http://127.0.0.1:5501/docs/build/html/data_structure.html#admin-start-structure>`_
   - `Project table <http://127.0.0.1:5501/docs/build/html/data_structure.html#project-table>`_
-
   - `Address <http://127.0.0.1:5500/docs/build/html/data_structure.html#address>`_
-
   - `Lettings <http://127.0.0.1:5500/docs/build/html/data_structure.html#lettings>`_
-
   - `Profiles <http://127.0.0.1:5500/docs/build/html/data_structure.html#profile>`_
-
   - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
+  - `Admin end structure <http://127.0.0.1:5501/docs/build/html/data_structure.html#admin-end-structure>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Description
 ~~~~~~~~~~~
 
-* `Description <http://127.0.0.1:5500/docs/build/html/description.html#>`_
+* :doc:`Description <description>`
 
   - `Start <http://127.0.0.1:5500/docs/build/html/description.html#start>`_
-
   - `Prerequiste <http://127.0.0.1:5500/docs/build/html/description.html#prerequisite>`_
-
   - `To do <http://127.0.0.1:5500/docs/build/html/description.html#to-do>`_
-
   - `Final description <http://127.0.0.1:5500/docs/build/html/description.html#final-description>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -296,18 +286,14 @@ Description
 Docker
 ~~~~~~
 
-* `Docker <http://127.0.0.1:5501/docs/build/html/docker.html>`_
+* :doc:`Docker <docker>`
 
   - `Dockerfile for Python <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile-for-python>`_
-
   - `Dockerfile <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile>`_
-
   - `docker-compose.yml <http://127.0.0.1:5501/docs/build/html/docker.html#docker-compose-yml>`_
 
       - `Build image <http://127.0.0.1:5501/docs/build/html/docker.html#build-image>`_
-
       - `Docker image <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image>`_
-
       - `Docker image details <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image-details>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -315,14 +301,11 @@ Docker
 Docstring
 ~~~~~~~~~
 
-* `Docstring <http://127.0.0.1:5501/docs/build/html/docker.html>`_
+* :doc:`Docstring <docstring>`
 
   - `What the docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#what-the-docstrings>`_
-
   - `Google style <http://127.0.0.1:5501/docs/build/html/docstring.html#google-style>`_
-
   - `NumPy/Scipy style <http://127.0.0.1:5501/docs/build/html/docstring.html#numpy-scipy-style>`_
-
   - `Display docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#display-docstrings>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -330,31 +313,39 @@ Docstring
 Documentation
 ~~~~~~~~~~~~~
 
-* `Documentation <http://127.0.0.1:5500/docs/build/html/documentation.html>`_
+* :doc:`Documentation <documentation>`
 
   - `Creation <http://127.0.0.1:5500/docs/build/html/documentation.html#creation>`_
-
   - `Project <http://127.0.0.1:5500/docs/build/html/documentation.html#project>`_
-
   - `.readthedocs.yaml <http://127.0.0.1:5500/docs/build/html/documentation.html#readthedocs-yaml>`_
-
   - `conf.py <http://127.0.0.1:5500/docs/build/html/documentation.html#conf-py>`_
-
   - `requirements.txt <http://127.0.0.1:5500/docs/build/html/documentation.html#requirements-txt>`_
-
   - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
+
+      - `Circle CI <http://127.0.0.1:5501/docs/build/html/documentation.html#circle-ci>`_
+      - `Data structure <http://127.0.0.1:5501/docs/build/html/documentation.html#data-structure>`_
+      - `Description <http://127.0.0.1:5501/docs/build/html/documentation.html#description>`_
+      - `Docker <http://127.0.0.1:5501/docs/build/html/documentation.html#docker>`_
+      - `Docstring <http://127.0.0.1:5501/docs/build/html/documentation.html#docstring>`_
+      - `Documentation <http://127.0.0.1:5501/docs/build/html/documentation.html#id7>`_
+      - `Error <http://127.0.0.1:5501/docs/build/html/documentation.html#error>`_
+      - `Flake8 <http://127.0.0.1:5501/docs/build/html/documentation.html#flake8>`_
+      - `Heroku <http://127.0.0.1:5501/docs/build/html/documentation.html#heroku>`_
+      - `Pipelines <http://127.0.0.1:5501/docs/build/html/documentation.html#pipelines>`_
+      - `Quick start <http://127.0.0.1:5501/docs/build/html/documentation.html#quick-start>`_
+      - `Sentry <http://127.0.0.1:5501/docs/build/html/documentation.html#sentry>`_
+      - `Pytest Django <http://127.0.0.1:5501/docs/build/html/documentation.html#pytest-django>`_
+      - `Web site <http://127.0.0.1:5501/docs/build/html/documentation.html#web-site>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Error
 ~~~~~
 
-* `Error <http://127.0.0.1:5501/docs/build/html/error.html>`_
+* :doc:`Error <error>`
 
   - `404 Error <http://127.0.0.1:5501/docs/build/html/error.html#id2>`_
-
   - `500 Error <http://127.0.0.1:5501/docs/build/html/error.html#id3>`_
-
   - `Summary <http://127.0.0.1:5501/docs/build/html/error.html#summary>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -362,20 +353,14 @@ Error
 Flake8
 ~~~~~~
 
-* `Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html>`_
+* :doc:`Flake8 <flake8>`
 
   - `What is Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8>`_
-
   - `Install Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8>`_
-
   - `.flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#id2>`_
-
   - `Using Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#using-flake8>`_
-
   - `What is Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8-html>`_
-
   - `Install Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8-html>`_
-
   - `Flake8 pipelines <http://127.0.0.1:5501/docs/build/html/flake8.html#flake8-pipelines>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -383,10 +368,9 @@ Flake8
 Heroku
 ~~~~~~
 
-* `Heroku <http://127.0.0.1:5501/docs/build/html/heroku.html>`_
+* :doc:`Heroku <heroku>`
 
   - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
-
   - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -394,28 +378,18 @@ Heroku
 Pipelines
 ~~~~~~~~~
 
-* `Pipelines <http://127.0.0.1:5501/docs/build/html/pipeline.html#>`_
+* :doc:`Pipelines <pipeline>`
 
   - `Spin up environment <http://127.0.0.1:5501/docs/build/html/pipeline.html#spin-up-environment>`_
-
   - `Preparing environment variables <http://127.0.0.1:5501/docs/build/html/pipeline.html#preparing-environment-variables>`_
-
   - `Checkout code <http://127.0.0.1:5501/docs/build/html/pipeline.html#checkout-code>`_
-
   - `Link lockfile <http://127.0.0.1:5501/docs/build/html/pipeline.html#link-lockfile>`_
-
   - `Save Python version <http://127.0.0.1:5501/docs/build/html/pipeline.html#save-python-version>`_
-
   - `Restoring cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#restoring-cache>`_
-
   - `Move restored cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#move-restored-cache>`_
-
   - `Install dependencies with pipenv <http://127.0.0.1:5501/docs/build/html/pipeline.html#install-dependencies-with-pipenv-using-project-pipfile-or-inline-packages>`_
-
   - `Saving cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#saving-cache>`_
-
   - `Run test <http://127.0.0.1:5501/docs/build/html/pipeline.html#run-test>`_
-
   - `Persisting to workspace <http://127.0.0.1:5501/docs/build/html/pipeline.html#persisting-to-workspace>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -423,21 +397,18 @@ Pipelines
 Quick start
 ~~~~~~~~~~~
 
-* `Quick start <http://127.0.0.1:5500/docs/build/html/quick_start.html>`_
+* :doc:`Quick start <quick_start>`
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sentry
 ~~~~~~
 
-* `Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html>`_
+* :doc:`Sentry <sentry>`
 
   - `What is Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#what-is-sentry>`_
-
   - `Install Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#install-sentry>`_
-
   - `.env <http://127.0.0.1:5501/docs/build/html/sentry.html#env>`_
-
   - `settings.py <http://127.0.0.1:5501/docs/build/html/sentry.html#settings-py>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -445,36 +416,25 @@ Sentry
 Pytest-Django
 ~~~~~~~~~~~~~
 
-* `Pytest-Django <http://127.0.0.1:5501/docs/build/html/test.html>`_
+* :doc:`Pytest-Django <test>`
 
   - `Configuration <http://127.0.0.1:5501/docs/build/html/test.html#configuration>`_
-
   - `pytest.ini <http://127.0.0.1:5501/docs/build/html/test.html#pytest-ini>`_
-
   - `Run test <http://127.0.0.1:5501/docs/build/html/test.html#run-test>`_
-
   - `pytest -vvv <http://127.0.0.1:5501/docs/build/html/test.html#pytest-vvv>`_
-
   - `pytest -cov=. <http://127.0.0.1:5501/docs/build/html/test.html#pytest-cov>`_
-
   - `Report HTML <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
-
   - `Report pipelines test <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Web site
 ~~~~~~~~
 
-* `Web site <http://127.0.0.1:5501/docs/build/html/website.html>`_
+* :doc:`Web site <website>`
 
   - `Reception <http://127.0.0.1:5501/docs/build/html/website.html>`_
-
   - `Middle button <http://127.0.0.1:5501/docs/build/html/website.html#middle-button>`_
-
   - `Down button <http://127.0.0.1:5501/docs/build/html/website.html#down-button>`_
-
   - `Lettings <http://127.0.0.1:5501/docs/build/html/website.html#lettings>`_
-
   - `profiles <http://127.0.0.1:5501/docs/build/html/website.html#profiles>`_

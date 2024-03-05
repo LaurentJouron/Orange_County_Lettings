@@ -61,7 +61,7 @@ The main page of the web site contain 2 buttons : Profiles and Lettings.
 Down button
 ***********
 
-From lettings and profiles, there is 2 buttons to go back to homepage or previous page.
+From lettings and profiles, there is 3 buttons to go back to homepage or previous page.
 
 .. figure:: _static/site_down_buttons.png
    :scale: 75
