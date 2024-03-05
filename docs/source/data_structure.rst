@@ -18,8 +18,6 @@
 Admin start structure
 *********************
 
-.. _ma_figure:
-
 .. figure:: _static/data_structure_admin_start.png
    :height: 400
    :width: 700

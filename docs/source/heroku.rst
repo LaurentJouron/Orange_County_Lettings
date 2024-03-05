@@ -51,7 +51,7 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: _static/heroku_deployement.png
-   :scale: 50
+   :scale: 40
    :align: center
    :alt: heroku deployement
 

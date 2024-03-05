@@ -54,7 +54,7 @@ settings.py
 By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can set options for DjangoIntegration to change its behavior:
 
 .. code-block:: python
-    
+
     import os
     import environ
     import sentry_sdk
@@ -74,6 +74,96 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
             ),
         ],
     )
+
+
+.. code-block:: python
+
+    LOGGING = {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+            },
+        },
+        "root": {
+            "handlers": ["console"],
+            "level": "WARNING",
+        },
+        "loggers": {
+            "django": {
+                "handlers": ["console"],
+                "level": os.getenv("DJANGO_LOG_LEVEL", "INFO"),
+                "propagate": False,
+            },
+        },
+    }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. figure:: _static/sentry_reception.png
+   :scale: 55
+   :align: center
+   :alt: sentry reception
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/sentry_reception.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+   .. figure:: _static/sentry_frontend.png
+    :scale: 55
+    :align: center
+    :alt: sentry frontend
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/sentry_frontend.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+   .. figure:: _static/sentry_backend.png
+    :scale: 55
+    :align: center
+    :alt: sentry backend
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/data_structure_admin_start.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+   .. figure:: _static/sentry_journalisation.png
+    :scale: 85
+    :align: center
+    :alt: sentry journalisation
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/sentry_journalisation.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
