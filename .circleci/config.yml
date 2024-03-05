@@ -85,7 +85,6 @@ workflows:
     jobs:
       - build_and_test
       - flake8
-      - deploy_on_heroku
       - build-and-push-docker-image:
           requires:
               - build_and_test
