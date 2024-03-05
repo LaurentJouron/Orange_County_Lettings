@@ -90,11 +90,11 @@ workflows:
               - build_and_test
           filters:
             branches:
-              only: master
+              only: main
       - deploy_on_heroku:
           requires:
             - build-and-push-docker-image
             - flake8
           filters:
             branches:
-              only: master
+              only: main
