@@ -3,24 +3,18 @@
 **Quick start**
 ===============
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 .. note::
 
    This way of installation is the simplest. On the other hand, this use is local, which means that nothing is found 
    on the internet and is accessible only on the computer you are using.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 There are several solutions to install the project. The easiest for quick use is as follows:
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: ⚙️ Clone
 
 .. code-block:: console
 
    git clone https://github.com/LaurentJouron/Orange_County_Lettings.git
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +24,6 @@ There are several solutions to install the project. The easiest for quick use is
 
    cd Orange_County_Lettings
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: ⚙️ Create virtual environment folder
@@ -38,7 +31,6 @@ There are several solutions to install the project. The easiest for quick use is
 .. code-block:: console
 
    mkdir .venv
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,7 +42,6 @@ There are several solutions to install the project. The easiest for quick use is
 
    pipenv install
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. rubric:: ⏩️ Activate environment
@@ -58,7 +49,6 @@ There are several solutions to install the project. The easiest for quick use is
 .. code-block:: console
 
    pipenv shell
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -68,21 +58,20 @@ There are several solutions to install the project. The easiest for quick use is
    
    python manage.py runserver
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.. rubric:: 🔚 Quit
-
-.. code-block:: console
-
-   ctrl + c
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 .. warning:: This button is only functional if the project is activated according to the above process. If this is the case ``click`` on it, otherwise it leads to an **error page**.
-
 
 .. raw:: html
 
    <a href="http://localhost:8000" class="button">
        <img src="_static/button_open_website.png" alt="Bouton" width="200" height="100" />
    </a>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. rubric:: 🔚 Quit
+
+To leave the server and stop any intervention on the website.
+
+.. code-block:: console
+
+   ctrl + c

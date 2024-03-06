@@ -121,11 +121,17 @@ and make your tests discoverable (<a class="reference external" href="https://py
 <hr class="docutils" />
 <section id="pytest-ini">
 <h2>pytest.ini<a class="headerlink" href="#pytest-ini" title="Link to this heading"></a></h2>
-<p>⚙️ pytest.ini</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pytest</span><span class="p">]</span>
-<span class="n">DJANGO_SETTINGS_MODULE</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">settings</span>
+<p>Créer un fichier pytest.ini</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">pytest</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<p>⚙️ pytest.ini file configuration</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="c1"># pytest.ini</span>
+<span class="p">[</span><span class="n">pytest</span><span class="p">]</span>
+<span class="n">DJANGO_SETTINGS_MODULE</span> <span class="o">=</span> <span class="n">oc_lettings_site</span><span class="o">.</span><span class="n">settings</span>
 <span class="c1"># -- recommended but optional:</span>
 <span class="n">python_files</span> <span class="o">=</span> <span class="n">tests</span><span class="o">.</span><span class="n">py</span> <span class="n">test_</span><span class="o">*.</span><span class="n">py</span> <span class="o">*</span><span class="n">_tests</span><span class="o">.</span><span class="n">py</span>
+<span class="n">addopts</span> <span class="o">=</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
 </section>

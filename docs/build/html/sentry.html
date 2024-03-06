@@ -65,6 +65,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#install-sentry">Install Sentry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#env">.env</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#settings-py">settings.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging">LOGGING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reception-dashboard">reception dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frontend-dashboard">frontend dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backend-dashboard">backend dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#email-report">Email report</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
@@ -129,7 +134,9 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
 <section id="settings-py">
 <h2>settings.py<a class="headerlink" href="#settings-py" title="Link to this heading"></a></h2>
 <p>By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can set options for DjangoIntegration to change its behavior:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># setting.py</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">environ</span>
 <span class="kn">import</span> <span class="nn">sentry_sdk</span>
 <span class="kn">from</span> <span class="nn">sentry_sdk.integrations.django</span> <span class="kn">import</span> <span class="n">DjangoIntegration</span>
@@ -150,7 +157,14 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
 <span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+</section>
+<hr class="docutils" />
+<section id="logging">
+<h2>LOGGING<a class="headerlink" href="#logging" title="Link to this heading"></a></h2>
+<p>For a precise setting of the errors, it is necessary to use the installation <a class="reference external" href="https://docs.djangoproject.com/fr/2.2/topics/logging/">logging</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># setting.py</span>
+
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;disable_existing_loggers&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="s2">&quot;handlers&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -172,7 +186,10 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
 <span class="p">}</span>
 </pre></div>
 </div>
+</section>
 <hr class="docutils" />
+<section id="reception-dashboard">
+<h2>reception dashboard<a class="headerlink" href="#reception-dashboard" title="Link to this heading"></a></h2>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/sentry_reception.png"><img alt="sentry reception" src="_images/sentry_reception.png" style="width: 688.0500000000001px; height: 471.35px;" /></a>
 </figure>
@@ -180,7 +197,10 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
     <a href="_static/sentry_reception.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
-</div><hr class="docutils" />
+</div></section>
+<hr class="docutils" />
+<section id="frontend-dashboard">
+<h2>frontend dashboard<a class="headerlink" href="#frontend-dashboard" title="Link to this heading"></a></h2>
 <blockquote>
 <div><figure class="align-center">
 <a class="reference internal image-reference" href="_images/sentry_frontend.png"><img alt="sentry frontend" src="_images/sentry_frontend.png" style="width: 684.2px; height: 465.3px;" /></a>
@@ -190,7 +210,10 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
     <a href="_static/sentry_frontend.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
-</div><hr class="docutils" />
+</div></section>
+<hr class="docutils" />
+<section id="backend-dashboard">
+<h2>backend dashboard<a class="headerlink" href="#backend-dashboard" title="Link to this heading"></a></h2>
 <blockquote>
 <div><figure class="align-center">
 <a class="reference internal image-reference" href="_images/sentry_backend.png"><img alt="sentry backend" src="_images/sentry_backend.png" style="width: 689.1500000000001px; height: 469.70000000000005px;" /></a>
@@ -200,7 +223,11 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
     <a href="_static/data_structure_admin_start.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
-</div><hr class="docutils" />
+</div></section>
+<hr class="docutils" />
+<section id="email-report">
+<h2>Email report<a class="headerlink" href="#email-report" title="Link to this heading"></a></h2>
+<p>If everything is set properly, the confirmation emails receive it regularly depending on the settings.</p>
 <blockquote>
 <div><figure class="align-center">
 <a class="reference internal image-reference" href="_images/sentry_journalisation.png"><img alt="sentry journalisation" src="_images/sentry_journalisation.png" style="width: 437.75px; height: 622.1999999999999px;" /></a>

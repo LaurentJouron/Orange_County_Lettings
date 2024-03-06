@@ -3,8 +3,6 @@
 **Documentation**
 =================
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ********
 Creation
 ********
@@ -14,10 +12,9 @@ Creation
     .. image:: https://img.shields.io/badge/sphinx-%23C4302B.svg?style=for-the-badge&logo=sphinx&logoColor=white
         :alt: Sphinx Badge
         :target: https://www.sphinx-doc.org/en/master/index.html
-    
+
     **After creating the project** and activating the virtual environment, you can start.
     To start create documentation, you must install `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ 
-    
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -249,10 +246,10 @@ Circle CI
 
 * :doc:`Circle CI <circleci>`
 
-  - `What is Circle CI <http://127.0.0.1:5501/docs/build/html/circleci.html#what-is-circleci>`_
-  - `Pipeline CI/CD <http://127.0.0.1:5501/docs/build/html/circleci.html#pipline-ci-cd>`_
-  - `.circleci <http://127.0.0.1:5501/docs/build/html/circleci.html#id2>`_
-  - `config.py <http://127.0.0.1:5501/docs/build/html/circleci.html#config-py>`_
+  - `What is Circle CI <https://laurent-lettings.readthedocs.io/en/latest/circleci.html#what-is-circleci>`_
+  - `Pipeline CI/CD <https://laurent-lettings.readthedocs.io/en/latest/circleci.html#pipelines-ci-cd>`_
+  - `.circleci <https://laurent-lettings.readthedocs.io/en/latest/circleci.html#id1>`_
+  - `config.py <https://laurent-lettings.readthedocs.io/en/latest/circleci.html#config-py>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -261,13 +258,13 @@ Data structure
 
 * :doc:`Data structure <data_structure>`
 
-  - `Admin start structure <http://127.0.0.1:5501/docs/build/html/data_structure.html#admin-start-structure>`_
-  - `Project table <http://127.0.0.1:5501/docs/build/html/data_structure.html#project-table>`_
-  - `Address <http://127.0.0.1:5500/docs/build/html/data_structure.html#address>`_
-  - `Lettings <http://127.0.0.1:5500/docs/build/html/data_structure.html#lettings>`_
-  - `Profiles <http://127.0.0.1:5500/docs/build/html/data_structure.html#profile>`_
-  - `Schema <http://127.0.0.1:5500/docs/build/html/data_structure.html#schema>`_
-  - `Admin end structure <http://127.0.0.1:5501/docs/build/html/data_structure.html#admin-end-structure>`_
+  - `Admin start structure <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#admin-start-structure>`_
+  - `Project table <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#project-table>`_
+  - `Address <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#address>`_
+  - `Lettings <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#lettings>`_
+  - `Profiles <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#profiles>`_
+  - `Schema <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#schema>`_
+  - `Admin end structure <https://laurent-lettings.readthedocs.io/en/latest/data_structure.html#admin-end-structure>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -276,10 +273,10 @@ Description
 
 * :doc:`Description <description>`
 
-  - `Start <http://127.0.0.1:5500/docs/build/html/description.html#start>`_
-  - `Prerequiste <http://127.0.0.1:5500/docs/build/html/description.html#prerequisite>`_
-  - `To do <http://127.0.0.1:5500/docs/build/html/description.html#to-do>`_
-  - `Final description <http://127.0.0.1:5500/docs/build/html/description.html#final-description>`_
+  - `Start <https://laurent-lettings.readthedocs.io/en/latest/description.html#start>`_
+  - `Prerequiste <https://laurent-lettings.readthedocs.io/en/latest/description.html#pre-requisite>`_
+  - `To do <https://laurent-lettings.readthedocs.io/en/latest/description.html#to-do>`_
+  - `Final description <https://laurent-lettings.readthedocs.io/en/latest/description.html#final-description>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -288,13 +285,13 @@ Docker
 
 * :doc:`Docker <docker>`
 
-  - `Dockerfile for Python <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile-for-python>`_
-  - `Dockerfile <http://127.0.0.1:5501/docs/build/html/docker.html#dockerfile>`_
-  - `docker-compose.yml <http://127.0.0.1:5501/docs/build/html/docker.html#docker-compose-yml>`_
+  - `Dockerfile for Python <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile-for-python>`_
+  - `Dockerfile <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile>`_
+  - `docker-compose.yml <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-compose-yml>`_
 
-      - `Build image <http://127.0.0.1:5501/docs/build/html/docker.html#build-image>`_
-      - `Docker image <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image>`_
-      - `Docker image details <http://127.0.0.1:5501/docs/build/html/docker.html#docker-image-details>`_
+      - `Build image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#build-image>`_
+      - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
+      - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -303,10 +300,10 @@ Docstring
 
 * :doc:`Docstring <docstring>`
 
-  - `What the docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#what-the-docstrings>`_
-  - `Google style <http://127.0.0.1:5501/docs/build/html/docstring.html#google-style>`_
-  - `NumPy/Scipy style <http://127.0.0.1:5501/docs/build/html/docstring.html#numpy-scipy-style>`_
-  - `Display docstrings <http://127.0.0.1:5501/docs/build/html/docstring.html#display-docstrings>`_
+  - `What the docstrings <https://laurent-lettings.readthedocs.io/en/latest/docstring.html#what-the-docstrings>`_
+  - `Google style <https://laurent-lettings.readthedocs.io/en/latest/docstring.html#google-style>`_
+  - `NumPy/Scipy style <https://laurent-lettings.readthedocs.io/en/latest/docstring.html#numpy-scipy-style>`_
+  - `Display docstrings <https://laurent-lettings.readthedocs.io/en/latest/docstring.html#display-docstrings>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -315,27 +312,27 @@ Documentation
 
 * :doc:`Documentation <documentation>`
 
-  - `Creation <http://127.0.0.1:5500/docs/build/html/documentation.html#creation>`_
-  - `Project <http://127.0.0.1:5500/docs/build/html/documentation.html#project>`_
-  - `.readthedocs.yaml <http://127.0.0.1:5500/docs/build/html/documentation.html#readthedocs-yaml>`_
-  - `conf.py <http://127.0.0.1:5500/docs/build/html/documentation.html#conf-py>`_
-  - `requirements.txt <http://127.0.0.1:5500/docs/build/html/documentation.html#requirements-txt>`_
-  - `Schema of the doc <http://127.0.0.1:5500/docs/build/html/documentation.html#schema-of-the-doc>`_
+  - `Creation <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#creation>`_
+  - `Project <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#project>`_
+  - `.readthedocs.yaml <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#readthedocs-yaml>`_
+  - `conf.py <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#conf-py>`_
+  - `requirements.txt <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#requirements-txt>`_
+  - `Schema of the doc <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#schema-of-the-doc>`_
 
-      - `Circle CI <http://127.0.0.1:5501/docs/build/html/documentation.html#circle-ci>`_
-      - `Data structure <http://127.0.0.1:5501/docs/build/html/documentation.html#data-structure>`_
-      - `Description <http://127.0.0.1:5501/docs/build/html/documentation.html#description>`_
-      - `Docker <http://127.0.0.1:5501/docs/build/html/documentation.html#docker>`_
-      - `Docstring <http://127.0.0.1:5501/docs/build/html/documentation.html#docstring>`_
-      - `Documentation <http://127.0.0.1:5501/docs/build/html/documentation.html#id7>`_
-      - `Error <http://127.0.0.1:5501/docs/build/html/documentation.html#error>`_
-      - `Flake8 <http://127.0.0.1:5501/docs/build/html/documentation.html#flake8>`_
-      - `Heroku <http://127.0.0.1:5501/docs/build/html/documentation.html#heroku>`_
-      - `Pipelines <http://127.0.0.1:5501/docs/build/html/documentation.html#pipelines>`_
-      - `Quick start <http://127.0.0.1:5501/docs/build/html/documentation.html#quick-start>`_
-      - `Sentry <http://127.0.0.1:5501/docs/build/html/documentation.html#sentry>`_
-      - `Pytest Django <http://127.0.0.1:5501/docs/build/html/documentation.html#pytest-django>`_
-      - `Web site <http://127.0.0.1:5501/docs/build/html/documentation.html#web-site>`_
+      - `Circle CI <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#circle-ci>`_
+      - `Data structure <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#data-structure>`_
+      - `Description <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#description>`_
+      - `Docker <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#docker>`_
+      - `Docstring <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#docstring>`_
+      - `Documentation <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id2>`_
+      - `Error <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id15>`_
+      - `Flake8 <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id18>`_
+      - `Heroku <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id20>`_
+      - `Pipelines <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id21>`_
+      - `Quick start <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id22>`_
+      - `Sentry <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id23>`_
+      - `Pytest Django <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id24>`_
+      - `Web site <https://laurent-lettings.readthedocs.io/en/latest/documentation.html#id26>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -344,9 +341,9 @@ Error
 
 * :doc:`Error <error>`
 
-  - `404 Error <http://127.0.0.1:5501/docs/build/html/error.html#id2>`_
-  - `500 Error <http://127.0.0.1:5501/docs/build/html/error.html#id3>`_
-  - `Summary <http://127.0.0.1:5501/docs/build/html/error.html#summary>`_
+  - `404 Error <https://laurent-lettings.readthedocs.io/en/latest/error.html#id2>`_
+  - `500 Error <https://laurent-lettings.readthedocs.io/en/latest/error.html#id3>`_
+  - `Summary <https://laurent-lettings.readthedocs.io/en/latest/error.html#summary>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -355,13 +352,13 @@ Flake8
 
 * :doc:`Flake8 <flake8>`
 
-  - `What is Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8>`_
-  - `Install Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8>`_
-  - `.flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#id2>`_
-  - `Using Flake8 <http://127.0.0.1:5501/docs/build/html/flake8.html#using-flake8>`_
-  - `What is Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#what-is-flake8-html>`_
-  - `Install Flake8-html <http://127.0.0.1:5501/docs/build/html/flake8.html#install-flake8-html>`_
-  - `Flake8 pipelines <http://127.0.0.1:5501/docs/build/html/flake8.html#flake8-pipelines>`_
+  - `What is Flake8 <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#what-is-flake8>`_
+  - `Install Flake8 <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#install-flake8>`_
+  - `.flake8 <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#id2>`_
+  - `Using Flake8 <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#using-flake8>`_
+  - `What is Flake8-html <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#what-is-flake8-html>`_
+  - `Install Flake8-html <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#install-flake8-html>`_
+  - `Flake8 pipelines <https://laurent-lettings.readthedocs.io/en/latest/flake8.html#flake8-pipelines>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -370,8 +367,8 @@ Heroku
 
 * :doc:`Heroku <heroku>`
 
-  - `Heroku and CLI <http://127.0.0.1:5501/docs/build/html/heroku.html#heroku-and-cli>`_
-  - `Signup <http://127.0.0.1:5501/docs/build/html/heroku.html#signup>`_
+  - `Heroku and CLI <https://laurent-lettings.readthedocs.io/en/latest/heroku.html#heroku-and-cli>`_
+  - `Signup <https://laurent-lettings.readthedocs.io/en/latest/heroku.html#signup>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -380,17 +377,18 @@ Pipelines
 
 * :doc:`Pipelines <pipeline>`
 
-  - `Spin up environment <http://127.0.0.1:5501/docs/build/html/pipeline.html#spin-up-environment>`_
-  - `Preparing environment variables <http://127.0.0.1:5501/docs/build/html/pipeline.html#preparing-environment-variables>`_
-  - `Checkout code <http://127.0.0.1:5501/docs/build/html/pipeline.html#checkout-code>`_
-  - `Link lockfile <http://127.0.0.1:5501/docs/build/html/pipeline.html#link-lockfile>`_
-  - `Save Python version <http://127.0.0.1:5501/docs/build/html/pipeline.html#save-python-version>`_
-  - `Restoring cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#restoring-cache>`_
-  - `Move restored cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#move-restored-cache>`_
-  - `Install dependencies with pipenv <http://127.0.0.1:5501/docs/build/html/pipeline.html#install-dependencies-with-pipenv-using-project-pipfile-or-inline-packages>`_
-  - `Saving cache <http://127.0.0.1:5501/docs/build/html/pipeline.html#saving-cache>`_
-  - `Run test <http://127.0.0.1:5501/docs/build/html/pipeline.html#run-test>`_
-  - `Persisting to workspace <http://127.0.0.1:5501/docs/build/html/pipeline.html#persisting-to-workspace>`_
+  - `Spin up environment <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#spin-up-environment>`_
+  - `Preparing environment variables <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#preparing-environment-variables>`_
+  - `Checkout code <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#checkout-code>`_
+  - `Link lockfile <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#link-lockfile>`_
+  - `Save Python version <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#save-python-version>`_
+  - `Restoring cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#restoring-cache>`_
+  - `Move restored cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#move-restored-cache>`_
+  - `Install dependencies with pipenv <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#install-dependencies-with-pipenv-using-project-pipfile-or-inline-packages>`_
+  - `Copy to cache directory <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#copy-to-cache-directory>`_
+  - `Saving cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#saving-cache>`_
+  - `Run test <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#run-test>`_
+  - `Persisting to workspace <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#persisting-to-workspace>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -406,10 +404,15 @@ Sentry
 
 * :doc:`Sentry <sentry>`
 
-  - `What is Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#what-is-sentry>`_
-  - `Install Sentry <http://127.0.0.1:5501/docs/build/html/sentry.html#install-sentry>`_
-  - `.env <http://127.0.0.1:5501/docs/build/html/sentry.html#env>`_
-  - `settings.py <http://127.0.0.1:5501/docs/build/html/sentry.html#settings-py>`_
+  - `What is Sentry <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#what-is-sentry>`_
+  - `Install Sentry <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#install-sentry>`_
+  - `.env <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#env>`_
+  - `settings.py <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#settings-py>`_
+  - `LOGGING <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#logging>`_
+  - `reception dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#reception-dashboard>`_
+  - `frontend dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#frontend-dashboard>`_
+  - `backend dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#backend-dashboard>`_
+  - `Email report <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#email-report>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -418,13 +421,13 @@ Pytest-Django
 
 * :doc:`Pytest-Django <test>`
 
-  - `Configuration <http://127.0.0.1:5501/docs/build/html/test.html#configuration>`_
-  - `pytest.ini <http://127.0.0.1:5501/docs/build/html/test.html#pytest-ini>`_
-  - `Run test <http://127.0.0.1:5501/docs/build/html/test.html#run-test>`_
-  - `pytest -vvv <http://127.0.0.1:5501/docs/build/html/test.html#pytest-vvv>`_
-  - `pytest -cov=. <http://127.0.0.1:5501/docs/build/html/test.html#pytest-cov>`_
-  - `Report HTML <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
-  - `Report pipelines test <http://127.0.0.1:5501/docs/build/html/test.html#report-html>`_
+  - `Configuration <https://laurent-lettings.readthedocs.io/en/latest/test.html#configuration>`_
+  - `pytest.ini <https://laurent-lettings.readthedocs.io/en/latest/test.html#pytest-ini>`_
+  - `Run test <https://laurent-lettings.readthedocs.io/en/latest/test.html#run-test>`_
+  - `pytest -vvv <https://laurent-lettings.readthedocs.io/en/latest/test.html#pytest-vvv>`_
+  - `pytest -cov=. <https://laurent-lettings.readthedocs.io/en/latest/test.html#pytest-cov>`_
+  - `Report HTML <https://laurent-lettings.readthedocs.io/en/latest/test.html#report-html>`_
+  - `Report pipelines test <https://laurent-lettings.readthedocs.io/en/latest/test.html#report-pipelines-test>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -433,8 +436,8 @@ Web site
 
 * :doc:`Web site <website>`
 
-  - `Reception <http://127.0.0.1:5501/docs/build/html/website.html>`_
-  - `Middle button <http://127.0.0.1:5501/docs/build/html/website.html#middle-button>`_
-  - `Down button <http://127.0.0.1:5501/docs/build/html/website.html#down-button>`_
-  - `Lettings <http://127.0.0.1:5501/docs/build/html/website.html#lettings>`_
-  - `profiles <http://127.0.0.1:5501/docs/build/html/website.html#profiles>`_
+  - `Reception <https://laurent-lettings.readthedocs.io/en/latest/website.html#reception>`_
+  - `Middle button <https://laurent-lettings.readthedocs.io/en/latest/website.html#middle-button>`_
+  - `Down button <https://laurent-lettings.readthedocs.io/en/latest/website.html#down-button>`_
+  - `Lettings <https://laurent-lettings.readthedocs.io/en/latest/website.html#lettings>`_
+  - `profiles <https://laurent-lettings.readthedocs.io/en/latest/website.html#profiles>`_

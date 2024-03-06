@@ -55,6 +55,8 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
 
 .. code-block:: python
 
+    # setting.py
+
     import os
     import environ
     import sentry_sdk
@@ -75,8 +77,17 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
         ],
     )
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*******
+LOGGING
+*******
+
+For a precise setting of the errors, it is necessary to use the installation `logging <https://docs.djangoproject.com/fr/2.2/topics/logging/>`_
 
 .. code-block:: python
+
+    # setting.py
 
     LOGGING = {
         "version": 1,
@@ -101,6 +112,10 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+*******************
+reception dashboard
+*******************
+
 .. figure:: _static/sentry_reception.png
    :scale: 55
    :align: center
@@ -116,6 +131,9 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+******************
+frontend dashboard
+******************
 
    .. figure:: _static/sentry_frontend.png
     :scale: 55
@@ -132,7 +150,9 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+*****************
+backend dashboard
+*****************
 
    .. figure:: _static/sentry_backend.png
     :scale: 55
@@ -149,8 +169,11 @@ By adding DjangoIntegration explicitly to your sentry_sdk.init() call you can se
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+************
+Email report
+************
 
-
+If everything is set properly, the confirmation emails receive it regularly depending on the settings.
 
    .. figure:: _static/sentry_journalisation.png
     :scale: 85

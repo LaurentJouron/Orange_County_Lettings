@@ -39,14 +39,23 @@ and make your tests discoverable (`see My tests are not being found. Why? <https
 pytest.ini
 **********
 
-⚙️ pytest.ini
+Créer un fichier pytest.ini
+
+.. code-block:: python
+   
+   touch pytest.ini
+
+
+⚙️ pytest.ini file configuration
 
 .. code-block:: python
 
-    [pytest]
-    DJANGO_SETTINGS_MODULE = test.settings
-    # -- recommended but optional:
-    python_files = tests.py test_*.py *_tests.py
+    # pytest.ini
+   [pytest]
+   DJANGO_SETTINGS_MODULE = oc_lettings_site.settings
+   # -- recommended but optional:
+   python_files = tests.py test_*.py *_tests.py
+   addopts = -v
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
