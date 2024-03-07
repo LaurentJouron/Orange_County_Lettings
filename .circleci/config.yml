@@ -78,6 +78,24 @@ jobs:
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
+      - run:
+          name: Display deployment message
+          command: echo "Application successfully deployed to Heroku."
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+
+  notify_deployment:
+    # Job to notify successful deployment.
+    docker:
+      - image: cimg/python:3.12.0
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Send deployment notification
+          command: echo "Deployment to Heroku successful!"
 
 workflows:
   main:
@@ -95,6 +113,12 @@ workflows:
           requires:
             - build-and-push-docker-image
             - flake8
+          filters:
+            branches:
+              only: main
+      - notify_deployment:
+          requires:
+            - deploy_on_heroku
           filters:
             branches:
               only: main
