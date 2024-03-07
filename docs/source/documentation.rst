@@ -285,13 +285,18 @@ Docker
 
 * :doc:`Docker <docker>`
 
-  - `Dockerfile for Python <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile-for-python>`_
-  - `Dockerfile <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile>`_
-  - `docker-compose.yml <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-compose-yml>`_
+  - `What is container <https://laurent-lettings.readthedocs.io/en/latest/docker.html#what-is-container>`_
+  - `Why Docker <https://laurent-lettings.readthedocs.io/en/latest/docker.html#why-docker>`_
+  - `Docker Hub <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-hub>`_
 
-      - `Build image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#build-image>`_
-      - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
-      - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
+      - `Dockerfile for Python <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile-for-python>`_
+      - `Dockerfile <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile>`_
+      - `docker-compose.yml <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-compose-yml>`_
+
+  - `Build image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#build-image>`_
+  - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
+  - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
+  - `Quit container <https://laurent-lettings.readthedocs.io/en/latest/docker.html#quit-container>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

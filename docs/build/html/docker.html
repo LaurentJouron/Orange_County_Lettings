@@ -53,14 +53,18 @@
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Docker</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dockerfile-for-python">Dockerfile for Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dockerfile">Dockerfile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#docker-compose-yml">docker-compose.yml</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#build-image">Build image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#docker-image">Docker image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#docker-image-details">Docker image details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-container">What is container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-docker">Why Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-hub">Docker Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dockerfile-for-python">Dockerfile for Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dockerfile">Dockerfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-compose-yml">docker-compose.yml</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#build-image">Build image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-image">Docker image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-image-details">Docker image details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quit-container">Quit container</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
@@ -108,8 +112,58 @@
 documentation <a class="reference external" href="https://docs.docker.com/">Docker</a>.</p>
 </div>
 <hr class="docutils" />
+<section id="what-is-container">
+<h2>What is container<a class="headerlink" href="#what-is-container" title="Link to this heading"></a></h2>
+<p>A container is an isolated environment that includes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Own processes</p></li>
+<li><p>Its own dependencies/ libraries/ binaries.</p></li>
+<li><p>Its own file tree.</p></li>
+<li><p>Its own network interfaces and ports.</p></li>
+</ul>
+</div></blockquote>
+<p>A container can be started, duplicated, paused, stopped.</p>
+</section>
+<hr class="docutils" />
+<section id="why-docker">
+<h2>Why Docker<a class="headerlink" href="#why-docker" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Insulation</strong></dt><dd><ul class="simple">
+<li><p>A container has its own environment, its own dependency versions/ libraries/ binaries.</p></li>
+</ul>
+</dd>
+<dt><strong>Deployment</strong></dt><dd><ul class="simple">
+<li><p>Starting an application on a new machine is very Fast, the application is pre-packaged with what it needs.</p></li>
+</ul>
+</dd>
+<dt><strong>Performance</strong></dt><dd><ul class="simple">
+<li><p>Containerization is very efficient in terms of use resourceful.</p></li>
+</ul>
+</dd>
+<dt><strong>Portability</strong></dt><dd><ul class="simple">
+<li><p>The app can be deployed on multiple types of transparently.</p></li>
+</ul>
+</dd>
+<dt><strong>Scalability</strong></dt><dd><ul class="simple">
+<li><p>A container can be easily duplicated to create a horizontal scalability.</p></li>
+</ul>
+</dd>
+<dt><strong>Safety</strong></dt><dd><ul class="simple">
+<li><p>Containers and processes are isolated from the rest of the system.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="docker-hub">
+<h2>Docker Hub<a class="headerlink" href="#docker-hub" title="Link to this heading"></a></h2>
+<p>To launch a container, we need an <strong>image</strong>.</p>
+<p><a class="reference external" href="https://hub.docker.com/">Docker Hub</a> is the main registry of Docker, it contains many images basic (servers, bones, tools, databases, applications…).</p>
+<p><a class="reference external" href="https://hub.docker.com/">Docker Hub</a> allows you to search for images and see tags available for this image.</p>
+<hr class="docutils" />
 <section id="dockerfile-for-python">
-<h2>Dockerfile for Python<a class="headerlink" href="#dockerfile-for-python" title="Link to this heading"></a></h2>
+<h3>Dockerfile for Python<a class="headerlink" href="#dockerfile-for-python" title="Link to this heading"></a></h3>
 <p>This Docker file is used to build a Python application container.</p>
 <p>💡 Pull the official base image</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">FROM python:3.12.0</span>
@@ -169,7 +223,7 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 </section>
 <hr class="docutils" />
 <section id="dockerfile">
-<h2>Dockerfile<a class="headerlink" href="#dockerfile" title="Link to this heading"></a></h2>
+<h3>Dockerfile<a class="headerlink" href="#dockerfile" title="Link to this heading"></a></h3>
 <p>⚙️ Dockerfile</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># Pull the official base image</span>
 <span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12.0</span>
@@ -211,7 +265,7 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 </section>
 <hr class="docutils" />
 <section id="docker-compose-yml">
-<h2>docker-compose.yml<a class="headerlink" href="#docker-compose-yml" title="Link to this heading"></a></h2>
+<h3>docker-compose.yml<a class="headerlink" href="#docker-compose-yml" title="Link to this heading"></a></h3>
 <p>💡This docker-compose.yml file defines the services needed to run the application.
 It uses Docker Compose to manage Docker containers.</p>
 <ul class="simple">
@@ -249,17 +303,23 @@ web:
 <span class="w">    </span>#<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>via<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>host.
 </pre></div>
 </div>
+</section>
+</section>
 <hr class="docutils" />
 <section id="build-image">
-<h3>Build image<a class="headerlink" href="#build-image" title="Link to this heading"></a></h3>
+<h2>Build image<a class="headerlink" href="#build-image" title="Link to this heading"></a></h2>
 <p>⚙️ Perform this command to control the image</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>Docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>orange_county_lettings<span class="w"> </span>.
+</pre></div>
+</div>
+<p class="rubric">⏩️ Launch Docker project</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>orange_county_lettings
 </pre></div>
 </div>
 </section>
 <hr class="docutils" />
 <section id="docker-image">
-<h3>Docker image<a class="headerlink" href="#docker-image" title="Link to this heading"></a></h3>
+<h2>Docker image<a class="headerlink" href="#docker-image" title="Link to this heading"></a></h2>
 <figure class="align-center" id="ma-figure">
 <a class="reference internal image-reference" href="_images/docker_image.png"><img alt="docker image" src="_images/docker_image.png" style="width: 785.5px; height: 72.0px;" /></a>
 </figure>
@@ -270,8 +330,8 @@ web:
 </div></section>
 <hr class="docutils" />
 <section id="docker-image-details">
-<h3>Docker image details<a class="headerlink" href="#docker-image-details" title="Link to this heading"></a></h3>
-<figure class="align-center" id="id3">
+<h2>Docker image details<a class="headerlink" href="#docker-image-details" title="Link to this heading"></a></h2>
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/docker_image_details.png"><img alt="docker image" src="_images/docker_image_details.png" style="width: 809.0px; height: 485.0px;" /></a>
 </figure>
 <div style="text-align: center;">
@@ -279,6 +339,15 @@ web:
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div></section>
+<hr class="docutils" />
+<section id="quit-container">
+<h2>Quit container<a class="headerlink" href="#quit-container" title="Link to this heading"></a></h2>
+<p class="rubric">🔚 Quit</p>
+<p>To stop the server, press</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ctrl + c</span>
+</pre></div>
+</div>
+<p>(SIGNIT signal)</p>
 </section>
 </section>
 
