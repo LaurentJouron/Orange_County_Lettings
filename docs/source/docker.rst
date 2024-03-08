@@ -14,6 +14,57 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+*****************
+What is container
+*****************
+
+A container is an isolated environment that includes:
+
+    * Own processes
+    * Its own dependencies/ libraries/ binaries.
+    * Its own file tree.
+    * Its own network interfaces and ports.
+
+A container can be started, duplicated, paused, stopped.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********
+Why Docker
+**********
+
+**Insulation**
+    * A container has its own environment, its own dependency versions/ libraries/ binaries.
+
+**Deployment**
+    * Starting an application on a new machine is very Fast, the application is pre-packaged with what it needs.
+
+**Performance**
+    * Containerization is very efficient in terms of use resourceful.
+
+**Portability**
+    * The app can be deployed on multiple types of transparently.
+
+**Scalability**
+    * A container can be easily duplicated to create a horizontal scalability.
+
+**Safety**
+    * Containers and processes are isolated from the rest of the system.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********
+Docker Hub
+**********
+
+To launch a container, we need an **image**.
+
+`Docker Hub <https://hub.docker.com/>`_ is the main registry of Docker, it contains many images basic (servers, bones, tools, databases, applications...).
+
+`Docker Hub <https://hub.docker.com/>`_ allows you to search for images and see tags available for this image.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 =====================
 Dockerfile for Python
 =====================
@@ -156,7 +207,6 @@ Dockerfile
 docker-compose.yml
 ==================
 
-
 💡This docker-compose.yml file defines the services needed to run the application. 
 It uses Docker Compose to manage Docker containers.
 
@@ -206,9 +256,10 @@ Build image
 
     Docker build -t orange_county_lettings .
 
+.. rubric:: ⏩️ Launch Docker project
 
 .. code-block:: Dockerfile
-    
+
     docker run -d -p 8000:8000 orange_county_lettings
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -238,8 +289,6 @@ Docker image
 Docker image details
 ********************
 
-.. _ma_figure:
-
 .. figure:: _static/docker_image_details.png
    :scale: 50
    :align: center
@@ -252,3 +301,19 @@ Docker image details
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**************
+Quit container
+**************
+
+.. rubric:: 🔚 Quit
+
+To stop the server, press
+
+.. code-block:: console
+
+   ctrl + c
+
+(SIGNIT signal)

@@ -285,13 +285,18 @@ Docker
 
 * :doc:`Docker <docker>`
 
-  - `Dockerfile for Python <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile-for-python>`_
-  - `Dockerfile <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile>`_
-  - `docker-compose.yml <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-compose-yml>`_
+  - `What is container <https://laurent-lettings.readthedocs.io/en/latest/docker.html#what-is-container>`_
+  - `Why Docker <https://laurent-lettings.readthedocs.io/en/latest/docker.html#why-docker>`_
+  - `Docker Hub <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-hub>`_
 
-      - `Build image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#build-image>`_
-      - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
-      - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
+      - `Dockerfile for Python <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile-for-python>`_
+      - `Dockerfile <https://laurent-lettings.readthedocs.io/en/latest/docker.html#dockerfile>`_
+      - `docker-compose.yml <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-compose-yml>`_
+
+  - `Build image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#build-image>`_
+  - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
+  - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
+  - `Quit container <https://laurent-lettings.readthedocs.io/en/latest/docker.html#quit-container>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -408,11 +413,11 @@ Sentry
   - `Install Sentry <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#install-sentry>`_
   - `.env <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#env>`_
   - `settings.py <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#settings-py>`_
-  - `Email report <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#email-report>`_
   - `LOGGING <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#logging>`_
   - `reception dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#reception-dashboard>`_
   - `frontend dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#frontend-dashboard>`_
   - `backend dashboard <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#backend-dashboard>`_
+  - `Email report <https://laurent-lettings.readthedocs.io/en/latest/sentry.html#email-report>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
