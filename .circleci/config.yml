@@ -18,7 +18,7 @@ jobs:
           pkg-manager: pipenv
       - run:
           name: Run tests
-          command: 
+          command:
             mkdir test-results && pipenv run pytest
 
   flake8:
