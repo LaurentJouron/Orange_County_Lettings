@@ -108,17 +108,17 @@ workflows:
               - build_and_test
           filters:
             branches:
-              only: main
+              only: master
       - deploy_on_heroku:
           requires:
             - build-and-push-docker-image
             - flake8
           filters:
             branches:
-              only: main
+              only: master
       - notify_deployment:
           requires:
             - deploy_on_heroku
           filters:
             branches:
-              only: main
+              only: master
