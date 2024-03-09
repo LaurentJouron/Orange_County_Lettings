@@ -161,6 +161,28 @@ This Docker file is used to build a Python application container.
 Dockerfile
 ==========
 
+**FROM**
+    * Set the source image
+
+**RUN**
+    * Run commands in a container
+
+**ADD**
+    * Add files to a container
+
+**WORKDIR**
+    * Used to define the working directory
+
+**EXPOSE**
+    * Set default listening ports
+
+**VOLUME**
+    * Defines usable volumes
+
+**CMD**
+    * Set the default command when running your Docker containers.
+
+
 ⚙️ Dockerfile
 
 .. code-block:: Dockerfile
@@ -203,49 +225,6 @@ Dockerfile
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-==================
-docker-compose.yml
-==================
-
-💡This docker-compose.yml file defines the services needed to run the application. 
-It uses Docker Compose to manage Docker containers.
-
-*   Services
-
-    *   web: The "web" service is responsible for running the main application.
-
-*   Configuration
-
-    *   build: This option specifies that the Docker image for this service must be built using the Dockerfile located in the current directory.
-    *   volumes: This service mounts the current directory to the ``/code`` directory inside the container, thus allowing to synchronize the code between the host and the container.
-    *   ports: It maps port 8000 of the Docker container to port 8000 of the host, allowing access to the application via port 8000 of the host.
-
-
-⚙️ ``docker-composer.yml``
-
-.. code-block:: Dockerfile
-
-    # This docker-compose.yml file defines the necessary services to run the application. 
-    # It uses Docker Compose to manage Docker containers.
-    version: '3.9'
-
-    services:
-    web:
-        # Main service responsible for running the application.
-        build: .
-        # This option specifies that the Docker image for this service should be built using the
-        # Dockerfile located in the current directory.
-        volumes:
-        - .:/code
-        # This service mounts the current directory to the "/code" directory inside the container, 
-        # allowing code synchronization between the host and the container.
-        ports:
-        - "8000:8000"
-        # It maps port 8000 of the Docker container to port 8000 of the host, enabling access to 
-        # the application via port 8000 of the host.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ***********
 Build image
 ***********
@@ -282,6 +261,72 @@ Docker image
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***************
+docker commands
+***************
+
+Commands that list all images:
+
+.. code-block:: Dockerfile
+
+    docker images
+
+Commands that list the containers available on the computer
+
+.. code-block:: Dockerfile
+
+    docker ps
+
+Commands that download an existing image
+
+.. code-block:: Dockerfile
+
+    docker pull
+
+controls to run the image in interactive mode. The local run container.
+
+.. code-block:: Dockerfile
+
+    docker run -it orange_county_lettings
+
+Commands to stop a container by adding the ID of it.
+
+.. code-block:: Dockerfile
+
+    docker stop  "ID"
+
+Controls to rotate the container in detached (in the background).
+
+.. code-block:: Dockerfile
+    
+    docker run -it -d orange_county_lettings
+
+System cleaning controls.
+
+.. code-block:: Dockerfile
+
+    docker system prune
+
+Commands to launch the custom container.
+
+.. code-block:: Dockerfile
+
+    docker run -d -p 8000:8000 orange_county_lettings
+
+Link our previously created **orange_county_lettings:latest** image to the Docker Hub **jouron/orange_county_lettings:latest**
+
+.. code-block:: Dockerfile
+
+    docker tag orange_county_lettings:latest jouron/orange_county_lettings:latest
+
+Run a final command to send the image to the Docker Hub.
+
+.. code-block:: Dockerfile
+
+    docker push jouron/orange_county_lettings:latest
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,0 +1,13 @@
+Bonjour,
+
+Vous allez évaluer mes compétences pour le projet 13 (orange_county_lettings). Je vous pris de bien vouloir trouver les éléments demandés
+
+
+Le troisième livrable demandé est:
+
+	Un document TXT contenant le lien vers le pipeline CI/CD de la base de code, configuré de manière à ce que vos builds soient accessibles au public.
+	Tout ces éléments sont visible sur la documentation à ce lien: https://laurent-lettings.readthedocs.io/en/latest/circleci.html
+
+Pour répondre à la demande de façon plus exact, merci de trouvcer le lien vers Circleci:
+	
+	https://app.circleci.com/pipelines/github/LaurentJouron

@@ -76,7 +76,7 @@ _______________________
 
 <h1 align="center">Accédez au site </h1>
 
-* Pour une rapide installation local [cliquer ici](http://127.0.0.1:5501/docs/build/html/quick_start.html)
+* Pour une rapide installation local [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/quick_start.html)
 
 
 * Pour acceder au site public [cliquer ici](https://county-lettings-dce9820cf239.herokuapp.com/) ou sur le logo.
@@ -97,7 +97,7 @@ _______________________
 
 <h1 align="center">Accédez à l'Admin</h1>
 
-* Pour se rendre sur l'administration du site en local [cliquer ici (uniquement après installation)](http://localhost:8000/admin)
+* Pour se rendre sur l'administration du site en local [**uniquement après installation** cliquer ici](http://localhost:8000/admin)
 
 * Pour se rendre sur l'administration du site déployé [cliquer ici](https://county-lettings-dce9820cf239.herokuapp.com/admin/login/?next=/admin/)
 
@@ -199,7 +199,7 @@ _______________________
     </td>
 </table>
 
-Pour vous rendre sur la documentation orange county lettings et voir comment contruire une image avec Docker, [cliquer ici](http://127.0.0.1:5501/docs/build/html/docker.html)
+Pour vous rendre sur la documentation orange county lettings et voir comment contruire une image avec Docker, [cliquer ici](https://laurent-lettings.readthedocs.io/en/latest/docker.html)
 _______________________
 
 <h1 align="center">Sphinx</h1>

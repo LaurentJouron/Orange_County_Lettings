@@ -1,0 +1,13 @@
+Bonjour,
+
+Vous allez évaluer mes compétences pour le projet 13 (orange_county_lettings). Je vous pris de bien vouloir trouver les éléments demandés
+
+
+Le second livrable demandé est:
+
+	Un document TXT contenant le lien vers la documentation sur Read The Docs.
+
+
+Merci de bien vouloir trouver ci dessous le lien vers la documentation faite avec Sphinx et le module Read the doc:
+	
+	https://laurent-lettings.readthedocs.io/en/latest/index.html

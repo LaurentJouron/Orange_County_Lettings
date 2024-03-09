@@ -58,11 +58,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#docker-hub">Docker Hub</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#dockerfile-for-python">Dockerfile for Python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dockerfile">Dockerfile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#docker-compose-yml">docker-compose.yml</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#build-image">Build image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#docker-image">Docker image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-commands">docker commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#docker-image-details">Docker image details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quit-container">Quit container</a></li>
 </ul>
@@ -224,6 +224,36 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 <hr class="docutils" />
 <section id="dockerfile">
 <h3>Dockerfile<a class="headerlink" href="#dockerfile" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>FROM</strong></dt><dd><ul class="simple">
+<li><p>Set the source image</p></li>
+</ul>
+</dd>
+<dt><strong>RUN</strong></dt><dd><ul class="simple">
+<li><p>Run commands in a container</p></li>
+</ul>
+</dd>
+<dt><strong>ADD</strong></dt><dd><ul class="simple">
+<li><p>Add files to a container</p></li>
+</ul>
+</dd>
+<dt><strong>WORKDIR</strong></dt><dd><ul class="simple">
+<li><p>Used to define the working directory</p></li>
+</ul>
+</dd>
+<dt><strong>EXPOSE</strong></dt><dd><ul class="simple">
+<li><p>Set default listening ports</p></li>
+</ul>
+</dd>
+<dt><strong>VOLUME</strong></dt><dd><ul class="simple">
+<li><p>Defines usable volumes</p></li>
+</ul>
+</dd>
+<dt><strong>CMD</strong></dt><dd><ul class="simple">
+<li><p>Set the default command when running your Docker containers.</p></li>
+</ul>
+</dd>
+</dl>
 <p>⚙️ Dockerfile</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># Pull the official base image</span>
 <span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12.0</span>
@@ -263,47 +293,6 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 </pre></div>
 </div>
 </section>
-<hr class="docutils" />
-<section id="docker-compose-yml">
-<h3>docker-compose.yml<a class="headerlink" href="#docker-compose-yml" title="Link to this heading"></a></h3>
-<p>💡This docker-compose.yml file defines the services needed to run the application.
-It uses Docker Compose to manage Docker containers.</p>
-<ul class="simple">
-<li><p>Services</p>
-<ul>
-<li><p>web: The “web” service is responsible for running the main application.</p></li>
-</ul>
-</li>
-<li><p>Configuration</p>
-<ul>
-<li><p>build: This option specifies that the Docker image for this service must be built using the Dockerfile located in the current directory.</p></li>
-<li><p>volumes: This service mounts the current directory to the <code class="docutils literal notranslate"><span class="pre">/code</span></code> directory inside the container, thus allowing to synchronize the code between the host and the container.</p></li>
-<li><p>ports: It maps port 8000 of the Docker container to port 8000 of the host, allowing access to the application via port 8000 of the host.</p></li>
-</ul>
-</li>
-</ul>
-<p>⚙️ <code class="docutils literal notranslate"><span class="pre">docker-composer.yml</span></code></p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># This docker-compose.yml file defines the necessary services to run the application.</span>
-<span class="c"># It uses Docker Compose to manage Docker containers.</span>
-version:<span class="w"> </span><span class="s1">&#39;3.9&#39;</span>
-
-services:
-web:
-<span class="w">    </span>#<span class="w"> </span>Main<span class="w"> </span>service<span class="w"> </span>responsible<span class="w"> </span><span class="k">for</span><span class="w"> </span>running<span class="w"> </span>the<span class="w"> </span>application.
-<span class="w">    </span>build:<span class="w"> </span>.
-<span class="w">    </span>#<span class="w"> </span>This<span class="w"> </span>option<span class="w"> </span>specifies<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>service<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>built<span class="w"> </span>using<span class="w"> </span>the
-<span class="w">    </span>#<span class="w"> </span>Dockerfile<span class="w"> </span>located<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory.
-<span class="w">    </span>volumes:
-<span class="w">    </span>-<span class="w"> </span>.:/code
-<span class="w">    </span>#<span class="w"> </span>This<span class="w"> </span>service<span class="w"> </span>mounts<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span><span class="s2">&quot;/code&quot;</span><span class="w"> </span>directory<span class="w"> </span>inside<span class="w"> </span>the<span class="w"> </span>container,
-<span class="w">    </span>#<span class="w"> </span>allowing<span class="w"> </span>code<span class="w"> </span>synchronization<span class="w"> </span>between<span class="w"> </span>the<span class="w"> </span>host<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>container.
-<span class="w">    </span>ports:
-<span class="w">    </span>-<span class="w"> </span><span class="s2">&quot;8000:8000&quot;</span>
-<span class="w">    </span>#<span class="w"> </span>It<span class="w"> </span>maps<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>container<span class="w"> </span>to<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>host,<span class="w"> </span>enabling<span class="w"> </span>access<span class="w"> </span>to
-<span class="w">    </span>#<span class="w"> </span>the<span class="w"> </span>application<span class="w"> </span>via<span class="w"> </span>port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>host.
-</pre></div>
-</div>
-</section>
 </section>
 <hr class="docutils" />
 <section id="build-image">
@@ -328,6 +317,50 @@ web:
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div></section>
+<hr class="docutils" />
+<section id="docker-commands">
+<h2>docker commands<a class="headerlink" href="#docker-commands" title="Link to this heading"></a></h2>
+<p>Commands that list all images:</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images
+</pre></div>
+</div>
+<p>Commands that list the containers available on the computer</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
+</pre></div>
+</div>
+<p>Commands that download an existing image</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>controls to run the image in interactive mode. The local run container.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>orange_county_lettings
+</pre></div>
+</div>
+<p>Commands to stop a container by adding the ID of it.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stop<span class="w">  </span><span class="s2">&quot;ID&quot;</span>
+</pre></div>
+</div>
+<p>Controls to rotate the container in detached (in the background).</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-d<span class="w"> </span>orange_county_lettings
+</pre></div>
+</div>
+<p>System cleaning controls.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>system<span class="w"> </span>prune
+</pre></div>
+</div>
+<p>Commands to launch the custom container.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>orange_county_lettings
+</pre></div>
+</div>
+<p>Link our previously created <strong>orange_county_lettings:latest</strong> image to the Docker Hub <strong>jouron/orange_county_lettings:latest</strong></p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>tag<span class="w"> </span>orange_county_lettings:latest<span class="w"> </span>jouron/orange_county_lettings:latest
+</pre></div>
+</div>
+<p>Run a final command to send the image to the Docker Hub.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>push<span class="w"> </span>jouron/orange_county_lettings:latest
+</pre></div>
+</div>
+</section>
 <hr class="docutils" />
 <section id="docker-image-details">
 <h2>Docker image details<a class="headerlink" href="#docker-image-details" title="Link to this heading"></a></h2>

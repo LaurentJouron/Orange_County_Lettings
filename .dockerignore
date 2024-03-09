@@ -1,9 +1,1 @@
-**/__pycache__
-*.log
-*.pyc
-.env
-venv
-.coverage
 .git
-.pytest_cache
-.vscode

@@ -1,0 +1,13 @@
+Bonjour,
+
+Vous allez évaluer mes compétences pour le projet 13 (orange_county_lettings). Je vous pris de bien vouloir trouver les éléments demandés
+
+
+Le premier livrable demandé est: 
+
+	Un document TXT contenant le lien vers l'ensemble du code sur le repository GitHub, configuré pour que votre code soit accessible au public.
+
+
+Merci de bien vouloir trouver ci dessous le lien vers mon compte GitHub avec le projet:
+	
+	https://github.com/LaurentJouron/Orange_County_Lettings
