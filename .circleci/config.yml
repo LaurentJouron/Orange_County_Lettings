@@ -56,7 +56,7 @@ jobs:
             TAG=orange_county_lettings
             docker build -t jouron/orange_county_lettings:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
 
-            #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
+            docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
 
