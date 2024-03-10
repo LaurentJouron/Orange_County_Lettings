@@ -53,11 +53,10 @@ jobs:
       - run:
           name: Build and push docker image
           command: |
-            TAG=orange_county_lettings
-            docker build -t jouron/orange_county_lettings:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
 
+            TAG=0.1.$CIRCLE_BUILD_NUM
             docker build -t jouron/orange_county_lettings:$TAG .
-            echo $DOCKER_PASSWORD | docker login -u jouron --password-stdin
+            echo $DOCKER_PASS | docker login -u jouron --password-stdin
             docker push jouron/orange_county_lettings:$TAG
 
   deploy_on_heroku:
