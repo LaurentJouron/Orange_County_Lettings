@@ -55,9 +55,10 @@ jobs:
           command: |
 
             TAG=0.1.$CIRCLE_BUILD_NUM
-            docker build -t jouron/orange_county_lettings:$TAG .
+            docker build -t jouron/orange_county_lettings:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
             echo $DOCKER_PASS | docker login -u jouron --password-stdin
             docker push jouron/orange_county_lettings:$TAG
+
 
   deploy_on_heroku:
     # Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.
