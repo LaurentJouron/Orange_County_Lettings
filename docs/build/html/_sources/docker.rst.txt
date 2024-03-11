@@ -265,7 +265,7 @@ Docker image
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***************
-docker commands
+Docker commands
 ***************
 
 Commands that list all images:
@@ -301,7 +301,7 @@ Commands to stop a container by adding the ID of it.
 Controls to rotate the container in detached (in the background).
 
 .. code-block:: Dockerfile
-    
+
     docker run -it -d orange_county_lettings
 
 System cleaning controls.
@@ -362,3 +362,22 @@ To stop the server, press
    ctrl + c
 
 (SIGNIT signal)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**************
+Image deployed
+**************
+
+.. figure:: _static/docker_image_deploye.png
+   :scale: 50
+   :align: center
+   :alt: docker image deploye on Docker hub
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_image_deploye.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
