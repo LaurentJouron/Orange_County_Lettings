@@ -65,6 +65,42 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+The account is configured so that each change is accessible immediately. Just push the code on GitHub and everything is done automatically.
+
+**Before amendments**
+
+.. figure:: _static/heroku_deployement_before.png
+   :scale: 40
+   :align: center
+   :alt: heroku deployement
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_deployement.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**2 minutes laters**
+
+.. figure:: _static/heroku_deployement_after.png
+   :scale: 40
+   :align: center
+   :alt: heroku deployement
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_deployement.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 .. raw:: html
 
    <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">

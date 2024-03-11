@@ -296,7 +296,7 @@ Docker
   - `Docker image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image>`_
   - `Docker image details <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-image-details>`_
   - `Quit container <https://laurent-lettings.readthedocs.io/en/latest/docker.html#quit-container>`_
-  - `Docker Hub <https://laurent-lettings.readthedocs.io/en/latest/docker.html#docker-hub>`_
+  - `Deployed image <https://laurent-lettings.readthedocs.io/en/latest/docker.html#image-deployed>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

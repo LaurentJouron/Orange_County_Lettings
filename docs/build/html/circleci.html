@@ -243,8 +243,7 @@ or you have to gather it on the Master branch.</p>
 
 <span class="n">jobs</span><span class="p">:</span>
 <span class="n">build_and_test</span><span class="p">:</span>
-   <span class="c1"># Job for building and testing the application.</span>
-   <span class="c1"># Uses a Docker image with Python 3.12.0.</span>
+   <span class="c1"># Job for building and testing the application. Uses a Docker image with Python 3.12.0.</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
@@ -267,8 +266,6 @@ or you have to gather it on the Master branch.</p>
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">check</span> <span class="n">linting</span> <span class="k">with</span> <span class="n">Flake8</span>
          <span class="n">command</span><span class="p">:</span> <span class="n">flake8</span>
-
-
       <span class="o">-</span> <span class="n">store_test_results</span><span class="p">:</span>
          <span class="n">path</span><span class="p">:</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span>
       <span class="o">-</span> <span class="n">store_artifacts</span><span class="p">:</span>
@@ -280,10 +277,9 @@ or you have to gather it on the Master branch.</p>
             <span class="o">-</span> <span class="o">.</span>
 
 <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
-   <span class="c1"># Job for building and pushing a Docker image.</span>
-   <span class="c1"># Uses a Docker image with Python 3.9.6.</span>
+   <span class="c1"># Job for building and pushing a Docker image. Uses a Docker image with Python 3.12.0</span>
    <span class="n">docker</span><span class="p">:</span>
-      <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.9.6</span>
+      <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">checkout</span>
       <span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
@@ -292,20 +288,22 @@ or you have to gather it on the Master branch.</p>
          <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">docker</span> <span class="n">image</span>
          <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
             <span class="n">TAG</span><span class="o">=</span><span class="mf">0.1</span><span class="o">.</span><span class="err">$</span><span class="n">CIRCLE_BUILD_NUM</span>
-            <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="n">orange_county_lettings</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">SECRET_KEY</span><span class="p">}</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">DSN</span><span class="p">}</span> <span class="o">.</span>
+            <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="err">$</span><span class="n">IMAGE_NAME</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">SECRET_KEY</span><span class="p">}</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="n">arg</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">DSN</span><span class="p">}</span> <span class="o">.</span>
             <span class="c1">#docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .</span>
             <span class="n">echo</span> <span class="err">$</span><span class="n">DOCKER_PASSWORD</span> <span class="o">|</span> <span class="n">docker</span> <span class="n">login</span> <span class="o">-</span><span class="n">u</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span> <span class="o">--</span><span class="n">password</span><span class="o">-</span><span class="n">stdin</span>
             <span class="n">docker</span> <span class="n">push</span> <span class="err">$</span><span class="n">DOCKER_USERNAME</span><span class="o">/</span><span class="err">$</span><span class="n">IMAGE_NAME</span><span class="p">:</span><span class="err">$</span><span class="n">TAG</span>
 
+
 <span class="n">deploy_on_heroku</span><span class="p">:</span>
-   <span class="c1"># Job for deploying the application to Heroku.</span>
-   <span class="c1"># Uses a Docker image with Python 3.12.0.</span>
+   <span class="c1"># Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+
    <span class="n">steps</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">checkout</span>
       <span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
          <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
+
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
          <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
@@ -315,6 +313,24 @@ or you have to gather it on the Master branch.</p>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
+      <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+         <span class="n">name</span><span class="p">:</span> <span class="n">Display</span> <span class="n">deployment</span> <span class="n">message</span>
+         <span class="n">command</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;Application successfully deployed to Heroku.&quot;</span>
+      <span class="o">-</span> <span class="n">persist_to_workspace</span><span class="p">:</span>
+         <span class="n">root</span><span class="p">:</span> <span class="o">~/</span><span class="n">project</span>
+         <span class="n">paths</span><span class="p">:</span>
+            <span class="o">-</span> <span class="o">.</span>
+
+<span class="n">notify_deployment</span><span class="p">:</span>
+   <span class="c1"># Job to notify successful deployment.</span>
+   <span class="n">docker</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
+   <span class="n">steps</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">attach_workspace</span><span class="p">:</span>
+         <span class="n">at</span><span class="p">:</span> <span class="o">~/</span><span class="n">project</span>
+      <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
+         <span class="n">name</span><span class="p">:</span> <span class="n">Send</span> <span class="n">deployment</span> <span class="n">notification</span>
+         <span class="n">command</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;Deployment to Heroku successful!&quot;</span>
 
 <span class="n">workflows</span><span class="p">:</span>
 <span class="n">main</span><span class="p">:</span>
@@ -327,17 +343,35 @@ or you have to gather it on the Master branch.</p>
             <span class="o">-</span> <span class="n">build_and_test</span>
          <span class="n">filters</span><span class="p">:</span>
             <span class="n">branches</span><span class="p">:</span>
-            <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
+            <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
       <span class="o">-</span> <span class="n">deploy_on_heroku</span><span class="p">:</span>
          <span class="n">requires</span><span class="p">:</span>
             <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span>
             <span class="o">-</span> <span class="n">flake8</span>
          <span class="n">filters</span><span class="p">:</span>
             <span class="n">branches</span><span class="p">:</span>
-            <span class="n">only</span><span class="p">:</span> <span class="n">main</span>
+            <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
+      <span class="o">-</span> <span class="n">notify_deployment</span><span class="p">:</span>
+         <span class="n">requires</span><span class="p">:</span>
+            <span class="o">-</span> <span class="n">deploy_on_heroku</span>
+         <span class="n">filters</span><span class="p">:</span>
+            <span class="n">branches</span><span class="p">:</span>
+            <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
 </pre></div>
 </div>
 <hr class="docutils" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before using this configuration, you must create the environment variables dans CircleCI.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_environnement_variables.png"><img alt="circleci environnement variables" src="_images/circleci_environnement_variables.png" style="width: 654.8499999999999px; height: 314.65px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_environnement_variables.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <a href="https://app.circleci.com/pipelines/github/LaurentJouron" class="button">
     <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
 </a></section>
