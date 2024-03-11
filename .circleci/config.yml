@@ -74,11 +74,11 @@ jobs:
           name: Build and push Docker image to Heroku
           command: |
            sudo curl https://cli-assets.heroku.com/install.sh | sh
-           HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set SECRET_KEY=$SECRET_KEY -a $HEROKU_APP_NAME
-           HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DSN=$DSN -a $HEROKU_APP_NAME
-           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
-           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
-           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
+           heroku config:set SECRET_KEY=$SECRET_KEY -a $HEROKU_APP_NAME
+           heroku config:set DSN=$DSN -a $HEROKU_APP_NAME
+           heroku container:login
+           heroku container:push -a $HEROKU_APP_NAME web
+           heroku container:release -a $HEROKU_APP_NAME web
       - run:
           name: Display deployment message
           command: echo "Application successfully deployed to Heroku."
