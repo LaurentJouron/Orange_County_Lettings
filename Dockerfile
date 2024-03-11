@@ -13,8 +13,8 @@ ARG SECRET_KEY
 ARG DSN
 
 # Set environment variables using the provided arguments
-ENV SECRET_KEY=${SECRET_KEY}
-ENV DSN=${DSN}
+ENV SECRET_KEY=$SECRET_KEY
+ENV DSN=$DSN
 
 # Expose port 8000 to the outside world
 ENV PORT 8000
