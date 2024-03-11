@@ -32,4 +32,4 @@ COPY . /usr/src/app
 RUN python manage.py collectstatic --noinput
 
 # Command to run the application using Gunicorn
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "--access-logfile", "-", "oc_lettings_site.wsgi"]
+CMD gunicorn --bind 0.0.0.0:8000 oc_lettings_site.wsgi
