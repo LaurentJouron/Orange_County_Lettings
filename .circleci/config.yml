@@ -105,7 +105,8 @@ workflows:
       - flake8
       - build-and-push-docker-image:
           requires:
-              - build_and_test
+            - build_and_test
+            - flake8
           filters:
             branches:
               only: master
