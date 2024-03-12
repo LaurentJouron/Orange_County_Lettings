@@ -239,7 +239,7 @@ or you have to gather it on the Master branch.</p>
 <span class="n">heroku</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">heroku</span><span class="o">@</span><span class="mf">2.0.0</span>
 
 <span class="n">jobs</span><span class="p">:</span>
-<span class="n">build_and_test</span><span class="p">:</span>
+<span class="n">run_test</span><span class="p">:</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
@@ -251,7 +251,7 @@ or you have to gather it on the Master branch.</p>
          <span class="n">command</span><span class="p">:</span>
             <span class="n">mkdir</span> <span class="n">test</span><span class="o">-</span><span class="n">results</span> <span class="o">&amp;&amp;</span> <span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span>
 
-<span class="n">flake8</span><span class="p">:</span>
+<span class="n">flake8_test</span><span class="p">:</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
@@ -300,9 +300,11 @@ or you have to gather it on the Master branch.</p>
          <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
          <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
          <span class="n">sudo</span> <span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cli</span><span class="o">-</span><span class="n">assets</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="n">SECRET_KEY</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="p">{</span><span class="n">HEROKU_APP_NAME</span><span class="p">}</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="n">DSN</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="p">{</span><span class="n">HEROKU_APP_NAME</span><span class="p">}</span>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="p">{</span><span class="n">HEROKU_APP_NAME</span><span class="p">}</span> <span class="n">web</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="p">{</span><span class="n">HEROKU_APP_NAME</span><span class="p">}</span> <span class="n">web</span>
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">Display</span> <span class="n">deployment</span> <span class="n">message</span>
          <span class="n">command</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;Application successfully deployed to Heroku.&quot;</span>
@@ -326,12 +328,12 @@ or you have to gather it on the Master branch.</p>
 <span class="n">main</span><span class="p">:</span>
    <span class="c1"># Main workflow for running the jobs in the specified order.</span>
    <span class="n">jobs</span><span class="p">:</span>
-      <span class="o">-</span> <span class="n">build_and_test</span>
-      <span class="o">-</span> <span class="n">flake8</span>
+      <span class="o">-</span> <span class="n">run_test</span>
+      <span class="o">-</span> <span class="n">flake8_test</span>
       <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
          <span class="n">requires</span><span class="p">:</span>
-            <span class="o">-</span> <span class="n">build_and_test</span>
-            <span class="o">-</span> <span class="n">flake8</span>
+            <span class="o">-</span> <span class="n">run_test</span>
+            <span class="o">-</span> <span class="n">flake8_test</span>
          <span class="n">filters</span><span class="p">:</span>
             <span class="n">branches</span><span class="p">:</span>
             <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
@@ -359,6 +361,15 @@ or you have to gather it on the Master branch.</p>
 </figure>
 <div style="text-align: center;">
     <a href="_static/circleci_environment_variables.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>After running all the tests there is a graph that can be found to make possible improvements.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/circleci_graphic.png"><img alt="circleci graphic" src="_images/circleci_graphic.png" style="width: 853.65px; height: 190.35px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/circleci_graphic.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />

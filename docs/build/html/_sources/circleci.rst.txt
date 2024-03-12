@@ -215,7 +215,7 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
       heroku: circleci/heroku@2.0.0
 
       jobs:
-      build_and_test:
+      run_test:
          docker:
             - image: cimg/python:3.12.0
          steps:
@@ -227,7 +227,7 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
                command:
                   mkdir test-results && pipenv run pytest
 
-      flake8:
+      flake8_test:
          docker:
             - image: cimg/python:3.12.0
          steps:
@@ -276,9 +276,11 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
                name: Build and push Docker image to Heroku
                command: |
                sudo curl https://cli-assets.heroku.com/install.sh | sh
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku config:set SECRET_KEY=$SECRET_KEY -a ${HEROKU_APP_NAME}
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku config:set DSN=$DSN -a ${HEROKU_APP_NAME}
                HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
-               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a county-lettings web
-               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a county-lettings web
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a ${HEROKU_APP_NAME} web
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a ${HEROKU_APP_NAME} web
             - run:
                name: Display deployment message
                command: echo "Application successfully deployed to Heroku."
@@ -302,12 +304,12 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
       main:
          # Main workflow for running the jobs in the specified order.
          jobs:
-            - build_and_test
-            - flake8
+            - run_test
+            - flake8_test
             - build-docker-image:
                requires:
-                  - build_and_test
-                  - flake8
+                  - run_test
+                  - flake8_test
                filters:
                   branches:
                   only: master
@@ -323,6 +325,7 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
                filters:
                   branches:
                   only: master
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -342,6 +345,25 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+After running all the tests there is a graph that can be found to make possible improvements.
+
+.. figure:: _static/circleci_graphic.png
+   :scale: 45
+   :align: center
+   :alt: circleci graphic
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/circleci_graphic.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
