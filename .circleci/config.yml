@@ -17,7 +17,7 @@ jobs:
           command:
             mkdir test-results && pipenv run pytest
 
-  flake8:
+  flake8_test:
     docker:
       - image: cimg/python:3.12.0
     steps:
@@ -95,11 +95,11 @@ workflows:
     # Main workflow for running the jobs in the specified order.
     jobs:
       - run_test
-      - flake8
+      - flake8_test
       - build-docker-image:
           requires:
             - run_test
-            - flake8
+            - flake8_test
           filters:
             branches:
               only: master
