@@ -1,7 +1,7 @@
 .. _pipeline:
 
-**Pipelines**
-=============
+Pipelines
+=========
 
 When a modification is done on the Github repository (after a commit), CircleCi launch some commands.
 

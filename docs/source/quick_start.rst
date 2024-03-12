@@ -1,7 +1,7 @@
 .. _quick_start:
 
-**Quick start**
-===============
+Quick start
+===========
 
 .. note::
 

@@ -1,7 +1,7 @@
 .. _heroku:
 
-**Heroku**
-==========
+Heroku
+======
 
 .. important::
 
@@ -26,14 +26,13 @@ Make sure you have a `Heroku <https://signup.heroku.com/>`_ account and the `Her
 Signup
 ******
 
-Connectez-vous à votre compte Heroku en utilisant la commande suivante dans votre terminal:
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+To verify the installation of your `Heroku <https://dashboard.heroku.com/apps>`_ account use the following command in your terminal:
 
 .. code-block:: console 
 
    heroku login
+
+You must obtain the following result, with your credentials:
 
 .. figure:: _static/heroku_login.png
    :scale: 50
@@ -50,15 +49,67 @@ Connectez-vous à votre compte Heroku en utilisant la commande suivante dans vot
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. figure:: _static/heroku_deployement.png
+You must obtain the following result, with your credentials in **county-lettings/Deploy** select **Heroku Git Use Heroku CLI**
+
+.. figure:: _static/heroku_liaison.png
    :scale: 40
    :align: center
-   :alt: heroku deployement
+   :alt: heroku liaison
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/heroku_deployement.png" download class="button">
+       <a href="_static/heroku_liaison.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+It is important to generate an API secret key to create an environment varialble in :doc:`Circle CI <circleci>`.
+
+.. figure:: _static/heroku_api_key.png
+   :scale: 40
+   :align: center
+   :alt: heroku api key
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_api_key.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+By going to different tabs, you can have different statistics.
+
+.. figure:: _static/heroku_statistic_using.png
+   :scale: 40
+   :align: center
+   :alt: heroku statistic using
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_statistic_using.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. figure:: _static/heroku_updating.png
+   :scale: 40
+   :align: center
+   :alt: heroku updating
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/heroku_updating.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>

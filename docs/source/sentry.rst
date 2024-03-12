@@ -1,7 +1,7 @@
 .. _sentry:
 
-**Sentry**
-==========
+Sentry
+======
 
 .. important::
 

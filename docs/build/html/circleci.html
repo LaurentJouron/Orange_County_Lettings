@@ -49,26 +49,26 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Circle CI</strong></a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Circle CI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-circleci">What is CircleCi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pipelines-ci-cd">Pipelines CI/CD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">.circleci</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-py">config.py</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data_structure.html"><strong>Data structure</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="description.html"><strong>Description</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker.html"><strong>Docker</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="docstring.html"><strong>Docstring</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html"><strong>Documentation</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="error.html"><strong>Error</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="flake8.html"><strong>Flake8</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="heroku.html"><strong>Heroku</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="pipeline.html"><strong>Pipelines</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="quick_start.html"><strong>Quick start</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="sentry.html"><strong>Sentry</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="test.html"><strong>Pytest-Django</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="website.html"><strong>Web Site</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flake8.html">Flake8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heroku.html">Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Pipelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sentry.html">Sentry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Pytest-Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">Web Site</a></li>
 </ul>
 
         </div>
@@ -85,7 +85,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><strong>Circle CI</strong></li>
+      <li class="breadcrumb-item active">Circle CI</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/circleci.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -96,7 +96,7 @@
            <div itemprop="articleBody">
              
   <section id="circle-ci">
-<span id="circleci"></span><h1><strong>Circle CI</strong><a class="headerlink" href="#circle-ci" title="Link to this heading"></a></h1>
+<span id="circleci"></span><h1>Circle CI<a class="headerlink" href="#circle-ci" title="Link to this heading"></a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <a class="reference external image-reference" href="https://circleci.com/docs/"><img alt="CircleCi Badge" src="https://img.shields.io/badge/circle%20ci-%23161616.svg?style=for-the-badge&amp;logo=circleci&amp;logoColor=white" /></a>
@@ -134,7 +134,7 @@ tool widely used in software development.
 series of automated steps that are executed in a specific order to test and deploy the code consistently
 and reliably.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/circleci_pipeline_without_problem.png"><img alt="circleci pipeline without problem" src="_images/circleci_pipeline_without_problem.png" style="width: 765.2px; height: 318.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="_images/circleci_pipeline_without_problem.png"><img alt="circleci pipeline without problem" src="_images/circleci_pipeline_without_problem.png" style="width: 752.8000000000001px; height: 168.0px;" /></a>
 </figure>
 <div style="text-align: center;">
     <a href="_static/circleci_pipeline_without_problem.png" download class="button">
@@ -308,11 +308,10 @@ or you have to gather it on the Master branch.</p>
          <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
          <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
          <span class="n">sudo</span> <span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cli</span><span class="o">-</span><span class="n">assets</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="err">$</span><span class="n">SECRET_KEY</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">config</span><span class="p">:</span><span class="nb">set</span> <span class="n">DSN</span><span class="o">=</span><span class="err">$</span><span class="n">DSN</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
-         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_TOKEN</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="err">$</span><span class="n">HEROKU_APP_NAME</span> <span class="n">web</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
+         <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
+
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">Display</span> <span class="n">deployment</span> <span class="n">message</span>
          <span class="n">command</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;Application successfully deployed to Heroku.&quot;</span>
@@ -365,10 +364,10 @@ or you have to gather it on the Master branch.</p>
 <p>Before using this configuration, you must create the environment variables dans CircleCI.</p>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/circleci_environnement_variables.png"><img alt="circleci environnement variables" src="_images/circleci_environnement_variables.png" style="width: 654.8499999999999px; height: 314.65px;" /></a>
+<a class="reference internal image-reference" href="_images/circleci_environment_variables.png"><img alt="circleci environnement variables" src="_images/circleci_environment_variables.png" style="width: 703.8000000000001px; height: 367.65000000000003px;" /></a>
 </figure>
 <div style="text-align: center;">
-    <a href="_static/circleci_environnement_variables.png" download class="button">
+    <a href="_static/circleci_environment_variables.png" download class="button">
        <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
     </a>
 </div><hr class="docutils" />

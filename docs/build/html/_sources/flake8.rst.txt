@@ -1,7 +1,7 @@
 .. _flake8:
 
-**Flake8**
-==========
+Flake8
+======
 
 .. important::
 

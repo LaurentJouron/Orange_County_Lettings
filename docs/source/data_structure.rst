@@ -1,7 +1,7 @@
 .. _data_structure:
 
-**Data structure**
-==================
+Data structure
+==============
 
 .. important::
 

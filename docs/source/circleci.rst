@@ -1,7 +1,7 @@
 .. _circleci:
 
-**Circle CI**
-=============
+Circle CI
+=========
 
 .. important::
 
@@ -284,11 +284,10 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
             name: Build and push Docker image to Heroku
             command: |
             sudo curl https://cli-assets.heroku.com/install.sh | sh
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set SECRET_KEY=$SECRET_KEY -a $HEROKU_APP_NAME
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DSN=$DSN -a $HEROKU_APP_NAME
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push -a $HEROKU_APP_NAME web
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a $HEROKU_APP_NAME web
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a county-lettings web
+            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a county-lettings web
+
          - run:
             name: Display deployment message
             command: echo "Application successfully deployed to Heroku."
@@ -334,22 +333,21 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
                branches:
                only: master
 
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. important::
 
    Before using this configuration, you must create the environment variables dans CircleCI.
 
-.. figure:: _static/circleci_environnement_variables.png
-   :scale: 35
+.. figure:: _static/circleci_environment_variables.png
+   :scale: 45
    :align: center
    :alt: circleci environnement variables
 
 .. raw:: html
 
    <div style="text-align: center;">
-       <a href="_static/circleci_environnement_variables.png" download class="button">
+       <a href="_static/circleci_environment_variables.png" download class="button">
           <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
        </a>
    </div>

@@ -1,7 +1,7 @@
 .. _test:
 
-**Pytest-Django**
-=================
+Pytest-Django
+=============
 
 .. important::
 

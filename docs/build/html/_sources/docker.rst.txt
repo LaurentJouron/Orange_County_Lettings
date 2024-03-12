@@ -1,7 +1,7 @@
 .. _docker:
 
-**Docker**
-==========
+Docker
+======
 
 .. important::
 

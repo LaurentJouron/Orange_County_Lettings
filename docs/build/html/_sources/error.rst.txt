@@ -1,7 +1,7 @@
 .. _error:
 
-**Error**
-=========
+Error
+=====
 
 .. important::
 

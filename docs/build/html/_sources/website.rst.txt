@@ -1,7 +1,7 @@
 .. _website:
 
-**Web Site**
-============
+Web Site
+========
 
 .. important::
 
