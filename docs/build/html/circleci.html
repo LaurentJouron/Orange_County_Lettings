@@ -232,10 +232,7 @@ or you have to gather it on the Master branch.</p>
 </div><hr class="docutils" />
 <p>⚙️ <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> after configuration</p>
 <p>This <code class="docutils literal notranslate"><span class="pre">YML</span> <span class="pre">file</span></code> defines the configuration of a deployment pipeline with <strong>CircleCI</strong>. It includes steps for <strong>building, testing, creating a Docker image, and deploying to Heroku</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This YAML file defines the configuration of the deployment pipeline with CircleCI.</span>
-<span class="c1"># It contains steps for building, testing, creating a Docker image, and deploying to Heroku.</span>
-
-<span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="mf">2.1</span>
 
 <span class="n">orbs</span><span class="p">:</span>
 <span class="n">python</span><span class="p">:</span> <span class="n">circleci</span><span class="o">/</span><span class="n">python</span><span class="o">@</span><span class="mf">2.1.1</span>
@@ -243,7 +240,6 @@ or you have to gather it on the Master branch.</p>
 
 <span class="n">jobs</span><span class="p">:</span>
 <span class="n">build_and_test</span><span class="p">:</span>
-   <span class="c1"># Job for building and testing the application. Uses a Docker image with Python 3.12.0.</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
@@ -276,8 +272,7 @@ or you have to gather it on the Master branch.</p>
          <span class="n">paths</span><span class="p">:</span>
             <span class="o">-</span> <span class="o">.</span>
 
-<span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
-   <span class="c1"># Job for building and pushing a Docker image. Uses a Docker image with Python 3.12.0</span>
+<span class="n">build</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
    <span class="n">steps</span><span class="p">:</span>
@@ -295,15 +290,12 @@ or you have to gather it on the Master branch.</p>
 
 
 <span class="n">deploy_on_heroku</span><span class="p">:</span>
-   <span class="c1"># Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.</span>
    <span class="n">docker</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">cimg</span><span class="o">/</span><span class="n">python</span><span class="p">:</span><span class="mf">3.12.0</span>
-
    <span class="n">steps</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">checkout</span>
       <span class="o">-</span> <span class="n">setup_remote_docker</span><span class="p">:</span>
          <span class="n">docker_layer_caching</span><span class="p">:</span> <span class="n">true</span>
-
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">Build</span> <span class="ow">and</span> <span class="n">push</span> <span class="n">Docker</span> <span class="n">image</span> <span class="n">to</span> <span class="n">Heroku</span>
          <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
@@ -311,7 +303,6 @@ or you have to gather it on the Master branch.</p>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">login</span>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">push</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
          <span class="n">HEROKU_API_KEY</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="n">HEROKU_API_KEY</span><span class="p">}</span> <span class="n">heroku</span> <span class="n">container</span><span class="p">:</span><span class="n">release</span> <span class="o">-</span><span class="n">a</span> <span class="n">county</span><span class="o">-</span><span class="n">lettings</span> <span class="n">web</span>
-
       <span class="o">-</span> <span class="n">run</span><span class="p">:</span>
          <span class="n">name</span><span class="p">:</span> <span class="n">Display</span> <span class="n">deployment</span> <span class="n">message</span>
          <span class="n">command</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;Application successfully deployed to Heroku.&quot;</span>
@@ -337,16 +328,16 @@ or you have to gather it on the Master branch.</p>
    <span class="n">jobs</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">build_and_test</span>
       <span class="o">-</span> <span class="n">flake8</span>
-      <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span><span class="p">:</span>
          <span class="n">requires</span><span class="p">:</span>
             <span class="o">-</span> <span class="n">build_and_test</span>
+            <span class="o">-</span> <span class="n">flake8</span>
          <span class="n">filters</span><span class="p">:</span>
             <span class="n">branches</span><span class="p">:</span>
             <span class="n">only</span><span class="p">:</span> <span class="n">master</span>
       <span class="o">-</span> <span class="n">deploy_on_heroku</span><span class="p">:</span>
          <span class="n">requires</span><span class="p">:</span>
-            <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">push</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span>
-            <span class="o">-</span> <span class="n">flake8</span>
+            <span class="o">-</span> <span class="n">build</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span>
          <span class="n">filters</span><span class="p">:</span>
             <span class="n">branches</span><span class="p">:</span>
             <span class="n">only</span><span class="p">:</span> <span class="n">master</span>

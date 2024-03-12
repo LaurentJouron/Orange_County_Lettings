@@ -208,130 +208,121 @@ This ``YML file`` defines the configuration of a deployment pipeline with **Circ
 
 .. code-block:: python
 
-   # This YAML file defines the configuration of the deployment pipeline with CircleCI.
-   # It contains steps for building, testing, creating a Docker image, and deploying to Heroku.
+      version: 2.1
 
-   version: 2.1
+      orbs:
+      python: circleci/python@2.1.1
+      heroku: circleci/heroku@2.0.0
 
-   orbs:
-   python: circleci/python@2.1.1
-   heroku: circleci/heroku@2.0.0
-
-   jobs:
-   build_and_test:
-      # Job for building and testing the application. Uses a Docker image with Python 3.12.0.
-      docker:
-         - image: cimg/python:3.12.0
-      steps:
-         - checkout
-         - python/install-packages:
-            pkg-manager: pipenv
-         - run:
-            name: Run tests
-            command:
-               mkdir test-results && pipenv run pytest
-
-   flake8:
-      docker:
-         - image: cimg/python:3.12.0
-      steps:
-         - checkout
-         - run:
-            name: Install Flake8
-            command: pip install flake8==3.7.0
-         - run:
-            name: check linting with Flake8
-            command: flake8
-         - store_test_results:
-            path: test-results
-         - store_artifacts:
-            path: test-results
-            destination: tr1
-         - persist_to_workspace:
-            root: ~/project
-            paths:
-               - .
-
-   build-and-push-docker-image:
-      # Job for building and pushing a Docker image. Uses a Docker image with Python 3.12.0
-      docker:
-         - image: cimg/python:3.12.0
-      steps:
-         - checkout
-         - setup_remote_docker:
-            docker_layer_caching: true
-         - run:
-            name: Build and push docker image
-            command: |
-               TAG=0.1.$CIRCLE_BUILD_NUM
-               docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
-               #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
-               echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-               docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
-
-
-   deploy_on_heroku:
-      # Job for deploying the application to Heroku. Uses a Docker image with Python 3.12.0.
-      docker:
-         - image: cimg/python:3.12.0
-
-      steps:
-         - checkout
-         - setup_remote_docker:
-            docker_layer_caching: true
-
-         - run:
-            name: Build and push Docker image to Heroku
-            command: |
-            sudo curl https://cli-assets.heroku.com/install.sh | sh
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a county-lettings web
-            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a county-lettings web
-
-         - run:
-            name: Display deployment message
-            command: echo "Application successfully deployed to Heroku."
-         - persist_to_workspace:
-            root: ~/project
-            paths:
-               - .
-
-   notify_deployment:
-      # Job to notify successful deployment.
-      docker:
-         - image: cimg/python:3.12.0
-      steps:
-         - attach_workspace:
-            at: ~/project
-         - run:
-            name: Send deployment notification
-            command: echo "Deployment to Heroku successful!"
-
-   workflows:
-   main:
-      # Main workflow for running the jobs in the specified order.
       jobs:
-         - build_and_test
-         - flake8
-         - build-and-push-docker-image:
-            requires:
-               - build_and_test
-            filters:
-               branches:
-               only: master
-         - deploy_on_heroku:
-            requires:
-               - build-and-push-docker-image
-               - flake8
-            filters:
-               branches:
-               only: master
-         - notify_deployment:
-            requires:
-               - deploy_on_heroku
-            filters:
-               branches:
-               only: master
+      build_and_test:
+         docker:
+            - image: cimg/python:3.12.0
+         steps:
+            - checkout
+            - python/install-packages:
+               pkg-manager: pipenv
+            - run:
+               name: Run tests
+               command:
+                  mkdir test-results && pipenv run pytest
+
+      flake8:
+         docker:
+            - image: cimg/python:3.12.0
+         steps:
+            - checkout
+            - run:
+               name: Install Flake8
+               command: pip install flake8==3.7.0
+            - run:
+               name: check linting with Flake8
+               command: flake8
+            - store_test_results:
+               path: test-results
+            - store_artifacts:
+               path: test-results
+               destination: tr1
+            - persist_to_workspace:
+               root: ~/project
+               paths:
+                  - .
+
+      build-docker-image:
+         docker:
+            - image: cimg/python:3.12.0
+         steps:
+            - checkout
+            - setup_remote_docker:
+               docker_layer_caching: true
+            - run:
+               name: Build and push docker image
+               command: |
+                  TAG=0.1.$CIRCLE_BUILD_NUM
+                  docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG --build-arg SECRET_KEY=${SECRET_KEY} --build-arg DSN=${DSN} .
+                  #docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$TAG .
+                  echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+                  docker push $DOCKER_USERNAME/$IMAGE_NAME:$TAG
+
+
+      deploy_on_heroku:
+         docker:
+            - image: cimg/python:3.12.0
+         steps:
+            - checkout
+            - setup_remote_docker:
+               docker_layer_caching: true
+            - run:
+               name: Build and push Docker image to Heroku
+               command: |
+               sudo curl https://cli-assets.heroku.com/install.sh | sh
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a county-lettings web
+               HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a county-lettings web
+            - run:
+               name: Display deployment message
+               command: echo "Application successfully deployed to Heroku."
+            - persist_to_workspace:
+               root: ~/project
+               paths:
+                  - .
+
+      notify_deployment:
+         # Job to notify successful deployment.
+         docker:
+            - image: cimg/python:3.12.0
+         steps:
+            - attach_workspace:
+               at: ~/project
+            - run:
+               name: Send deployment notification
+               command: echo "Deployment to Heroku successful!"
+
+      workflows:
+      main:
+         # Main workflow for running the jobs in the specified order.
+         jobs:
+            - build_and_test
+            - flake8
+            - build-docker-image:
+               requires:
+                  - build_and_test
+                  - flake8
+               filters:
+                  branches:
+                  only: master
+            - deploy_on_heroku:
+               requires:
+                  - build-docker-image
+               filters:
+                  branches:
+                  only: master
+            - notify_deployment:
+               requires:
+                  - deploy_on_heroku
+               filters:
+                  branches:
+                  only: master
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
