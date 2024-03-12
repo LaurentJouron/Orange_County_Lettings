@@ -5,7 +5,7 @@ orbs:
   heroku: circleci/heroku@2.0.0
 
 jobs:
-  build_and_test:
+  run_test:
     docker:
       - image: cimg/python:3.12.0
     steps:
@@ -66,6 +66,8 @@ jobs:
           name: Build and push Docker image to Heroku
           command: |
            sudo curl https://cli-assets.heroku.com/install.sh | sh
+           HEROKU_API_KEY=${HEROKU_API_KEY} heroku config:set SECRET_KEY=$SECRET_KEY -a county-lettings
+           HEROKU_API_KEY=${HEROKU_API_KEY} heroku config:set DSN=$DSN -a county-lettings
            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:login
            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:push -a county-lettings web
            HEROKU_API_KEY=${HEROKU_API_KEY} heroku container:release -a county-lettings web
@@ -92,11 +94,11 @@ workflows:
   main:
     # Main workflow for running the jobs in the specified order.
     jobs:
-      - build_and_test
+      - run_test
       - flake8
       - build-docker-image:
           requires:
-            - build_and_test
+            - run_test
             - flake8
           filters:
             branches:
