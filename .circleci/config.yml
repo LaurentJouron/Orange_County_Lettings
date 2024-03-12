@@ -112,7 +112,6 @@ workflows:
       - deploy_on_heroku:
           requires:
             - build-and-push-docker-image
-            - flake8
           filters:
             branches:
               only: master
