@@ -233,13 +233,6 @@ Build image
 
 .. code-block:: Dockerfile
 
-<<<<<<< HEAD
-=======
-    docker pull jouron/orange_county_lettings
-
-.. code-block:: Dockerfile
-
->>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
     docker build -t orange_county_lettings .
 
 .. rubric:: ⏩️ Launch Docker project

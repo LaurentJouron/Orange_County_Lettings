@@ -233,13 +233,6 @@ Build image
 
 .. code-block:: Dockerfile
 
-<<<<<<< HEAD
-=======
-    docker pull jouron/orange_county_lettings
-
-.. code-block:: Dockerfile
-
->>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
     docker build -t orange_county_lettings .
 
 .. rubric:: ⏩️ Launch Docker project
@@ -366,7 +359,6 @@ controls to run the image in interactive mode. The local run container.
 .. code-block:: Dockerfile
 
     docker run -it jouron/orange_county_lettings
-<<<<<<< HEAD
 
 .. figure:: _static/docker_run_it_container.png
    :scale: 60
@@ -403,8 +395,6 @@ Commands that `list the containers <https://docs.docker.com/reference/cli/docker
    </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-=======
->>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
 
 Commands to `stop a container <https://docs.docker.com/reference/cli/docker/container/stop/>`_ by adding the ID of it.
 
