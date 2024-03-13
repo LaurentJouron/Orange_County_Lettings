@@ -299,13 +299,17 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 <section id="build-image">
 <h2>Build image<a class="headerlink" href="#build-image" title="Link to this heading"></a></h2>
 <p>⚙️ Perform this command to control the image</p>
+<<<<<<< HEAD
+=======
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>jouron/orange_county_lettings
 </pre></div>
 </div>
+>>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>orange_county_lettings<span class="w"> </span>.
 </pre></div>
 </div>
 <p class="rubric">⏩️ Launch Docker project</p>
+<p>Launch the container in detached mode on a specific port (8000 for example).</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>orange_county_lettings
 </pre></div>
 </div>
@@ -324,38 +328,154 @@ documentation <a class="reference external" href="https://docs.docker.com/">Dock
 <hr class="docutils" />
 <section id="docker-commands">
 <h2>Docker commands<a class="headerlink" href="#docker-commands" title="Link to this heading"></a></h2>
-<p>Commands that list all images:</p>
+<p>Commands that <a class="reference external" href="https://docs.docker.com/trusted-content/official-images/">list all images</a>:</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images
 </pre></div>
 </div>
-<p>Commands that list the containers available on the computer</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_no_image_console.png"><img alt="docker no console image" src="_images/docker_no_image_console.png" style="width: 553.6px; height: 58.400000000000006px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_no_image_console.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>Commands that <a class="reference external" href="https://docs.docker.com/reference/cli/docker/stack/ps/">list the containers</a> available on the computer:</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
 </pre></div>
 </div>
-<p>Commands that download an existing image</p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_no_container_console.png"><img alt="docker no container console" src="_images/docker_no_container_console.png" style="width: 567.2px; height: 56.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_no_container_console.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>To use this image, download it on <a class="reference external" href="https://hub.docker.com/r/jouron/orange_county_lettings">Docker Hub</a>.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>jouron/orange_county_lettings
 </pre></div>
 </div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_pull_image.png"><img alt="docker no container console" src="_images/docker_pull_image.png" style="width: 738.5px; height: 373.79999999999995px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_pull_image.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>If you relaunch the <a class="reference external" href="https://docs.docker.com/trusted-content/official-images/">first command</a> we made, we see the list of images:</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_image_console.png"><img alt="docker console image" src="_images/docker_image_console.png" style="width: 587.2px; height: 77.60000000000001px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_image_console.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p>controls to run the image in interactive mode. The local run container.</p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>orange_county_lettings
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>jouron/orange_county_lettings
 </pre></div>
 </div>
-<p>Commands to stop a container by adding the ID of it.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_run_it_container.png"><img alt="docker run intervative container" src="_images/docker_run_it_container.png" style="width: 610.8px; height: 94.2px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_run_it_container.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>Commands that <a class="reference external" href="https://docs.docker.com/reference/cli/docker/stack/ps/">list the containers</a> available on the computer</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_list_container.png"><img alt="docker container console" src="_images/docker_list_container.png" style="width: 700.1999999999999px; height: 44.4px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_list_container.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>Commands to <a class="reference external" href="https://docs.docker.com/reference/cli/docker/container/stop/">stop a container</a> by adding the ID of it.</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stop<span class="w">  </span><span class="s2">&quot;ID&quot;</span>
 </pre></div>
 </div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_stop_container.png"><img alt="docker container console" src="_images/docker_stop_container.png" style="width: 702.0px; height: 109.2px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_stop_container.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p>Controls to rotate the container in detached (in the background).</p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-d<span class="w"> </span>orange_county_lettings
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-d<span class="w"> </span>jouron/orange_county_lettings
 </pre></div>
 </div>
-<p>System cleaning controls.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_run_it_detached.png"><img alt="docker run container it detached console" src="_images/docker_run_it_detached.png" style="width: 698.5999999999999px; height: 49.699999999999996px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_run_it_detached.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
+</pre></div>
+</div>
+<p>If you re-run the command to <a class="reference external" href="https://docs.docker.com/reference/cli/docker/stack/ps/">see the containers</a> that are running, we see the list of containers.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_run_container_it_d.png"><img alt="docker run container detached console" src="_images/docker_run_container_it_d.png" style="width: 698.4px; height: 53.4px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_run_container_it_d.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>Commands to <a class="reference external" href="https://docs.docker.com/reference/cli/docker/container/stop/">stop a container</a> by adding the ID of it.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stop<span class="w">  </span><span class="s2">&quot;ID&quot;</span>
+</pre></div>
+</div>
+<p>List container:</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_stop_container.png"><img alt="docker stop container console" src="_images/docker_stop_container.png" style="width: 702.0px; height: 109.2px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_stop_container.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>System <a class="reference external" href="https://docs.docker.com/reference/cli/docker/volume/prune/">cleaning</a> controls.</p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>system<span class="w"> </span>prune
 </pre></div>
 </div>
-<p>Commands to launch the custom container.</p>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>orange_county_lettings
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_system_prune.png"><img alt="docker cleaning container" src="_images/docker_system_prune.png" style="width: 444.0px; height: 439.2px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_system_prune.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
+<p>Command to <a class="reference external" href="https://docs.docker.com/reference/cli/docker/volume/prune/">delete images</a> (caution suppresion without possibility of return).</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a
 </pre></div>
 </div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/docker_system_prune_a.png"><img alt="docker cleaning container -a" src="_images/docker_system_prune_a.png" style="width: 608.4px; height: 414.59999999999997px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/docker_system_prune_a.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div><hr class="docutils" />
 <p>Link our previously created <strong>orange_county_lettings:latest</strong> image to the Docker Hub <strong>jouron/orange_county_lettings:latest</strong></p>
 <div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>tag<span class="w"> </span>orange_county_lettings:latest<span class="w"> </span>jouron/orange_county_lettings:latest
 </pre></div>

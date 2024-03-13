@@ -233,13 +233,18 @@ Build image
 
 .. code-block:: Dockerfile
 
+<<<<<<< HEAD
+=======
     docker pull jouron/orange_county_lettings
 
 .. code-block:: Dockerfile
 
+>>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
     docker build -t orange_county_lettings .
 
 .. rubric:: ⏩️ Launch Docker project
+
+Launch the container in detached mode on a specific port (8000 for example).
 
 .. code-block:: Dockerfile
 
@@ -272,53 +277,267 @@ Docker image
 Docker commands
 ***************
 
-Commands that list all images:
+Commands that `list all images <https://docs.docker.com/trusted-content/official-images/>`_:
 
 .. code-block:: Dockerfile
 
     docker images
 
-Commands that list the containers available on the computer
+.. figure:: _static/docker_no_image_console.png
+   :scale: 80
+   :align: center
+   :alt: docker no console image
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_no_image_console.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Commands that `list the containers <https://docs.docker.com/reference/cli/docker/stack/ps/>`_ available on the computer:
 
 .. code-block:: Dockerfile
 
     docker ps
 
-Commands that download an existing image
+.. figure:: _static/docker_no_container_console.png
+   :scale: 80
+   :align: center
+   :alt: docker no container console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_no_container_console.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+To use this image, download it on `Docker Hub <https://hub.docker.com/r/jouron/orange_county_lettings>`_.
 
 .. code-block:: Dockerfile
 
-    docker pull
+    docker pull jouron/orange_county_lettings
+
+.. figure:: _static/docker_pull_image.png
+   :scale: 70
+   :align: center
+   :alt: docker no container console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_pull_image.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If you relaunch the `first command <https://docs.docker.com/trusted-content/official-images/>`_ we made, we see the list of images:
+
+.. code-block:: Dockerfile
+
+    docker images
+
+.. figure:: _static/docker_image_console.png
+   :scale: 80
+   :align: center
+   :alt: docker console image
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_image_console.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 controls to run the image in interactive mode. The local run container.
 
 .. code-block:: Dockerfile
 
     docker run -it jouron/orange_county_lettings
+<<<<<<< HEAD
 
-Commands to stop a container by adding the ID of it.
+.. figure:: _static/docker_run_it_container.png
+   :scale: 60
+   :align: center
+   :alt: docker run intervative container
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_run_it_container.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Commands that `list the containers <https://docs.docker.com/reference/cli/docker/stack/ps/>`_ available on the computer
+
+.. code-block:: Dockerfile
+
+    docker ps
+
+.. figure:: _static/docker_list_container.png
+   :scale: 60
+   :align: center
+   :alt: docker container console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_list_container.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+=======
+>>>>>>> 24f4045b06b8aca8e7cd87c8144272e382b2e651
+
+Commands to `stop a container <https://docs.docker.com/reference/cli/docker/container/stop/>`_ by adding the ID of it.
 
 .. code-block:: Dockerfile
 
     docker stop  "ID"
 
+.. figure:: _static/docker_stop_container.png
+   :scale: 60
+   :align: center
+   :alt: docker container console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_stop_container.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Controls to rotate the container in detached (in the background).
 
 .. code-block:: Dockerfile
 
-    docker run -it -d orange_county_lettings
+    docker run -it -d jouron/orange_county_lettings
 
-System cleaning controls.
+.. figure:: _static/docker_run_it_detached.png
+   :scale: 70
+   :align: center
+   :alt: docker run container it detached console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_run_it_detached.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. code-block:: Dockerfile
+
+    docker ps
+
+If you re-run the command to `see the containers <https://docs.docker.com/reference/cli/docker/stack/ps/>`_ that are running, we see the list of containers.
+
+
+.. figure:: _static/docker_run_container_it_d.png
+   :scale: 60
+   :align: center
+   :alt: docker run container detached console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_run_container_it_d.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Commands to `stop a container <https://docs.docker.com/reference/cli/docker/container/stop/>`_ by adding the ID of it.
+
+.. code-block:: Dockerfile
+
+    docker stop  "ID"
+
+List container:
+
+.. code-block:: Dockerfile
+
+    docker ps
+
+.. figure:: _static/docker_stop_container.png
+   :scale: 60
+   :align: center
+   :alt: docker stop container console
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_stop_container.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+System `cleaning <https://docs.docker.com/reference/cli/docker/volume/prune/>`_ controls.
 
 .. code-block:: Dockerfile
 
     docker system prune
 
-Commands to launch the custom container.
+.. figure:: _static/docker_system_prune.png
+   :scale: 60
+   :align: center
+   :alt: docker cleaning container
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_system_prune.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Command to `delete images <https://docs.docker.com/reference/cli/docker/volume/prune/>`_ (caution suppresion without possibility of return).
 
 .. code-block:: Dockerfile
 
-    docker run -d -p 8000:8000 orange_county_lettings
+    docker system prune -a
+
+.. figure:: _static/docker_system_prune_a.png
+   :scale: 60
+   :align: center
+   :alt: docker cleaning container -a
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/docker_system_prune_a.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Link our previously created **orange_county_lettings:latest** image to the Docker Hub **jouron/orange_county_lettings:latest**
 
