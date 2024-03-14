@@ -18,9 +18,9 @@ def index(request):
         404 (Http404): If the requested profile does not exist.
         500 (Http500): If an unexpected error occurs during profile retrieval.
     """
-
     try:
         profiles_list = Profile.objects.all()
+
     except Profile.DoesNotExist as e:
         capture_exception(e)
         return render(request, "404.html", status=400)
@@ -28,6 +28,7 @@ def index(request):
     except Exception as e:
         capture_exception(e)
         return render(request, "500.html", status=500)
+
     context = {"profiles_list": profiles_list}
     return render(request, "profiles/index.html", context)
 
@@ -47,9 +48,9 @@ def profile(request, username):
         404 (Http404): If the requested profile does not exist.
         500 (Http500): If an unexpected error occurs during profile retrieval.
     """
-
     try:
         profile = Profile.objects.get(user__username=username)
+
     except Profile.DoesNotExist as e:
         capture_exception(e)
         return render(request, "404.html", status=400)
@@ -57,5 +58,6 @@ def profile(request, username):
     except Exception as e:
         capture_exception(e)
         return render(request, "500.html", status=500)
+
     context = {"profile": profile}
     return render(request, "profiles/profile.html", context)
