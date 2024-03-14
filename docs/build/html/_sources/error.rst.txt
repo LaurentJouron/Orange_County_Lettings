@@ -21,28 +21,35 @@ This error is usually displayed when the requested URL is not found in the appli
 The **404 error** is often called **Page not found** because it indicates that the requested resource is not available.
 In a Django application, a custom **404 error** page can be displayed to guide users when they encounter this error.
 
-💡 **handler404**
+Configuration in different views, depending on the example ``views.py``:
 
-In Django, **handler404** is a variable that specifies the function or view that will be called when Django 
-encounters a **404 error**, that is, a page that is not found.
+.. code-block:: Python
 
-Here’s how to describe it and how it is used in ``urls.py``:
+    def profile(request, username):
+    try:
+        profile = Profile.objects.get(user__username=username)
+    except Profile.DoesNotExist as e:
+        capture_exception(e)
+        return render(request, "404.html", status=400)
 
-.. console:: Python
+    except Exception as e:
+        capture_exception(e)
+        return render(request, "500.html", status=500)
+    context = {"profile": profile}
+    return render(request, "profiles/profile.html", context)
 
-    # 404 erreur: page not found
-    handler404 = views.handler404
+.. figure:: _static/error_404.png
+   :scale: 50
+   :align: center
+   :alt: Error-404
 
-💡 Description:
+.. raw:: html
 
-**handler404** is a variable used in the urls.py file to specify the function or view that will be 
-executed when Django encounters a **404 error**. This error occurs when a user tries to access a URL 
-that does not exist in your Django application.
-
-💡 Usage:
-
-To use **handler404**, you must assign to a view or function that handles the display of the 404 error 
-custom page. This view or function must be defined in a ``views.py`` file.
+   <div style="text-align: center;">
+       <a href="_static/error_404.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,22 +69,6 @@ A custom **500 error** page can be used to inform users that the server is exper
 and to provide instructions on what they can do, such as trying again later or contacting the site 
 administrator.
 
-💡 **handler500** - Description:
-
-**handler500** is a variable used in Django’s urls.py file to specify the function or view that will be 
-executed when Django encounters a **500 error**, also known as the "Server Error" error. This error occurs 
-when Django encounters an internal server error.
-
-.. console:: Python
-
-    # 500 erreur: Server error
-    handler500 = views.handler500
-
-
-💡 Usage:
-
-To use **handler500**, it must be assigned to a view or function that handles the display of the **500 error** 
-custom page. This view or function must be defined in your ``views.py`` file.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

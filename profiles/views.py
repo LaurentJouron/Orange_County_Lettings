@@ -1,53 +1,64 @@
-import logging
-from sentry_sdk import capture_message
-from django.http import Http404
+# import logging
+from sentry_sdk import capture_exception
 from django.shortcuts import render
 from .models import Profile
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 def index(request):
     """
-    Renders the index page.
+    View function to display a user's profile.
 
     Args:
-        request: The HTTP request object.
+        request: HttpRequest object representing the request made to the server.
+        username: Username of the user whose profile is being accessed.
 
     Returns:
-        A rendered HTML response containing the index page.
+        Rendered HttpResponse displaying the user's profile.
 
-    Examples:
-        >>> response = index(request)
+    Raises:
+        404 (Http404): If the requested profile does not exist.
+        500 (Http500): If an unexpected error occurs during profile retrieval.
     """
 
-    profiles_list = Profile.objects.all()
+    try:
+        profiles_list = Profile.objects.all()
+    except Profile.DoesNotExist as e:
+        capture_exception(e)
+        return render(request, "404.html", status=400)
+
+    except Exception as e:
+        capture_exception(e)
+        return render(request, "500.html", status=500)
     context = {"profiles_list": profiles_list}
     return render(request, "profiles/index.html", context)
 
 
 def profile(request, username):
     """
-    Renders the profile page for a given username.
+    View function to display a user's profile.
 
     Args:
-        request: The HTTP request object.
-        username: The username of the profile to be rendered.
+        request: HttpRequest object representing the request made to the server.
+        username: Username of the user whose profile is being accessed.
 
     Returns:
-        A rendered HTML response containing the profile page.
+        Rendered HttpResponse displaying the user's profile.
 
     Raises:
-        Http404: If the profile does not exist.
-
-    Examples:
-        >>> response = profile(request, "john_doe")
+        404 (Http404): If the requested profile does not exist.
+        500 (Http500): If an unexpected error occurs during profile retrieval.
     """
+
     try:
         profile = Profile.objects.get(user__username=username)
     except Profile.DoesNotExist as e:
-        capture_message("This page does not exist!", level="error")
-        logger.error("This page does not exist")
-        raise Http404("This profile does not exist") from e
+        capture_exception(e)
+        return render(request, "404.html", status=400)
+
+    except Exception as e:
+        capture_exception(e)
+        return render(request, "500.html", status=500)
     context = {"profile": profile}
     return render(request, "profiles/profile.html", context)

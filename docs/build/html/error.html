@@ -109,18 +109,29 @@ resource (web page, file, etc.) that does not exist on the server.
 This error is usually displayed when the requested URL is not found in the application or on the web server.
 The <strong>404 error</strong> is often called <strong>Page not found</strong> because it indicates that the requested resource is not available.
 In a Django application, a custom <strong>404 error</strong> page can be displayed to guide users when they encounter this error.</p>
-<p>💡 <strong>handler404</strong></p>
-<p>In Django, <strong>handler404</strong> is a variable that specifies the function or view that will be called when Django
-encounters a <strong>404 error</strong>, that is, a page that is not found.</p>
-<p>Here’s how to describe it and how it is used in <code class="docutils literal notranslate"><span class="pre">urls.py</span></code>:</p>
-<p>💡 Description:</p>
-<p><strong>handler404</strong> is a variable used in the urls.py file to specify the function or view that will be
-executed when Django encounters a <strong>404 error</strong>. This error occurs when a user tries to access a URL
-that does not exist in your Django application.</p>
-<p>💡 Usage:</p>
-<p>To use <strong>handler404</strong>, you must assign to a view or function that handles the display of the 404 error
-custom page. This view or function must be defined in a <code class="docutils literal notranslate"><span class="pre">views.py</span></code> file.</p>
-</section>
+<p>Configuration in different views, depending on the example <code class="docutils literal notranslate"><span class="pre">views.py</span></code>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user__username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">Profile</span><span class="o">.</span><span class="n">DoesNotExist</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">capture_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;404.html&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">capture_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;500.html&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;profile&quot;</span><span class="p">:</span> <span class="n">profile</span><span class="p">}</span>
+<span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;profiles/profile.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/error_404.png"><img alt="Error-404" src="_images/error_404.png" style="width: 729.5px; height: 340.0px;" /></a>
+</figure>
+<div style="text-align: center;">
+    <a href="_static/error_404.png" download class="button">
+       <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+    </a>
+</div></section>
 <hr class="docutils" />
 <section id="id3">
 <h2>500 Error<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
@@ -134,13 +145,6 @@ with the server itself.
 A custom <strong>500 error</strong> page can be used to inform users that the server is experiencing temporary difficulties
 and to provide instructions on what they can do, such as trying again later or contacting the site
 administrator.</p>
-<p>💡 <strong>handler500</strong> - Description:</p>
-<p><strong>handler500</strong> is a variable used in Django’s urls.py file to specify the function or view that will be
-executed when Django encounters a <strong>500 error</strong>, also known as the “Server Error” error. This error occurs
-when Django encounters an internal server error.</p>
-<p>💡 Usage:</p>
-<p>To use <strong>handler500</strong>, it must be assigned to a view or function that handles the display of the <strong>500 error</strong>
-custom page. This view or function must be defined in your <code class="docutils literal notranslate"><span class="pre">views.py</span></code> file.</p>
 </section>
 <hr class="docutils" />
 <section id="summary">
