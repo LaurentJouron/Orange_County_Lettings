@@ -69,6 +69,18 @@ A custom **500 error** page can be used to inform users that the server is exper
 and to provide instructions on what they can do, such as trying again later or contacting the site 
 administrator.
 
+.. figure:: _static/error_500.png
+   :scale: 50
+   :align: center
+   :alt: Error-404
+
+.. raw:: html
+
+   <div style="text-align: center;">
+       <a href="_static/error_500.png" download class="button">
+          <img src="_static/button_download.png" alt="Donwload button" width="100" height="50" />
+       </a>
+   </div>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

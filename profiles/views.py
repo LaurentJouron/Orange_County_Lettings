@@ -1,9 +1,6 @@
-# import logging
 from sentry_sdk import capture_exception
 from django.shortcuts import render
 from .models import Profile
-
-# logger = logging.getLogger(__name__)
 
 
 def index(request):
