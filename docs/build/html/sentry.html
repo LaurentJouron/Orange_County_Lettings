@@ -170,6 +170,13 @@ This allows developers to diagnose and resolve issues quickly. <a class="referen
     <span class="s2">&quot;handlers&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;console&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;logging.StreamHandler&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;formatter&quot;</span><span class="p">:</span> <span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;formatters&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;standard&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> [</span><span class="si">%(levelname)s</span><span class="s2">] </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;datefmt&quot;</span><span class="p">:</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="s2">&quot;root&quot;</span><span class="p">:</span> <span class="p">{</span>

@@ -144,6 +144,13 @@ LOGGING = {
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
+            "formatter": "standard",
+        },
+    },
+    "formatters": {
+        "standard": {
+            "format": "%(asctime)s [%(levelname)s] %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
         },
     },
     "root": {
