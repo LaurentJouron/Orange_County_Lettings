@@ -382,18 +382,11 @@ Pipelines
 
 * :doc:`Pipelines <pipeline>`
 
-  - `Spin up environment <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#spin-up-environment>`_
-  - `Preparing environment variables <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#preparing-environment-variables>`_
-  - `Checkout code <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#checkout-code>`_
-  - `Link lockfile <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#link-lockfile>`_
-  - `Save Python version <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#save-python-version>`_
-  - `Restoring cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#restoring-cache>`_
-  - `Move restored cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#move-restored-cache>`_
-  - `Install dependencies with pipenv <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#install-dependencies-with-pipenv-using-project-pipfile-or-inline-packages>`_
-  - `Copy to cache directory <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#copy-to-cache-directory>`_
-  - `Saving cache <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#saving-cache>`_
   - `Run test <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#run-test>`_
-  - `Persisting to workspace <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#persisting-to-workspace>`_
+  - `Flake8_test <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#flake8-test>`_
+  - `Build Docker image <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#build-docker-image>`_
+  - `Deploy on Heroku <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#deploy-on-heroku>`_
+  - `Notify deployment <https://laurent-lettings.readthedocs.io/en/latest/pipeline.html#notify-deployment>`_
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

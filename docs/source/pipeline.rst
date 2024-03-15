@@ -3,7 +3,7 @@
 Pipelines
 =========
 
-When a modification is done on the Github repository (after a commit), CircleCi launch some commands.
+When a modification is done on the `Github repository <https://github.com/LaurentJouron/Orange_County_Lettings>`_ (after a commit), :doc:`CircleCi <circleci>` launch some commands.
 
 .. figure:: _static/circleci_all_pipelines.png
    :scale: 40
@@ -45,9 +45,9 @@ After running all the tests there is a graph that can be found to make possible 
 Run test
 ********
 
-Run_test pipelines are automated processes that run tests on the source code to verify its proper operation. 
-These tests may include unit tests, integration tests, end-to-end tests, etc. 
-Running run_test pipelines ensures that code changes have not introduced new bugs and that the existing code is still working properly.
+``Run_test`` pipelines are automated processes that :doc:`run tests <test>` on the source code to verify its proper operation. 
+These :doc:`tests <test>` may include unit tests, integration tests, end-to-end tests, etc. 
+Running ``run_test`` pipelines ensures that code changes have not introduced new bugs and that the existing code is still working properly.
 
 .. figure:: _static/circleci_run_tests.png
    :scale: 40
@@ -74,8 +74,8 @@ Running run_test pipelines ensures that code changes have not introduced new bug
 flake8_test
 ***********
 
-Flake8_test pipelines are automated processes that use the Flake8 tool to verify source code compliance with Python style standards. 
-Flake8 analyzes the code for violations of the style rules defined by PEP 8, as well as potential errors. 
+``Flake8_test`` pipelines are automated processes that use the :doc:`Flake8 <flake8>` tool to verify source code compliance with Python style standards. 
+:doc:`Flake8 <flake8>` analyzes the code for violations of the style rules defined by `PEP 8 <https://peps.python.org/pep-0008/>`_ , as well as potential errors. 
 Running flake8_test pipelines helps maintain code style consistency and identify code quality issues at the development stage.
 
 .. figure:: _static/circleci_flake8.png
@@ -103,9 +103,9 @@ Running flake8_test pipelines helps maintain code style consistency and identify
 Build Docker image
 ******************
 
-build_docker_image pipelines are automated processes that create a Docker image from the configuration files and source code of an 
-application. These pipelines use Docker instructions to assemble the image, which can then be deployed to development, test, or 
-production environments. Running build_docker_image pipelines ensures that the Docker image is properly built and ready for use 
+``build_docker_image`` pipelines are automated processes that create a :doc:`Docker image <docker>` from the configuration files and source code of an 
+application. These pipelines use :doc:`Docker <docker>` instructions to assemble the image, which can then be deployed to development, test, or 
+production environments. Running ``build_docker_image`` pipelines ensures that the :doc:`Docker image <docker>` is properly built and ready for use 
 to run the application in an isolated and portable manner.
 
 .. figure:: _static/circleci_docker_image.png
@@ -133,9 +133,9 @@ to run the application in an isolated and portable manner.
 Deploy on Heroku
 ****************
 
-Deploye on Heroku pipelines are automated processes that deploy the application on the Heroku cloud platform. 
-These pipelines take the application’s source code, build the Docker image if necessary, and deploy it to Heroku using tools like Git, 
-Heroku CLI, or continuous integration services. Running deploye on Heroku pipelines quickly updates the application in production on Heroku, 
+Deploye on :doc:`Heroku <heroku>` pipelines are automated processes that deploy the application on the :doc:`Heroku <heroku>` cloud platform. 
+These pipelines take the application’s source code, build the :doc:`Docker <docker>` image if necessary, and deploy it to :doc:`Heroku <heroku>` using tools like **Git**, 
+**Heroku CLI**, or continuous integration services. Running deploye on :doc:`Heroku <heroku>` pipelines quickly updates the application in production on :doc:`Heroku <heroku>`, 
 providing an efficient and reliable method for deploying web applications.
 
 

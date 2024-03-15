@@ -98,7 +98,7 @@
              
   <section id="pipelines">
 <span id="pipeline"></span><h1>Pipelines<a class="headerlink" href="#pipelines" title="Link to this heading"></a></h1>
-<p>When a modification is done on the Github repository (after a commit), CircleCi launch some commands.</p>
+<p>When a modification is done on the <a class="reference external" href="https://github.com/LaurentJouron/Orange_County_Lettings">Github repository</a> (after a commit), <a class="reference internal" href="circleci.html"><span class="doc">CircleCi</span></a> launch some commands.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_all_pipelines.png"><img alt="circleci spin up environnement" src="_images/circleci_all_pipelines.png" style="width: 751.6px; height: 364.0px;" /></a>
 </figure>
@@ -119,9 +119,9 @@
 </a><hr class="docutils" />
 <section id="run-test">
 <h2>Run test<a class="headerlink" href="#run-test" title="Link to this heading"></a></h2>
-<p>Run_test pipelines are automated processes that run tests on the source code to verify its proper operation.
-These tests may include unit tests, integration tests, end-to-end tests, etc.
-Running run_test pipelines ensures that code changes have not introduced new bugs and that the existing code is still working properly.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Run_test</span></code> pipelines are automated processes that <a class="reference internal" href="test.html"><span class="doc">run tests</span></a> on the source code to verify its proper operation.
+These <a class="reference internal" href="test.html"><span class="doc">tests</span></a> may include unit tests, integration tests, end-to-end tests, etc.
+Running <code class="docutils literal notranslate"><span class="pre">run_test</span></code> pipelines ensures that code changes have not introduced new bugs and that the existing code is still working properly.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_run_tests.png"><img alt="circleci run tests" src="_images/circleci_run_tests.png" style="width: 758.4000000000001px; height: 362.40000000000003px;" /></a>
 </figure>
@@ -135,8 +135,8 @@ Running run_test pipelines ensures that code changes have not introduced new bug
 <hr class="docutils" />
 <section id="flake8-test">
 <h2>flake8_test<a class="headerlink" href="#flake8-test" title="Link to this heading"></a></h2>
-<p>Flake8_test pipelines are automated processes that use the Flake8 tool to verify source code compliance with Python style standards.
-Flake8 analyzes the code for violations of the style rules defined by PEP 8, as well as potential errors.
+<p><code class="docutils literal notranslate"><span class="pre">Flake8_test</span></code> pipelines are automated processes that use the <a class="reference internal" href="flake8.html"><span class="doc">Flake8</span></a> tool to verify source code compliance with Python style standards.
+<a class="reference internal" href="flake8.html"><span class="doc">Flake8</span></a> analyzes the code for violations of the style rules defined by <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8</a> , as well as potential errors.
 Running flake8_test pipelines helps maintain code style consistency and identify code quality issues at the development stage.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_flake8.png"><img alt="circleci flake8" src="_images/circleci_flake8.png" style="width: 643.2px; height: 356.0px;" /></a>
@@ -151,9 +151,9 @@ Running flake8_test pipelines helps maintain code style consistency and identify
 <hr class="docutils" />
 <section id="build-docker-image">
 <h2>Build Docker image<a class="headerlink" href="#build-docker-image" title="Link to this heading"></a></h2>
-<p>build_docker_image pipelines are automated processes that create a Docker image from the configuration files and source code of an
-application. These pipelines use Docker instructions to assemble the image, which can then be deployed to development, test, or
-production environments. Running build_docker_image pipelines ensures that the Docker image is properly built and ready for use
+<p><code class="docutils literal notranslate"><span class="pre">build_docker_image</span></code> pipelines are automated processes that create a <a class="reference internal" href="docker.html"><span class="doc">Docker image</span></a> from the configuration files and source code of an
+application. These pipelines use <a class="reference internal" href="docker.html"><span class="doc">Docker</span></a> instructions to assemble the image, which can then be deployed to development, test, or
+production environments. Running <code class="docutils literal notranslate"><span class="pre">build_docker_image</span></code> pipelines ensures that the <a class="reference internal" href="docker.html"><span class="doc">Docker image</span></a> is properly built and ready for use
 to run the application in an isolated and portable manner.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_docker_image.png"><img alt="circleci Docker build" src="_images/circleci_docker_image.png" style="width: 750.8000000000001px; height: 361.6px;" /></a>
@@ -168,9 +168,9 @@ to run the application in an isolated and portable manner.</p>
 <hr class="docutils" />
 <section id="deploy-on-heroku">
 <h2>Deploy on Heroku<a class="headerlink" href="#deploy-on-heroku" title="Link to this heading"></a></h2>
-<p>Deploye on Heroku pipelines are automated processes that deploy the application on the Heroku cloud platform.
-These pipelines take the application’s source code, build the Docker image if necessary, and deploy it to Heroku using tools like Git,
-Heroku CLI, or continuous integration services. Running deploye on Heroku pipelines quickly updates the application in production on Heroku,
+<p>Deploye on <a class="reference internal" href="heroku.html"><span class="doc">Heroku</span></a> pipelines are automated processes that deploy the application on the <a class="reference internal" href="heroku.html"><span class="doc">Heroku</span></a> cloud platform.
+These pipelines take the application’s source code, build the <a class="reference internal" href="docker.html"><span class="doc">Docker</span></a> image if necessary, and deploy it to <a class="reference internal" href="heroku.html"><span class="doc">Heroku</span></a> using tools like <strong>Git</strong>,
+<strong>Heroku CLI</strong>, or continuous integration services. Running deploye on <a class="reference internal" href="heroku.html"><span class="doc">Heroku</span></a> pipelines quickly updates the application in production on <a class="reference internal" href="heroku.html"><span class="doc">Heroku</span></a>,
 providing an efficient and reliable method for deploying web applications.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/circleci_deploy_on_heroku.png"><img alt="circleci link lockfile" src="_images/circleci_deploy_on_heroku.png" style="width: 751.2px; height: 362.8px;" /></a>
