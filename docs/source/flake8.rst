@@ -209,7 +209,7 @@ Then run flake8 passing the --format=html option and a --htmldir:
 
 .. raw:: html
 
-   <a href="http://127.0.0.1:5501/flake-report/" class="button">
+   <a href="http://127.0.0.1:5501/flake-report/" class="button" target=_blank>
        <img src="_static/report_flake8.png" alt="Report button" width="200" height="100" />
    </a>
 
@@ -238,6 +238,6 @@ Flake8 pipelines
 
 .. raw:: html
 
-   <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings/65/workflows/b035e665-45b6-438e-b442-5e32ef0a7b53/jobs/89" class="button">
+   <a href="https://app.circleci.com/pipelines/github/LaurentJouron/Orange_County_Lettings/65/workflows/b035e665-45b6-438e-b442-5e32ef0a7b53/jobs/89" class="button" target=_blank>
        <img src="_static/circleci_pipelines_flake8.png" alt="Report button" width="200" height="100" />
    </a>

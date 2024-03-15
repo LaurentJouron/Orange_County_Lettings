@@ -192,6 +192,6 @@ If everything is set properly, the confirmation emails receive it regularly depe
 
 .. raw:: html
 
-   <a href="https://ace-xk.sentry.io/performance/?project=4506710341844992" class="button">
+   <a href="https://ace-xk.sentry.io/performance/?project=4506710341844992" class="button" target=_blank>
        <img src="_static/button_sentry.png" alt="Report button" width="200" height="100" />
    </a>

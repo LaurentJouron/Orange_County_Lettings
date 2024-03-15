@@ -154,6 +154,6 @@ The account is configured so that each change is accessible immediately. Just pu
 
 .. raw:: html
 
-   <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">
+   <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button" target=_blank>
        <img src="_static/button_open_website.png" alt="Report button" width="200" height="100" />
    </a>

@@ -159,6 +159,6 @@ Profiles contains a list of profiles wich you can click to access to their detai
 
 .. raw:: html
 
-   <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button">
+   <a href="https://county-lettings-dce9820cf239.herokuapp.com/" class="button" target=_blank>
        <img src="_static/button_open_website.png" alt="Bouton" width="200" height="100" />
    </a>

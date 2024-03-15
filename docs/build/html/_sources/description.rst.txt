@@ -64,7 +64,7 @@ service while remaining at the forefront of technology.
 
 .. raw:: html
 
-   <a href="https://github.com/LaurentJouron/Orange_County_Lettings" class="button">
+   <a href="https://github.com/LaurentJouron/Orange_County_Lettings" class="button" target=_blank>
        <img src="_static/button_github_repository.png" alt="Repository GitHub button" width="200" height="100" />
    </a>
 

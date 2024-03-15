@@ -369,6 +369,6 @@ After running all the tests there is a graph that can be found to make possible 
 
 .. raw:: html
 
-   <a href="https://app.circleci.com/pipelines/github/LaurentJouron" class="button">
+   <a href="https://app.circleci.com/pipelines/github/LaurentJouron" class="button" target=_blank>
        <img src="_static/button_all_pipelines.png" alt="Report button" width="200" height="100" />
    </a>
